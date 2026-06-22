@@ -1,0 +1,71 @@
+{
+  "name": "R001 Field Activity Log",
+  "category": "Field",
+  "heavyconnect_report_type_id": 117,
+  "status": "in_progress",
+  "header": [
+    { "label": "Date of Activity", "type": "date", "required": true },
+    { "label": "Start Time", "type": "time", "required": true },
+    { "label": "End Time", "type": "time", "required": true }
+  ],
+  "location_fields": ["Region", "Site", "Location"],
+  "details_max_length": 950,
+  "sections": [
+    {
+      "title": "Field Activities",
+      "questions": [
+        {
+          "label": "Activity Type",
+          "type": "single_select",
+          "required": true,
+          "options": ["Ground Work", "Planting", "Application", "Irrigation", "Transplant", "Re-Plant", "Mow ( Cutting Grass)"]
+        },
+        { "label": "Ground Work", "type": "single_select", "required": true, "options_status": "pending" },
+        { "label": "Did you sanitize your equipment before moving fields?", "type": "yes_no", "required": false },
+        { "label": "Did you apply fertilizer?", "type": "yes_no", "required": true },
+        { "label": "Have you moved from a conventional to an organic production field?", "type": "yes_no", "required": true },
+        {
+          "label": "Clean and disinfect all equipment before entering the field (i.e., seed hoppers, fertilizer applicators, and storage containers)",
+          "type": "instruction",
+          "required": false
+        },
+        { "label": "Product Applied", "type": "single_select", "required": true, "options_status": "pending" },
+        { "label": "Application Method", "type": "single_select", "required": true, "options_status": "pending" },
+        { "label": "Volume Applied", "type": "single_select", "required": true, "options_status": "pending" },
+        { "label": "Other Volume", "type": "short_text", "required": true, "max_length": 20, "archived_for_future_reports": true },
+        { "label": "Pre-Harvest Interval", "type": "yes_no_na", "required": false },
+        { "label": "Restricted Entry Interval", "type": "yes_no_na", "required": false },
+        { "label": "Equipment Used", "type": "single_select", "required": false, "options_status": "pending" },
+        { "label": "Variety", "type": "unsupported_in_web_dashboard", "required": false },
+        { "label": "Seed Volume (lbs)", "type": "number", "required": false },
+        { "label": "Target Pest", "type": "short_text", "required": false, "max_length": 20, "archived_for_future_reports": true },
+        { "label": "Acreage", "type": "number", "required": false },
+        { "label": "Irrigation Type", "type": "single_select", "required": false, "options_status": "pending" },
+        { "label": "Source Inspection", "type": "single_select", "required": false, "options_status": "pending" },
+        { "label": "Hours of Use", "type": "number", "required": false },
+        { "label": "For Drip Irrigation input 1470. For Overhead Irrigation input 13582", "type": "number", "required": false },
+        {
+          "label": "Volume of Water Applied",
+          "type": "calculated_number",
+          "required": false,
+          "formula_display": "Q1 * Q2 ="
+        }
+      ]
+    },
+    {
+      "title": "Version History",
+      "questions": [
+        {
+          "label": "Record # R001, Version # 01, Revision: Added Change Controls, Approved By VS/KH, Issue Date: 7/30/24",
+          "type": "instruction"
+        }
+      ]
+    },
+    {
+      "title": "Employee Name",
+      "questions": [
+        { "label": "Employee name of who reported these checks?", "type": "short_text", "required": false }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "source": "HeavyConnect authenticated Bay Baby Produce workspace",
+  "verified_on": "2026-06-22",
+  "verification": {
+    "recent_summary_report_types": [
+      "R001 Field Activity Log",
+      "R004 Tractor Inspection",
+      "Daily Sanitation Log",
+      "R006 Daily Sanitation Log",
+      "R024 Field Buffer Log",
+      "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting"
+    ],
+    "available_but_not_in_recent_summary": [
+      "R022 Risk Assessment"
+    ],
+    "note": "The six summary types have reports in the visible HeavyConnect reporting period. R022 is available in the active Field template library but does not appear in the current summary period."
+  },
+  "templates": [
+    { "name": "Daily Sanitation Log", "category": "Harvest", "status": "pending" },
+    { "name": "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting", "category": "Health & Safety", "status": "pending" },
+    { "name": "R001 Field Activity Log", "category": "Field", "status": "in_progress", "heavyconnect_report_type_id": 117 },
+    { "name": "R004 Tractor Inspection", "category": "Field", "status": "captured", "heavyconnect_report_type_id": 294 },
+    { "name": "R006 Daily Sanitation Log", "category": "Field", "status": "captured", "heavyconnect_report_type_id": 128 },
+    { "name": "R022 Risk Assessment", "category": "Field", "status": "pending" },
+    { "name": "R024 Field Buffer Log", "category": "Field", "status": "pending" }
+  ]
+}

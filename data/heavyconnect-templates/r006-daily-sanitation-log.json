@@ -1,0 +1,53 @@
+{
+  "name": "R006 Daily Sanitation Log",
+  "category": "Field",
+  "heavyconnect_report_type_id": 128,
+  "status": "captured",
+  "location_fields": ["Region", "Site", "Location"],
+  "details_max_length": 950,
+  "sections": [
+    {
+      "title": "General Cleaning",
+      "instructions": ["Checklist shall be completed daily during production season, shall be completed weekly during the off-season"],
+      "questions": [
+        { "label": "Have all surfaces been cleaned and sanitized?", "type": "yes_no", "required": true },
+        { "label": "Have the walls, shelves and storage areas been cleaned and sanitized?", "type": "yes_no", "required": true },
+        { "label": "Have the sinks been cleaned and sanitized?", "type": "yes_no", "required": true },
+        { "label": "Have the floors been swept and if needed properly mopped?", "type": "yes_no", "required": true },
+        { "label": "Has all trash and litter been removed?", "type": "yes_no", "required": true },
+        { "label": "Are all trash cans properly lined and covered?", "type": "yes_no", "required": true }
+      ]
+    },
+    {
+      "title": "Supplies Stocked",
+      "questions": [
+        { "label": "Hand Soap", "type": "yes_no", "required": true },
+        { "label": "Hand Sanitizer", "type": "yes_no", "required": true },
+        { "label": "Hand Towels", "type": "yes_no", "required": true }
+      ]
+    },
+    {
+      "title": "Maintenance",
+      "questions": [
+        { "label": "Do all doors and latches work properly?", "type": "yes_no", "required": false },
+        { "label": "Is maintenance service required?", "type": "yes_no", "required": true },
+        { "label": "What maintenance is needed?", "type": "short_text", "required": false }
+      ]
+    },
+    {
+      "title": "Version History",
+      "questions": [
+        {
+          "label": "Record # R006, Version # 01, Revision: Added Change Controls, Approved By VS/KH, Issue Date: 7/30/24",
+          "type": "instruction"
+        }
+      ]
+    },
+    {
+      "title": "Employee Name",
+      "questions": [
+        { "label": "Employee name of who reported these checks?", "type": "short_text", "required": false }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "R004 Tractor Inspection",
+  "category": "Field",
+  "heavyconnect_report_type_id": 294,
+  "status": "captured",
+  "location_fields": ["Region", "Site", "Location"],
+  "details_max_length": 950,
+  "sections": [
+    {
+      "title": "Equipment ID",
+      "questions": [
+        { "label": "What is the Equipment ID number?", "type": "short_text", "required": true }
+      ]
+    },
+    {
+      "title": "Equipment Walkaround",
+      "questions": [
+        { "label": "Do you notice any coolant or oil leaks?", "type": "yes_no", "required": true },
+        { "label": "Do you notice any hydraulic line issues and/or leaks?", "type": "yes_no", "required": true },
+        { "label": "Is the battery in good working condition?", "type": "yes_no", "required": true },
+        { "label": "Are the wheels in good operating condition?", "type": "yes_no", "required": true },
+        { "label": "Are all safety guards intact?", "type": "yes_no", "required": true },
+        { "label": "Are all attachments or attachment points secure and in good working condition?", "type": "yes_no", "required": true },
+        { "label": "Is the seatbelt functional?", "type": "yes_no", "required": true },
+        { "label": "Does the equipment have a fire extinguisher?", "type": "yes_no", "required": true },
+        { "label": "Is the equipment in clean condition? (dirt, debris, etc.)", "type": "yes_no", "required": true }
+      ]
+    },
+    {
+      "title": "Start Up",
+      "questions": [
+        { "label": "Does the equipment have adequate fuel?", "type": "yes_no", "required": true },
+        { "label": "Are all lights operational?(headlights, reverse, hazards, turn signals, brake)", "type": "yes_no", "required": true },
+        { "label": "Does the horn work?", "type": "yes_no", "required": true },
+        { "label": "Do the brakes work properly? (foot and park)", "type": "yes_no", "required": true },
+        { "label": "Do you have all necessary equipment for road travel, if necessary?", "type": "yes_no", "required": true },
+        { "label": "Record the equipment hours:", "type": "number", "required": true },
+        {
+          "label": "If the equipment requires maintenance immediately notify the Farm Manager to create a work order request.",
+          "type": "instruction"
+        }
+      ]
+    },
+    {
+      "title": "Version History",
+      "questions": [
+        {
+          "label": "Record # R004, Version # 01, Revision: Added Change Controls, Approved By VS/KH, Issue Date: 7/30/24",
+          "type": "instruction"
+        }
+      ]
+    },
+    {
+      "title": "Employee Name",
+      "questions": [
+        { "label": "Employee name of who reported these checks?", "type": "short_text", "required": false }
+      ]
+    }
+  ]
+}
