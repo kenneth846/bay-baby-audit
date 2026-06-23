@@ -24,9 +24,14 @@ import {
 } from "@phosphor-icons/react";
 import { useMemo, useState } from "react";
 import heavyConnectInventory from "@/data/heavyconnect-reports/inventory.json";
+import dailySanitationTemplate from "@/data/heavyconnect-templates/daily-sanitation-log.json";
+import freshTemplate from "@/data/heavyconnect-templates/fresh-committee-meeting.json";
 import r001Template from "@/data/heavyconnect-templates/r001-field-activity-log.json";
+import r022Template from "@/data/heavyconnect-templates/r022-risk-assessment.json";
+import r024Template from "@/data/heavyconnect-templates/r024-field-buffer-log.json";
 import r004Template from "@/data/heavyconnect-templates/r004-tractor-inspection.json";
 import r006Template from "@/data/heavyconnect-templates/r006-daily-sanitation-log.json";
+import heavyConnectSelfAudit32 from "@/data/heavyconnect-self-audits/primus-gfs-3-2.json";
 import primusV4Index from "@/data/primusgfs/v4/index.json";
 
 type Status = "approved" | "review" | "action" | "draft";
@@ -57,6 +62,14 @@ type TemplateDefinition = {
   source: string;
   moduleTargets: string[];
   lastExample?: string;
+  sections: TemplateSection[];
+};
+
+type TemplateJson = {
+  name: string;
+  category: string;
+  status?: string;
+  source?: string;
   sections: TemplateSection[];
 };
 
@@ -148,33 +161,16 @@ function buildImportedReports(): Report[] {
   });
 }
 
-function sampleTemplateFromReport(reportType: string, category: string, moduleTargets: string[]): TemplateDefinition {
-  const examples = heavyConnectInventory.reports.filter((report) => report.report_type === reportType);
-  const questions = examples
-    .flatMap((example) => example.sample_fields)
-    .filter((field) => field.question && !["Report ID:", "Date & Time:", "Creator:", "Location:", "Coordinates:"].includes(field.question))
-    .slice(0, 18)
-    .map((field): Question => ({
-      label: cleanQuestionLabel(field.question),
-      type: ["Yes", "No", "N/A"].includes(field.answer) ? "yes_no_na" : "short_text",
-      required: false,
-    }));
-
+function templateFromJson(template: TemplateJson, key: string, status: TemplateDefinition["status"], source: string, moduleTargets: string[]): TemplateDefinition {
   return {
-    key: reportType.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
-    code: normalizeCode(reportType),
-    name: reportType,
-    category,
-    status: "inferred",
-    source: "Inferred from downloaded 2025 HeavyConnect report PDF. Exact live template capture still recommended.",
+    key,
+    code: normalizeCode(template.name),
+    name: template.name,
+    category: template.category,
+    status,
+    source,
     moduleTargets,
-    lastExample: examples[0]?.source_file,
-    sections: [
-      {
-        title: "Imported report fields",
-        questions: questions.length ? questions : [{ label: "Template fields not extracted from sample PDF yet.", type: "instruction" }],
-      },
-    ],
+    sections: template.sections,
   };
 }
 
@@ -210,10 +206,10 @@ function buildTemplates(): TemplateDefinition[] {
       moduleTargets: ["Module 5 Facility"],
       sections: r006Template.sections,
     },
-    sampleTemplateFromReport("R022 Risk Assessment", "Field", ["Module 2 Farm"]),
-    sampleTemplateFromReport("R024 Field Buffer Log", "Field", ["Module 2 Farm"]),
-    sampleTemplateFromReport("Daily Sanitation Log", "Harvest / Warehouse", ["Module 4 Harvest Crew", "Module 5 Facility"]),
-    sampleTemplateFromReport("FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting", "Health & Safety", ["Module 1 FSMS", "Module 6 HACCP"]),
+    templateFromJson(r022Template, "r022-risk-assessment", "partial", "PDF-captured from completed report; live builder confirmed report_type=517 and first dropdown options.", ["Module 2 Farm"]),
+    templateFromJson(r024Template, "r024-field-buffer-log", "partial", "PDF-captured from completed report; live dropdown/options confirmation still recommended.", ["Module 2 Farm"]),
+    templateFromJson(dailySanitationTemplate, "daily-sanitation-log", "partial", "PDF-captured from field/warehouse completed reports; live dropdown/options confirmation still recommended.", ["Module 4 Harvest Crew", "Module 5 Facility"]),
+    templateFromJson(freshTemplate, "fresh-committee-meeting", "partial", "PDF-captured from completed FRESH committee report; attendance controls still need live confirmation.", ["Module 1 FSMS", "Module 6 HACCP"]),
   ];
 }
 
@@ -441,6 +437,7 @@ function PrimusStandardView() {
   const totalPoints = modules.reduce((sum, module) => sum + module.scored_points, 0);
   const importedReports = heavyConnectInventory.report_count;
   const importedReportTypes = heavyConnectInventory.report_type_count;
+  const selfAuditQuestionCount = heavyConnectSelfAudit32.modules.reduce((sum, module) => sum + module.question_count, 0);
   const moduleEvidence = new Map(heavyConnectInventory.primus_v4_module_evidence.map((item) => [item.module_key, item]));
   const recommendedModules = new Set(["module-1-fsms", "module-2-farm", "module-4-harvest-crew", "module-5-facility", "module-6-haccp"]);
   const bayBabyEvidence = heavyConnectInventory.expected_bay_baby_report_status;
@@ -457,6 +454,7 @@ function PrimusStandardView() {
         <span>{totalQuestions} questions</span>
         <span>{totalPoints.toLocaleString()} scored points</span>
         <span>{importedReports} HeavyConnect PDFs imported</span>
+        <span>{selfAuditQuestionCount} HC self-audit questions captured</span>
       </div>
     </section>
 
@@ -489,7 +487,8 @@ function PrimusStandardView() {
       <section className="gap-panel">
         <div className="section-heading"><h2>Next gaps to close</h2><span>Before packet generation</span></div>
         <div className="gap-row"><CheckCircle weight="duotone" /><div><strong>HeavyConnect evidence import complete</strong><span>{importedReports} PDFs from Jan 1, 2025 to Jan 1, 2026 are indexed and ready for mapping.</span></div></div>
-        <div className="gap-row warning"><WarningCircle weight="fill" /><div><strong>Crosswalk v3.2 self-audit to v4.0</strong><span>HeavyConnect self audit may still be v3.2, so the next build step is a translation layer to v4.0 question IDs.</span></div></div>
+        <div className="gap-row"><CheckCircle weight="duotone" /><div><strong>HeavyConnect self-audit captured</strong><span>{selfAuditQuestionCount} Primus GFS 3.2 questions captured from HeavyConnect for comparison.</span></div></div>
+        <div className="gap-row warning"><WarningCircle weight="fill" /><div><strong>Crosswalk v3.2 self-audit to v4.0</strong><span>Now map HeavyConnect's v3.2 question IDs to PrimusGFS v4.0 so the cleaner Bay Baby packet remains auditor-friendly.</span></div></div>
         <div className="gap-row"><FilePdf weight="duotone" /><div><strong>Generate question-level packet index</strong><span>Use the imported report examples to attach evidence to specific PrimusGFS v4.0 questions.</span></div></div>
       </section>
     </div>

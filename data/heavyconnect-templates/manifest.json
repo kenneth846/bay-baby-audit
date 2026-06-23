@@ -1,6 +1,6 @@
 {
   "source": "HeavyConnect authenticated Bay Baby Produce workspace",
-  "verified_on": "2026-06-22",
+  "verified_on": "2026-06-23",
   "verification": {
     "recent_summary_report_types": [
       "R001 Field Activity Log",
@@ -16,12 +16,16 @@
     "note": "The six summary types have reports in the visible HeavyConnect reporting period. R022 is available in the active Field template library but does not appear in the current summary period."
   },
   "templates": [
-    { "name": "Daily Sanitation Log", "category": "Harvest", "status": "pending" },
-    { "name": "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting", "category": "Health & Safety", "status": "pending" },
+    { "name": "Daily Sanitation Log", "category": "Harvest / Warehouse", "status": "pdf_captured", "source_file": "daily-sanitation-log.json" },
+    { "name": "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting", "category": "Health & Safety", "status": "pdf_captured", "source_file": "fresh-committee-meeting.json" },
     { "name": "R001 Field Activity Log", "category": "Field", "status": "in_progress", "heavyconnect_report_type_id": 117 },
     { "name": "R004 Tractor Inspection", "category": "Field", "status": "captured", "heavyconnect_report_type_id": 294 },
     { "name": "R006 Daily Sanitation Log", "category": "Field", "status": "captured", "heavyconnect_report_type_id": 128 },
-    { "name": "R022 Risk Assessment", "category": "Field", "status": "pending" },
-    { "name": "R024 Field Buffer Log", "category": "Field", "status": "pending" }
+    { "name": "R022 Risk Assessment", "category": "Field", "status": "pdf_captured_live_started", "heavyconnect_report_type_id": 517, "source_file": "r022-risk-assessment.json" },
+    { "name": "R024 Field Buffer Log", "category": "Field", "status": "pdf_captured", "source_file": "r024-field-buffer-log.json" }
+  ],
+  "remaining_template_gaps": [
+    "Live HeavyConnect confirmation of all dropdown option lists for R022, Daily Sanitation Log, FRESH, and R024.",
+    "R001 dropdown option lists are still partially pending."
   ]
 }

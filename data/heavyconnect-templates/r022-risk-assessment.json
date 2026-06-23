@@ -1,0 +1,82 @@
+{
+  "name": "R022 Risk Assessment",
+  "category": "Field",
+  "heavyconnect_report_type_id": 517,
+  "status": "pdf_captured_live_started",
+  "source": "Question list transcribed from completed HeavyConnect PDF download6.pdf. Live HeavyConnect builder confirmed report_type=517 and first dropdown options.",
+  "location_fields": ["Region", "Site", "Location"],
+  "details_max_length": 950,
+  "sections": [
+    {
+      "title": "Inspection Record",
+      "questions": [
+        {
+          "label": "Why are you conducting this risk assessment?",
+          "type": "single_select",
+          "required": true,
+          "options": ["All", "Annual pre-planting inspection", "Growing area land change", "Adjacent land use change"],
+          "archived_for_future_reports": true
+        },
+        { "label": "Planned Use", "type": "single_select", "required": true, "options": ["Conventional Crops"], "options_status": "partial_from_pdf", "archived_for_future_reports": true }
+      ]
+    },
+    {
+      "title": "Ground History",
+      "questions": [
+        { "label": "Was the growing area used for growing food crops last season?", "type": "yes_no", "required": false },
+        { "label": "What food crops were produced in the last season?", "type": "short_text", "required": false },
+        { "label": "Has the growing area been used for any non-agricultural purposes?", "type": "yes_no", "required": false },
+        { "label": "Has the growing area been used for animal husbandry or grazing land for animals in the last 12 months?", "type": "yes_no", "required": false },
+        { "label": "Has flooding from uncontrolled causes occurred on the growing area since the previous growth cycle?", "type": "yes_no", "required": false },
+        { "label": "In the previous 60 days have any soil amendments or pesticides been applied to the growing area?", "type": "yes_no", "required": false }
+      ]
+    },
+    {
+      "title": "Adjacent Land",
+      "questions": [
+        { "label": "Is the adjacent land to the growing area a possible source of contamination from intensive livestock production (e.g., feed lots, dairy operations, poultry houses, meat rendering operation)?", "type": "yes_no", "required": false },
+        { "label": "Is there evidence of domestic animals and/or wild animals (includes homes with hobby farms, and non-commercial livestock) in proximity to the growing operation?", "type": "yes_no", "required": false },
+        { "label": "Are untreated animal manure piles, compost, biosolids, or non-synthetic amendment stored and/or applied on adjacent land?", "type": "yes_no", "required": false }
+      ]
+    },
+    {
+      "title": "Water Source",
+      "questions": [
+        { "label": "What is the intended primary water source for irrigation use?", "type": "single_select", "required": false, "options": ["Flowing surface water"], "options_status": "partial_from_pdf" },
+        { "label": "Is municipal or district water used in the growing operation?", "type": "yes_no", "required": false },
+        { "label": "Is well water used in the operation?", "type": "yes_no", "required": false },
+        { "label": "Is open flowing surface water used in the operation (e.g., rivers, canals, ditches, etc.)?", "type": "yes_no", "required": false },
+        { "label": "Is non-flowing surface water (e.g., ponds, reservoirs, watersheds, etc.) used in the operation?", "type": "yes_no", "required": false },
+        { "label": "Are there backflow prevention devices on all main lines?", "type": "yes_no", "required": false },
+        { "label": "If the operation stores water (tank, cistern, container), is the storage container well maintained?", "type": "yes_no", "required": false },
+        { "label": "Is there above ground access to the water source?", "type": "yes_no", "required": false },
+        { "label": "Does the water source and associated equipment appear to be damage and tamper free?", "type": "yes_no", "required": false },
+        { "label": "Is the water access (well head, pump house, etc.) covered and protected?", "type": "yes_no", "required": false },
+        { "label": "Are there signs of on-site or upstream animal intrusion in the water source? (i.e. livestock, domestic animals, wildlife)", "type": "yes_no", "required": false },
+        { "label": "What is the overall condition of the water source? (e.g. issues regarding well cap, well casing, seals, piping tanks, treatment equipment, cross connections, trash, animal presence, pooled water, etc.)", "type": "short_text", "required": false },
+        { "label": "If the overall condition is not good, please provide additional detail and attach a photo of the issue", "type": "short_text", "required": false }
+      ]
+    },
+    {
+      "title": "Additional Risks",
+      "questions": [
+        { "label": "Is the growing area situated in a higher risk location where contamination could occur from nearby operations or functions (e.g., leach fields, runoff or potential flooding from sewers, toilet systems, industrial facilities, labor camps, etc.)?", "type": "yes_no", "required": false },
+        { "label": "Are there any other potential risks in the adjacent land that could potentially lead to contamination of the growing area?", "type": "yes_no", "required": false },
+        { "label": "Is there evidence of human fecal matter in the adjacent land to the audited area?", "type": "yes_no", "required": false }
+      ]
+    },
+    {
+      "title": "Testing",
+      "questions": [
+        { "label": "Have soil tests been ordered/conducted to test for metals or other regulated contaminants?", "type": "yes_no", "required": false },
+        { "label": "Have you conducted a generic E. coli test on the water (taken from the closest practical point of use)?", "type": "yes_no", "required": false }
+      ]
+    },
+    {
+      "title": "Employee Name",
+      "questions": [
+        { "label": "Employee name of who reported these checks?", "type": "short_text", "required": false }
+      ]
+    }
+  ]
+}

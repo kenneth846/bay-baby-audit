@@ -1,0 +1,25 @@
+{
+  "name": "R024 Field Buffer Log",
+  "category": "Field",
+  "status": "pdf_captured",
+  "source": "Question list transcribed from completed HeavyConnect PDF download4.pdf.",
+  "location_fields": ["Region", "Site", "Location"],
+  "details_max_length": 950,
+  "sections": [
+    {
+      "title": "Field Activities",
+      "questions": [
+        { "label": "Buffer Location", "type": "short_text", "required": false },
+        { "label": "Buffer Specifications (Width, Length, Type)", "type": "short_text", "required": false },
+        { "label": "Maintenance Activities", "type": "short_text", "required": false },
+        { "label": "Contamination Checks", "type": "short_text", "required": false }
+      ]
+    },
+    {
+      "title": "Employee Name",
+      "questions": [
+        { "label": "Employee name of who reported these checks?", "type": "short_text", "required": false }
+      ]
+    }
+  ]
+}

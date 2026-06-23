@@ -1,0 +1,59 @@
+{
+  "name": "Daily Sanitation Log",
+  "category": "Harvest / Warehouse",
+  "status": "pdf_captured",
+  "source": "Question list combined from completed HeavyConnect PDFs download30.pdf and download31.pdf to cover field/harvest and warehouse variants.",
+  "location_fields": ["Region", "Site", "Location"],
+  "details_max_length": 950,
+  "sections": [
+    {
+      "title": "General Cleaning",
+      "questions": [
+        { "label": "Have all surfaces been cleaned and sanitized?", "type": "yes_no", "required": false },
+        { "label": "Have the walls, shelves and storage areas been cleaned and sanitized?", "type": "yes_no", "required": false },
+        { "label": "Have the sinks been cleaned and sanitized?", "type": "yes_no", "required": false },
+        { "label": "Have the floors been swept and if needed properly mopped?", "type": "yes_no", "required": false },
+        { "label": "Has all trash and litter been removed?", "type": "yes_no", "required": false },
+        { "label": "Are all trash cans properly lined and covered?", "type": "yes_no", "required": false },
+        { "label": "Have all drains been cleaned?", "type": "yes_no", "required": false }
+      ]
+    },
+    {
+      "title": "Harvest Tools",
+      "questions": [
+        { "label": "Were all harvest tools (clippers, loppers) collected at the end of shift for cleaning and sanitation?", "type": "yes_no", "required": false },
+        { "label": "Are all collected tools free from visible signs of damage, rust and chips?", "type": "yes_no", "required": false },
+        { "label": "Were all hand tools cleaned and sanitized following the proper procedure?", "type": "yes_no", "required": false }
+      ]
+    },
+    {
+      "title": "Supplies Stocked",
+      "questions": [
+        { "label": "Hand Soap", "type": "yes_no", "required": false },
+        { "label": "Hand Sanitizer", "type": "yes_no", "required": false },
+        { "label": "Hand Towels", "type": "yes_no", "required": false },
+        { "label": "Toilet Paper", "type": "yes_no", "required": false }
+      ]
+    },
+    {
+      "title": "Maintenance",
+      "questions": [
+        { "label": "Do all doors and latches work properly?", "type": "yes_no", "required": false },
+        { "label": "Is maintenance service required?", "type": "yes_no", "required": false }
+      ]
+    },
+    {
+      "title": "Warehouse Equipment",
+      "questions": [
+        { "label": "Have the Piano Key (sizer/sorter) 1 & 2 been cleaned and sanitized?", "type": "yes_no_na", "required": false },
+        { "label": "Have the Wash Tank 1 & 2 been cleaned and sanitized?", "type": "yes_no_na", "required": false }
+      ]
+    },
+    {
+      "title": "Employee Name",
+      "questions": [
+        { "label": "Employee name of who reported these checks?", "type": "short_text", "required": false }
+      ]
+    }
+  ]
+}

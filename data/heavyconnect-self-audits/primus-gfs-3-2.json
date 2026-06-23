@@ -1,0 +1,1174 @@
+{
+  "id": "heavyconnect-primus-gfs-3-2-self-audit",
+  "name": "Primus GFS 3.2 Self Audit",
+  "source": {
+    "system": "HeavyConnect",
+    "url": "https://dashboard.heavyconnect.com/#/dashboard/self-audits/module?module_type=46&report_id=5232&report_type=378",
+    "module_type": 46,
+    "report_id": 5232,
+    "report_type": 378,
+    "captured_on": "2026-06-23",
+    "capture_method": "logged-in browser read-only section sweep",
+    "note": "Captured question text only from an existing HeavyConnect self-audit draft. No answers were entered and no report was submitted."
+  },
+  "status": "browser_captured",
+  "response_options_observed": [
+    "YES",
+    "NO",
+    "N/A"
+  ],
+  "modules": [
+    {
+      "module": "1",
+      "question_count": 32,
+      "questions": [
+        {
+          "archived_for_future_reports": true,
+          "code": "1.01.01",
+          "required": true,
+          "text": "Is there a documented food safety policy detailing the company’s commitment to food safety?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.01.02",
+          "required": true,
+          "text": "Is there an organizational chart showing all management and workers who are involved in food safety related activities and documentation (job descriptions) detailing their food safety responsibilities?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.01.03",
+          "required": true,
+          "text": "Is there a food safety committee and are there logs of food safety meetings with topics covered and attendees?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.01.04",
+          "required": true,
+          "text": "Is there a training management system in place that shows what types of training are required for various job roles of specific workers, including who has been trained, when they were trained, which trainings they still need to take, and a training schedule?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.01.05",
+          "required": true,
+          "text": "Is there documented management verification review of the entire food safety management system at least every 12 months, including an evaluation of resources, and are there records of changes made?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.01.06",
+          "required": true,
+          "text": "Where specific industry guidelines or best practices exist for the crop and/or product, does the operation have a current copy of the document?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.02.01",
+          "required": true,
+          "text": "Is there a written document control procedure (including document control register/record) describing how documents will be maintained, updated and replaced?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.02.02",
+          "required": true,
+          "text": "Is there a documented and implemented procedure that requires all records to be stored for a minimum period of 24 months (or greater if legally required) or for at least the shelf life of the product if it is greater than 24 months?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.02.03",
+          "required": true,
+          "text": "Are both paper and electronic food safety related documents and records created, edited, stored and handled in a secure manner?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.02.04",
+          "required": true,
+          "text": "Are records maintained in an organized and retrievable manner?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.02.05",
+          "required": true,
+          "text": "Are all records and test results that can have an impact on the food safety program verified by a qualified person independent of the individual(s) completing the records?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.03.01",
+          "required": true,
+          "text": "Is there a written and standardized procedure for creating Standard Operating Procedures (SOPs) and their content?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.03.02",
+          "required": true,
+          "text": "Are the written procedures available to relevant users and is a master copy maintained in a central file?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.03.03",
+          "required": true,
+          "text": "Is there a documented corrective action procedure that describes the basic requirements for handling all nonconformances affecting food safety?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.03.04",
+          "required": true,
+          "text": "Is there an incident reporting system, also known as a Notice(s) of Unusual Occurrence and Corrective Actions Log (NUOCA) ?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.04.01",
+          "required": true,
+          "text": "Is there a documented procedure for how internal audits are to be performed at the operations, including frequency and covering all processes impacting food safety and the related documents and records?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.04.02",
+          "required": true,
+          "text": "Are there written procedures for handling regulatory inspections?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.04.03",
+          "required": true,
+          "text": "Are there records of regulatory inspections and/or contracted inspections, company responses and corrective actions, if any?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.04.04",
+          "required": true,
+          "text": "Are there documented calibration and/or accuracy verification procedures for measuring and monitoring devices used in the operations that are related to the safety of the product?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.04.05",
+          "required": true,
+          "text": "Are calibration and/or accuracy verification records maintained and are they consistent with the requirements outlined in the SOP(s) for instruments and measuring devices requiring calibration?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.05.01",
+          "required": true,
+          "text": "Is there a documented product release procedure available?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.05.02",
+          "required": true,
+          "text": "Are there records of the handling of on hold and rejected items kept on file?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.05.03",
+          "required": true,
+          "text": "Is there a documented procedure for handling on hold and rejected items?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.05.04",
+          "required": true,
+          "text": "Are there records of the handling of on hold and rejected items kept on file?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.05.05",
+          "required": true,
+          "text": "Is there a documented procedure for dealing with customer and buyer food safety complaints/feedback along with records and company responses, including corrective actions?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.06.01",
+          "required": true,
+          "text": "Is there a written procedure detailing how suppliers and service providers are evaluated, approved, and include the ongoing verification activities including monitoring? Note that supply chain preventive controls and supplychain-applied controls are also mentioned in Module 7."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.06.02",
+          "required": true,
+          "text": "Is there a list of approved suppliers and service providers including justification for use of any emergency (temporary) suppliers or providers?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.06.03",
+          "required": true,
+          "text": "Are there current written food safety related specifications for all incoming products, ingredients, materials (including primary packaging), services provided on-site, and outsourced services?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.06.04",
+          "required": true,
+          "text": "Does the organization have documented evidence to ensure that all incoming products, ingredients, materials, services provided onsite and outsourced service suppliers comply with the approval requirements and that all supplier verification activities (including monitoring) are being followed, as defined in the supplier approval procedure?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.06.05",
+          "required": true,
+          "text": "Where food safety related testing is being performed by external laboratory service providers, are these licensed and/or accredited laboratories (e.g., ISO 17025 or equivalent, national and local regulations, etc.)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.07.01",
+          "required": true,
+          "text": "Is there is a document that indicates how the company product tracking system works, thereby enabling trace back and trace forward to occur in the event of a potential recall issue?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "1.07.02",
+          "required": true,
+          "text": "Does the organization have a documented recall program including procedures, recall team roles and contact details, external contact listings, requirement for recall effectiveness checks, explanation of different recall classes and handling of recalled product?"
+        }
+      ]
+    },
+    {
+      "module": "2",
+      "question_count": 22,
+      "questions": [
+        {
+          "archived_for_future_reports": true,
+          "code": "2.01.01",
+          "required": true,
+          "text": "Is there a designated person responsible for the operation's food safety program?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.01.02",
+          "required": true,
+          "text": "If the operation is growing under organic principles, is there written documentation of current certification by an accredited organic certification organization? Informacion Gathering Question."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.01.03",
+          "required": true,
+          "text": "Does the operation have a written food safety hygiene and health policy covering at least worker and visitor hygiene and health, infants and toddlers, animal presence in growing and storage areas, fecal matter, dropped product, blood and bodily fluids?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.01",
+          "required": true,
+          "text": "Is there a map that accurately shows all aspects of the operation, including water sources and fixtures used to deliver water used in the operation?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.02",
+          "required": true,
+          "text": "Are growing areas adequately identified or coded to enable trace back and trace forward in the event of a recall?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.03",
+          "required": true,
+          "text": "If any risk is identified, have corrective actions and/or preventative measures been documented and implemented?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.04",
+          "required": true,
+          "text": "Are the necessary food defense controls implemented in the operation?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.05",
+          "required": true,
+          "text": "Is the exterior area immediately outside the growing area, including roads, yards and parking areas, free of litter, weeds and standing water?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.06",
+          "required": true,
+          "text": "Are control measures being implemented for the outside storage of equipment, pallets, tires, etc. (i.e. out of the mud, stacked to prevent pest harborage, away from the growing area)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.07",
+          "required": true,
+          "text": "Are garbage receptacles and dumpsters kept covered or closed?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.08",
+          "required": true,
+          "text": "Where soil, substrates or fertilizer (e.g., compost) are stored or handled, are measures in place to ensure seepage and runoff is collected or diverted and does not reach growing areas, product, or any of the water sources? A ZERO POINT DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.09",
+          "required": true,
+          "text": "Where there are fill stations for fuel or pesticides, is it evident that the location and/or use is not a risk of contamination to the product, water sources, growing areas, equipment, packaging materials, etc.?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.10",
+          "required": true,
+          "text": "Is the audited area free from animal presence and/or animal activity (wild or domestic)? If Total Compliance, go to 2.02.11."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.11",
+          "required": true,
+          "text": "Is the audited area free from any evidence of human fecal matter?ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.02.12",
+          "required": true,
+          "text": "Is the audited area free of evidence of infants and toddlers?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.03.01",
+          "required": true,
+          "text": "Were growing area(s) used for growing food crops for human consumption last season?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.03.02",
+          "required": true,
+          "text": "Has the growing area(s) been used for any non-agricultural functions? If No, go to 2.03.03."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.03.03",
+          "required": true,
+          "text": "Has the growing area(s) been used for animal husbandry or grazing land for animals? If No, go to 2.03.04."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.03.04",
+          "required": true,
+          "text": "Has flooding from uncontrolled causes occurred on the growing area(s) since the previous growth cycle? If No, go to 2.03.05."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.04.01",
+          "required": true,
+          "text": "Is the adjacent land to the growing area a possible source of contamination from intensive livestock production (e.g., feed lots, dairy operations, poultry houses, meat rendering operation)? If No, go to 2.04.02."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.04.03",
+          "required": true,
+          "text": "Are untreated animal manure piles, compost, biosolids, or non-synthetic amendment stored and/or applied on adjacent land? If No, go to 2.04.04."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "2.04.04",
+          "required": true,
+          "text": "Is the growing area situated in a higher risk location where contamination could occur from nearby operations or functions (e.g., leach fields, runoff or potential flooding from sewers, toilet systems, industrial facilities, labor camps, etc.)? If No, go to 2.04.05."
+        }
+      ]
+    },
+    {
+      "module": "3",
+      "question_count": 29,
+      "questions": [
+        {
+          "archived_for_future_reports": true,
+          "code": "3.01.01",
+          "required": true,
+          "text": "Is there a designated person responsible for the operation’s food safety program?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.01.02",
+          "required": true,
+          "text": "If the operation is growing under organic principles, is there written documentation of current certification by an accredited organic certification organization?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.01.03",
+          "required": true,
+          "text": "Does the operation have a written food safety hygiene and health policy covering at least worker and visitor hygiene and health, infants and toddlers, animal presence in growing and storage areas, fecal matter, dropped product, blood and bodily fluids?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.01",
+          "required": true,
+          "text": "Is there a map that accurately shows all aspects of the operation, including water sources and fixtures used to deliver water used in the operation?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.02",
+          "required": true,
+          "text": "Are growing areas adequately identified or coded to enable trace back and trace forward in the event of a recall?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.03",
+          "required": true,
+          "text": "Has a documented risk assessment been conducted at least annually for the operation?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.04",
+          "required": true,
+          "text": "Are the necessary food defense controls implemented in the operation?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.05",
+          "required": true,
+          "text": "Is the exterior area immediately outside the facility, including roads, yards and parking areas, free of litter, weeds and standing water?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.06",
+          "required": true,
+          "text": "Is any packaging stored outside, being stored protected?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.07",
+          "required": true,
+          "text": "Are control measures being implemented for the outside storage of equipment, pallets, tires etc. (i.e. out of the mud, stacked to prevent pest harborage, away from the building perimeter)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.08",
+          "required": true,
+          "text": "Is the area around the dumpster/cull truck/ trash area clean?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.09",
+          "required": true,
+          "text": "Are outside garbage receptacles and dumpsters kept covered or closed?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.11",
+          "required": true,
+          "text": "Where there are fill stations for fuel or pesticides, is it evident that the location and/or use is not a risk of contamination to the product, water sources, growing areas, equipment, packaging materials, etc.?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.12",
+          "required": true,
+          "text": "Is the audited area free from animal presence and/or animal activity (wild or domestic)? If Total Compliance, go to 3.02.13"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.13",
+          "required": true,
+          "text": "Is the audited area free from any evidence of human fecal matter? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.02.14",
+          "required": true,
+          "text": "Is the audited area free from evidence of infants or toddlers?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.01",
+          "required": true,
+          "text": "Is there a written policy prohibiting animals in the facility, including the growing areas and any packaging or equipment storage areas?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.02",
+          "required": true,
+          "text": "Is there an effective pest control program in place? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.03",
+          "required": true,
+          "text": "Is the pest control program properly documented, detailing the scope of the program, target pests and frequency of checks, including a copy of the contract with the extermination company (if used), Pest Control Operator license(s)/training (if baits are used), and insurance documents?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.04",
+          "required": true,
+          "text": "Is there a schematic drawing/plan of the facility (Indoor agriculture operation), showing numbered locations of all pest monitoring devices (e.g., rodent traps, bait stations, insect light traps, etc.) both inside and outside the facility?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.05",
+          "required": true,
+          "text": "Are service reports created for pest control checks detailing inspection records, application records, and corrective actions of issues noted (in-house and/or contract)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.06",
+          "required": true,
+          "text": "Are closed doors, and windows to the outside pest proof?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.07",
+          "required": true,
+          "text": "Is the area outside the facility free of evidence of pest activity?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.08",
+          "required": true,
+          "text": "Are pest control devices located away from exposed raw materials (e.g., seeds, transplants, soil, media), finished goods and packaging, and poisonous bait stations are not used within the facility?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.09",
+          "required": true,
+          "text": "Are pest control devices located away from exposed raw materials (e.g., seeds, transplants, soil, media), finished goods and packaging, and poisonous rodent bait traps are not used within the facility?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.10",
+          "required": true,
+          "text": "Are pest control devices maintained in a clean and intact condition and marked as monitored (or bar code scanned) on a regular basis?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.11",
+          "required": true,
+          "text": "Are interior and exterior building perimeter pest control devices adequate in number and location?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.03.12",
+          "required": true,
+          "text": "Are all pest control devices effective and bait stations secured?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "3.04.01",
+          "required": true,
+          "text": "Are there chemical inventory logs for chemicals, including pesticides, fertilizers and cleaning and sanitizing chemicals?"
+        }
+      ]
+    },
+    {
+      "module": "4",
+      "question_count": 23,
+      "questions": [
+        {
+          "archived_for_future_reports": true,
+          "code": "4.01.01",
+          "required": true,
+          "text": "Is there a designated person responsible for the operation's food safety program?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.01.02",
+          "required": true,
+          "text": "Does the operation have a written food safety hygiene and health policy covering at least worker and visitor hygiene and health, infants and toddlers, animal presence in growing and storage areas, fecal matter, dropped product, blood and bodily fluids?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.02.01",
+          "required": true,
+          "text": "Is there documented evidence of the internal audits performed, detailing findings and corrective actions?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.02.02",
+          "required": true,
+          "text": "Are there records of pre-harvest inspections and do they show that the current block (or coded area) is cleared for harvest?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.02.03",
+          "required": true,
+          "text": "Is there a pre-operation inspection log?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.03.01",
+          "required": true,
+          "text": "Is there a food safety hygiene training program covering new and existing workers and are there records of these training events?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.03.02",
+          "required": true,
+          "text": "Is there a documented training program with training logs for the sanitation workers, including best practices and chemical use details?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.03.03",
+          "required": true,
+          "text": "Are there written and communicated procedures in place that require food handlers to report any cuts or grazes and/or if they are suffering any illnesses that might be a contamination risk to the products being produced, and return to work requirements? (In countries with health privacy/confidentiality laws, e.g. USA, auditors can check procedure/policy but not the actual records)."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.03.04",
+          "required": true,
+          "text": "Are there worker food safety non-conformance records and associated corrective actions (including retraining records)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.01",
+          "required": true,
+          "text": "Are toilet facilities adequate in number and location? A ZERO POINT (NONCOMPLIANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.02",
+          "required": true,
+          "text": "Is hand washing signage posted appropriately?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.03",
+          "required": true,
+          "text": "Are hand washing stations adequate in number and appropriately located for worker access and monitoring usage? A ZERO POINT (NONCOMPLIANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.04",
+          "required": true,
+          "text": "Are total coliforms (TC) and generic E. coli tests conducted on the water used for hand washing at the required and/or expected frequency?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.05",
+          "required": true,
+          "text": "Are workers washing and sanitizing their hands before starting work each day, after using the restroom, after breaks, before putting on gloves and whenever hands may be contaminated?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.07",
+          "required": true,
+          "text": "Is it evident that corrective actions are taken when workers fail to comply with hand washing guidelines?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.08",
+          "required": true,
+          "text": "Are workers who are working directly or indirectly with food, free from evidence of boils, sores, open wounds and are not exhibiting signs of foodborne illness?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.09",
+          "required": true,
+          "text": "Is jewelry confined to a plain wedding band and watches, studs, false eyelashes, etc., are not worn?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.11",
+          "required": true,
+          "text": "Is smoking, eating, chewing and drinking confined to designated areas, and spitting is prohibited in all areas?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.12",
+          "required": true,
+          "text": "Are workers wearing effective hair nets that contain all hair?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.13",
+          "required": true,
+          "text": "Are all items removed from garment (shirt, blouse, etc.) top pockets, and unsecured items are not worn (e.g., pens, glasses on top of head, Bluetooth devices, etc.)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.14",
+          "required": true,
+          "text": "Are all workers wearing protective outer garments suitable for the operation (e.g. appropriate clean clothes, smocks, aprons, sleeves and non-latex gloves)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.15",
+          "required": true,
+          "text": "Do workers remove protective outer garments (e.g., smocks, aprons, sleeves and gloves) when on break, before using the toilets and when going home at the end of their shift?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "4.04.16",
+          "required": true,
+          "text": "Is fresh potable drinking water readily accessible to workers?"
+        }
+      ]
+    },
+    {
+      "module": "5",
+      "question_count": 37,
+      "questions": [
+        {
+          "archived_for_future_reports": true,
+          "code": "5.01.01",
+          "required": true,
+          "text": "Are all cleaning and maintenance chemicals (pesticides, sanitizers, detergents, lubricants, etc.) stored securely, safely and are they labeled correctly?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.01.02",
+          "required": true,
+          "text": "Are \"food grade\" and \"non-food grade\" chemicals used appropriately, according to the label and not commingled?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.01.03",
+          "required": true,
+          "text": "Are signs supporting GMPs posted appropriately?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.01.04",
+          "required": true,
+          "text": "Are the necessary food defense controls implemented in the operation?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.01",
+          "required": true,
+          "text": "Are products or ingredients free of pests (e.g. insects, rodents, birds, reptiles, mammals) or any evidence of them? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.02",
+          "required": true,
+          "text": "Are packaging supplies free of pests (e.g., insects, rodents,birds,reptiles,mammals) or any evidence of them? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.03",
+          "required": true,
+          "text": "Are plant and storage areas free of pest (e.g. insects, rodents, birds, reptiles, mammals) or any evidence of them?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.04",
+          "required": true,
+          "text": "Is the area outside the facility free of evidence of pest activity?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.05",
+          "required": true,
+          "text": "Is there an effective pest control program in place? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.06",
+          "required": true,
+          "text": "Are pest control devices located away from exposed raw materials, work-in-progress, ingredients (including water and ice), finished goods and packaging, and poisonous bait stations are not used within the facility?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.07",
+          "required": true,
+          "text": "Are pest control devices maintained in a clean and intact condition and marked as monitored (or bar code scanned) on a regular basis?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.08",
+          "required": true,
+          "text": "Are interior and exterior building perimeter pest control devices adequate in number and location?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.09",
+          "required": true,
+          "text": "Are all pest control devices identified by a number or other code (e.g. barcode) ?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.02.10",
+          "required": true,
+          "text": "Are all pest control devices effective and bait stations secured?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.03.01",
+          "required": true,
+          "text": "Does the facility layout ensure separation of ingredients (including ice), products, and packaging stored to prevent cross contamination (this includes iced product pallets stored above pallets of product without adequate protection as well as any allergen cross contamination issues)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.03.02",
+          "required": true,
+          "text": "Is the facility's use restricted to the storage of food products?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.03.04",
+          "required": true,
+          "text": "Are raw products, work in progress, ingredients (including water and ice), finished goods and food contact packaging within accepted tolerances for spoilage and free from adulteration? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.03.05",
+          "required": true,
+          "text": "Are all storage areas clean, especially the racking structures, lights, ceilings, floor areas by the walls and other hard to reach areas?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.03.06",
+          "required": true,
+          "text": "Are materials (commodities, packaging, ingredients, processing aids, work in progress, etc.) properly marked with rotation codes (receipt dates, manufacture dates, etc.)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.03.07",
+          "required": true,
+          "text": "Are materials (commodities, packaging, ingredients, processing aids, work in progress, etc.) rotated using FIFO policy?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.03.08",
+          "required": true,
+          "text": "Are storage areas at the appropriate temperatures for the specific products being stored?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.03.09",
+          "required": true,
+          "text": "Is any packaging being stored outside, being stored protected?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.01",
+          "required": true,
+          "text": "Does the process flow, facility layout, worker control, utensil control, internal vehicle use, etc. ensure that finished (processed) products are not contaminated by raw (unprocessed) products?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.02",
+          "required": true,
+          "text": "Are all exposed materials (product, packaging, etc.) protected from overhead contamination (e.g. ladders, motors, condensation, lubricants, walkways, loose panels, degrading insulation, etc.)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.03",
+          "required": true,
+          "text": "Are production areas clean and well maintained; especially lights, ducts, fans, floor areas by the walls and equipment, and other hard to reach areas?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.04",
+          "required": true,
+          "text": "Where facilities are not completely enclosed, are there measures in place to mitigate potential hazards?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.05",
+          "required": true,
+          "text": "Is all re-work / re-packaging handled correctly?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.06",
+          "required": true,
+          "text": "Are raw ingredients examined before use?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.07",
+          "required": true,
+          "text": "Are finished products coded (carton and unit packaging) for the day of production?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.08",
+          "required": true,
+          "text": "Are foreign material control methods (e.g. metal detectors, metal traps, magnets, visual inspection, x-ray machines, etc.) in place and regularly tested (where relevant) to ensure proper operation?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.09",
+          "required": true,
+          "text": "Does the facility use the appropriate test strips, test kits or test probes for verifying the concentrations of anti-microbial chemicals (product contact water, terminal sanitizers, dip stations, etc.) being used, are they in operational condition and are they being used correctly?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.10",
+          "required": true,
+          "text": "Are hand washing stations adequate in number and appropriately located for worker access and monitoring usage?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.11",
+          "required": true,
+          "text": "Are hand washing stations in working order, have water of suitable temperature and pressure, adequately stocked (e.g. disposable towels, unscented soap, etc.) and restricted to hand washing purposes only?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.12",
+          "required": true,
+          "text": "Are toilet facilities adequate in number and location and are they adequately stocked (e.g. toilet paper, disposable towels, unscented soap, etc.)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.13",
+          "required": true,
+          "text": "Are secondary hand sanitation stations adequate in number and location, and are the stations maintained properly?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.14",
+          "required": true,
+          "text": "Are foot baths, foamers or dry powdered sanitizing stations adequate in number and location, and are the stations maintained properly?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "5.04.15",
+          "required": true,
+          "text": "Are single service containers used for their intended purpose only so that potential cross contamination is prevented?"
+        }
+      ]
+    },
+    {
+      "module": "6",
+      "question_count": 20,
+      "questions": [
+        {
+          "archived_for_future_reports": true,
+          "code": "6.01.02",
+          "required": true,
+          "text": "Is there documented evidence that the HACCP team members have been trained on HACCP principles?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.01.03",
+          "required": true,
+          "text": "Does a product description exist for the products produced?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.01.04",
+          "required": true,
+          "text": "Has the process(es) been flow charted in sufficient detail to completely describe the process or product handling/processing steps?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.01.05",
+          "required": true,
+          "text": "Is there documented evidence that the flow chart(s) been verified on-site?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.01",
+          "required": true,
+          "text": "Has a documented hazard analysis for the processes been conducted, showing the various types of hazards, their likelihood of occurrence, their associated severity and their control measures? A ZERO POINT (NONCOMPLIANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.02",
+          "required": true,
+          "text": "Have CCP decisions been made with logical, documented justification and where CCPs are implemented in a specific processing step, have they been developed to control the identified hazard(s)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.03",
+          "required": true,
+          "text": "Is the HACCP system reviewed when significant changes are made and at least once every 12 months?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.04",
+          "required": true,
+          "text": "Tener procesamiento de puntos de control crítico (CCP) Se han identificado pasos que eliminan o reducen peligros para la seguridad alimentaria a un nivel aceptable? Recopilación de información. Si la respuesta es sí, continúe con la siguiente pregunta. Si la respuesta es NO, el resto del \"Módulo 6 HACCP\" no es aplicable."
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.06",
+          "required": true,
+          "text": "Have monitoring requirements and frequencies been determined and documented for the CCPs?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.07",
+          "required": true,
+          "text": "Have specific responsibilities been assigned for the monitoring, recording and corrective action implementation of each CCP?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.08",
+          "required": true,
+          "text": "Have standard operating procedures (SOPs) been created for the monitoring process(es) of the CCPs, which would include how to carry out the monitoring activities?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.09",
+          "required": true,
+          "text": "Have corrective action procedures been established for the CCPs, including a detailed action plan for operators to follow if the critical control limits are not met (loss of control/deviation) and plans to adjust the process back into control?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.10",
+          "required": true,
+          "text": "Have recording forms been developed for monitoring the CCPs?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.02.11",
+          "required": true,
+          "text": "Have verification plans and schedules been developed for each CCP?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.03.01",
+          "required": true,
+          "text": "Is there documented evidence that all plant workers have attended a HACCP training, including specific training for CCP operators?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.03.02",
+          "required": true,
+          "text": "Are the CCP monitoring activities and frequencies in compliance with the HACCP Plan and CCP SOPs?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.03.03",
+          "required": true,
+          "text": "Are the CCP monitoring activities and frequencies in compliance with the HACCP Plan and CCP SOPs?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.03.04",
+          "required": true,
+          "text": "Are CCP monitoring records signed off (or initialed) by the operator(s) who are carrying out and recording the CCP check?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.03.05",
+          "required": true,
+          "text": "Are the CCP records reviewed and signed off by the quality control supervisor and/or management (second signatory)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "6.03.06",
+          "required": true,
+          "text": "Is there a deviation record detailing documented corrective actions when a deviation/loss of control of a CCP occurs (a critical control limit is exceeded)?"
+        }
+      ]
+    },
+    {
+      "module": "7",
+      "question_count": 22,
+      "questions": [
+        {
+          "archived_for_future_reports": true,
+          "code": "7.01.01",
+          "required": true,
+          "text": "Is there a team responsible for the preventive control program at the operation, with a leader assigned, if applicable, for the development, implementation and on-going maintenance of the preventive control program?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.01.02",
+          "required": true,
+          "text": "Is there documented evidence that the preventive control team members have been trained on preventive control program development?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.01.03",
+          "required": true,
+          "text": "Does a product description exist for the products produced?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.01.04",
+          "required": true,
+          "text": "Has the process(es) been flow charted in sufficient detail to completely describe the process or product handling/processing steps?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.01.05",
+          "required": true,
+          "text": "Is there documented evidence that the flow chart(s) has been verified on-site?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.01",
+          "required": true,
+          "text": "Has a documented hazard analysis for each product been conducted, showing the various types of hazards, their likelihood of occurrence, their associated severity and their control measures?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.02",
+          "required": true,
+          "text": "Where risk-based preventive controls are identified, have they been developed using plans and/or procedures to control identified hazard(s) are they appropriate and consistent with current scientific understanding?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.03",
+          "required": true,
+          "text": "Is the preventive control program (as part of the Preventive Control Plan re-analysis) reviewed when significant changes are made (raw materials, packaging, suppliers, product, process, construction, recurring deviations, new scientific information, etc.) and at least once every 3 years?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.04",
+          "required": true,
+          "text": "Do the process preventive controls have critical limits, supported by relevant validation documentation, and do other preventive controls have parameters, values and targets (where relevant)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.05",
+          "required": true,
+          "text": "Have monitoring requirements and frequencies been determined and documented for the preventive controls?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.06",
+          "required": true,
+          "text": "Are there documents that show validation work for the process preventive controls and was this validation work performed by or overseen by a Preventive Control Qualified Individual?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.07",
+          "required": true,
+          "text": "Do the preventive control plans, charts and/or procedures indicate that specific responsibilities have been assigned for the monitoring, recording and corrective action implementation?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.08",
+          "required": true,
+          "text": "Have standard operating procedures (SOPs) been created for the monitoring process(es) of the preventive controls, including those in plan or chart format (e.g., process preventive controls)?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.09",
+          "required": true,
+          "text": "Have corrective action procedures been established for the preventive controls, including a detailed action plan for operators to follow if out of specification situations are observed (loss of control/deviation) and plans to adjust process back into control?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.10",
+          "required": true,
+          "text": "Have recording forms been developed for monitoring the preventive controls?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.02.11",
+          "required": true,
+          "text": "Have verification procedures and schedules been developed for the preventive controls?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.03.01",
+          "required": true,
+          "text": "Is there documented evidence that all plant workers have attended a preventive control training, including specific training for workers directly involved with preventive controls?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.03.02",
+          "required": true,
+          "text": "Are the preventive control monitoring activities and frequencies in compliance with the preventive control plans, charts, and procedures?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.03.03",
+          "required": true,
+          "text": "Do workers directly involved with preventive control operations understand basic preventive control principles and their role in monitoring preventive controls?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.03.04",
+          "required": true,
+          "text": "Are preventive control associated records signed off (or initialed) by the workers who are carrying out and recording the preventive control activities?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.03.05",
+          "required": true,
+          "text": "Is there a deviation record detailing documented corrective actions when a deviation or deficiency of a preventive control occurs?"
+        },
+        {
+          "archived_for_future_reports": true,
+          "code": "7.03.06",
+          "required": true,
+          "text": "Are the records associated with preventive controls reviewed and signed off bya preventive controls qualified individual or trained designate(second signatory)?"
+        }
+      ]
+    }
+  ]
+}

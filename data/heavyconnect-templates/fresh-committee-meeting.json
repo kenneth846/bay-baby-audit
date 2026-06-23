@@ -1,0 +1,32 @@
+{
+  "name": "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting",
+  "category": "Health & Safety",
+  "status": "pdf_captured",
+  "source": "Question list transcribed from completed HeavyConnect PDF download24.pdf.",
+  "header": [
+    { "label": "Crews", "type": "multi_select", "required": false },
+    { "label": "Employees Attending Meeting", "type": "people_list", "required": false },
+    { "label": "Other Employees Attending", "type": "short_text", "required": false }
+  ],
+  "sections": [
+    {
+      "title": "Agenda",
+      "questions": [
+        { "label": "PRIMUS Audit Update", "type": "yes_no", "required": false },
+        { "label": "EFI / SMETA Audit Update", "type": "yes_no", "required": false },
+        { "label": "People Safety Incidents since last meeting", "type": "short_text", "required": false },
+        { "label": "Food Safety Incidents since last meeting", "type": "short_text", "required": false },
+        { "label": "Operations Process Changes since last meeting", "type": "short_text", "required": false },
+        { "label": "Site Inspections since last meeting", "type": "short_text", "required": false },
+        { "label": "Emergencies since last meeting", "type": "short_text", "required": false },
+        { "label": "Other Items Discussed:", "type": "long_text", "required": false }
+      ]
+    },
+    {
+      "title": "Attendees",
+      "questions": [
+        { "label": "Employee attendance list", "type": "people_list", "required": false }
+      ]
+    }
+  ]
+}
