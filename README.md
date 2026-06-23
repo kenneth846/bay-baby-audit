@@ -9,11 +9,11 @@ A simpler inspection and Primus audit-preparation application for Bay Baby Produ
 - Manager review and corrective-action workflow
 - Four-step Audit Generator with readiness validation and server-generated PDF download
 - PrimusGFS v4.0 standard view with module readiness and evidence mapping
-- HeavyConnect Primus GFS 3.2 self-audit capture plus a draft v3.2-to-v4.0 crosswalk
+- Legacy self-audit capture plus a draft question crosswalk to PrimusGFS v4.0
 - Scalable Supabase schema for dynamic report templates, questions, attachments, reviews, and audit packets
 - Seed locations and initial R001, R004, and R006 report types
-- HeavyConnect transcription ledger under `data/heavyconnect-templates`
-- HeavyConnect completed-report evidence import under `data/heavyconnect-reports`
+- Bay Baby template ledger under `data/heavyconnect-templates`
+- Bay Baby historical report evidence import under `data/heavyconnect-reports`
 - PrimusGFS v4.0 extracted module index under `data/primusgfs/v4`
 
 ## Local setup
@@ -43,13 +43,13 @@ Bay Baby Audit treats PrimusGFS v4.0 as the audit-standard backbone. The extract
 
 Likely Bay Baby scope is Modules 1, 2, 4, 5, and 6. Module 3, Indoor Agriculture, is kept available but marked optional/confirm until the actual audit scope requires it.
 
-HeavyConnect reports should be mapped as evidence against PrimusGFS v4.0 question IDs. HeavyConnect's v3.2 self-audit templates are not the source of truth; they are now captured under `data/heavyconnect-self-audits` and draft-mapped to v4.0 under `data/primusgfs/crosswalks/v3-2-to-v4-0.json`.
+Bay Baby reports should be mapped as evidence against PrimusGFS v4.0 question IDs. Legacy self-audit templates are not the source of truth; they are captured under `data/heavyconnect-self-audits` and draft-mapped to v4.0 under `data/primusgfs/crosswalks/v3-2-to-v4-0.json`.
 
-## HeavyConnect evidence import
+## Historical evidence import
 
-Completed HeavyConnect report PDFs were downloaded locally for January 1, 2025 through January 1, 2026 and indexed into `data/heavyconnect-reports/inventory.json`.
+Completed historical report PDFs were imported locally for January 1, 2025 through January 1, 2026 and indexed into `data/heavyconnect-reports/inventory.json`.
 
-The original PDFs remain local at `C:/Users/kenneth/Desktop/heavyconnectreports/` and are not committed. The committed import includes metadata, report type grouping, bounded field samples, evidence tags, and a first-pass map to PrimusGFS v4.0 modules.
+The original PDFs remain local and are not committed. The committed import includes metadata, report type grouping, bounded field samples, evidence tags, and a first-pass map to PrimusGFS v4.0 modules.
 
 The seven core Bay Baby report types are all represented in the import:
 
@@ -63,13 +63,13 @@ The seven core Bay Baby report types are all represented in the import:
 
 ## Current production-readiness pass
 
-The app now avoids the earlier demo-only report flow. `Start Report` opens a template picker first, then renders a data-driven report form based on captured HeavyConnect template fields or completed-report examples. The Inspector list is also populated from the imported HeavyConnect evidence inventory instead of hardcoded tractor/sanitation examples.
+The app now avoids the earlier demo-only report flow. `Start Report` opens a template picker first, then renders a data-driven report form based on Bay Baby template fields or completed-report examples. The Inspector list is also populated from the imported historical evidence inventory instead of hardcoded tractor/sanitation examples.
 
 Captured templates render from `data/heavyconnect-templates`. Remaining live dropdown/multi-select option gaps are tracked in `data/heavyconnect-templates/live-capture-gaps.json` and should not be guessed.
 
-## HeavyConnect template migration
+## Template migration
 
-The active-template verification found six report types with activity in HeavyConnect's visible summary period:
+The active-template verification found six report types with activity in the visible summary period:
 
 - R001 Field Activity Log
 - R004 Tractor Inspection
@@ -80,7 +80,7 @@ The active-template verification found six report types with activity in HeavyCo
 
 R022 Risk Assessment is available in the active Field template library but did not appear in that recent summary period.
 
-Structured captures now exist for all seven core Bay Baby templates using a mix of live HeavyConnect capture and completed-report PDFs. The remaining work is exact live option capture for dropdowns/multi-select controls listed in `live-capture-gaps.json`.
+Structured captures now exist for all seven core Bay Baby templates using a mix of live option capture and completed-report PDFs. The remaining work is exact live option capture for dropdowns/multi-select controls listed in `live-capture-gaps.json`.
 
 ## Deployment
 

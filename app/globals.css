@@ -82,7 +82,7 @@ main { min-width: 0; }
 .status.review { color: #be4a0f; background: #fff1e8; }.status.review i { background: var(--orange); }
 .status.action { color: #b7161e; background: #ffeded; }.status.action i { background: var(--red); }
 .status.approved { color: #236138; background: #edf5ed; }.status.approved i { background: var(--green); }
-.status.draft { color: #565e5b; background: #f0f1ef; }.status.draft i { background: #69716e; }
+.status.submitted { color: #245869; background: #eaf6fa; }.status.submitted i { background: #2e7b91; }
 .row-action { height: 34px; background: white; color: #15552c; border: 1px solid #3e7c50; border-radius: 4px; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; }
 .row-action:hover { background: #edf5ed; }
 .empty { min-height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--muted); gap: 8px; }
@@ -147,9 +147,14 @@ main { min-width: 0; }
 .template-table p, .template-table small { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
 .template-table span { color: var(--green); font-size: 11px; text-transform: uppercase; letter-spacing: .9px; font-weight: 800; }
 .capture { justify-self: end; border-radius: 999px; padding: 6px 10px; font-size: 11px; text-transform: capitalize; }
+.capture.ready { color: var(--green); background: var(--pale-green); }
+.capture.needs_options_review { color: #995807; background: #fff4df; }
 .capture.captured { color: var(--green); background: var(--pale-green); }
 .capture.partial { color: #995807; background: #fff4df; }
 .capture.inferred { color: #59625e; background: #eef0ed; }
+.management-table article { grid-template-columns: 48px 1fr auto; }
+.table-avatar { width: 42px; height: 42px; }
+.small-score strong { font-size: 36px; }
 .start-flow .modal-heading { padding-right: 40px; }
 .real-stepper { justify-content: flex-start; }
 .template-search { height: 44px; border: 1px solid #d8ddd9; border-radius: 7px; display: flex; align-items: center; gap: 9px; padding: 0 12px; margin: 22px 0 14px; }

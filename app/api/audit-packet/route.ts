@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     ["Still in review", "6"],
     ["Needs attention", "2"],
     ["Readiness", "78%"],
-    ["v3.2-to-v4.0 strong matches", String(crosswalkSummary.strong_candidate ?? 0)],
+    ["Legacy question matches", String(crosswalkSummary.strong_candidate ?? 0)],
     ["Manual crosswalk review", `${crosswalkSummary.needs_manual_mapping ?? 0} questions`],
   ];
 
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
   }
 
   page.drawText("Packet sections", { x: 52, y: 210, size: 15, font: bold });
-  page.drawText("Audit summary - PrimusGFS v4.0 module index - HeavyConnect evidence index", { x: 52, y: 184, size: 10, font });
+  page.drawText("Audit summary - PrimusGFS v4.0 module index - Bay Baby evidence index", { x: 52, y: 184, size: 10, font });
   page.drawText("Exceptions and corrective actions - Report appendix - Signature and review log", { x: 52, y: 165, size: 10, font });
   page.drawText("Note: Crosswalk candidates must be reviewed before official scoring.", { x: 52, y: 122, size: 9, font, color: rgb(0.55, 0.32, 0.05) });
 
