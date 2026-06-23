@@ -9,6 +9,7 @@ A simpler inspection and Primus audit-preparation application for Bay Baby Produ
 - Manager review and corrective-action workflow
 - Four-step Audit Generator with readiness validation and server-generated PDF download
 - PrimusGFS v4.0 standard view with module readiness and evidence mapping
+- HeavyConnect Primus GFS 3.2 self-audit capture plus a draft v3.2-to-v4.0 crosswalk
 - Scalable Supabase schema for dynamic report templates, questions, attachments, reviews, and audit packets
 - Seed locations and initial R001, R004, and R006 report types
 - HeavyConnect transcription ledger under `data/heavyconnect-templates`
@@ -17,20 +18,32 @@ A simpler inspection and Primus audit-preparation application for Bay Baby Produ
 
 ## Local setup
 
-1. Copy `.env.example` to `.env.local` and add Supabase values.
+1. Copy `.env.example` to `.env.local` and add Supabase values. Keep `SUPABASE_SECRET_KEY` local only; do not commit it.
 2. Install dependencies with `pnpm install`.
 3. Run `pnpm dev`.
 4. Open `http://127.0.0.1:3000`.
 
 The current interface uses realistic local demonstration data, so it runs without Supabase credentials. Apply `supabase/migrations/001_initial_schema.sql` and `supabase/seed.sql` when connecting a project.
 
+## Roles and approvals
+
+The Supabase schema defines five roles:
+
+- `admin`: manages users, templates, reviews, and audit packets.
+- `manager`: reviews/approves reports, creates corrective actions, and generates audit packets.
+- `reviewer`: reviews/approves reports and creates corrective actions.
+- `auditor`: read/export access for approved evidence and generated packets.
+- `operator`: creates and submits their own field reports.
+
+Report approval is limited to `admin`, `manager`, and `reviewer`. Audit packet generation is limited to `admin` and `manager`.
+
 ## Audit standard
 
-Bay Baby Audit now treats PrimusGFS v4.0 as the audit-standard backbone. The extracted v4.0 index includes Modules 1-6, source URLs, question counts, point values, sections, and evidence tags.
+Bay Baby Audit treats PrimusGFS v4.0 as the audit-standard backbone. The extracted v4.0 index includes Modules 1-6, source URLs, question counts, point values, sections, and evidence tags.
 
 Likely Bay Baby scope is Modules 1, 2, 4, 5, and 6. Module 3, Indoor Agriculture, is kept available but marked optional/confirm until the actual audit scope requires it.
 
-HeavyConnect reports should be mapped as evidence against PrimusGFS v4.0 question IDs. HeavyConnect's v3.2 self-audit templates should be crosswalked to v4.0 rather than treated as the source of truth.
+HeavyConnect reports should be mapped as evidence against PrimusGFS v4.0 question IDs. HeavyConnect's v3.2 self-audit templates are not the source of truth; they are now captured under `data/heavyconnect-self-audits` and draft-mapped to v4.0 under `data/primusgfs/crosswalks/v3-2-to-v4-0.json`.
 
 ## HeavyConnect evidence import
 
@@ -52,7 +65,7 @@ The seven core Bay Baby report types are all represented in the import:
 
 The app now avoids the earlier demo-only report flow. `Start Report` opens a template picker first, then renders a data-driven report form based on captured HeavyConnect template fields or completed-report examples. The Inspector list is also populated from the imported HeavyConnect evidence inventory instead of hardcoded tractor/sanitation examples.
 
-Captured templates render from `data/heavyconnect-templates`. Templates not yet captured live in HeavyConnect are marked as inferred and built from downloaded report PDFs until the exact template can be transcribed.
+Captured templates render from `data/heavyconnect-templates`. Remaining live dropdown/multi-select option gaps are tracked in `data/heavyconnect-templates/live-capture-gaps.json` and should not be guessed.
 
 ## HeavyConnect template migration
 
@@ -67,7 +80,7 @@ The active-template verification found six report types with activity in HeavyCo
 
 R022 Risk Assessment is available in the active Field template library but did not appear in that recent summary period.
 
-Exact structured captures currently exist for R001, R004, and R006. The manifest intentionally marks incomplete templates and unanswered dropdown option sets as pending; they must not be guessed.
+Structured captures now exist for all seven core Bay Baby templates using a mix of live HeavyConnect capture and completed-report PDFs. The remaining work is exact live option capture for dropdowns/multi-select controls listed in `live-capture-gaps.json`.
 
 ## Deployment
 

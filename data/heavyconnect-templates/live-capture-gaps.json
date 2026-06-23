@@ -1,0 +1,74 @@
+{
+  "verified_on": "2026-06-23",
+  "status": "blocked_by_browser_policy_after_picker_opened",
+  "note": "HeavyConnect was authenticated and the Start Report picker was visible, but browser automation was blocked when inspecting the live page internals for dropdown options. Do not guess these values; use this list as the remaining live-capture checklist.",
+  "templates": [
+    {
+      "name": "R001 Field Activity Log",
+      "priority": "high",
+      "missing_controls": [
+        "Field Activity Type full dropdown option list",
+        "Commodity / crop dropdown option list",
+        "Crew / employee selector behavior",
+        "Equipment / tractor selector behavior, if enabled",
+        "Location-detail dependent fields"
+      ]
+    },
+    {
+      "name": "R022 Risk Assessment",
+      "priority": "high",
+      "known_live_values": {
+        "heavyconnect_report_type_id": 517,
+        "Why are you conducting this risk assessment?": [
+          "All",
+          "Annual pre-planting inspection",
+          "Growing area land change",
+          "Adjacent land use change"
+        ]
+      },
+      "missing_controls": [
+        "Planned Use full dropdown option list",
+        "Primary irrigation water source full dropdown option list",
+        "Any conditional skip/show logic after Yes/No answers",
+        "Photo/attachment requirement behavior"
+      ]
+    },
+    {
+      "name": "R024 Field Buffer Log",
+      "priority": "medium",
+      "missing_controls": [
+        "Buffer type dropdown option list, if present",
+        "Maintenance activity dropdown option list, if present",
+        "Contamination check response options",
+        "Photo/attachment requirement behavior"
+      ]
+    },
+    {
+      "name": "Daily Sanitation Log",
+      "priority": "high",
+      "missing_controls": [
+        "Harvest vs Warehouse variant selector behavior",
+        "Supply-stocked controls",
+        "Equipment-specific Yes/No/N/A controls",
+        "Maintenance-service required conditional fields"
+      ]
+    },
+    {
+      "name": "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting",
+      "priority": "medium",
+      "missing_controls": [
+        "Crew multi-select values",
+        "Employee attendance selector behavior",
+        "Meeting agenda Yes/No controls",
+        "Other attendees free-text behavior"
+      ]
+    }
+  ],
+  "recommended_capture_method": [
+    "Open HeavyConnect > Inspector > Start Report.",
+    "Select the target template but do not submit.",
+    "For each dropdown/multi-select, open the control and copy every visible option.",
+    "Cancel or close the draft without saving if HeavyConnect allows it.",
+    "Update the matching JSON file in data/heavyconnect-templates."
+  ]
+}

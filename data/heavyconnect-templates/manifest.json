@@ -27,5 +27,6 @@
   "remaining_template_gaps": [
     "Live HeavyConnect confirmation of all dropdown option lists for R022, Daily Sanitation Log, FRESH, and R024.",
     "R001 dropdown option lists are still partially pending."
-  ]
+  ],
+  "live_capture_gap_file": "live-capture-gaps.json"
 }

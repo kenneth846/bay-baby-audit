@@ -31,12 +31,20 @@ import r022Template from "@/data/heavyconnect-templates/r022-risk-assessment.jso
 import r024Template from "@/data/heavyconnect-templates/r024-field-buffer-log.json";
 import r004Template from "@/data/heavyconnect-templates/r004-tractor-inspection.json";
 import r006Template from "@/data/heavyconnect-templates/r006-daily-sanitation-log.json";
+import liveCaptureGaps from "@/data/heavyconnect-templates/live-capture-gaps.json";
 import heavyConnectSelfAudit32 from "@/data/heavyconnect-self-audits/primus-gfs-3-2.json";
+import primusCrosswalk from "@/data/primusgfs/crosswalks/v3-2-to-v4-0.json";
 import primusV4Index from "@/data/primusgfs/v4/index.json";
 
 type Status = "approved" | "review" | "action" | "draft";
 type View = "inspector" | "standard" | "templates";
 type Modal = "start" | "review" | "audit" | null;
+type CrosswalkSummary = {
+  total: number;
+  strong_candidate?: number;
+  review_candidate?: number;
+  needs_manual_mapping?: number;
+};
 
 type Question = {
   label: string;
@@ -256,7 +264,7 @@ export function AuditApp() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "Bay-Baby-Primus-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
+    a.download = "Bay-Baby-PrimusGFS-v4-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
     a.click();
     URL.revokeObjectURL(url);
     setToast("Audit packet generated");
@@ -407,14 +415,26 @@ function InspectorView(props: {
 }
 
 function TemplatesView({ templates, onStart }: { templates: TemplateDefinition[]; onStart: () => void }) {
+  const remainingGapCount = liveCaptureGaps.templates.reduce((sum, template) => sum + template.missing_controls.length, 0);
+
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
         <span>Active templates</span>
         <h2>Start from the same reports Bay Baby actually uses</h2>
-        <p>Captured templates render with known HeavyConnect fields. Inferred templates are built from downloaded completed reports until we finish exact live template capture.</p>
+        <p>Captured templates render with known HeavyConnect fields. Remaining live dropdown/control lists are tracked explicitly so we do not guess audit data.</p>
       </div>
       <button className="primary" onClick={onStart}><Plus /> Start Report</button>
+    </section>
+    <section className="gap-panel template-gaps">
+      <div className="section-heading"><h2>Live HeavyConnect capture remaining</h2><span>{remainingGapCount} controls/options</span></div>
+      {liveCaptureGaps.templates.map((template) => <div className="gap-row warning" key={template.name}>
+        <WarningCircle weight="fill" />
+        <div>
+          <strong>{template.name}</strong>
+          <span>{template.missing_controls.slice(0, 2).join("; ")}{template.missing_controls.length > 2 ? `; +${template.missing_controls.length - 2} more` : ""}</span>
+        </div>
+      </div>)}
     </section>
     <section className="template-table">
       {templates.map((template) => <article key={template.key}>
@@ -438,6 +458,7 @@ function PrimusStandardView() {
   const importedReports = heavyConnectInventory.report_count;
   const importedReportTypes = heavyConnectInventory.report_type_count;
   const selfAuditQuestionCount = heavyConnectSelfAudit32.modules.reduce((sum, module) => sum + module.question_count, 0);
+  const crosswalkSummary = primusCrosswalk.summary as CrosswalkSummary;
   const moduleEvidence = new Map(heavyConnectInventory.primus_v4_module_evidence.map((item) => [item.module_key, item]));
   const recommendedModules = new Set(["module-1-fsms", "module-2-farm", "module-4-harvest-crew", "module-5-facility", "module-6-haccp"]);
   const bayBabyEvidence = heavyConnectInventory.expected_bay_baby_report_status;
@@ -455,6 +476,7 @@ function PrimusStandardView() {
         <span>{totalPoints.toLocaleString()} scored points</span>
         <span>{importedReports} HeavyConnect PDFs imported</span>
         <span>{selfAuditQuestionCount} HC self-audit questions captured</span>
+        <span>{crosswalkSummary.strong_candidate ?? 0} v3.2→v4.0 strong matches</span>
       </div>
     </section>
 
@@ -488,8 +510,9 @@ function PrimusStandardView() {
         <div className="section-heading"><h2>Next gaps to close</h2><span>Before packet generation</span></div>
         <div className="gap-row"><CheckCircle weight="duotone" /><div><strong>HeavyConnect evidence import complete</strong><span>{importedReports} PDFs from Jan 1, 2025 to Jan 1, 2026 are indexed and ready for mapping.</span></div></div>
         <div className="gap-row"><CheckCircle weight="duotone" /><div><strong>HeavyConnect self-audit captured</strong><span>{selfAuditQuestionCount} Primus GFS 3.2 questions captured from HeavyConnect for comparison.</span></div></div>
-        <div className="gap-row warning"><WarningCircle weight="fill" /><div><strong>Crosswalk v3.2 self-audit to v4.0</strong><span>Now map HeavyConnect's v3.2 question IDs to PrimusGFS v4.0 so the cleaner Bay Baby packet remains auditor-friendly.</span></div></div>
-        <div className="gap-row"><FilePdf weight="duotone" /><div><strong>Generate question-level packet index</strong><span>Use the imported report examples to attach evidence to specific PrimusGFS v4.0 questions.</span></div></div>
+        <div className="gap-row"><CheckCircle weight="duotone" /><div><strong>Draft v3.2→v4.0 crosswalk generated</strong><span>{crosswalkSummary.strong_candidate ?? 0} strong, {crosswalkSummary.review_candidate ?? 0} review, {crosswalkSummary.needs_manual_mapping ?? 0} manual mappings from HeavyConnect self-audit into v4.0.</span></div></div>
+        <div className="gap-row warning"><WarningCircle weight="fill" /><div><strong>Manual crosswalk review required</strong><span>PrimusGFS v4.0 is the official target; review the candidate mapping before relying on it for auditor-facing scoring.</span></div></div>
+        <div className="gap-row"><FilePdf weight="duotone" /><div><strong>Generate question-level packet index</strong><span>Use the imported report examples and reviewed crosswalk to attach evidence to specific PrimusGFS v4.0 questions.</span></div></div>
       </section>
     </div>
   </div>;
@@ -583,6 +606,7 @@ function ReviewPanel({ report, onDone }: { report: Report; onDone: () => void })
 
 function AuditWizard({ step, setStep, onGenerate, selected }: { step: number; setStep: (step: number) => void; onGenerate: () => void; selected: number }) {
   const titles = ["Select scope", "Validate readiness", "Preview packet", "Generate PDF"];
+  const crosswalkSummary = primusCrosswalk.summary as CrosswalkSummary;
   return <div className="wizard">
     <div className="modal-heading"><span>Audit Generator</span><h2>Build a Primus-ready packet</h2><p>Checks imported HeavyConnect evidence against the PrimusGFS v4.0 backbone before export.</p></div>
     <div className="wizard-steps">{titles.map((title, index) => <span className={step >= index + 1 ? "done" : ""} key={title}><b>{step > index + 1 ? <Check /> : index + 1}</b>{title}</span>)}</div>
@@ -592,13 +616,13 @@ function AuditWizard({ step, setStep, onGenerate, selected }: { step: number; se
         <div className="success"><CheckCircle weight="duotone" /><b>{selected}</b><span>Reports selected</span></div>
         <div><ClipboardText weight="duotone" /><b>{heavyConnectInventory.report_type_count}</b><span>Report types</span></div>
         <div className="success"><ShieldCheck weight="duotone" /><b>7</b><span>Core templates found</span></div>
-        <div className="warning"><WarningCircle weight="duotone" /><b>1</b><span>Crosswalk pending</span></div>
-        <section><strong>Pre-audit checks</strong><span><CheckCircle /> Required Bay Baby evidence found</span><span><CheckCircle /> PrimusGFS v4.0 modules loaded</span><span><WarningCircle /> v3.2 self-audit crosswalk still pending</span></section>
+        <div className={(crosswalkSummary.needs_manual_mapping ?? 0) ? "warning" : "success"}><WarningCircle weight="duotone" /><b>{crosswalkSummary.needs_manual_mapping ?? 0}</b><span>Manual mappings</span></div>
+        <section><strong>Pre-audit checks</strong><span><CheckCircle /> Required Bay Baby evidence found</span><span><CheckCircle /> PrimusGFS v4.0 modules loaded</span><span><CheckCircle /> Draft v3.2→v4.0 crosswalk generated</span><span><WarningCircle /> Manual mapping review still required before final scoring</span></section>
       </div>}
       {step === 3 && <div className="packet-preview">
         {["Cover page", "PrimusGFS v4.0 module index", "HeavyConnect evidence index", "Open gaps and corrective actions", "Reports grouped by type", "Attachments appendix", "Signature & review log"].map((section, index) => <div key={section}><span>{index + 1}</span><b>{section}</b><CheckCircle weight="fill" /></div>)}
       </div>}
-      {step === 4 && <div className="generate-ready"><FilePdf weight="duotone" /><h3>Your packet is ready</h3><p>Bay-Baby-Primus-Audit-Packet_2025-01-01_to_2026-01-01.pdf</p><span>{selected} reports • PrimusGFS v4.0 • Evidence index included</span></div>}
+      {step === 4 && <div className="generate-ready"><FilePdf weight="duotone" /><h3>Your packet is ready</h3><p>Bay-Baby-PrimusGFS-v4-Audit-Packet_2025-01-01_to_2026-01-01.pdf</p><span>{selected} reports • PrimusGFS v4.0 • Evidence index included</span></div>}
     </div>
     <div className="modal-actions"><button className="secondary" onClick={() => setStep(Math.max(1, step - 1))} disabled={step === 1}>Back</button><button className="primary" onClick={() => step < 4 ? setStep(step + 1) : onGenerate()}>{step < 4 ? "Continue" : "Generate & download PDF"}</button></div>
   </div>;
