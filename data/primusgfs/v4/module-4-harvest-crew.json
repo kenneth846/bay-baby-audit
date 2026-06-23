@@ -1,0 +1,801 @@
+{
+  "key": "module-4-harvest-crew",
+  "number": "Module 4",
+  "title": "Harvest Crew",
+  "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf",
+  "local_cache": "tmp/primusgfs-v4/module-4-harvest-crew.pdf",
+  "question_count": 56,
+  "scored_points": 424,
+  "sections": [
+    {
+      "code": "4.01",
+      "questions": 2,
+      "points": 25
+    },
+    {
+      "code": "4.02",
+      "questions": 2,
+      "points": 15
+    },
+    {
+      "code": "4.03",
+      "questions": 4,
+      "points": 33
+    },
+    {
+      "code": "4.04",
+      "questions": 19,
+      "points": 153
+    },
+    {
+      "code": "4.05",
+      "questions": 20,
+      "points": 143
+    },
+    {
+      "code": "4.06",
+      "questions": 1,
+      "points": 0
+    },
+    {
+      "code": "4.07",
+      "questions": 4,
+      "points": 30
+    },
+    {
+      "code": "4.08",
+      "questions": 4,
+      "points": 25
+    }
+  ],
+  "questions": [
+    {
+      "id": "4.01.01",
+      "section": "4.01",
+      "question": "Is there a trained on- site person(s) responsible for the operation's food safety program?",
+      "points": 10,
+      "expectation_summary": "There should be a trained on-site person(s) responsible for the operation's food safety program (cross reference with 1.01.02). They should have documented formal training or be trained by someone that has documented formal credentials in food safety topics relevant to their responsibilities. This training should meet all local and national requirements.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.01.02",
+      "section": "4.01",
+      "question": "Does the operation have a written food safety hygiene and health rules covering at least worker and visitor hygiene and health, infants and toddlers, animal presence in growing and storage areas, fecal matter, dropped product, blood and bodily fluids?",
+      "points": 15,
+      "expectation_summary": "There should be written food safety policy rules regarding worker and visitor personal hygiene, GAPs and health requirements. The rules should cover the rules related to hygiene and health (e.g., hand washing, eating/drinking, smoking, specific clothing rules, foreign material issues, cuts/wounds, illness rules, etc.), no infants and toddlers allowed in the growing area, what to do in the case of evidence of animals and/or fecal matter in the growing and/or storage areas, and what to do in the case of dropped product, and if the product comes into contact with blood or other bodily fluids. All workers should be issued a list of rules in the relevant languages and confirm by signing they understand and agree to abide. Cross reference with 1.01.04 to verify topics are part of the training program for workers. Training provided and associated records should meet local and national regulations.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "pest-animal"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.02.01",
+      "section": "4.02",
+      "question": "Are there records of pre-harvest inspections and do they show that the current block (or coded area) is cleared for harvest? If there are no pre-harvest inspections got to 4.02.02.",
+      "points": 5,
+      "expectation_summary": "A pre-harvest block inspection should have been performed no more than 7 days prior to harvest and if harvesting is occurring, it should show if there are any harvesting restrictions, etc. (e.g., pre-harvest testing results, evidence of animal intrusion, changes in weather conditions or weather events, pesticide application events) The harvest crew might not have a copy of the actual inspection, but they should have a document indicating which blocks have been inspected and cleared for harvest. If there are no pre-harvest inspections, go to 4.02.02.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "pest-animal",
+        "harvest"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.02.02",
+      "section": "4.02",
+      "question": "Is there a pre-operation inspection log?",
+      "points": 10,
+      "expectation_summary": "Pre-operation inspections just prior to start-up should identify potential problems with the harvesting operation, including equipment hygiene, tool hygiene, and worker hygiene. These inspections and corrective actions should be recorded. Use of surface monitoring checks e.g., ATP, A3 (ATP, ADP, AMP), plate counts, etc., are ideal practice and if used, should be recorded properly along with any required corrective actions.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.03.01",
+      "section": "4.03",
+      "question": "Is there a food safety hygiene training program covering new and existing workers and are there records of these training events?",
+      "points": 15,
+      "expectation_summary": "There should be a formal training program and records, to inform workers of the current rules and requirements of the company regarding hygiene. Cross reference with 1.01.04. Training should be in the language understood by the workers, and training type and intensity should reflect the risks associated with the products/processes. Frequency should be at the start of the season before starting work and then some topics covered at least quarterly, but ideally monthly. These trainings should cover food safety and hygiene policies and basic food safety and hygiene topics, allergens, the importance of detecting food safety and/or hygiene issues with co-workers and visitors, all food safety or hygiene issues in which they are responsible and correcting and reporting problems. Training logs should have a clearly defined topic(s) covered, trainer(s) and material(s) used/given. Topics include, but not limited to, hand washing, protective clothing (where applicable), recognizing and reporting injury and illness, blood and bodily fluids, jewelry, dropped product, animal intrusion, food defense. There should be records of workers who have attended each session.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "risk-assessment",
+        "pest-animal"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.03.02",
+      "section": "4.03",
+      "question": "Is there a documented training program with training logs for the sanitation workers, including best practices and chemical use details?",
+      "points": 5,
+      "expectation_summary": "Sanitation training should ensure that the workers understand the importance of proper sanitation, cleaning efficacy, how to use the cleaning chemicals and how to understand Sanitation Standard Operating Procedures. Unless sanitation workers attend regular food safety trainings, sanitation training should also include elements of food safety training pertinent to sanitation operations (e.g., hand washing, restroom use, foreign material, etc.). Training logs should have a clearly defined topic(s) covered, trainer(s) material(s) used/given and who attended the training (name and signature).",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "sanitation"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.03.03",
+      "section": "4.03",
+      "question": "Are there written and communicated procedures in place that require food handlers to report any cuts or grazes and/or if they are suffering any illnesses that might be a contamination risk to the products being produced, and return to work requirements? (In countries with health privacy/confidentiality laws, e.g., USA, auditors can check procedure/policy but not the actual records).",
+      "points": 10,
+      "expectation_summary": "There should be documented procedures that are communicated (e.g., worker signature on a training log) to food handlers, requiring them to report any cuts, grazes and/or any illnesses that might be a food safety cross contamination risk. Procedures to indicate return to work requirements for affected workers, to whom the food handlers should report, how the issue is recorded and appropriate actions to be taken for a particular issue. Procedures should cover recording requirements, but auditors should not request to review records where countries have laws covering privacy/confidentiality of health records.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "risk-assessment",
+        "inspection"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.03.04",
+      "section": "4.03",
+      "question": "Are there worker food safety non- conformance records and associated corrective actions (including retraining records)?",
+      "points": 3,
+      "expectation_summary": "There should be records covering when workers are found not following food safety requirements. These records should also show corrective actions and evidence that retraining has occurred (where relevant).",
+      "evidence_tags": [
+        "training",
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.01",
+      "section": "4.04",
+      "question": "Are toilet facilities adequate in number and location? A ZERO POINT (NON- COMPLIANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "points": 15,
+      "expectation_summary": "Toilet facilities should be available and accessible to all workers and visitors, while work is actively occurring. At least one toilet per 20 workers should be provided, or if more stringent, as per prevailing national/local guidelines. Toilet facility placement should be within 1/4 mile or 5 minutes walking distance of where workers are located, or if more stringent, as per prevailing national/local guidelines. A 5-minute drive is not acceptable, while harvesting is actively occurring with groups of three or more workers. Where there are two or less workers present and workers have transportation that is immediately available to toilets within a 5-minute drive, it is acceptable to score as total conformance. Automatic failure if there are insufficient or inadequate toilet facilities. A ZERO POINT (NON-COMPLIANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection",
+        "facility",
+        "harvest"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.02",
+      "section": "4.04",
+      "question": "Is hand washing signage posted appropriately?",
+      "points": 5,
+      "expectation_summary": "Hand washing signs (multi-lingual or pictograms) should be posted as a reminder to wash hands before and after eating, returning to work and after using the toilet. The signs should be permanent and placed in key areas where workers can easily see them (e.g., at toilets, break areas, etc.).",
+      "evidence_tags": [],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.03",
+      "section": "4.04",
+      "question": "Are hand washing stations adequate in number and appropriately located for worker access and monitoring usage? A ZERO POINT (NON- COMPLIANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "points": 15,
+      "expectation_summary": "An adequate number of hand washing stations, in working order, should be provided to ensure efficient worker flow (1 per 20 people on site), and available to all workers and visitors. Hands free is an optimum system. Hand washing stations should be visible and located within close proximity of toilet facilities and lunchrooms and within 1/4 mile or 5 minutes walking distance of where workers are located. A ZERO POINT (NON-COMPLIANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.04",
+      "section": "4.04",
+      "question": "Are there results for total coliforms (TC) and generic E. coli tests conducted on the water used for hand washing at the required and/or expected frequency?",
+      "points": 15,
+      "expectation_summary": "Testing results should be recorded, including the organism(s) tested for, the testing methodology, lab that performed the test, details of the sampling sites, when the test occurred and the results (including units of measure). If any issues are detected, corrective actions should be recorded (see 4.04.04c). Total coliforms (TC) and generic E. coli testing should occur on a routine basis. All water sources used for hand washing throughout the harvesting season should be tested. One sample per water source should be collected and tested prior to use and then at least every 3 months, ideally monthly. A reduced sampling and testing frequency is acceptable if supported by a valid risk assessment, although there should be at least one water test per season. Water samples should be taken from as close to the point of use as is practical e.g., hand wash spigot/faucet. If there are multiple hand wash units, then samples should be taken from a different location each test (randomize or rotate locations). If there are multiple sources for hand wash water, testing should also account for each source used.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "corrective-action",
+        "water",
+        "harvest"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.05",
+      "section": "4.04",
+      "question": "Are workers washing and sanitizing their hands before starting work each day, after using the restroom, after breaks, before putting on gloves and whenever hands may be contaminated?",
+      "points": 15,
+      "expectation_summary": "Worker conformance to hand washing and sanitizing procedures should be assessed as washing hands is the first step in avoiding food contamination. Workers should be observed washing their hands prior to beginning work, after breaks, after using the toilets, before putting on gloves, and whenever hands may have become a source of contamination (e.g., after eating, after using a handkerchief or tissue, smoking, drinking, etc.).",
+      "evidence_tags": [
+        "policy"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.06",
+      "section": "4.04",
+      "question": "Are secondary hand sanitation stations (e.g., hand dips, gels or spray stations) adequate in number and location, and are the stations maintained properly?",
+      "points": 5,
+      "expectation_summary": "Secondary hand sanitation is required for items that may be “ready-to-eat” (e.g., herbs, tomatoes, edible flowers, etc.). Secondary hand sanitizers are optional for root vegetable crops or a commodity that requires cooking prior to eating. Secondary hand sanitation (hand dips, gels or sprays) does not replace hand washing requirements (lack surfactant qualities). Secondary hand sanitation stations should be unscented/non-perfumed, have 60% to 95% ethanol or isopropanol and should be located near hand washing and other easily accessible areas. Hand dips (if used) should contain a food grade sanitizer at a determined concentration. Refer to hand sanitizer manufacturer label for dilutions. Hand dips should be regularly monitored (recorded anti-microbial strength checks) to ensure their effectiveness with corrective actions recorded (e.g., dip solution replenishment and anti- microbial additions). Hand gel / spray stations should be well stocked and tested regularly to ensure they are at the required strength - checks should be recorded. The auditor should check that gel pack type stations are stocked and have the auditee check the strength of anti-microbial chemicals in hand dips. Strength checks do not need to be performed for commercially purchased sanitizers that have been purchased already mixed.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "sanitation"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.07",
+      "section": "4.04",
+      "question": "Are workers who are working directly or indirectly with food, without evidence of boils, sores, open wounds and are not exhibiting signs of foodborne illness?",
+      "points": 10,
+      "expectation_summary": "Workers who have exposed boils, sores, exposed infected wounds, foodborne illness or any other source of abnormal microbial contamination should not be allowed to work in contact with the product, packaging or food contact surfaces.",
+      "evidence_tags": [],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.08",
+      "section": "4.04",
+      "question": "Are workers not observed wearing watches, jewelry (plain band permitted), studs, false eyelashes, false fingernails, etc.?",
+      "points": 5,
+      "expectation_summary": "Workers are not observed wearing jewelry (including earrings, ear gages, necklaces, bracelets, rings with stones, rings or studs in nose, lip and eyebrow, watches) in the growing area. Plain wedding bands are the only exception. Other examples of foreign items maybe a source of foreign material contamination include studs, false fingernails and fingernail polish, false eye lashes, eye lash extensions and badges.",
+      "evidence_tags": [],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.09",
+      "section": "4.04",
+      "question": "Are worker personal items being stored in such a way that they are not a potential food safety risk to product, growing area, equipment or materials?",
+      "points": 5,
+      "expectation_summary": "Workers should have a designated area for storing personal items such as coats, shoes, purses, medication, phones, etc. Areas set aside for workers' personal items should be far enough away from growing area(s) and material storage area(s) to prevent contamination and avoid food defense risks.",
+      "evidence_tags": [
+        "risk-assessment",
+        "equipment"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.10",
+      "section": "4.04",
+      "question": "Is smoking, eating, chewing and drinking confined to designated areas, and spitting is prohibited in all areas?",
+      "points": 5,
+      "expectation_summary": "Smoking, chewing tobacco, chewing gum, drinking and eating is permitted in designated areas that are away from growing and storage areas. Spitting should be prohibited in all areas. Smoking should not be permitted in eating and drinking areas.",
+      "evidence_tags": [],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.11",
+      "section": "4.04",
+      "question": "Where required, are workers wearing effective hair restraints that contain all hair?",
+      "points": 5,
+      "expectation_summary": "If the operation requires the use of hair restraints, the harvest workers should be wearing appropriate hair restraints that restrain all hair. Baseball caps and head coverings are allowed in the harvesting area only if they are clean and worn with a clearly visible hair net.",
+      "evidence_tags": [
+        "harvest"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.12",
+      "section": "4.04",
+      "question": "Are all items removed from garment (shirt, blouse, etc.) top pockets, and unsecured items are not worn (e.g., pens, glasses on top of head, Bluetooth devices, etc.)?",
+      "points": 3,
+      "expectation_summary": "There should be no items stored in workers' top pockets. Items in pockets and otherwise unsecured have the potential to fall into the product.",
+      "evidence_tags": [],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.13",
+      "section": "4.04",
+      "question": "Are all workers wearing protective outer garments suitable for the operation (e.g., appropriate clean clothes, smocks, aprons, sleeves and non-latex gloves)?",
+      "points": 5,
+      "expectation_summary": "Outer garment policy should consider potential for cross contamination, customer requirements, production risk, product type, etc. Outer garments include where applicable: smocks, aprons, sleeves, gloves, boots, etc. Workers should not wear personal clothes with sequins, pom-poms, fur, etc. No sleeveless tops without an over garment. Where dedicated protective clothing is not required/worn, it must be clear that outer street clothes are clean and not a potential source of contamination. If required, the policy should consider customer requirements, production risk, product type, etc.",
+      "evidence_tags": [
+        "policy",
+        "risk-assessment"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.14",
+      "section": "4.04",
+      "question": "Do workers remove protective outer garments (e.g., smocks, aprons, sleeves and gloves) when on break, before using the toilets and when going home at the end of their shift?",
+      "points": 5,
+      "expectation_summary": "When worn, protective clothing (e.g., aprons, smocks, sleeves, and gloves) should be removed when workers leave the work area (e.g., when they go to the toilet facility, break areas, etc.). Workers cannot smoke, eat, or use the restroom while wearing these garments.",
+      "evidence_tags": [
+        "facility"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.15",
+      "section": "4.04",
+      "question": "Is fresh potable drinking water in clean containers readily accessible to workers?",
+      "points": 10,
+      "expectation_summary": "Water should be suitably cool and in sufficient amounts, taking into account the air temperature, humidity and the nature of the work performed, to meet the needs of all workers. Fresh potable water meeting the quality standards for drinking water should be available for workers on-site to prevent dehydration. The term “potable” meaning that the water is of drinking water quality (e.g., the EPA Drinking Water Standard or equivalent). If water containers are used, they should be maintained in a clean condition, free from residues and contamination to ensure workers are not adversely affected by contaminated water from unclean containers. If there is evidence (i.e., visual observation or documentation) the water is coming from a questionable source, the auditor should review water quality test results.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "water"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.16",
+      "section": "4.04",
+      "question": "Are first aid kits adequately stocked and readily available to workers?",
+      "points": 5,
+      "expectation_summary": "First aid kit(s) supplies should be appropriate for the workplace and the injuries most likely to occur there (including any chemicals stored on-site) and should be stored in an area where they are readily available for emergency access. Date-coded materials should be within dates of expiration. Gloves should be worn over all band aids on hands.",
+      "evidence_tags": [],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.17",
+      "section": "4.04",
+      "question": "Are all commodities that come in contact with blood and/or other bodily fluids destroyed? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "Any commodity that comes into contact with blood and/or other bodily fluids must be destroyed. If this occurs during the time of inspection, auditor must witness that product is destroyed. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.18",
+      "section": "4.04",
+      "question": "Are trash receptacles adequate and placed in suitable locations?",
+      "points": 5,
+      "expectation_summary": "There should be adequate measures for trash disposal so that spills are contained (no evidence of leaks) and the growing and storage areas are not contaminated. Containers (e.g., dumpsters, trash cans) should be available and placed in suitable locations for the disposal of waste and trash e.g., near hand wash stations.",
+      "evidence_tags": [],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.04.19",
+      "section": "4.04",
+      "question": "Are any potential foreign material issues (e.g., metal, glass, plastic) controlled?",
+      "points": 5,
+      "expectation_summary": "There should be no foreign material issues that are or could be potential risks to the product. Examples include, but are not limited to, glass bottles, unprotected lights on equipment, staples on wooden crates, hair pins, using “snappable” blades instead of one-piece blades, broken and brittle plastic issues on re-useable totes.",
+      "evidence_tags": [
+        "risk-assessment",
+        "equipment"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.01",
+      "section": "4.05",
+      "question": "Is there no evidence of animal presence and/or animal activity (wild or domestic) in the harvest area? If Total Compliance, go to 4.05.02.",
+      "points": 15,
+      "expectation_summary": "Animals can represent potential contamination to the harvesting area, to the crop, to the equipment, etc., and therefore, should not be present in the operations. Evidence of animal presence can include tracks, fecal matter, feathers, etc.",
+      "evidence_tags": [
+        "equipment",
+        "pest-animal",
+        "harvest"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.02",
+      "section": "4.05",
+      "question": "Is there no evidence of human fecal contamination in the harvest area? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "There should be no evidence of human fecal contamination in the harvesting area, area being harvested, packaging area, equipment area, or in any other area that would cause a contamination issue. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection",
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.03",
+      "section": "4.05",
+      "question": "Is there no evidence of infants or toddlers in the harvest area?",
+      "points": 10,
+      "expectation_summary": "Infants and toddlers can represent potential contamination to the growing area, to the crop, to packaging and should not be present in the operations, including chemical or equipment storage areas.",
+      "evidence_tags": [
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.04",
+      "section": "4.05",
+      "question": "Are all chemicals (pesticides, fertilizers, sanitizers, detergents, lubricants, etc.) stored securely, safely and are they labeled correctly?",
+      "points": 15,
+      "expectation_summary": "Chemicals (i.e., pesticides, fertilizers, sanitizers, detergents, lubricants, etc.) are required to be stored in a well vented, designated (with a sign), dedicated, secure (locked) area away from food and packaging materials and separated from growing area and water sources. Access is restricted to trained personnel. Spill controls should be in place for opened in use containers. All chemical containers should be off the floor, have legible labels of contents; this includes chemicals that have been decanted from master containers into smaller containers. Empty containers should be stored and disposed of safely. Chemical storage requirements must meet local and national requirements.",
+      "evidence_tags": [
+        "training",
+        "water",
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.05",
+      "section": "4.05",
+      "question": "Are copies of all Safety Data Sheets on file and fully accessible at all times with clear indexes?",
+      "points": 3,
+      "expectation_summary": "Current SDS sheets should be available for hazardous chemicals (detergents, sanitizers, pesticides, etc.). SDS may be kept on file, stored on memory stick, CD or computer, and auditee can demonstrate they are readily accessible to workers. Chemicals used should meet local and national requirements.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.06",
+      "section": "4.05",
+      "question": "Are \"food grade\" and \"non-food grade\" chemicals used appropriately, according to the label and not commingled?",
+      "points": 10,
+      "expectation_summary": "All chemicals applied should be approved by the prevailing authority for their designated use and used according to label instructions. Only food grade lubricants should be used anywhere near product and packaging materials. \"Food grade\" and \"non-food grade\" materials should be stored in separate designated areas and adequately labeled. Grease guns and containers should be labeled adequately. Access to non-food grade materials should be limited to those entrusted with the correct use of chemicals.",
+      "evidence_tags": [],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.07",
+      "section": "4.05",
+      "question": "Does the operation have a preventative maintenance program that includes a schedule and completion records?",
+      "points": 10,
+      "expectation_summary": "There should be a list of preventive maintenance tasks with frequencies that includes routine maintenance, periodic maintenance and annual tasks including a hygienic design review to evaluate areas of concern and how to minimize. A preventative maintenance program can help prevent production and ancillary equipment, structures and fittings failure that can result in biological, physical or chemical contamination of products. Equipment includes harvesting equipment, compressed air equipment, water treatment equipment, etc. Use of predictive maintenance systems are also acceptable for this question.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "water",
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.08",
+      "section": "4.05",
+      "question": "Are there logs of maintenance work and repairs and are they signed off when work is completed?",
+      "points": 10,
+      "expectation_summary": "A log of maintenance for unscheduled repair work and request orders is necessary to track improperly working equipment, repairs and similar issues not covered under the preventative maintenance program. Repair activities also have the potential to create unintended hazards if not properly conducted. Tracking these activities help with product contamination investigation as well as to improve preventative maintenance.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "equipment"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.09",
+      "section": "4.05",
+      "question": "Is there a written cleaning schedule (Master Sanitation Schedule) that shows what and where is to be cleaned and how often?",
+      "points": 10,
+      "expectation_summary": "A master sanitation program should be in place that covers all the harvest equipment, storage areas, break areas, restrooms, transportation and waste areas. The master sanitation program should reflect the type of harvesting operation. Areas that require periodic disassembly/deep cleaning should be listed (e.g., wear strips under belts, difficult to reach locations (i.e., incline belts, cog wheels), sandwich spots, framework, cutting board attachments, mechanical drive and support rollers, bearings) as well as any light covers, overhead structures, etc. List should include food and non-food contact equipment (e.g., harvest buckets, harvest tools/machines, carts, tables, pallet jacks, forklifts, and company owned trailers, etc.) The master sanitation schedule should include a detailed list of areas and equipment to be cleaned as well as the frequency.",
+      "evidence_tags": [
+        "policy",
+        "sanitation",
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.10",
+      "section": "4.05",
+      "question": "Are there records of microbial testing for water used for postharvest product contact (e.g., washing, re-hydrating) and product contact surfaces (e.g., cleaning grading or packing tables and harvest tools) showing that there are no detectable total coliforms and generic E. coli in the water?",
+      "points": 15,
+      "expectation_summary": "Testing results should be recorded, including the organism(s) tested for, the testing methodology, lab that performed the test, details of the sampling sites, when the test occurred and the results (including units of measure). If any issues are detected, corrective actions should be recorded including investigations and water retests. (see 4.05.10b). All water sources that are used for postharvest contact with the edible portion of a crop (e.g., washing, re-hydrating) and product contact surfaces (e.g., cleaning grading or packing tables and harvest tools) should be tested on a routine basis. One sample per water source should be collected and tested prior to use and then at least quarterly thereafter, or at a frequency relative to the associated risks. For commodities under the Leafy Greens Marketing Agreement, one sample per water source should be collected and tested prior to use if >60 days since the last test of the water source. Additional samples shall be collected at intervals of no less than 18 hrs. and at least monthly during use. Results of water testing for total coliforms and generic E. coli should meet the US EPA drinking water microbiological specification. For total coliforms and generic E. coli, there should be negative or < detection limit (MPN or CFU/100mL).",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "corrective-action",
+        "water",
+        "sanitation"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.11",
+      "section": "4.05",
+      "question": "Is the product harvested and transported to a facility for additional handling and/or final packing?",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This question refers to product that is harvested in the growing area and then taken to a facility for handling and/or packing.",
+      "evidence_tags": [
+        "facility",
+        "harvest"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.12",
+      "section": "4.05",
+      "question": "Is the product packed in the final packing unit in the growing area? If No, go to 4.05.13.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This question refers to product packed in the growing area that is in the final unit for shipping (i.e., clamshell, wrapped products, carton boxes, etc.), that usually bypasses any selection packing lines in a facility i.e. goes to a cooling process as opposed to a packing line.",
+      "evidence_tags": [
+        "facility"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.13",
+      "section": "4.05",
+      "question": "Is the crop, harvested product, ingredients (including water), food contact packaging and food contact surfaces within accepted tolerances for spoilage and without evidence of adulteration? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "The crop, harvested product, ingredients (including water), food contact packaging and food contact surfaces should be free from spoilage, adulteration and/or gross contamination (21 CFR 110.3g). If legislation exists, then the contamination should be viewed against this legislation (e.g., USDA Grading Standards often include decay tolerances). Spoilage and adulteration would include any physical, chemical or biological contamination including blood and bodily fluids. Measures should be taken to prevent any known or reasonably foreseeable hazard (e.g., Clostridium botulinum in mushrooms). Other examples might include glass, trash/litter, motor oil in products, etc. This question is designed to allow an auditor to halt an audit when finding gross contamination issues. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "water",
+        "harvest"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.14",
+      "section": "4.05",
+      "question": "Are grading and packing surfaces, carts, ladders and other harvest aids used? If No, go to 4.05.15.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This refers to food contact surfaces used to grade, inspect, re-pack, or pack product (e.g., grading tables, mushroom grading platforms, picking carts, ladders, etc.).",
+      "evidence_tags": [
+        "harvest"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.15",
+      "section": "4.05",
+      "question": "Are re-useable containers (e.g., buckets, totes, lugs, RPCs, bins) used in the harvesting operation? If No, go to 4.05.16.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This refers to any re-useable containers used in the harvesting operation (e.g., buckets, totes, lugs, RPCs, bins, etc.) used in the harvesting operation.",
+      "evidence_tags": [
+        "harvest"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.16",
+      "section": "4.05",
+      "question": "Are tools (e.g., knives, clippers, scissors, etc.) used in harvesting? If No, go to 4.05.17.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This refers to harvest tools (e.g., knives, clippers, scissors, etc.) used in harvesting.",
+      "evidence_tags": [
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.17",
+      "section": "4.05",
+      "question": "Is machinery used in the harvesting process? If No, go to 4.05.18.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This includes equipment with the potential to affect product (e.g., conveyor belts, mechanical harvesting units, field packing rigs, field packing buses, live bottom trailers, coring rigs and any “in- field” processing rigs). Please note that there are some more specific questions for coring rigs and any “in-field” processing rigs in a later section.",
+      "evidence_tags": [
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.18",
+      "section": "4.05",
+      "question": "Is water used directly on product contact (e.g., re-hydration, core in field)? If No, go to 4.05.19.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This refers to water that is used directly on product contact. Examples may include but are not limited to re-hydration, core in field.",
+      "evidence_tags": [
+        "water"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.19",
+      "section": "4.05",
+      "question": "Does the operation use the appropriate test strips, test kits or test probes for verifying the concentrations of anti- microbial chemicals (e.g., postharvest product contact water, dip stations, etc.) being used, are they in operational condition and are they being used correctly?",
+      "points": 15,
+      "expectation_summary": "The strength (concentration, pH, etc.) of anti-microbial chemicals should be checked on a regular basis and recorded. All test solutions/strips should be within date code, appropriate for the concentrations used and stored correctly. If the ORP meter controls the pumps that are injecting the anti- microbial and/or buffer, there should be an independent calibrated ORP probe or other method (e.g., test strip papers, titration) in order to verify injector readings.",
+      "evidence_tags": [
+        "records",
+        "water",
+        "harvest"
+      ],
+      "source_page": 19,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.05.20",
+      "section": "4.05",
+      "question": "Is the harvested product \"in-field processed\" or \"in-field semi-processed\" (e.g., core in field, top & tail, florets)? If No, go to 4.06.01.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. \"In field processed\" products are subject to all the questions in this audit and these extra requirements below. \"In field processed\" usually refers to product having multiple cuts surfaces created in the field (e.g., coring in field, topping & tailing, florets).",
+      "evidence_tags": [
+        "inspection",
+        "harvest"
+      ],
+      "source_page": 19,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.06.01",
+      "section": "4.06",
+      "question": "Is there any post- harvest treatment performed to the product in the growing area? If No, go to 4.07.01.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This refers to any post-harvest treatments taking place in the growing area (e.g., blueberries packed in the field with sodium metabisulphite pads, tables grapes packed in the field treated/gassed with sulfur dioxide, etc.).",
+      "evidence_tags": [
+        "harvest"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.07.01",
+      "section": "4.07",
+      "question": "Are the vehicles loading and transporting fresh produce from growing area to facility limited to this function only, maintained in proper condition, and adequate for the purpose?",
+      "points": 5,
+      "expectation_summary": "Vehicles loading and transporting product should be limited to this function only and should be adequate for transporting produce. Vehicles should be part of the sanitation program, in a good state of repair, clean, odor free, free from personal items, and free from chemical and microbiological contamination. If loads are tied down, tarps, belts, ropes, etc., should also be in good working order, without contamination risk to product.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "risk-assessment",
+        "sanitation",
+        "facility"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.07.02",
+      "section": "4.07",
+      "question": "During loading and transporting are harvested products protected from potential contamination?",
+      "points": 5,
+      "expectation_summary": "Personnel conducting loading and transporting activities should ensure that potential cross-contamination is prevented.",
+      "evidence_tags": [
+        "harvest"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.07.03",
+      "section": "4.07",
+      "question": "Are cleaning and sanitation logs on file for transport vehicles that show what was done, when, where, by who, water source used, and who verified?",
+      "points": 10,
+      "expectation_summary": "Sanitation logs should include: date/time, list of areas/equipment that were cleaned and sanitized, where cleaned/sanitized, why cleaned, water source, sanitizer concentration tests, the individual accountable who signed-off for each task completed, who verified cleaning effectiveness and any deviation against SSOPs.",
+      "evidence_tags": [
+        "records",
+        "water",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.07.04",
+      "section": "4.07",
+      "question": "Is there a system in place to track product from the growing area?",
+      "points": 10,
+      "expectation_summary": "There should be a tracking system in place to ensure that product can be traced back to each exact growing location and harvest date (e.g., grower identification, farm identification, block, harvesting date, etc.). Traceability lot codes must meet local and national requirements e.g., FDA Traceability Rule requirements (if applicable).",
+      "evidence_tags": [
+        "traceability",
+        "harvest"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.08.01",
+      "section": "4.08",
+      "question": "Is there an on-site storage for items and/or equipment used in the harvesting process (e.g., packing material, cartons, clamshells, re-usable containers, disinfectants, grading/packing tables, RPCs, harvesting equipment, etc.)?",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This question refers to an on-site storage for items and/or equipment used in the harvesting process (e.g., packing material, cartons, clamshells, re-usable containers, disinfectants, grading/packing tables, RPCs, harvesting equipment, etc.).",
+      "evidence_tags": [
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 23,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.08.02",
+      "section": "4.08",
+      "question": "Are packaging, containers, and harvesting equipment stored to prevent cross contamination (this includes RPCs, cartons, clamshells, bins, and other harvesting type of containers that are single use or reusable, etc.)?",
+      "points": 5,
+      "expectation_summary": "Packaging, containers, etc., should be stored away from farm chemicals, sanitizers, fertilizers, etc. All packaging materials should be stored off the ground (i.e. on racks, pallets, shelves, etc.). Cartons and other packing materials should be properly protected during storage to prevent contamination.",
+      "evidence_tags": [
+        "sanitation",
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 23,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.08.03",
+      "section": "4.08",
+      "question": "Are there cleaning logs for the storage area(s)?",
+      "points": 5,
+      "expectation_summary": "All storage areas should have a sanitation program in place and there should be records of the cleaning and sanitation activities performed, including areas cleaned, dates and person performing the activity.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "sanitation"
+      ],
+      "source_page": 23,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    },
+    {
+      "id": "4.08.04",
+      "section": "4.08",
+      "question": "Is there a documented and effective pest control program in place for fixed location storage areas?",
+      "points": 15,
+      "expectation_summary": "There should be a documented and effective, proactive pest control program (in-house or contracted) to control rodents (also insects, reptiles and birds where necessary) and prevent infestation in all fixed (permanent/dropped in place) storage areas. There should be a written scope of the program, indicating target pests and frequency of checks.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "pest-animal"
+      ],
+      "source_page": 24,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf"
+    }
+  ]
+}

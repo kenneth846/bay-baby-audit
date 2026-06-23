@@ -1,0 +1,633 @@
+{
+  "key": "module-1-fsms",
+  "number": "Module 1",
+  "title": "Food Safety Management System",
+  "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf",
+  "local_cache": "tmp/primusgfs-v4/module-1-fsms.pdf",
+  "question_count": 42,
+  "scored_points": 288,
+  "sections": [
+    {
+      "code": "1.01",
+      "questions": 8,
+      "points": 58
+    },
+    {
+      "code": "1.02",
+      "questions": 5,
+      "points": 21
+    },
+    {
+      "code": "1.03",
+      "questions": 4,
+      "points": 20
+    },
+    {
+      "code": "1.04",
+      "questions": 6,
+      "points": 48
+    },
+    {
+      "code": "1.05",
+      "questions": 5,
+      "points": 30
+    },
+    {
+      "code": "1.06",
+      "questions": 5,
+      "points": 50
+    },
+    {
+      "code": "1.07",
+      "questions": 3,
+      "points": 35
+    },
+    {
+      "code": "1.08",
+      "questions": 6,
+      "points": 26
+    }
+  ],
+  "questions": [
+    {
+      "id": "1.01.01",
+      "section": "1.01",
+      "question": "Is there a documented food safety policy detailing the company's commitment to food safety?",
+      "points": 5,
+      "expectation_summary": "The documented policy should include a clear statement and detailed objectives of the company's commitment to food safety, promoting a proactive and committed food safety culture, food laws, best practices and continued improvement including how objectives are measured and verified (e.g., by training, communicating organizational chart, feedback to management, performance measurements related to food safety, etc.). Cross reference with 1.01.02 and 1.01.07 to confirm monitoring and measurement of objectives. Everyone in the company should understand the food safety policy and be aware of their role in ensuring that it is met. The policy should be posted in an area(s) visible to visitors and workers and in the language(s) understood by the workers.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "inspection"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.01.02",
+      "section": "1.01",
+      "question": "Is there an established,",
+      "points": 5,
+      "expectation_summary": "The food safety culture assessment plan should be a structured and evolving initiative that actively evaluates and enhances the operation's food safety culture. The plan should be designed to identify areas for improvement and promote positive behaviors around food safety.",
+      "evidence_tags": [],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.01.03",
+      "section": "1.01",
+      "question": "Is there an organizational chart showing all management and workers who are involved in safety related activities and documentation (job descriptions) detailing their food safety responsibilities?",
+      "points": 10,
+      "expectation_summary": "The organizational chart should show positions and reporting structure of workers whose activities affect food safety within the company. This document should also detail job functions and responsibilities related to food safety. Suitable alternates should be indicated in case someone cannot perform the assigned responsibilities at certain moment. Document should be signed and dated by management to indicate it is current and accurate.",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.01.04",
+      "section": "1.01",
+      "question": "Is there a food safety committee and are there logs of food safety meetings with topics covered and attendees?",
+      "points": 5,
+      "expectation_summary": "Meetings that are either devoted to, or include food safety topics, should be recorded as proof of company's ongoing commitment to food safety (minimum frequency every 3 months). These meetings should detail Senior Management involvement in the Food Safety program.",
+      "evidence_tags": [
+        "policy",
+        "records"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.01.05",
+      "section": "1.01",
+      "question": "Is there a training management system in place that shows what types of training are required for various job roles of specific workers, including who has been trained, when they were trained, which trainings they still need to take, and a training schedule?",
+      "points": 5,
+      "expectation_summary": "The company has a system in place (e.g., training matrix) that shows what types of trainings are required for various job roles that affect food safety, who has been trained, when they were trained, which trainings they still need to take, and a training schedule. The training records required under specific questions will be reviewed in the applicable module(s).",
+      "evidence_tags": [
+        "training",
+        "records"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.01.06",
+      "section": "1.01",
+      "question": "Is there a documented allergen control program?",
+      "points": 10,
+      "expectation_summary": "Regardless of whether allergens are grown, stored or handled, there should be a documented allergen control program with a risk assessment of allergen cross contact and implemented controls to reduce or eliminate risks. The program details the operation’s management of allergens and how to avoid inadvertent allergen cross-contamination. The program should include an up-to-date list of any allergens grown, stored or handled on site in country of production (and where applicable, in country of destination). Workers are trained on allergen awareness, including on food consumed on-site (cross reference training records).",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "risk-assessment"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.01.07",
+      "section": "1.01",
+      "question": "Is there documented management verification review of the entire food safety management system at least every 12 months, including an evaluation of resources, and are there records of changes made?",
+      "points": 15,
+      "expectation_summary": "There should be written verification of the entire food safety management system including the HACCP system and FDA FSMA Preventive Controls Systems (if applicable to the operation) at planned intervals (minimum every 12 months) and there should be evidence that senior management is involved in the review (e.g. signatures, meeting minutes) to ensure its continuing suitability, adequacy and effectiveness and that they are continuing to support and invest in adequate food safety resources (e.g., equipment, services, supplies, personnel training, worker staffing levels, customer requirements/specifications, etc.) and to building and maintaining a proactive and committed food safety culture. The review should determine the need for changes and the changes made should be documented. The documented review should meet any national or local legislative requirements.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "equipment",
+        "haccp"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.01.08",
+      "section": "1.01",
+      "question": "Where specific industry guidelines or best practices exist for the crop and/or product, does the operation have a current copy of the document?",
+      "points": 3,
+      "expectation_summary": "There is a current copy of any specific industry guidelines for the crop and/or product, best practice documents and required government regulations. All local and national legislation or guidelines should be accounted for e.g., US Produce Safety Rule, FSMA, CA LGMA, Canada SFCR).",
+      "evidence_tags": [],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.02.01",
+      "section": "1.02",
+      "question": "Is there a written document control procedure (including document control register/record) describing how documents will be maintained, updated and replaced?",
+      "points": 5,
+      "expectation_summary": "There should be a record of all documents used when they were issued and updated with the current revision status to help avoid using obsolete documents. The document control procedure should show how controlled documents are to be written, coded, approved, issued and updated, and should also show how obsolete versions of documents are controlled. If using an electronic record keeping system, the procedure should also detail how electronic documents are managed to control access, how changes to documents are controlled-including who has edit rights and how electronic documents are secured, i.e., backup system.",
+      "evidence_tags": [
+        "policy",
+        "records"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.02.02",
+      "section": "1.02",
+      "question": "Is there a documented and implemented procedure that requires all records to be stored for a minimum period of 24 months (or greater if legally required) or for at least the shelf life of the product if it is greater than 24 months?",
+      "points": 3,
+      "expectation_summary": "There should be a written procedure in place requiring that all food safety related records (including any test results) be retained for a minimum of 24 months, regardless of the product(s) shelf-life. Food safety records for product(s) with a shelf-life beyond 24 months should be retained for at least the shelf-life of the product. Organizations are expected to follow any regulatory or legal requirements for food safety related record(s) retention beyond the 24-month minimum requirement stated here.",
+      "evidence_tags": [
+        "policy",
+        "records"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.02.03",
+      "section": "1.02",
+      "question": "Are both paper and electronic food safety related documents and records created, edited, stored and handled in a secure manner?",
+      "points": 5,
+      "expectation_summary": "Both paper and electronic documents and records that are part of the food safety program (e.g., procedures, policies, training records, testing results, monitoring records, etc.), should be stored securely and backed up in the case of electronic files. In the case of paper files, they should be generated using ink (not pencil), and if changes are made to records after initial entry, changes should be clearly legible and tracked, avoiding the use of corrective fluid. For electronic records, there should be access control and a backup of all files. When electronic records are amended, they should show what was amended, by whom and when (editing history). Records should be legible and accurate.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "inspection"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.02.04",
+      "section": "1.02",
+      "question": "Are records maintained in an organized and retrievable manner?",
+      "points": 3,
+      "expectation_summary": "All food safety records and documents should be maintained in a designated area where they can be retrieved readily. These records should be well organized, and should be accessible, even if the operation is seasonal. This will aid in the detection of issues, the isolation of problems, and the identification of trends where attention is needed. Data on computers must be easily retrievable.",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.02.05",
+      "section": "1.02",
+      "question": "Are all records and test results that can have an impact on the food safety program verified by a qualified person independent of the individual(s) completing the records?",
+      "points": 5,
+      "expectation_summary": "Records and test results should be reviewed and signed off by a qualified person within 7 days. The verifier is independent of the individual completing the record(s), understands the purpose of the verification and understands what they need to review on the record(s) before they sign (i.e., evidence of training). If any issues are detected, corrective actions should be recorded.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.03.01",
+      "section": "1.03",
+      "question": "Is there a written and standardized procedure for creating Standard Operating Procedures (SOPs) and their content?",
+      "points": 5,
+      "expectation_summary": "There should be a written document that describes how to create SOPs when required to cover any food safety related activities. SOPs should have document creation and update information e.g., a date it was written and a date it was revised, or revision #, document number or reference code; name of person who wrote it, and detail what is to be done, how it is done, how often, by whom, what recordings are required and any immediate corrective action to implement when deficiencies occur. There should be clear evidence that this system is being followed, based on SOPs reviewed.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.03.02",
+      "section": "1.03",
+      "question": "Are the written procedures available to relevant users and is a master copy maintained in a central file?",
+      "points": 5,
+      "expectation_summary": "The written procedures should be available to the users and other interested parties involved in performing the activities described in the procedures. A master copy of all SOPs and associated recording forms should be assembled and stored as a reference.",
+      "evidence_tags": [
+        "policy",
+        "records"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.03.03",
+      "section": "1.03",
+      "question": "Is there a documented corrective action procedure that describes the basic requirements for handling all non-conformances affecting food safety?",
+      "points": 5,
+      "expectation_summary": "The corrective action procedure should outline how the operation manages corrective actions. Specifically, requiring the determination of cause, establishment of an action plan(s) to address immediate issue(s) regarding non-conformance(s) (including any actions taken regarding affected product), corrective actions taken, the development of preventive actions to help avoid future occurrences and validation of corrective action. Procedure should require that records of the corrective action activities and their follow-up are completed using the same format with the required information detailed. Specific corrective action procedures and records are assessed in each module.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.03.04",
+      "section": "1.03",
+      "question": "Is there an incident reporting system, also known as a Notice(s) of Unusual Occurrence and Corrective Actions Log (NUOCA)?",
+      "points": 5,
+      "expectation_summary": "This record documents unusual and infrequent events, remedial actions and preventive actions, and helps avoid creating multiple logs for events that do not occur very often. Examples might include incidents like foreign object findings, out of specification testing results, chemical spills, power outages, packaging issues, glass breakage, fires, etc., as well as any other serious incidents such as natural disasters (e.g., hurricanes, flooding, earthquakes, etc.) that may have significant food safety impact.",
+      "evidence_tags": [
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.04.01",
+      "section": "1.04",
+      "question": "Is there a documented procedure for how internal audits are to be performed at the operations, including frequency and covering all processes impacting food safety and the related documents and records?",
+      "points": 10,
+      "expectation_summary": "A written procedure for internal audits should be created covering each operation. The procedure should cover the inspection of the sites, the practices in place, the related documents required, the records generated, the recording system to be used for the audits, the frequency of the internal audits and identification of the person(s) responsible for conducting the internal audits. Cross reference internal auditor(s) with 1.01.04 to ensure appropriate training has been given.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "inspection"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.04.02",
+      "section": "1.04",
+      "question": "Is there documented evidence of the internal audits performed, detailing findings and corrective actions?",
+      "points": 15,
+      "expectation_summary": "There should be records of the internal audits performed, meeting the frequency defined in the internal audit program. The records should include the date of the audit, name of the internal auditor, scope of the audit, justification for answers (not just checked √ or all Y/N), detailing any deficiencies found and the corrective actions taken. An audit checklist (ideally PrimusGFS) should be used that covers all sections of the PrimusGFS audit, including worker hygiene, harvest practices, on-site storage, etc. No down score if another audit checklist is used, as long as all sections are covered. Corrective actions should adhere to corrective action procedure 1.03.03.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection",
+        "harvest"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.04.03",
+      "section": "1.04",
+      "question": "Are there written procedures for handling regulatory inspections?",
+      "points": 3,
+      "expectation_summary": "Written procedures for handling food safety related regulatory inspections are available for workers to follow when regulatory agencies inspect the operation. Regulatory agencies could be Health Departments, State enforcement organizations, etc. (e.g., US: USDA/FDA, Canada: CFIA, Chile: Ministerio de Agricultura/SAG, México: SAGARPA). The procedures should include at a minimum, rules for always accompanying inspections, identified meeting space, rules on taking samples and taking photographs, how to follow-up after the inspection, corrective action requirements, etc. This policy should be communicated to key personnel including the receptionists, field/plant workers and crew/line supervisors. Inspection policies must not contravene bio-terrorism laws and restrict access to documents that have been covered by these laws.",
+      "evidence_tags": [
+        "policy",
+        "corrective-action",
+        "inspection",
+        "harvest"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.04.04",
+      "section": "1.04",
+      "question": "Are there records of regulatory inspections and/or contracted inspections, company responses and corrective actions, if any?",
+      "points": 5,
+      "expectation_summary": "Reports of previous food safety inspections are on file and any deficiencies noted have been responded to (date of response, action taken, and signature). Inspections include regulatory (e.g., local and national) and third-party audits.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.04.05",
+      "section": "1.04",
+      "question": "Are there documented calibration and/or accuracy verification procedures for measuring and monitoring devices used in the operations that are related to the safety of the product?",
+      "points": 10,
+      "expectation_summary": "Equipment used for measuring and monitoring processes related to food safety should be identified (i.e., catalog, roster, list) and SOPs should be available. Scales/weight or volume measuring devices (e.g., for pesticide measurement) should have verification of accuracy and/or calibration regularly to ensure correct and accurate operation, where relevant to food safety. Calibration procedures should be traceable to a national or international standard or method, and should describe the frequency of testing, the testing method and the acceptable range of variation. Corrective actions should be detailed when applicable. Legal requirements, manufacturer recommendations, best practice and experience of equipment drift help to determine the frequency.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection",
+        "equipment"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.04.06",
+      "section": "1.04",
+      "question": "Are calibration and/or accuracy verification records maintained and are they consistent with the requirements outlined in the SOP(s) for instruments and measuring devices requiring calibration?",
+      "points": 5,
+      "expectation_summary": "Calibration and/or accuracy verification records should be available for all applicable equipment and should consider at least equipment identification, date, frequency of testing, testing method, result (variation), and corrective actions. Both internal (where the company checks the equipment for themselves) and external (where equipment is sent away, or an outside specialist company comes on site and checks the equipment in situ) calibrations should be documented and on file. Proof of calibration includes records, invoices and on machines labels. Where an external service is used, procedures, licenses and/or certifications are acceptable.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "equipment"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.05.01",
+      "section": "1.05",
+      "question": "Is there a documented product release procedure available?",
+      "points": 5,
+      "expectation_summary": "Product release procedures are needed when the product is approved for shipment or harvest (they do not indicate the release of a product that has been placed on hold). Product release procedures ensure that a lot is only released for shipment (sale) when lot meets agreed standards (e.g., specification) or meets agreed testing requirements (e.g., results confirmed negative or within limits results from testing, etc.). This includes crops approved for harvest and crop harvest where harvested product is direct picked into packaging during harvest (e.g., mushrooms, berries, individually wrapped lettuce) or there is in-field processing/semi- processing. Products should not be released for harvest or shipment without assuring that necessary evaluations have been performed. N/A for organizations that only have authority over the growing activities and operation(s), and not the harvesting activities.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "harvest"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.05.02",
+      "section": "1.05",
+      "question": "Are there records of product releases kept on file?",
+      "points": 5,
+      "expectation_summary": "Product release records are needed to document when the product is approved for shipment or harvest (they do not indicate the release of a product that has been placed on hold). Product release records should show documented evidence that all product that is shipped and harvested is released only when the release procedure has been completed and the product has been \"signed off\" for by authorized personnel. Records should be available demonstrating the sign off for the “release” of all product shipped. N/A for organizations that only have authority over the growing activities and operation(s), and not the harvesting activities.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "harvest"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.05.03",
+      "section": "1.05",
+      "question": "Is there a documented procedure for handling on hold and rejected items?",
+      "points": 5,
+      "expectation_summary": "There should be a documented procedure that explains how items (raw materials, packaging, work in progress, finished product, etc.) that have either been rejected or placed on hold should be handled, including the release of the on hold/rejected items. The procedure should identify who (position/title) is authorized to determine the disposition of materials that are placed on hold and include details on how the affected items are separated in terms of identification system (e.g., when, why, who), and any other physical separation needed to ensure that affected items are not commingled with other goods in such a way that their disposition is not clear.",
+      "evidence_tags": [
+        "policy",
+        "records"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.05.04",
+      "section": "1.05",
+      "question": "Are there records of the handling of on hold and rejected items kept on file?",
+      "points": 5,
+      "expectation_summary": "Records should be kept to provide information about any item (raw materials, packaging, work in progress, finished product, etc.) that is rejected or put on hold, including at least: date and time, amount of product affected, reason for being on hold/rejected, name of the person who rejected the product or put it on hold, details of product disposition, date, time, the actions taken, and the signature of an authorized person to release the product.",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.05.05",
+      "section": "1.05",
+      "question": "Is there a documented procedure for dealing with customer and buyer food safety complaints/feedback along with records and company responses, including corrective actions?",
+      "points": 10,
+      "expectation_summary": "There should be a documented procedure detailing how to handle food safety related complaints, rejections and feedback. The procedure should require the recording to include (where applicable): • Date/Time of complaint/rejection/feedback • Who made the complaint/gave feedback, • Contact information, • Product description, • Where the product was purchased, • Amount of product, • Product code/date, • Nature of complaint/rejection/feedback, • Corrective actions (including details of cause if known) • Corrective actions taken to prevent reoccurrence. Where appropriate (e.g., complaints of a repetitive nature), a trend analysis of food safety feedback should be performed to assist with the development of corrective actions.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.06.01",
+      "section": "1.06",
+      "question": "Is there a written procedure detailing how suppliers and service providers are evaluated, approved, and include the ongoing verification activities including monitoring?",
+      "points": 10,
+      "expectation_summary": "The procedure for evaluation, approval and on-going verification, including monitoring of suppliers, on-site service providers and outsourced service providers including labor providers, should include the indicators to be considered for decision making (including food safety hazards), exceptions and the elements the providers should comply with to make sure they meet the defined specifications. This procedure should include monitoring requirements in order to remain approved, and methods for suspending and un-approving suppliers and service providers including product design and development (new products, changes to product or manufacturing processes). The procedure should also detail what is needed (minimum requirements) in the case of working with a supplier in an emergency situation that has not yet been approved, including requiring approval from named management is justified and documented. Cross reference with 1.01.06 to confirm ongoing verification activities.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "inspection",
+        "supplier"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.06.02",
+      "section": "1.06",
+      "question": "Is there a list of approved suppliers and service providers including justification for use of any emergency (temporary) suppliers or providers?",
+      "points": 10,
+      "expectation_summary": "There should be a list of approved suppliers and service providers. All incoming products, ingredients, materials (including primary packaging) and services (e.g., labor, equipment, materials) that relate to food safety should be sourced from approved entities. Where exceptions are made (e.g., market conditions), approval from management should be justified and documented as per procedure (1.06.01).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "equipment",
+        "supplier"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.06.03",
+      "section": "1.06",
+      "question": "Are there current written food safety related specifications for all incoming products, ingredients, materials, services provided on-site, and outsourced services?",
+      "points": 10,
+      "expectation_summary": "There should be written, detailed, up-to-date specifications based on sound scientific principles for all incoming materials (including inputs), services provided on-site, and outsourced services (including labor) that have an effect on food safety, addressing the required Good Agricultural Practices and/or Good Manufacturing Practices. Documented specifications should be easily accessible to workers. The specifications should be reviewed at least annually.",
+      "evidence_tags": [
+        "policy",
+        "records"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.06.04",
+      "section": "1.06",
+      "question": "Does the organization have documented evidence to ensure that all incoming products, ingredients, materials, services provided on- site, and outsourced service suppliers comply with the approval requirements and that all supplier verification activities (including monitoring) are being followed, as defined in the supplier approval procedure?",
+      "points": 15,
+      "expectation_summary": "The organization should have the required documentation for approved suppliers to ensure that they are complying with the established supplier/service provider approval procedures, contracts, specifications, regulatory requirements and best practice guidelines. Supplier/service provider verification documents should demonstrate that the ongoing approval requirements detailed in 1.06.01 are being met (e.g., third party food safety audits, certificates of analysis, reviews of supplier records, etc.).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "inspection",
+        "supplier"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.06.05",
+      "section": "1.06",
+      "question": "Where food safety related testing is being performed by laboratory service providers, are these licensed and/or accredited laboratories (e.g., ISO 17025 or equivalent, national and local regulations, etc.)?",
+      "points": 5,
+      "expectation_summary": "Food safety related testing that is performed by laboratory service providers should be done by currently permitted, licensed and/or accredited laboratories for the scope(s) of work being carried out. Examples of these licenses and accreditations include ISO 17025 accreditations or equivalent, national and local regulations in the country of production, etc. Documented evidence of these licenses and/or accreditations should be available.",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.07.01",
+      "section": "1.07",
+      "question": "Is there a document that indicates how the company product tracking system works, thereby enabling trace back and trace forward to occur in the event of a potential recall issue?",
+      "points": 10,
+      "expectation_summary": "The tracking system should be shown in writing or in the form of a flow diagram and demonstrates the product tracking system that is used by the operation. The system should be able to show that it can trace back to the supplier(s) of materials (including seeds and other propagation materials, growing media, commodities, packaging, etc.), and also show that the system can trace forward and indicate which customer(s) received products. This is usually accomplished by lot coding materials throughout a process and recording these lot codes at different points in the process. Where legally required (e.g., FDA Traceability Rule), lot codes and additional Key Data Elements (KDAs) should be recorded and linked to enable product tracing. Growing operations should have certificates/seed lot numbers/product names (for purchased seed, home saved seed and seed treatments. The traceability system should be in evidence when touring the operation and also when checking paperwork",
+      "evidence_tags": [
+        "records",
+        "supplier",
+        "traceability"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.07.02",
+      "section": "1.07",
+      "question": "Does the organization have a documented recall program including procedures, recall team roles and contact details, external contact listings, requirement for recall effectiveness checks, explanation of different recall classes and handling of recalled product?",
+      "points": 15,
+      "expectation_summary": "There should be a written procedure describing how to perform a product recall, a list of recall team members and their contact details, responsibilities and alternates, a referral to customer and supplier contact details, handling of recalled product, explanations of relevant laws (e.g., product withdrawal, recalls classes if USA is involved as a country of production or destination, etc.). In the event of a product recall related to food safety, the organization must inform their certification body (CB).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "supplier",
+        "traceability"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.07.03",
+      "section": "1.07",
+      "question": "Is testing of recall procedures (including traceback) performed and documented at least every six months, and the company can demonstrate the ability to trace materials (one step forward, one step back) effectively?",
+      "points": 10,
+      "expectation_summary": "Testing of recall procedures should be performed at least every six months. (For short season crops where the operation runs 6 months or less throughout the year, only one mock recall is required.) Where two mock recalls per year are required, one of the mock recalls should include the primary packaging as part of the exercise. The steps taken to conduct the mock recall, as well as the records utilized to demonstrate the program, are effective and should be consistent with the scenario identified. Documentation should indicate the date and time the mock recall was initiated, the product or material chosen, the scenario, amount of product produced, affected lot ID’s (date code(s), lot code(s), etc.), amount located, and percent located. Mock recall documentation should include copies of documentation that support the trace (forward and back depending on the scenario) from the affected finished good lot through to the production run(s) affected, and therefore, showing if other lots are affected and which other customers might have received affected lot(s). Checks should be carried out to ensure that contact details exist for the affected customers. Documentation should also include any “lessons learned” from the process.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "traceability"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.08.01",
+      "section": "1.08",
+      "question": "Is there a written food fraud vulnerability assessment (FFVA) and protection plan for all types of fraud, including all incoming and outgoing products?",
+      "points": 5,
+      "expectation_summary": "There should be a vulnerability (risk) assessment and comprehensive protection plan that is developed and maintained by personnel with appropriate knowledge and expertise, covering all types of food fraud. This includes economically motivated hazards, economically motivated food safety hazards, adulterant substances, mislabeling, theft, tampering, simulation, diversion or gray market, intellectual property rights and counterfeiting. An example of a food fraud scenario that may occur at an operation is when suppliers provide products/materials that do not match their required specifications (e.g., unapproved chemicals, non-food grade packaging material. product substitution).",
+      "evidence_tags": [
+        "policy",
+        "risk-assessment",
+        "supplier"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.08.02",
+      "section": "1.08",
+      "question": "Is there a written food defense vulnerability assessment and food defense plan based on the risks associated with the operation?",
+      "points": 5,
+      "expectation_summary": "The company should have a documented food defense plan that is developed and maintained by personnel with appropriate knowledge and expertise, and includes a written food defense vulnerability assessment, and controls for the identified risks. Some high-risk areas include: site/building access, personnel, visitors, contractors, computers, raw material receipt (raw materials, product and packaging), trucks (incoming and outbound), water sources, storage areas for product, materials, chemicals, production areas, shipping areas, etc. The food defense plan creation should also meet any national or local regulations (including management oversight and approval). Based on this assessment, the operation should create monitoring, corrective action and verification procedures (where appropriate). These procedures should note the recording requirements of the food defense plan. The plan should be reviewed at least once every 12 months e.g., as part of management verification review process.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "risk-assessment",
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.08.03",
+      "section": "1.08",
+      "question": "Are records associated with the food defense plan and its procedures being maintained, including monitoring, corrective action and verification records (where appropriate)?",
+      "points": 5,
+      "expectation_summary": "The records required in the food defense plan should be maintained, in accordance with the details of the plan and its associated procedures. These records are also subject to the document control and records requirements of this module.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.08.04",
+      "section": "1.08",
+      "question": "Is there a documented crisis management plan?",
+      "points": 5,
+      "expectation_summary": "Crisis management plans are documented steps to help organizations plan, prepare and address disruptive events that may impact the ability of the auditee to assure the safety of the food product. Known disruptive events should be listed, and may include natural and man-made incidents e.g., hurricane, earthquake, fire, chemical spill, computer virus attack, vandalism, power outage, etc. The plan should list and identify a crisis management team, emergency contacts, criteria for crises, monitoring systems and measures for detecting signs of potential crisis situations, and an action or response plan for each crisis listed. Where any product is affected, records of disposition should be maintained. Team should meet at least every 12 months (with documented minutes) to review, test and verify the plan. Written details should include the subject/test scenario, who was involved, test results, and any changes made to the program.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "inspection"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.08.05",
+      "section": "1.08",
+      "question": "Is there a current list of emergency contact phone numbers for management, law enforcement and appropriate regulatory agencies?",
+      "points": 3,
+      "expectation_summary": "The company should have a current list of emergency contact phone numbers available for company management, law enforcement and appropriate regulatory agencies.",
+      "evidence_tags": [],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    },
+    {
+      "id": "1.08.06",
+      "section": "1.08",
+      "question": "Are visitors and contractors to the company operations required to adhere to food defense procedures?",
+      "points": 3,
+      "expectation_summary": "Visitors and contractors should be required to adhere to food defense procedures. This can be evidenced by having them sign a log when arriving to the operation, where they are agreeing to meet the company visitor and contractor food defense requirements.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "equipment"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf"
+    }
+  ]
+}

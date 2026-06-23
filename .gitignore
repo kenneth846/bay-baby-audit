@@ -16,6 +16,9 @@ dist/
 # logs
 *.log
 
+# local extraction/cache files
+tmp/
+
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts

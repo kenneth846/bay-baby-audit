@@ -1,0 +1,354 @@
+{
+  "key": "module-6-haccp",
+  "number": "Module 6",
+  "title": "HACCP",
+  "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf",
+  "local_cache": "tmp/primusgfs-v4/module-6-haccp.pdf",
+  "question_count": 22,
+  "scored_points": 260,
+  "sections": [
+    {
+      "code": "6.01",
+      "questions": 5,
+      "points": 50
+    },
+    {
+      "code": "6.02",
+      "questions": 11,
+      "points": 135
+    },
+    {
+      "code": "6.03",
+      "questions": 6,
+      "points": 75
+    }
+  ],
+  "questions": [
+    {
+      "id": "6.01.01",
+      "section": "6.01",
+      "question": "Is there a team responsible for the HACCP system at the operation, with an assigned leader for the development, implementation and on-going maintenance of the HACCP system?",
+      "points": 10,
+      "expectation_summary": "There should be a documented list of the team carrying out the HACCP system (hazard and risk management system) in the operation, with one leader or coordinator assigned as responsible. The team should be multidisciplinary and include people from management, production, quality, sanitation, maintenance, shipping, procurement, sales, external consultants, etc. The size of the team will depend on the size of the operation and the processes performed.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "sanitation",
+        "haccp"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.01.02",
+      "section": "6.01",
+      "question": "Is there documented evidence that the HACCP team members have been trained on HACCP principles?",
+      "points": 15,
+      "expectation_summary": "The HACCP Coordinator should have a certificate of formal HACCP training from a recognized organization, institution or trainer with a minimum duration of 2 days or 16 hours, taken within the last 5 years. The rest of the team should have at least an internal training (within the last 5 years) to make sure they are knowledgeable of the HACCP principles. These trainings should be documented.",
+      "evidence_tags": [
+        "training",
+        "records",
+        "haccp"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.01.03",
+      "section": "6.01",
+      "question": "Does a product description exist for the products produced?",
+      "points": 10,
+      "expectation_summary": "The description should detail the products' name and composition (ingredients), packaging used, shelf-life, storage conditions, distribution requirements, important food safety characteristics (if any) (e.g., pH, water activity), label instructions, the intended use, statement on whether the product is RTE and who the intended consumer is.",
+      "evidence_tags": [
+        "water"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.01.04",
+      "section": "6.01",
+      "question": "Has the process(es) been flow charted in sufficient detail to completely describe the process or product handling/processing steps?",
+      "points": 10,
+      "expectation_summary": "The information (from receiving through to final storage and shipping) on the flow diagram is used to identify any and all steps throughout the process where there is a potential for a food safety hazard to be introduced or for a product safety control to be implemented. Groups of similar products going through the same process can be grouped in the same flow chart. The flow chart should be based on the latest version of the Codex Alimentarius General Principles of Food Hygiene, indicate all raw materials, ingredients and materials used in all preparation steps, all equipment used, blending steps, processing steps, rework, by-product, returned products and products destined for further processing, packaging materials (carton and unit packaging) and packaging equipment. All inputs should be included, such as packaging, water source (e.g., city or well), ice, air, anti- microbials, fungicides, etc., as well as outputs e.g., waste, re-work, further processing, etc. Each step should show any holding times, temperature regimes, etc., at appropriate process steps. Diagram should show re-work processes and when product is diverted to be used for other purposes. Process flows can be augmented by written process descriptions (where helpful).",
+      "evidence_tags": [
+        "policy",
+        "water",
+        "equipment"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.01.05",
+      "section": "6.01",
+      "question": "Is there documented evidence that the flow chart(s) has been verified on-site?",
+      "points": 5,
+      "expectation_summary": "Flow diagrams should be verified on-site by the food safety team by walking through the facility to make sure the flow chart includes all the steps in the process, and they are in the correct order. Any significant changes to the process must be accurately reflected in the flow diagram and evaluated to determine if the changes have an impact on the hazard analysis and CCPs in place. The flow chart(s) is signed and dated by the HACCP coordinator to confirm it reflects the process at different moments in time (auditor should confirm how and when flow chart(s) were verified).",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "inspection",
+        "haccp",
+        "facility"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.01",
+      "section": "6.02",
+      "question": "Has a documented hazard analysis for the processes been conducted, showing the various types of hazards, their likelihood of occurrence, their associated severity and their control measures? A ZERO POINT (NON- CONFORMANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "points": 15,
+      "expectation_summary": "Hazard analyses based on the latest version of the Codex Alimentarius General Principles of Food Hygiene, are required to identify each potential food safety hazard (biological, chemical and physical) at each step of the production process. The analyses should evaluate the likelihood of hazard occurrence and potential hazard severity in the absence of control measures. The hazard analysis document(s) should show the control measures applied. Each step identified in the process flow diagram should be assessed in the hazard analysis. The hazard analysis should be reviewed when changes occur affecting the product description and/or the process flow. A ZERO POINT (NON-CONFORMANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.02",
+      "section": "6.02",
+      "question": "Have CCP decisions been made with logical, documented justification and where CCPs are implemented in a specific processing step, have they been developed to control the identified hazard(s)?",
+      "points": 15,
+      "expectation_summary": "The CCPs should be created based on the documented hazard analyses, i.e., there should be a logical documented approach based on the latest version of the Codex Alimentarius General Principles of Food Hygiene, (such as utilizing a CCP decision tree) that justifies whether or not there is a step(s) in the process determined to be a CCP(s). CCP decisions should be properly justified with supporting documents, rationale and evidence. The CCPs identified in the hazard analysis should be developed in detail to define the parameters involved and the monitoring requirements needed in order to control the hazard. This question must be scored. Scoring N/A is not allowed.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.03",
+      "section": "6.02",
+      "question": "Is the HACCP system reviewed when significant changes are made and at least once every 12 months?",
+      "points": 10,
+      "expectation_summary": "The HACCP system (hazard & risk assessment system) should be reviewed by the HACCP team at least every 12 months and when significant changes are made. There should be a written record of each step in the HACCP plan including product descriptions, process flows, hazard analyses, CCP decisions, critical limits, monitoring systems, corrective actions, and verification procedures being reviewed, verified as being accurate/appropriate and a change record is included for the plan. The review should also consider customer complaints, equipment calibration, record review, trend analysis data, raw materials, new products, labelling requirements (including allergens), packaging, suppliers, product, process, construction (including upgrades, improvements, temporary and emergency work), new equipment, recurring deviations, new scientific information, new legal requirements, new distribution or consumer practices, etc. Where emerging issues, such as recalls, an outbreak, new research, etc., are relevant to the products and processes at hand, consideration of a HACCP review should occur. Documented re-training or educational sessions may be necessary. The HACCP team should inform workers involved of the review outcomes.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "risk-assessment",
+        "corrective-action"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.04",
+      "section": "6.02",
+      "question": "Have critical control point (CCP) processing steps been identified that eliminate or reduce food safety hazards to an acceptable level? Information gathering. If the answer is YES, continue with the next question. If the answer is NO, the rest of “Module 6 HACCP” is not applicable.",
+      "points": 0,
+      "expectation_summary": "The identification of CCPs in the process will require the development of the criteria for managing it and the execution of the necessary activities in the production line. CCPs should be controllable, and the controls should be able to eliminate or reduce the risk to acceptable “safe” levels. Where the operation determined that there are no CCPs (and the auditor is in agreement), no further HACCP development is required, and the rest of the module is not applicable N/A. Where the auditor finds error(s) in the logic applied, e.g., a step meets the requirements for a CCP, but it is not identified as such, the issue should be detailed here, and the rest of Module 6 is applicable and should be scored.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.05",
+      "section": "6.02",
+      "question": "Have CCP critical control limits been established and are they supported by relevant validation documentation?",
+      "points": 15,
+      "expectation_summary": "A critical control limit (CCL) represents the dividing line used to judge whether a CCP is under control or not. Each Critical Control Point should have one or more critical control limits for each identified hazard. All CCPs should be supported by validation documentation showing that the critical control limits (CCL) are scientifically derived and meet any relevant legal requirements. Validation could take the form of publicly available legislative documents, industry best practice documents, peer reviewed research papers, on site validation studies, etc., or a mix of different validation sources.",
+      "evidence_tags": [
+        "records",
+        "haccp"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.06",
+      "section": "6.02",
+      "question": "Have monitoring requirements and frequencies been determined and documented for the CCPs?",
+      "points": 15,
+      "expectation_summary": "Monitoring requirements should detail the actions necessary (observations or measurements) to ensure whether a CCP is under control. Frequencies and requirements of monitoring should also be defined and documented for each CCP.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.07",
+      "section": "6.02",
+      "question": "Have specific responsibilities been assigned for the monitoring, recording and corrective action implementation of each CCP?",
+      "points": 10,
+      "expectation_summary": "Specific responsibilities should be assigned for the monitoring, recording and corrective action implementation of each CCP to ensure conformance. The responsibility should be clearly indicated on the HACCP plan by at least naming the function e.g., QA Technician or trained designate, who is responsible for monitoring, recording and executing corrective action related to an individual CCP.",
+      "evidence_tags": [
+        "training",
+        "records",
+        "corrective-action",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.08",
+      "section": "6.02",
+      "question": "Have standard operating procedures (SOPs) been created for the monitoring process(es) of the CCPs, which would include how to carry out the monitoring activities?",
+      "points": 10,
+      "expectation_summary": "Clear and simple standard operating procedures (SOPs) should be written for each monitoring process(es) of the CCPs. These SOPs should expand on what is written in the HACCP Plan and detail the monitoring activities in detail in the form of work instructions.",
+      "evidence_tags": [
+        "policy",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.09",
+      "section": "6.02",
+      "question": "Have corrective action procedures been established for the CCPs, including a detailed action plan for operators to follow if the critical control limits are not met (loss of control/deviation) and plans to adjust the process back into control?",
+      "points": 15,
+      "expectation_summary": "There should be a documented, detailed plan with written procedures to follow when there is a loss of control (deviation) of a CCP appropriate to the nature of the hazard. The corrective action details should note the critical control limit issue that occurred, what corrective actions were carried out, including what happened to potentially affected product and also how the process was “repaired” or “amended” in order to get the process back to the required control level. The HACCP plan corrective action sections should state where the corrective action details are to be recorded and details should match the written corrective action procedures. Where appropriate, preventative measures should also be required to reduce the likelihood the problem with recur.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "haccp"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.10",
+      "section": "6.02",
+      "question": "Have recording forms been developed for monitoring the CCPs?",
+      "points": 15,
+      "expectation_summary": "Recording form templates should be designed to record the monitoring of the CCPs that have been identified. The records should match the details as noted in the HACCP Plan and have CCPs identified by name and number, what is being measured, the frequency of the measurement, the critical control limit, the operating limit (if applicable), the responsible person(s) or team and the corrective action(s) required in the case of measurements not in conformance. These templates should be managed under the document control program.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.02.11",
+      "section": "6.02",
+      "question": "Have verification plans and schedules been developed for each CCP?",
+      "points": 15,
+      "expectation_summary": "Verification activities related to each CCP on the HACCP plan should be clearly detailed and documented. Verification activities verify that the HACCP plan is being implemented correctly, and may include microbial testing, customer complaints, equipment calibration, blade checks, visually observing a CCP operator, date checks of reagent expiration dates and any other information that CCPs might help generate. Verification activities also include a verification of the CCP monitoring records (6.03.05) by a HACCP trained supervisor or manager, checking that the CCP monitoring records have been completed in a proper and timely manner and including any corrective action work. Where verification activities have found that CCPs were not performing as required, there should be records that show that this prompted a review of the relevant part of the HACCP Plan.",
+      "evidence_tags": [
+        "training",
+        "records",
+        "corrective-action",
+        "inspection",
+        "equipment"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.03.01",
+      "section": "6.03",
+      "question": "Is there documented evidence that all plant workers have attended a HACCP training, including specific training for CCP operators?",
+      "points": 10,
+      "expectation_summary": "All plant workers (including management) should receive basic HACCP overview training i.e., what is HACCP, the 7 principles, and what are the CCPs on site, on an annual basis. This training is especially important for CCP operators, and for those workers, the training should cover the explanation of the procedures in which they are responsible and be included in the training management program (see 1.01.04). All training activities should be documented.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "haccp"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.03.02",
+      "section": "6.03",
+      "question": "Do CCP operators understand basic HACCP principles and their role in monitoring CCPs?",
+      "points": 10,
+      "expectation_summary": "CCP operators should understand basic HACCP principles and have a good understanding of the details of the CCPs that they have been assigned to monitor, including monitoring procedures, critical controls and corrective action requirements. Auditor should interview operators to verify.",
+      "evidence_tags": [
+        "policy",
+        "corrective-action",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.03.03",
+      "section": "6.03",
+      "question": "Are the CCP monitoring activities and frequencies in conformance with the HACCP Plan and CCP SOPs?",
+      "points": 15,
+      "expectation_summary": "The monitoring records should show that testing frequency, parameters and any other details match what is written in the HACCP Plan and CCP SOPs. The records should show actual values or observations, be accurate and legible, be real-time recording and have adequate detail.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.03.04",
+      "section": "6.03",
+      "question": "Are CCP monitoring records signed off (or initialed) by the operator(s) who are carrying out and recording the CCP check?",
+      "points": 15,
+      "expectation_summary": "Records should be legible in order to show who actually performed the CCP monitoring tests. If initials are used, there should be a way to easily determine who the initials refer to.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.03.05",
+      "section": "6.03",
+      "question": "Are the CCP records reviewed and signed off by the food safety supervisor and/or management (second signatory)?",
+      "points": 10,
+      "expectation_summary": "Records should be signed off by a trained, designated person within 36 hours of the original CCP monitoring activity occurring. The sign-off should not be done by the same person who carried out the monitoring activities. If any issues are detected, corrective actions should be recorded. Ideally records are reviewed prior to release of product to prevent potential recall and unintended consequences should a deviation be found during record review. Allowance may be made for operations that are not running daily (auditor discretion applies).",
+      "evidence_tags": [
+        "training",
+        "records",
+        "corrective-action",
+        "inspection",
+        "traceability"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    },
+    {
+      "id": "6.03.06",
+      "section": "6.03",
+      "question": "Is there a deviation record detailing documented corrective actions when a deviation/loss of control of a CCP occurs (a critical control limit is exceeded)?",
+      "points": 15,
+      "expectation_summary": "When a monitoring or verification step shows a deviation/loss of control against a CCP in the HACCP Plan (including when a critical control limit is exceeded), the incident should be recorded on a deviation record (or similar form), along with actions taken. This includes recording what happened to the affected product, how the situation was rectified and any preventative actions taken to avoid similar issues in the future.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "haccp"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf"
+    }
+  ]
+}

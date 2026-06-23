@@ -1,0 +1,898 @@
+{
+  "key": "module-2-farm",
+  "number": "Module 2",
+  "title": "Farm",
+  "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf",
+  "local_cache": "tmp/primusgfs-v4/module-2-farm.pdf",
+  "question_count": 62,
+  "scored_points": 549,
+  "sections": [
+    {
+      "code": "2.01",
+      "questions": 3,
+      "points": 25
+    },
+    {
+      "code": "2.02",
+      "questions": 13,
+      "points": 140
+    },
+    {
+      "code": "2.03",
+      "questions": 4,
+      "points": 0
+    },
+    {
+      "code": "2.04",
+      "questions": 6,
+      "points": 0
+    },
+    {
+      "code": "2.05",
+      "questions": 4,
+      "points": 36
+    },
+    {
+      "code": "2.06",
+      "questions": 3,
+      "points": 28
+    },
+    {
+      "code": "2.07",
+      "questions": 12,
+      "points": 100
+    },
+    {
+      "code": "2.08",
+      "questions": 4,
+      "points": 45
+    },
+    {
+      "code": "2.09",
+      "questions": 4,
+      "points": 40
+    },
+    {
+      "code": "2.10",
+      "questions": 6,
+      "points": 90
+    },
+    {
+      "code": "2.11",
+      "questions": 3,
+      "points": 45
+    }
+  ],
+  "questions": [
+    {
+      "id": "2.01.01",
+      "section": "2.01",
+      "question": "Is there a trained on- site person responsible for the operation's food safety program?",
+      "points": 10,
+      "expectation_summary": "There should be a trained on-site person(s) responsible for the operation's food safety program (cross reference with 1.01.04). They should have documented formal training or be trained by someone that has documented formal credentials in food safety topics relevant to their responsibilities. This training should meet all local and national requirements. Cross reference with 1.01.04.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.01.02",
+      "section": "2.01",
+      "question": "If the operation is growing under organic principles, is there written documentation of current certification by an accredited organic certification organization?",
+      "points": 0,
+      "expectation_summary": "Information gathering question. Current certification by an accredited organic certification organization (national/local) should cover the audited crops, be on file and available for review. N/A if not growing under organic principles.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "inspection"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.01.03",
+      "section": "2.01",
+      "question": "Does the operation have written food safety hygiene and health rules covering at least worker and visitor hygiene and health, infants and toddlers, animal presence in growing and storage areas, fecal matter, dropped product, blood and bodily fluids?",
+      "points": 15,
+      "expectation_summary": "There should be written food safety policy rules regarding worker and visitor personal hygiene, GAPs and health requirements. The rules should cover hygiene and health (e.g., hand washing, eating/drinking, smoking, specific clothing rules, foreign material issues, cuts/wounds, illness rules, etc.), no infants and toddlers allowed in the growing area, what to do in the case of evidence of animals and/or fecal matter in the growing and/or storage areas, and what to do in the case of dropped product, and if the product comes into contact with blood or other bodily fluids. All workers and visitors should be issued a list of rules in the relevant languages and confirm by signing they understand and agree to abide. Cross reference with 1.01.04 to verify topics are part of the training program for workers. Training provided and associated records should meet local and national regulations.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "pest-animal"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.01",
+      "section": "2.02",
+      "question": "Is there a map that accurately shows all aspects of the operation, including water sources and fixtures used to deliver water used in the operation?",
+      "points": 5,
+      "expectation_summary": "There is a map or similar document (photograph, drawing) that accurately shows the growing area(s), adjacent land use/features (e.g., buildings, industrial uses, nearby CAFOs, etc.), water sources, type of water distribution system (i.e., open or closed), location of permanent water fixtures and the direction of flow of the water system, including any holding tanks and water captured for re-use. Permanent fixtures include water district valves, wells, gates, reservoirs, canals, returns and other above ground features. Septic systems, effluent lagoons or ponds, surface water bodies are also identified. Document should enable location of the water sources and the production blocks they serve.",
+      "evidence_tags": [
+        "water",
+        "facility"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.02",
+      "section": "2.02",
+      "question": "Are growing areas adequately identified or coded to enable trace back and trace forward in the event of a recall?",
+      "points": 15,
+      "expectation_summary": "Coding details (e.g., farm name or reference code, blocks of the growing area(s)) should be in sufficient detail to enable trace back and trace forward through the distribution system and meet FDA Traceability Rule requirements (if applicable). Details of the coding need to be tied to the record keeping system (e.g., pesticide, fertilizer records, microbiological testing reports). There should be field maps available demonstrating the coding details used in the operation(s).",
+      "evidence_tags": [
+        "records",
+        "pest-animal",
+        "traceability"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.03",
+      "section": "2.02",
+      "question": "Has a documented risk assessment been developed, covering potential hazards associated with the site location and growing process including the flow of materials and equipment?",
+      "points": 15,
+      "expectation_summary": "A documented risk assessment of the growing area and surrounding areas should be performed prior to the first seasonal planting and at least annually, and when any changes are made to the growing area, and adjacent land. Specific risk assessments for animal-based or derived components under 2.08.02, growing media are scored under 2.08.03, and water use is covered under 2.09.02. They may be included in this risk assessment or as separate documents. Document should detail known or reasonable foreseeable hazards, the specific microbial, chemical (includes allergens) and physical hazards and their severity and likelihood of occurring in the following areas: previous use of the growing area, land features (e.g., septic systems, open water, power lines, etc.) adjacent or nearby land use (e.g., CAFO), fertilizers, crop protection chemicals, worker health and hygiene, equipment and tools used for harvest, storage, transportation, topography of the land for runoff (% slope, soil type), prevailing weather conditions or weather events. and any other applicable areas. Farms and indoor agriculture operations following the CA or AZ LGMA should reference current metrics.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "water",
+        "equipment",
+        "pest-animal"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.04",
+      "section": "2.02",
+      "question": "Are the necessary food defense controls implemented in the operation?",
+      "points": 10,
+      "expectation_summary": "The operation should have implemented the necessary controls for preventing intentional contamination of the product, high-risk areas, external areas and vulnerable points (i.e., those that are not permanently locked). These measures should be based on the risk associated with the operation, as detailed in the food defense plan (1.08.02). Some high-risk areas of the operation include but are not limited to: personnel, visitors, contractors, computers, raw material receipt (raw materials, product and packaging), trucks (incoming and outbound), water sources, storage areas for product, materials, chemicals, equipment, packaging, utensils or other items used in the growing area, etc.",
+      "evidence_tags": [
+        "risk-assessment",
+        "water",
+        "equipment"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.05",
+      "section": "2.02",
+      "question": "Is the exterior area immediately outside the growing area, including roads, yards and parking areas, free of litter, weeds and standing water?",
+      "points": 5,
+      "expectation_summary": "Litter, waste, refuse, uncut weeds or grass and standing water within the immediate vicinity of the growing area may constitute an attractant or breeding place for rodents, insects or other pests, as well as microorganisms that may cause contamination.",
+      "evidence_tags": [
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.06",
+      "section": "2.02",
+      "question": "Are control measures being implemented for the outside storage of equipment, pallets, tires, etc. (i.e., out of the mud, stacked to prevent pest harborage, away from the growing area)?",
+      "points": 5,
+      "expectation_summary": "Incorrectly stored pallets and equipment can provide areas for pest harborage and/or cross contamination. Equipment should be stored at least 4\" (10 cm) off the ground. Growers should check the stored equipment (e.g., irrigation pipes) periodically to ensure that it has not become a pest harborage area or dirty due to rains. Inventory checks (e.g., as part of an internal audit) should occur in order to ensure that these storage areas do not become full of unnecessary items.",
+      "evidence_tags": [
+        "inspection",
+        "water",
+        "equipment",
+        "pest-animal"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.07",
+      "section": "2.02",
+      "question": "Are garbage receptacles and dumpsters kept covered or closed?",
+      "points": 5,
+      "expectation_summary": "All dumpsters and garbage receptacles should have a cover and be kept covered to prevent the attraction of insects, rodents and other pests. Fine mesh lids are acceptable. Just having the lids is not acceptable i.e., when not in use, the dumpsters and garbage receptacles should be closed. Dumpsters that are only used for dry non-food waste (e.g., paper, cardboard, etc.) are exempt from this requirement.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.08",
+      "section": "2.02",
+      "question": "Where soil, substrates or fertilizer are stored or handled, are measures in place to ensure seepage and runoff is collected or diverted and does not reach growing areas, product, or any of the water sources? A ZERO POINT DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "Soil, substrates and fertilizer (e.g., compost, compost teas, fish emulsions, fish meal, blood meal, bio-fertilizers, synthetic fertilizers, etc.) are stored in a manner to prevent contamination to the growing areas, product, or water sources. Containers should be structurally sound and not a source of runoff or contamination. There should be appropriate and effective barriers, coverings, soil berms, pits or lagoons to divert or collect potential run-off or threats from wind, as applicable. A ZERO POINT DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection",
+        "water"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.09",
+      "section": "2.02",
+      "question": "Where there are fill stations for fuel, pesticides, or liquid fertilizer, is it evident that the condition, location and/or use is not a risk of contamination to the product, water sources, growing areas, equipment, packaging materials, etc.?",
+      "points": 15,
+      "expectation_summary": "Fill station area should not be a risk of contamination to the product, water sources, production areas, equipment, packaging materials, etc. Any containment structures (e.g., containment pad, bunding) must meet local and national requirements.",
+      "evidence_tags": [
+        "risk-assessment",
+        "water",
+        "equipment",
+        "pest-animal"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.10",
+      "section": "2.02",
+      "question": "Has the operation eliminated or adequately controlled any potential sources of contamination (physical, chemical or biological) not covered by other more specific questions?",
+      "points": 10,
+      "expectation_summary": "This question is designed to allow the auditor to underline potential contaminants to the auditee that are not covered by other more specific questions within the audit. There should be no physical (e.g., glass, plastic, metal, gunshot, stones, other crops, etc.), chemical (e.g., pesticides, fuel/lubricants, mycotoxins, allergens, etc.) or biological (e.g., human fecal matter) issues that are or could be potential risks to the product.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.11",
+      "section": "2.02",
+      "question": "Is there no evidence of animal presence and/or animal activity (wild or domestic) in the audited area? If Total Conformance, go to 2.02.12.",
+      "points": 15,
+      "expectation_summary": "Animals can represent potential contamination to the growing area, to the crop, to the field equipment, etc., and therefore, should not be present in the operations. Evidence of animal presence can include tracks, burrows, fecal matter, feathers, roosting (e.g., on power lines), nesting, etc. This includes any packaging or storage areas (e.g., equipment, agronomic inputs, chemicals). Note: The appearance of birds flying across a field or equipment is not necessarily cause for a down score, however, the area under their flightpath must be inspected for potential contamination due to fecal matter, etc. Evidence of fecal matter is scored in 2.02.11a.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection",
+        "equipment",
+        "pest-animal"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.12",
+      "section": "2.02",
+      "question": "Is there no evidence of",
+      "points": 15,
+      "expectation_summary": "Human fecal matter is a potential contaminant to the product being grown. Any evidence of human fecal matter in the growing area is an automatic failure. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.02.13",
+      "section": "2.02",
+      "question": "Is there no evidence of infants and toddlers in the audited area?",
+      "points": 10,
+      "expectation_summary": "Infants and toddlers can represent potential contamination to the growing area, to the crop, to packaging and should not be present in the operations, including chemical or equipment storage areas.",
+      "evidence_tags": [
+        "inspection",
+        "equipment"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.03.01",
+      "section": "2.03",
+      "question": "Were growing area(s) used for growing food crops last season?",
+      "points": 0,
+      "expectation_summary": "Information gathering question. Land should be purchased or leased that has previously been successfully utilized for growing crops without incidence.",
+      "evidence_tags": [],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.03.02",
+      "section": "2.03",
+      "question": "Has the growing area(s) been used for any non-agricultural functions? If No, go to 2.03.03.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. Purchase or lease of ground previously used for non-agricultural functions (e.g., toxic waste site, landfill, mining, extraction of oil or natural gas) should be avoided. Land should be purchased or leased that has previously been successfully utilized for growing crops for human consumption without incidence. https://www.epa.gov/superfund",
+      "evidence_tags": [],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.03.03",
+      "section": "2.03",
+      "question": "Has the growing area(s) been used for any purpose that included the presence of animals in the growing area (e.g., animal husbandry, grazing land for animals) in the last 12 months? If No, go to 2.03.04.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. If the land was used previously for any purpose that included animals in the growing area (e.g., animal husbandry, grazing land for animals), there should be a sufficient buffer time before growing a crop for human consumption.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.03.04",
+      "section": "2.03",
+      "question": "Has flooding from uncontrolled causes occurred on the growing area(s) since the previous growth cycle? If No, go to 2.03.05.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This would be the case of: the flowing or overflowing of a field with water outside a grower's control that is reasonably likely to contain microorganisms or chemicals of significant public health concern and is reasonably likely to cause adulteration of edible portions of fresh produce in that field.",
+      "evidence_tags": [
+        "water"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.04.01",
+      "section": "2.04",
+      "question": "Is there evidence of intensive livestock production (e.g., feedlots, dairy operations, poultry houses, meat rendering operation) on adjacent or nearby land? If No, go to 2.04.02.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. Adjacent refers to all parcels of land next to the growing operation, or within a distance where the crop in question may be affected. Intensive livestock production involves large numbers of animals on limited land. Examples of intensive livestock production are confined animal feeding operations (CAFO), cattle feed lots, dairy operations, poultry houses, etc.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.04.02",
+      "section": "2.04",
+      "question": "Is there evidence of domestic animals and/or wild animals (includes homes with hobby farms, and non- commercial livestock) on adjacent or nearby land? If No, go to 2.04.03.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. This includes all non-intensive livestock production. Other examples include chicken coops, dogs, horses, homes with hobby farms, wild pigs etc. Auditor must consider the maturity stage and type of crop involved. For example, pig activity around a ground level berry crop is different from a high-level tree crop.",
+      "evidence_tags": [
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.04.03",
+      "section": "2.04",
+      "question": "Is there evidence of untreated animal manure piles, compost, biosolids, or non- synthetic amendment stored and/or applied on adjacent land? If No, go to 2.04.04.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. Adjacent refers to all parcels of land next to the growing operation or within a distance where the crop in question may be affected by untreated animal manure piles, compost, biosolids, or non- synthetic amendment stored and/or applied on adjacent land.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.04.04",
+      "section": "2.04",
+      "question": "Is the growing area situated in a higher risk location where contamination could occur from nearby operations or functions (e.g., leach fields, runoff or potential flooding from sewers, toilet systems, industrial facilities, worker housing, etc.)? If No, go to 2.04.05.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. \"Higher risk\" refers to any nearby activities or operations that could pose a food safety threat to the growing area or facility(s). These might include chemical, microbiological, or physical contamination or pollution. Examples include, but are not limited to, runoff or potential flooding from septic systems, sewers, toilet systems, industrial facilities, worker housing (issues of trash, etc.).",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "facility"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.04.05",
+      "section": "2.04",
+      "question": "Is there evidence of any other potential risks in the adjacent land that could potentially lead to contamination of the growing area?",
+      "points": 0,
+      "expectation_summary": "Information gathering question. If there are any other potential sources of contamination to the growing area, this question is designed to allow the auditor to underline potential risks that are not covered by other more specific questions within the audit.",
+      "evidence_tags": [
+        "risk-assessment",
+        "inspection"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.04.06",
+      "section": "2.04",
+      "question": "Is there evidence of human fecal matter in the adjacent land to the audited area? If No, go to 2.05.01.",
+      "points": 0,
+      "expectation_summary": "Information gathering question. If the fecal matter found combines with conditions that can increase the potential of contamination to the growing area, the crop or the field equipment, this represents a high-risk situation that has to be addressed. Evidence of human fecal matter represents potential of contamination to the growing area, the crop and field equipment. If No, go to 2.05.01.",
+      "evidence_tags": [
+        "risk-assessment",
+        "inspection",
+        "equipment"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.05.01",
+      "section": "2.05",
+      "question": "Are there chemical inventory logs for chemicals, including pesticides and fertilizers?",
+      "points": 3,
+      "expectation_summary": "Chemicals within the scope of this question include pesticides, fertilizers, cleaners and sanitizers i.e., sanitation chemicals and food contact chemicals, such as chlorine, etc. Primary information in the product inventory includes: the product or chemical names, container volumes/weights, number on hand, and location of containers. Inventory by storage area/type of chemical is optimal. The inventory should take into account the arrival of new stocks and any discrepancies should be explained. Minimum frequency for inventory checks should be monthly during production season and a copy should be maintained separate from the chemical storage location(s) and available for auditor review. The frequency of the inventory checks may decrease in short season or off-season operations; auditor discretion applies.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.05.02",
+      "section": "2.05",
+      "question": "Are copies of all Safety Data Sheets on file and fully accessible at all times with clear indexes?",
+      "points": 3,
+      "expectation_summary": "Current SDS sheets should be available for hazardous chemicals (detergents, sanitizers, pesticides, etc.). SDS may be kept on file, stored on memory stick, CD or computer, and auditee can demonstrate they are readily accessible to workers. Chemicals used should meet local and national authorities.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.05.03",
+      "section": "2.05",
+      "question": "Are all chemicals (pesticides, fertilizers, sanitizers, detergents, lubricants, etc.) stored securely, safely and are they labeled correctly?",
+      "points": 15,
+      "expectation_summary": "Chemicals (i.e., pesticides, fertilizers, sanitizers, detergents, lubricants, etc.) are required to be stored in a well vented, designated (with a sign), dedicated, secure (locked) area away from food and packaging materials and separated from growing area and water sources. Access is restricted to trained personnel. Spill controls should be in place for opened in use containers. All chemical containers should be off the floor, have legible labels of contents; this includes chemicals that have been decanted from master containers into smaller containers. Empty chemical containers should be stored and disposed of properly. Chemical storage requirements must meet local and national requirements. Where pesticide storage is not located on-site, auditor discretion applies on question applicability.",
+      "evidence_tags": [
+        "training",
+        "inspection",
+        "water",
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.05.04",
+      "section": "2.05",
+      "question": "Are the crop, ingredients (including water), food contact packaging and food contact surfaces within accepted tolerances for spoilage and without evidence of adulteration? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "The crop, ingredients (including water), food contact packaging and food contact surfaces should be free from spoilage, adulteration and/or gross contamination (21 CFR 110.3g). If legislation exists, then the contamination should be viewed against this legislation (e.g., USDA Grading Standards often include decay tolerances). Spoilage and adulteration would include any physical, chemical or biological contamination including blood and bodily fluids. Measures should be taken to prevent any known or reasonably foreseeable hazard (e.g., Clostridium botulinum in mushrooms). This question is designed to allow an auditor to halt an audit when finding gross contamination issues. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "water"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.06.01",
+      "section": "2.06",
+      "question": "Is there a food safety hygiene training program covering new and existing workers and are there records of these training events?",
+      "points": 15,
+      "expectation_summary": "There should be a formal training program and training records, to inform workers of the current rules and requirements of the company regarding hygiene. Cross reference with 1.01.04. Training should be in the language understood by the workers, and training type and intensity should reflect the risks associated with the products/processes. Frequency should be at the start of the season before starting work and then some topics covered at least quarterly, but ideally monthly. These trainings should cover food safety and hygiene policies and basic food safety and hygiene topics, allergens, the importance of detecting food safety and/or hygiene issues with co-workers and visitors, all food safety or hygiene issues in which they are responsible and correcting and reporting problems. Training logs should have a clearly defined topic(s) covered, trainer(s) and material(s) used/given. Topics include, but not limited to, hand washing, protective clothing (where applicable), recognizing and reporting injury and illness, blood and bodily fluids, jewelry, dropped product, animal intrusion, food defense. There should be records of workers who have attended each session.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "risk-assessment",
+        "pest-animal"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.06.02",
+      "section": "2.06",
+      "question": "Are there written and communicated procedures in place that require food handlers to report any cuts or grazes and/or if they are suffering from any illnesses that might be a contamination risk to the products being produced, and return to",
+      "points": 10,
+      "expectation_summary": "There should be documented procedures that are communicated to food handlers (e.g., worker signature on a training log) to food handlers, requiring them to report any cuts, grazes and/or any illnesses that might be a food safety cross contamination risk. Procedures should indicate return to work requirements for affected workers, to whom the food handlers should report, how the issue is recorded and appropriate actions to be taken for a particular issue. Procedures should cover recording requirements, but auditors should not request to review records where countries have laws covering privacy/confidentiality of health records.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "risk-assessment",
+        "inspection"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.06.03",
+      "section": "2.06",
+      "question": "Are there worker food safety non- conformance records and associated corrective actions (including retraining records)?",
+      "points": 3,
+      "expectation_summary": "There should be records covering when workers are found not following food safety requirements. These records should also show corrective actions and evidence that retraining has occurred (where relevant).",
+      "evidence_tags": [
+        "training",
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.01",
+      "section": "2.07",
+      "question": "Are toilet facilities adequate in number and location? A ZERO POINT (NON- CONFORMANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "points": 15,
+      "expectation_summary": "Toilet facilities should be available and accessible to all workers and visitors, while work is actively occurring. At least one toilet per 20 workers should be provided, or if more stringent, as per prevailing national/local guidelines. Toilet facility placement should be within 1/4 mile or 5 minutes walking distance of where workers are located, or if more stringent, as per prevailing national/local guidelines. A 5 minute drive is not acceptable, while farm work is actively occurring with groups of three or more workers. Where there are two or less workers present (e.g., spray activities, irrigation check) and workers have transportation that is immediately available to toilets within a 5 minute drive, it is acceptable to score as total conformance. Automatic failure if there are insufficient or inadequate toilet facilities. A ZERO POINT (NON-CONFORMANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection",
+        "water",
+        "facility"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.02",
+      "section": "2.07",
+      "question": "Is hand washing signage posted appropriately?",
+      "points": 5,
+      "expectation_summary": "Hand washing signs (multi-lingual or pictograms) should be posted as a reminder to wash hands before and after eating, returning to work and after using the toilet. The signs should be permanent and placed in key areas where workers can easily see them (e.g., at toilets, break areas, etc.).",
+      "evidence_tags": [],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.03",
+      "section": "2.07",
+      "question": "Are hand washing stations adequate in number and appropriately located for worker access and monitoring usage? A ZERO POINT (NON- CONFORMANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "points": 15,
+      "expectation_summary": "An adequate number of hand washing stations, in working order, should be provided to ensure efficient worker flow (1 per 20 people on site), and be available to all workers and visitors while work is actively occurring. Hands free is an optimum system. Hand washing stations should be located within close proximity of toilet facilities and 1/4 mile or 5 minutes walking distance of where workers are located. A ZERO POINT (NON-CONFORMANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.04",
+      "section": "2.07",
+      "question": "Are workers washing",
+      "points": 15,
+      "expectation_summary": "Worker conformance to hand washing and sanitizing procedures should be assessed as washing hands is the first step in avoiding food contamination. Workers should be observed washing their hands prior to beginning work, after breaks, after using the toilets, before putting on gloves, and whenever hands may have become a source of contamination (e.g., after eating, after using a handkerchief or tissue, smoking, drinking, etc.).",
+      "evidence_tags": [
+        "policy"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.05",
+      "section": "2.07",
+      "question": "Are workers who are working directly or indirectly with food, without evidence of boils, sores, open wounds and are not exhibiting signs of foodborne illness?",
+      "points": 10,
+      "expectation_summary": "Workers who have exposed boils, sores, exposed infected wounds, foodborne illness or any other source of abnormal microbial contamination should not be allowed to work in contact with the product, packaging or food contact surfaces.",
+      "evidence_tags": [],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.06",
+      "section": "2.07",
+      "question": "Are workers not observed wearing watches, jewelry (plain band permitted), studs, false eyelashes, false fingernails, etc.?",
+      "points": 5,
+      "expectation_summary": "Workers are not observed wearing jewelry (including earrings, ear gages, necklaces, bracelets, rings with stones, rings or studs in nose, lip and eyebrow, watches) in the growing area. Plain wedding bands are the only exception. Other examples of foreign items that may be a source of foreign material contamination include studs, false finger nails and finger nail polish, false eye lashes, eye lash extensions and badges.",
+      "evidence_tags": [],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.07",
+      "section": "2.07",
+      "question": "Are worker personal items being stored in such a way that they are not a potential food safety risk to product, growing area, equipment or materials?",
+      "points": 5,
+      "expectation_summary": "Workers should have a designated area for storing personal items such as coats, shoes, purses, medication, phones, etc. Areas set aside for workers' personal items should be far enough away from growing area(s) and material storage area(s) to prevent contamination and avoid food defense risks.",
+      "evidence_tags": [
+        "risk-assessment",
+        "equipment"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.08",
+      "section": "2.07",
+      "question": "Is smoking, eating, chewing and drinking confined to designated areas, and spitting is prohibited in all areas?",
+      "points": 5,
+      "expectation_summary": "Smoking, chewing tobacco, chewing gum, drinking and eating is permitted in designated areas that are away from growing and storage areas. Spitting should be prohibited in all areas. Smoking should not be permitted in eating and drinking areas.",
+      "evidence_tags": [],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.09",
+      "section": "2.07",
+      "question": "Is fresh potable drinking water in clean containers readily accessible to workers?",
+      "points": 10,
+      "expectation_summary": "Fresh potable water meeting the quality standards for drinking water should be provided and placed in locations readily accessible to all workers on-site to prevent dehydration. The term “potable” meaning that the water is of drinking water quality (e.g., the EPA Drinking Water Standard or equivalent). Auditors should verbally verify the source of the water at the time of the audit. If water containers are used, they should be maintained in a clean condition, free from residues and contamination to ensure workers are not adversely affected by contaminated water from unclean containers. If there is evidence (i.e. visual observation or documentation) the water is coming from a questionable source, the auditor should review water quality test results.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "water"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.10",
+      "section": "2.07",
+      "question": "Are first aid kits adequately stocked and readily available to workers?",
+      "points": 5,
+      "expectation_summary": "First aid kit(s) supplies should be appropriate for the workplace and the injuries most likely to occur there (including any chemicals stored on-site) and should be stored in an area where they are readily available for emergency access. Date-coded materials should be within dates of expiration. Gloves should be worn over all band aids on hands.",
+      "evidence_tags": [],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.11",
+      "section": "2.07",
+      "question": "Are trash receptacles adequate and placed in suitable locations?",
+      "points": 5,
+      "expectation_summary": "There should be adequate measures for trash disposal so that spills are contained (no evidence of leaks) and the growing and storage areas are not contaminated. Containers (e.g., dumpsters, trash cans) should be available and placed in suitable locations for the disposal of waste and trash e.g., near hand wash stations.",
+      "evidence_tags": [],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.07.12",
+      "section": "2.07",
+      "question": "Are any potential foreign material issues (e.g., metal, glass, plastic) controlled?",
+      "points": 5,
+      "expectation_summary": "There should be no foreign material issues that are or could be potential risks to the product. Examples include, but are not limited to, glass bottles, unprotected lights on equipment, staples on wooden crates, hair pins, using “snappable” blades instead of one-piece blades, broken and brittle plastic issues on re-useable totes.",
+      "evidence_tags": [
+        "risk-assessment",
+        "equipment"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.08.01",
+      "section": "2.08",
+      "question": "What type(s) of fertilizers and amendments are used in the growing operation?",
+      "points": 0,
+      "expectation_summary": "Information gathering question.",
+      "evidence_tags": [],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.08.02",
+      "section": "2.08",
+      "question": "Is there a documented risk assessment in place for all animal- based fertilizers and amendments used on the growing operation?",
+      "points": 15,
+      "expectation_summary": "A documented risk assessment should be performed prior to use and should consider animal-based fertilizer and amendments, method of treatment, method and timing of application, microbial and heavy metal test results/COAs. Organic fertilizers include human sewage sludge (biosolids), animal derived compost (raw animal manure), untreated animal manure (e.g., raw manure &/or non-composted, incompletely composted animal manure, green waste, non-thermally treated animal manure), non-synthetic treatments (e.g., bone meal, blood meal, animal derived compost teas, fish emulsions, fish meal, animal derived bio-fertilizers, etc.), soil amendments (e.g., plant by- products, humates, seaweed, inoculants, and conditioner, etc.). Human sewage sludge (biosolids) are by-products of wastewater treatment. The use of untreated biosolids is prohibited. https://www.epa.gov/biosolids/basic- information-about-biosolids; http://omafra.gov.on.ca/english/nm/nasm/info/brochure.htm",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.08.03",
+      "section": "2.08",
+      "question": "Is there a documented risk assessment in place for all fertilizers and amendments not containing animal- based or derived components used in the growing operation?",
+      "points": 15,
+      "expectation_summary": "There should be a documented risk assessment of all fertilizers and amendments not containing animal-based components used in the growing operation. This should detail known or reasonably foreseeable hazards, the specific microbial, chemical and physical hazards and their severity and likelihood of occurring. Synthetic fertilizers include ammonium nitrate, ammonium sulfate, chemically synthesized urea, etc. These are sometimes called inorganic fertilizers. Growing media are the soilless components that plants grow in. Components can be organic (e.g., peat moss, bark, coconut coir, rice hulls, wood fiber, compost teas) or inorganic. (e.g., perlite, rock wool, oasis cubes, pumice, vermiculite, sand, hydrogel). The physical characteristics are determined by the components used and the proportions in which they are blended. Attention to substrates that are reused.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "pest-animal"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.08.04",
+      "section": "2.08",
+      "question": "Are all fertilizers and amendments being used according to local and national guidelines? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "All local and national legislation or guidelines should be followed e.g., EPA. Produce Safety Rule, Californian Leafy Green Commodity Specific Guidelines. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.09.01",
+      "section": "2.09",
+      "question": "What water source(s) are used in the operation?",
+      "points": 0,
+      "expectation_summary": "Information gathering question.",
+      "evidence_tags": [
+        "water"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.09.02",
+      "section": "2.09",
+      "question": "Is there a documented risk assessment in place for all water sources and distribution systems used on the farm?",
+      "points": 15,
+      "expectation_summary": "There should be a risk assessment for each water source and type of distribution system, considering water source (e.g., ground or surface), water uses, water quality, risks from animal access, upstream contamination/runoff, crop characteristics, timing and application methods, adjacent and nearby land use, topography of the land for runoff (% slope, soil type), and weather events (e.g., heavy rainfall, flooding) that may impact the water system documented at least annually, and when any changes occur.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.09.03",
+      "section": "2.09",
+      "question": "Where applicable, are there backflow prevention devices on all main lines, including where chemical, fertilizer and pesticide applications are made?",
+      "points": 10,
+      "expectation_summary": "Water systems should be fitted with backflow prevention devices to prevent contamination of the water supply. Main water lines should be fitted with back-flow protection for the incoming water (no matter what the source). Individual water lines should be fitted with backflow protection where practical.",
+      "evidence_tags": [
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.09.04",
+      "section": "2.09",
+      "question": "If the operation stores water (tank, cistern, container), are the storage containers well maintained?",
+      "points": 15,
+      "expectation_summary": "Containers should be structurally sound with no evidence of damage or rust, no vegetation growing on or in the container. The base of the container should be free from debris and weeds. Access lids are properly secured and any vents, overflow and drains are screened. Air gaps are present and should be at least twice the diameter of the water supply inlet and not be less than 25 mm (1 inch).",
+      "evidence_tags": [
+        "water"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.10.01",
+      "section": "2.10",
+      "question": "Are there up-to-date records of all pesticides applied (seed treatment and during the growth cycle)? A ZERO POINT (NON- CONFORMANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "points": 15,
+      "expectation_summary": "The growing operation should follow a pesticide application record keeping program that at least includes the following: date and time of application, crop name, treated area size and location (must be traceable), brand/product name, EPA (or country of production equivalent) registration information, active ingredient, amount applied (rate/dosage), applicator identification, pre- harvest interval, restricted entry interval, application equipment identification and target pests. A ZERO POINT (NON-CONFORMANCE) DOWN SCORE IN THIS QUESTION RESULTS IN AUTOMATIC FAILURE OF THIS AUDIT.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection",
+        "equipment"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.10.02",
+      "section": "2.10",
+      "question": "Are all pesticides applied authorized/registered by the authority/government of the country of production? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "Application records should show all pesticides applied are officially registered by the country of production for the target crop (e.g., EPA in the US, COFEPRIS in Mexico, SAG in Chile, Pest Management Regulatory Agency (PMRA) in Canada). In countries where there is approval for its use, this is acceptable, when the program is operated by the government and considers at a minimum the target crop, pesticide trade name and active ingredient, formulation, dosage, pre-harvest intervals and target pest(s) or in cases where the government authorizes an active ingredient but not a trade name, there must be evidence of conformance with the MRLs of the destination countries for the applied \"authorized\" active ingredient (see 2.10.05) When pesticide product registration/authorization information does not exist for the target crop in the country of production or there are not enough products registered/authorized to control a pest or disease (partial registration/authorization), extrapolation is possible if that practice is allowed by the country of production (e.g. in Mexico \"Anexo Técnico 1. Requisitos Generales para la Certificación y Reconocimiento de Sistemas de Riesgos de Contaminación (SRRC) Buen Uso y Manejo de Plaguicidas (BUMP) o Buenas Prácticas Agrícolas en la Actividad de Cosecha (BPCo) durante la producción primaria de vegetales – Section 12.3 should be considered. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.10.03",
+      "section": "2.10",
+      "question": "Are all pesticides used applied as recommended/directed in the label? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC",
+      "points": 15,
+      "expectation_summary": "Application records should show that pesticides are applied in accordance with label directions and any local or national regulation(s). In operations applying pesticides “authorized” by the government, where use directions are not in the label, application records should show “authorization program” use/application directions are followed.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "pest-animal"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.10.04",
+      "section": "2.10",
+      "question": "Where harvesting is restricted by pre- harvest intervals, are required pre-harvest intervals on product labels, national (e.g., EPA) registration and any local or national regulations and guidelines being adhered to? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "Application and harvest records show pre-harvest intervals on product labels, national (e.g., EPA) registration and any local or national regulations and guidelines are being adhered to. In operations applying pesticides “authorized” by the government, where use directions are not in the label, application and harvest records show the “authorization program” directions for pre-harvest intervals are followed. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 21,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.10.05",
+      "section": "2.10",
+      "question": "Is there documentation of pesticide Maximum Residue Limits (MRLs) conformance considering country of destination, target crop(s), and active ingredients applied?",
+      "points": 15,
+      "expectation_summary": "The operation should have documented evidence about the MRL requirements for each country of destination for each pesticide (active ingredient) applied during the growth cycle. If there is no MRL defined by the country of destination for any active ingredient applied, the operation should have documented evidence of the applicable regulations in that country (e.g., default MRL, Codex Alimentarius, non-detectable, etc.). In the case where the MRLs have been standardized or harmonized for a group of countries (i.e., European Union) it is acceptable that the operation demonstrate conformance by referencing the \"list\" of MRLs issued from the formal body that represents those countries for this purpose. This question is Not Applicable if the product is only sold in the country of production (domestic market).",
+      "evidence_tags": [
+        "records",
+        "pest-animal"
+      ],
+      "source_page": 21,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.10.06",
+      "section": "2.10",
+      "question": "Where the MRLs of the destination countries are lower (stricter) than the country of production or where required by buyer, do test results show that Maximum Residue Limits (MRLs) of the intended markets are met?",
+      "points": 15,
+      "expectation_summary": "Maximum Residue Limits (MRLs) analysis should be performed when the MRLs of the destination countries are lower (stricter) than the country of production. This assumes that grower is meeting country of origin MRL and label requirements. MRL test results and records should demonstrate that products/crops meet MRL regulations in those intended markets and any non-conforming product is diverted from those markets. This question is Not Applicable if the product is only sold in the country of production (domestic market).",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 21,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.11.01",
+      "section": "2.11",
+      "question": "Is there a documented procedure that is followed, for the pesticide applications, considering mixing and loading, transporting, applying, surplus mix/tank rinsate disposal and equipment cleaning?",
+      "points": 15,
+      "expectation_summary": "There should be a documented procedure for pesticide applications, specifically mixing and loading, how to transport, application procedures and equipment cleaning. The procedure should adhere to the product label and include: requiring activity to be in a well-ventilated, well-lit area away from unprotected people, food and other items that might be contaminated; necessary PPE, safe transportation, re-entry intervals, excessive winds, posting of treated areas, etc.; surplus mix/tank rinsate disposal, how to rinse and clean pesticide equipment including measuring devices, mixing containers and application equipment. If any of these practices are observed during the inspection, it should be evident that the procedures are being followed.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "inspection",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.11.02",
+      "section": "2.11",
+      "question": "Is there documentation that shows the individual(s) making decisions for pesticide applications is competent?",
+      "points": 15,
+      "expectation_summary": "Current valid certificates, licenses, another form of proof of training recognized by prevailing local or national regulations and guidelines should be available for the individual(s) making decisions on pesticide applications (e.g., choice of pesticides, application timings, rates, etc.).",
+      "evidence_tags": [
+        "training",
+        "records",
+        "pest-animal"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    },
+    {
+      "id": "2.11.03",
+      "section": "2.11",
+      "question": "Is there documentation",
+      "points": 15,
+      "expectation_summary": "All workers who handle pesticides must have current certificates, licenses, or other forms of proof of training (recognized by prevailing national/local standards and guidelines) qualifying them to do so independently or they must have proof of training (in-house or external) and be under the supervision of a worker who can do so independently.",
+      "evidence_tags": [
+        "training",
+        "records",
+        "pest-animal"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf"
+    }
+  ]
+}

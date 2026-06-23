@@ -1,0 +1,6031 @@
+{
+  "source_folder": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports",
+  "date_range_downloaded_from_heavyconnect": "2025-01-01 to 2026-01-01",
+  "generated_at": "2026-06-23",
+  "report_count": 33,
+  "report_type_count": 32,
+  "expected_bay_baby_report_status": [
+    {
+      "report_type": "R001 Field Activity Log",
+      "status": "present",
+      "count": 1,
+      "source_files": [
+        "download18.pdf"
+      ],
+      "report_ids": [
+        "11644"
+      ]
+    },
+    {
+      "report_type": "R004 Tractor Inspection",
+      "status": "present",
+      "count": 1,
+      "source_files": [
+        "download15.pdf"
+      ],
+      "report_ids": [
+        "12846"
+      ]
+    },
+    {
+      "report_type": "R006 Daily Sanitation Log",
+      "status": "present",
+      "count": 1,
+      "source_files": [
+        "download13.pdf"
+      ],
+      "report_ids": [
+        "10574"
+      ]
+    },
+    {
+      "report_type": "R022 Risk Assessment",
+      "status": "present",
+      "count": 1,
+      "source_files": [
+        "download6.pdf"
+      ],
+      "report_ids": [
+        "11688"
+      ]
+    },
+    {
+      "report_type": "R024 Field Buffer Log",
+      "status": "present",
+      "count": 1,
+      "source_files": [
+        "download4.pdf"
+      ],
+      "report_ids": [
+        "12600"
+      ]
+    },
+    {
+      "report_type": "Daily Sanitation Log",
+      "status": "present",
+      "count": 2,
+      "source_files": [
+        "download30.pdf",
+        "download31.pdf"
+      ],
+      "report_ids": [
+        "12845",
+        "12899"
+      ]
+    },
+    {
+      "report_type": "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting",
+      "status": "present",
+      "count": 1,
+      "source_files": [
+        "download24.pdf"
+      ],
+      "report_ids": [
+        "12695"
+      ]
+    }
+  ],
+  "report_type_summary": [
+    {
+      "report_type": "Accident Report",
+      "count": 1
+    },
+    {
+      "report_type": "Chemical Pump Calibration Report",
+      "count": 1
+    },
+    {
+      "report_type": "Daily Sanitation Log",
+      "count": 2
+    },
+    {
+      "report_type": "Employee Warning Notice Form",
+      "count": 1
+    },
+    {
+      "report_type": "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting",
+      "count": 1
+    },
+    {
+      "report_type": "Fire Extinguisher / Eye Wash Station Inspection",
+      "count": 1
+    },
+    {
+      "report_type": "Forklift Inspection",
+      "count": 1
+    },
+    {
+      "report_type": "Forklift Operator Safety Test",
+      "count": 1
+    },
+    {
+      "report_type": "Forklift Propane Filling handling instructions.",
+      "count": 1
+    },
+    {
+      "report_type": "Hearing Conservation Program",
+      "count": 1
+    },
+    {
+      "report_type": "Housing Safety and Health Checklist",
+      "count": 1
+    },
+    {
+      "report_type": "Leadership Training: Communication and Team Management",
+      "count": 1
+    },
+    {
+      "report_type": "Pre-Harvest Inspection",
+      "count": 1
+    },
+    {
+      "report_type": "Pre-Work HEAT Checklist",
+      "count": 1
+    },
+    {
+      "report_type": "R001 Field Activity Log",
+      "count": 1
+    },
+    {
+      "report_type": "R002 Daily Field Checklist",
+      "count": 1
+    },
+    {
+      "report_type": "R003 Daily Harvest Checklist",
+      "count": 1
+    },
+    {
+      "report_type": "R004 Tractor Inspection",
+      "count": 1
+    },
+    {
+      "report_type": "R005 Farm Equipment Service Request",
+      "count": 1
+    },
+    {
+      "report_type": "R006 Daily Sanitation Log",
+      "count": 1
+    },
+    {
+      "report_type": "R007 Line Lead - End of Day",
+      "count": 1
+    },
+    {
+      "report_type": "R008 Daily Warehouse Checklist",
+      "count": 1
+    },
+    {
+      "report_type": "R010 Warehouse Service Request",
+      "count": 1
+    },
+    {
+      "report_type": "R013 NUOCA Log",
+      "count": 1
+    },
+    {
+      "report_type": "R015 Facility Walkaround",
+      "count": 1
+    },
+    {
+      "report_type": "R021 Varmint Trap Inspection",
+      "count": 1
+    },
+    {
+      "report_type": "R022 Risk Assessment",
+      "count": 1
+    },
+    {
+      "report_type": "R023 Bee Activity log",
+      "count": 1
+    },
+    {
+      "report_type": "R024 Field Buffer Log",
+      "count": 1
+    },
+    {
+      "report_type": "Tractor Inspection",
+      "count": 1
+    },
+    {
+      "report_type": "Tractor Operator Safety Test",
+      "count": 1
+    },
+    {
+      "report_type": "Water Monitoring Log",
+      "count": 1
+    }
+  ],
+  "primus_v4_module_evidence": [
+    {
+      "module_key": "module-1-fsms",
+      "evidence_count": 4,
+      "report_types": [
+        "Accident Report",
+        "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting",
+        "Leadership Training: Communication and Team Management",
+        "R013 NUOCA Log"
+      ],
+      "source_files": [
+        "download9.pdf",
+        "download21.pdf",
+        "download24.pdf",
+        "download33.pdf"
+      ]
+    },
+    {
+      "module_key": "module-2-farm",
+      "evidence_count": 7,
+      "report_types": [
+        "Pre-Harvest Inspection",
+        "Pre-Work HEAT Checklist",
+        "R001 Field Activity Log",
+        "R002 Daily Field Checklist",
+        "R022 Risk Assessment",
+        "R023 Bee Activity log",
+        "R024 Field Buffer Log"
+      ],
+      "source_files": [
+        "download4.pdf",
+        "download5.pdf",
+        "download6.pdf",
+        "download17.pdf",
+        "download18.pdf",
+        "download19.pdf",
+        "download20.pdf"
+      ]
+    },
+    {
+      "module_key": "module-4-harvest-crew",
+      "evidence_count": 5,
+      "report_types": [
+        "Daily Sanitation Log",
+        "Pre-Harvest Inspection",
+        "Pre-Work HEAT Checklist",
+        "R003 Daily Harvest Checklist"
+      ],
+      "source_files": [
+        "download16.pdf",
+        "download19.pdf",
+        "download20.pdf",
+        "download30.pdf",
+        "download31.pdf"
+      ]
+    },
+    {
+      "module_key": "module-5-facility",
+      "evidence_count": 10,
+      "report_types": [
+        "Chemical Pump Calibration Report",
+        "Daily Sanitation Log",
+        "Fire Extinguisher / Eye Wash Station Inspection",
+        "Forklift Inspection",
+        "R006 Daily Sanitation Log",
+        "R008 Daily Warehouse Checklist",
+        "R015 Facility Walkaround",
+        "R021 Varmint Trap Inspection",
+        "Water Monitoring Log"
+      ],
+      "source_files": [
+        "download.pdf",
+        "download7.pdf",
+        "download8.pdf",
+        "download11.pdf",
+        "download13.pdf",
+        "download27.pdf",
+        "download28.pdf",
+        "download30.pdf",
+        "download31.pdf",
+        "download32.pdf"
+      ]
+    },
+    {
+      "module_key": "module-6-haccp",
+      "evidence_count": 3,
+      "report_types": [
+        "Chemical Pump Calibration Report",
+        "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting",
+        "Water Monitoring Log"
+      ],
+      "source_files": [
+        "download.pdf",
+        "download24.pdf",
+        "download32.pdf"
+      ]
+    }
+  ],
+  "notes": [
+    "Original HeavyConnect PDFs are kept on the local Desktop folder and are not committed to git.",
+    "This JSON captures report metadata, evidence tags, and bounded field samples for audit mapping.",
+    "All seven previously identified Bay Baby report types are present in the downloaded sample set."
+  ],
+  "reports": [
+    {
+      "source_file": "download.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download.pdf",
+      "sha256": "99d467f89b924c2556d75ede68a601a451bbc332a5607a1886109610f5c1effd",
+      "report_type": "Water Monitoring Log",
+      "report_id": "12792",
+      "date_time": "10/10/2025 07:55 AM",
+      "creator": "Manager w Admin",
+      "location": "BBP Warehouse / BBP-WH / Wash Line 2",
+      "coordinates": "",
+      "pages": 3,
+      "bytes": 251794,
+      "evidence_tags": [
+        "sanitation",
+        "water",
+        "warehouse"
+      ],
+      "field_count_estimate": 56,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12792",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "10/10/2025 07:55 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Wash Line 2",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date",
+          "answer": "Time",
+          "comments": "Turbidity Tested ppm Water Changed"
+        },
+        {
+          "page": 1,
+          "question": "10/01/2025",
+          "answer": "08:40 AM",
+          "comments": "Pass 210 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/01/2025",
+          "answer": "02:15 PM",
+          "comments": "Pass 210 No"
+        },
+        {
+          "page": 1,
+          "question": "10/02/2025",
+          "answer": "09:13 AM",
+          "comments": "Pass 210 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/02/2025",
+          "answer": "03:07 PM",
+          "comments": "Pass 270 No"
+        },
+        {
+          "page": 1,
+          "question": "10/03/2025",
+          "answer": "10:05 AM",
+          "comments": "Pass 255 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/03/2025",
+          "answer": "03:17 PM",
+          "comments": "Pass 265 No"
+        },
+        {
+          "page": 1,
+          "question": "10/06/2025",
+          "answer": "09:33 AM",
+          "comments": "Pass 240 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/06/2025",
+          "answer": "01:40 PM",
+          "comments": "Pass 210 No"
+        },
+        {
+          "page": 1,
+          "question": "10/07/2025",
+          "answer": "08:02 AM",
+          "comments": "Pass 210 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/07/2025",
+          "answer": "02:57 PM",
+          "comments": "Pass 210 No"
+        },
+        {
+          "page": 1,
+          "question": "10/08/2025",
+          "answer": "08:20 AM",
+          "comments": "Pass 240 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/08/2025",
+          "answer": "04:04 PM",
+          "comments": "Pass 210 No"
+        },
+        {
+          "page": 1,
+          "question": "10/09/2025",
+          "answer": "08:10 AM",
+          "comments": "Pass 210 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/09/2025",
+          "answer": "03:43 PM",
+          "comments": "Pass 210 No"
+        },
+        {
+          "page": 1,
+          "question": "10/10/2025",
+          "answer": "07:12 AM",
+          "comments": "Pass 210 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/10/2025",
+          "answer": "02:07 PM",
+          "comments": "Pass 210 No"
+        },
+        {
+          "page": 1,
+          "question": "10/13/2025",
+          "answer": "05:56 AM",
+          "comments": "Pass 180 Yes"
+        },
+        {
+          "page": 1,
+          "question": "10/13/2025",
+          "answer": "01:04 PM",
+          "comments": "Pass 195 No"
+        },
+        {
+          "page": 2,
+          "question": "10/14/2025",
+          "answer": "11:15 AM",
+          "comments": "Pass 195 Yes"
+        },
+        {
+          "page": 2,
+          "question": "10/15/2025",
+          "answer": "11:12 AM",
+          "comments": "Pass 165 Yes"
+        },
+        {
+          "page": 2,
+          "question": "10/20/2025",
+          "answer": "09:31 AM",
+          "comments": "Pass 180 Yes"
+        },
+        {
+          "page": 2,
+          "question": "10/20/2025",
+          "answer": "03:03 PM",
+          "comments": "Pass 180 No"
+        },
+        {
+          "page": 2,
+          "question": "10/21/2025",
+          "answer": "09:59 AM",
+          "comments": "Pass 150 Yes"
+        },
+        {
+          "page": 2,
+          "question": "10/22/2025",
+          "answer": "08:14 AM",
+          "comments": "Pass 165 Yes"
+        },
+        {
+          "page": 2,
+          "question": "10/22/2025",
+          "answer": "02:42 PM",
+          "comments": "Pass 165 No"
+        },
+        {
+          "page": 2,
+          "question": "Washtank Chemical Tote Level",
+          "answer": "Initials",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "185",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "185",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "175",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "180",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "165",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "165",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "160",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "160",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "140",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "140",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "135",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "135",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "130",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "130",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "130",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "130",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "120",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "120",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "110",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "105",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "85",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "85",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "80",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "70",
+          "answer": "K",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "70",
+          "answer": "K",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download1.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download1.pdf",
+      "sha256": "86109792c7a9c1c6ef3dc9bff15077c3f9087bc4b028bfa3ab0c480ba9f42b03",
+      "report_type": "Tractor Operator Safety Test",
+      "report_id": "11851",
+      "date_time": "08/11/2025 03:12 PM",
+      "creator": "Manager Gerente",
+      "location": "Farm Fields / BBP-FARM / Vernal's",
+      "coordinates": "",
+      "pages": 2,
+      "bytes": 266375,
+      "evidence_tags": [
+        "equipment",
+        "worker-health-safety",
+        "training"
+      ],
+      "field_count_estimate": 19,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11851",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "08/11/2025 03:12 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Vernal's",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Use this checklist to evaluate operator safety prior to equipment use. / Utilice esta lista de verificación para evaluar la seguridad del operador antes de usar el equipo.",
+          "answer": "Operator Being Evaluated / Operador en evaluación: Limber garcia",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Did the operator follow the daily checklist and inspect the equipment prior to use? / ¿El operador siguió la lista de verificación diaria e inspeccionó el equipo antes de usarlo?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Did the operator fasten their seatbelt properly prior to usage? / ¿El operador se abrochó el cinturón de seguridad correctamente antes de usarlo?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Properly started and stopped the engine / Arrancó y paró correctamente el motor.",
+          "answer": "Regular",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Properly used brakes while operating equipment / Frenos usados correctamente mientras se opera el equipo",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Properly set the parking brake / Ponga correctamente el freno de mano",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Demonstrated proper use of clutch and shifting / Uso adecuado demostrado del embrague y los cambios",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Demonstrated safe driving on level ground or slight grade / Conducción segura demostrada en terreno nivelado o pendiente leve",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Operating at a safe speed / Operando a una velocidad segura",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Demonstrated safe procedures for lowering or blocking out implements / Procedimientos seguros demostrados para bajar o bloquear implementos",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Properly hitched implement to tractor / Implemento debidamente enganchado al tractor",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Properly attached/detached hydraulic lines on implement / Properly attached/detached hydraulic lines on implement",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Properly operated and shut down PTO / Operado y apagado correctamente PTO",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Salomon camacho",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download3.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download3.pdf",
+      "sha256": "7fd855eeb352e48cea3349c0c2faa2eaeebcf63671b36132908dea27479503e8",
+      "report_type": "Tractor Inspection",
+      "report_id": "11427",
+      "date_time": "06/19/2025 06:35 AM",
+      "creator": "Operator Operador",
+      "location": "Farm Fields / BBP-FARM / Organic Mesman",
+      "coordinates": "(48.39155833333333, -122.4549)",
+      "pages": 2,
+      "bytes": 264808,
+      "evidence_tags": [
+        "equipment",
+        "worker-health-safety",
+        "corrective-action"
+      ],
+      "field_count_estimate": 23,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11427",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "06/19/2025 06:35 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Operator Operador",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Organic Mesman",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.39155833333333, -122.4549)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Name of Operator / Nombre del operador",
+          "answer": "Margarito Gonzalez Villa (ID: A2IG)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "What is the Equipment ID number? / ¿Cuál es el número de identificación del equipo?",
+          "answer": "3039r",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do you notice any coolant or oil leaks? / ¿Observa alguna fuga de refrigerante o aceite?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do you notice any hydraulic line issues and/or leaks? / ¿Observa algún problema en la línea hidráulica y / o fugas?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the battery in good working condition? / ¿Está la batería en buenas condiciones de funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are the wheels in good operating condition? / ¿Están las ruedas en buen estado de funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all safety guards intact? / ¿Están intactos todos los guardias de seguridad?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all attachments or attachment points secure and in good working condition? / ¿Están todos los accesorios o puntos de sujeción seguros y en buenas condiciones de funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the seatbelt functional? / ¿Funciona el cinturón de seguridad?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the equipment have a fire extinguisher? / ¿Tiene el equipo un extintor de incendios?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the equipment in clean condition? (dirt, debris, etc.) / ¿Está el equipo limpio? (suciedad, escombros, etc.)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the equipment have adequate fuel? / ¿El equipo tiene combustible adecuado?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all lights operational?(headlights, reverse, hazards, turn signals, brake) / ¿Están todas las luces en funcionamiento? (Faros, marcha atrás, peligros, señales de giro, freno)",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the horn work? / ¿Funciona la bocina?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Do the brakes work properly? (foot and park) / ¿Funcionan correctamente los frenos? (freno y freno de mano)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Do you have all necessary equipment for road travel, if necessary? / ¿Tiene todo el equipo necesario para viajar por carretera, si es necesario?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Record the equipment hours: / Registre las horas del equipo:",
+          "answer": "2224",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download4.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download4.pdf",
+      "sha256": "fb6ab7105d282714e5783726403e856bbe76d79e07aa378861dfa7b166a116bf",
+      "report_type": "R024 Field Buffer Log",
+      "report_id": "12600",
+      "date_time": "09/23/2025 11:51 AM",
+      "creator": "Manager w Admin",
+      "location": "Farm Fields / BBP-FARM / Organic Landing",
+      "coordinates": "(48.36359029, -122.4422138)",
+      "pages": 1,
+      "bytes": 626294,
+      "evidence_tags": [
+        "field-activity",
+        "equipment",
+        "pest-animal",
+        "corrective-action"
+      ],
+      "field_count_estimate": 11,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12600",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "09/23/2025 11:51 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Organic Landing",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.36359029, -122.4422138)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Buffer Location / Ubicacion de la zona de amortiguamiento",
+          "answer": "Buffer is acceptable for organic",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Buffer Specifications (Width, Length, Type) / Especificaciones de la zona de Armotiguamineto (Ancho, Longitud, Tipo)",
+          "answer": "Buffer is effective. No pest, weed issues or plant disease.",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Maintenance Activities / Actividades de Mantenimiento",
+          "answer": "No activity. Butternut ready to pickup.",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Contamination Checks / Verificacion de Contaminacion",
+          "answer": "None",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Kevin Harbine",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download5.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download5.pdf",
+      "sha256": "a7977a67c1da9dafd475a120f4055e41cc1941fd8b800671e35d2aac448264db",
+      "report_type": "R023 Bee Activity log",
+      "report_id": "11848",
+      "date_time": "08/11/2025 01:14 PM",
+      "creator": "Manager w Admin",
+      "location": "Farm Fields / BBP-FARM / Organic Landing",
+      "coordinates": "(48.3634101, -122.44226428)",
+      "pages": 1,
+      "bytes": 260699,
+      "evidence_tags": [
+        "pest-animal",
+        "corrective-action"
+      ],
+      "field_count_estimate": 13,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11848",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "08/11/2025 01:14 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Organic Landing",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.3634101, -122.44226428)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date of Activity / Fecha De Actividad: 08/11/2025",
+          "answer": "Start time / Hora de empezar: 12:14 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Drop off / Dejar",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Bee species observed / Especies de abejas observadas",
+          "answer": "Honeybees",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Number of bees observed / Cantidad de abejas observadas",
+          "answer": "250-500",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Activity Patterns / Patrones de actividad",
+          "answer": "High peak",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Pesticide exposure / exposición a pesticidas",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Kevin Harbine",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download6.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download6.pdf",
+      "sha256": "fb200af15b2916167fa8f762091e6d9c492c8ac8b9043e01ac56eb274d34c8b1",
+      "report_type": "R022 Risk Assessment",
+      "report_id": "11688",
+      "date_time": "08/01/2025 03:48 PM",
+      "creator": "Manager w Admin",
+      "location": "Farm Fields / BBP-FARM / Goods South",
+      "coordinates": "(48.34333382, -122.38955613)",
+      "pages": 4,
+      "bytes": 283808,
+      "evidence_tags": [
+        "field-activity",
+        "equipment",
+        "risk-assessment",
+        "pest-animal",
+        "worker-health-safety",
+        "corrective-action"
+      ],
+      "field_count_estimate": 28,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11688",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "08/01/2025 03:48 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Goods South",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.34333382, -122.38955613)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Why are you conducting this risk assessment? / ¿Por qué está realizando esta evaluación de riesgos?",
+          "answer": "Growing area land change",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Planned Use / Uso planificado",
+          "answer": "Conventional Crops",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Was the growing area used for growing food crops last season? / ¿Se utilizó el área de cultivo para cultivos alimentarios la temporada pasada?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "What food crops were produced in the last season? / ¿Qué cultivos alimentarios se produjeron en la última temporada?",
+          "answer": "Wheat",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Has the growing area been used for any non-agricultural purposes? / ¿Se ha utilizado el área de cultivo para fines no agrícolas?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Has flooding from uncontrolled causes occurred on the growing area since the previous growth cycle? / ¿Se han producido inundaciones por causas no controladas en el área de cultivo desde el ciclo de cultivo anterior?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "In the previous 60 days have any soil amendments or pesticides been applied to the growing area? / En los 60 días anteriores, ¿se han aplicado enmiendas al suelo o pesticidas en el área de cultivo?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "What is the intended primary water source for irrigation use? / ¿Cuál es la fuente primaria de agua prevista para uso de riego?",
+          "answer": "Flowing surface water",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is municipal or district water used in the growing operation? / ¿Se utiliza agua municipal o distrital en la operación de cultivo?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is well water used in the operation? / ¿Se utiliza agua de pozo en la operación?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is open flowing surface water used in the operation (e.g., rivers, canals, ditches, etc.)? / ¿Se utiliza agua superficial de flujo abierto en la operación (p. ej., ríos, canales, zanjas, etc.)?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is non-flowing surface water (e.g., ponds, reservoirs, watersheds, etc.) used in the operation? / ¿Se utiliza agua superficial que no fluye (p. ej., estanques, embalses, cuencas hidrográficas, etc.) en la operación?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are there backflow prevention devices on all main lines? / ¿Hay dispositivos de prevención de reflujo en todas las líneas principales?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "If the operation stores water (tank, cistern, container), is the storage container well maintained? / Si la operación almacena agua (tanque, cisterna, contenedor), ¿se mantiene bien el contenedor de almacenamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there above ground access to the water source? / ¿Hay acceso por encima del suelo a la fuente de agua?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Does the water source and associated equipment appear to be damage and tamper free? / ¿La fuente de agua y el equipo asociado parecen estar dañados y libres de manipulaciones?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is the water access (well head, pump house, etc.) covered and protected? / ¿Está cubierto y protegido el acceso al agua (boca del pozo, casa de bombas, etc.)?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "If the overall condition is not good, please provide additional detail and attach a photo of the issue / Si el estado general no es bueno, proporcione detalles adicionales y adjunte una foto del problema",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Is there evidence of human fecal matter in the adjacent land to the audited area? / ¿Hay evidencia de materia fecal humana en el terreno adyacente al área auditada?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Have soil tests been ordered/conducted to test for metals or other regulated contaminants? / ¿Se han ordenado/ realizado pruebas de suelo para detectar metales u otros contaminantes regulados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Have you conducted a generic E. coli test on the water (taken from the closest practical point of use)? / ¿Ha realizado una prueba genérica de E. coli en el agua (tomada del punto práctico de uso más cercano)?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Kevin Harbine",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download7.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download7.pdf",
+      "sha256": "837addd0248218dd92ef64b6fce56b5998edd0ebe7562d843cbdd54a3d12fdd3",
+      "report_type": "R021 Varmint Trap Inspection",
+      "report_id": "11515",
+      "date_time": "06/30/2025 02:30 PM",
+      "creator": "Manager Gerente",
+      "location": "",
+      "coordinates": "(48.35078977591206, -122.33727858443731)",
+      "pages": 8,
+      "bytes": 2482233,
+      "evidence_tags": [
+        "pest-animal",
+        "corrective-action"
+      ],
+      "field_count_estimate": 63,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11515",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "06/30/2025 02:30 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35078977591206, -122.33727858443731)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Trap 1 / Trampa 1",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Trap 2 / Trampa 2",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Trap 3 / Trampa 3",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Trap 4 / Trampa 4",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Trap 5 / Trampa 5",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Trap 6 / Trampa 6",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Trap 7 / Trampa 7",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Trap 8 / Trampa 8",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Trap 9 / Trampa 9",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Trap 10 / Trampa 10",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Trap 11 / Trampa 11",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Trap 12 / Trampa 12",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Trap 13 / Trampa 13",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Trap 14 / Trampa 14",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Trap 15 / Trampa 15",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Trap 16 / Trampa 16",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Trap 17 / Trampa 17",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Trap 18 / Trampa 18",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Trap 19 / Trampa 19",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Trap 20 / Trampa 20",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Trap 21 / Trampa 21",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 22 / Trampa 22",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 23 / Trampa 23",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 24 / Trampa 24",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 25 / Trampa 25",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 26 / Trampa 26",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 27 / Trampa 27",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 28 / Trampa 28",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 29 / Trampa 29",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Trap 30 / Trampa 30",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Comments / Comentarios",
+          "answer": "all indoor varmint traps found to be free of any varmints",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Trap 1 / Trampa 1",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Trap 2 / Trampa 2",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Trap 3 / Trampa 3",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Trap 4 / Trampa 4",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Trap 5 / Trampa 5",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Trap 6 / Trampa 6",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Trap 7 / Trampa 7",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Trap 8 / Trampa 8",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 6,
+          "question": "Trap 9 / Trampa 9",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 6,
+          "question": "Trap 10 / Trampa 10",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 6,
+          "question": "Trap 11 / Trampa 11",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 6,
+          "question": "Trap 12 / Trampa 12",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 6,
+          "question": "Trap 13 / Trampa 13",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 6,
+          "question": "Trap 14 / Trampa 14",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 6,
+          "question": "Trap 15 / Trampa 15",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 7,
+          "question": "Trap 16 / Trampa 16",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 7,
+          "question": "Trap 17 / Trampa 17",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 7,
+          "question": "Trap 18 / Trampa 18",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 7,
+          "question": "Trap 19 / Trampa 19",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 7,
+          "question": "Trap 20 / Trampa 20",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 7,
+          "question": "Trap 21 / Trampa 21",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 7,
+          "question": "Trap 22 / Trampa 22",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 7,
+          "question": "Trap 23 / Trampa 23",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 8,
+          "question": "Trap 24 / Trampa 24",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 8,
+          "question": "Trap 25 / Trampa 25",
+          "answer": "06/30/2025",
+          "comments": ""
+        },
+        {
+          "page": 8,
+          "question": "Comments / Comentarios",
+          "answer": "no varmints found in outside traps",
+          "comments": ""
+        },
+        {
+          "page": 8,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Kevin Faber",
+          "comments": ""
+        },
+        {
+          "page": 8,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download8.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download8.pdf",
+      "sha256": "7321954517f5ebc727d0bbef21dd5f24659ead8b1a94c28f04e8133d552d8d5f",
+      "report_type": "R015 Facility Walkaround",
+      "report_id": "11613",
+      "date_time": "07/15/2025 08:48 AM",
+      "creator": "Manager Gerente",
+      "location": "",
+      "coordinates": "(48.35080313859776, -122.3374022215863)",
+      "pages": 4,
+      "bytes": 417532,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "food-safety-meeting",
+        "pest-animal",
+        "worker-health-safety",
+        "training"
+      ],
+      "field_count_estimate": 55,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11613",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "07/15/2025 08:48 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35080313859776, -122.3374022215863)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all employee bulletin boards up to date and compliant? (Federal, State, WISHA, L&I, etc.)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are the minutes of the most recent FH&S Committee meeting posted for staff review?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all Emergency Contact numbers posted and accessible to employees?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are employee training records properly maintained and available for review?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are trainings occurring at the scheduled monthly frequency?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all employees properly trained in the selection, use and maintenance of PPE?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there a posted floor plan and procedure for evacuations and other emergency situations?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all Emergency Exits clearly marked and identifiable?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all fire alarms clearly marked and readily accessible?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all fire extinguishers clearly marked and readily accessible?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there evidence of regular inspection and maintenance of all fire extinguishers?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do all sprinkler heads have, at a minimum, an 18\" clearance within the facility?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all First Aid Kits clearly marked , readily accessible and adequately stocked?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the AED properly charged and appear functional? (green light indicates charge)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all top-heavy items properly bolted or secured to withstand an earthquake?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all large and/or heavy equipment items stored on lower level shelves to prevent injury in the event of an earthquake?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all walkways and stairways adequately illuminated?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all stairway treads and hand rails in good working condition?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all walkway markings throughout the facility in good condition?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all walkways unobstructed, clear of equipment and free of slip/trip hazards?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all hand and power tools properly stored in employee tool carts and put away when not in use?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are employees trained on safe lifting techniques and observed using that training in the workplace?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are high forklift traffic areas free of damage which may indicate operator error?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all employee common areas (breakrooms, restrooms, etc.) clean and free from litter?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all common appliances (refrigerator, microwave, etc.) clean and in good working condition?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are sufficient personal hygiene supplies available? (Hand soap, single use towels, toilet tissue, etc.)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there a proper 36\" clearance surrounding all electrical panels?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is all electrical equipment clean and in good working order?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is all inspected equipment properly grounded and kept clear of combustible materials?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all extension cords and outlet strips plugged directly into outlets? (i.e. no \"piggy-backing\")",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all observed cords in good working condition and free of splices, breaks and/or pinches?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are there cover plates on all electrical outlets?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all electrical outlets in restrooms GFCI protected?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Has there been a recent inventory of all hazardous materials stored on site? (i.e. within the last two calendar months)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all Material Safety Data Sheets up to date and available for employee review?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all secondary containers properly labeled following SOPs?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all storage areas properly organized and uncluttered?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Are all cabinets and lockers used to store hazardous materials locked and/or latched when not in use?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Is there proper ventilation in all areas where chemicals and/ or solvents are observed in use?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Are employees handling hazardous chemicals properly trained and observed following all safety protocols?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Are all maintenance and equipment storage areas clean and free of clutter or debris?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Is adequate hearing protection provided and are employees trained in the proper use while operating tools and/or machinery?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Is adequate eye protection provided with clear vision and no scratching and/or pitting and are employees trained in the proper use while operating tools and/or machinery?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Are employees observed properly using PPE while engaged in work activities?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Are all equipment operational guards in place and fully functional?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Are all wires and cords observed intact? (i.e. free of cuts, breaks or splices?)",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Are employees trained in and following proper LOTO procedure?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Are all required safety placards in place and legible?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Is there proper ventilation where tools and/or machinery are in use or undergoing maintenance?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Salomon & Alexandra",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download9.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download9.pdf",
+      "sha256": "51e9d1528d83c152ad145993f9b1b93a8c2ed975faf88523d8154fe3331f0b4a",
+      "report_type": "R013 NUOCA Log",
+      "report_id": "11104",
+      "date_time": "05/28/2025 12:37 PM",
+      "creator": "Manager w Admin",
+      "location": "Farm Fields / BBP-FARM / 2025 Conventional-Kamb NE",
+      "coordinates": "(48.33485616, -122.37907544)",
+      "pages": 2,
+      "bytes": 272397,
+      "evidence_tags": [
+        "field-activity",
+        "food-safety-meeting",
+        "corrective-action"
+      ],
+      "field_count_estimate": 16,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11104",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "05/28/2025 12:37 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / 2025 Conventional-Kamb NE",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.33485616, -122.37907544)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Reported By: / Reportado por:",
+          "answer": "Kevin Harbine (ID: A161)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date of Non-Conformance / Fecha de No Conformidad",
+          "answer": "05/28/2025",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Time of Non-Conformance / Tiempo de No Conformidad",
+          "answer": "12:38 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Witnessed By / Presenciado por",
+          "answer": "Kevin Harbine (ID: A161)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Describe Non-Conformance / Describir la no conformidad",
+          "answer": "Planting failure for field crops",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Immediate corrective action taken? / ¿Se tomaron medidas correctivas inmediatas?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date of corrective action / Fecha de la acción correctiva",
+          "answer": "05/28/2025",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Describe immediate corrective action / Describir la acción correctiva inmediata",
+          "answer": "Discuss replanting at manager meeting",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Identify the root cause of the non-conformance / Identificar la causa raíz de la no conformidad",
+          "answer": "Soil or method variance",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Corrective and preventative actions taken / Acciones correctivas y preventivas tomadas",
+          "answer": "Planned replant",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download10.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download10.pdf",
+      "sha256": "33cd52a471c8cb930c5c27ec45814132e2d2879d14087947cfa874d5d72094ee",
+      "report_type": "R010 Warehouse Service Request",
+      "report_id": "10568",
+      "date_time": "04/08/2025 01:43 PM",
+      "creator": "Manager Gerente",
+      "location": "BBP Warehouse / BBP-WH / Bulk Lines - Linea de empaque",
+      "coordinates": "(48.35088173127733, -122.33765056211601)",
+      "pages": 2,
+      "bytes": 368260,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "warehouse",
+        "corrective-action"
+      ],
+      "field_count_estimate": 10,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "10568",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "04/08/2025 01:43 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Bulk Lines - Linea de empaque",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35088173127733, -122.33765056211601)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Equipment Name / Number / Nombre / Número del equipo",
+          "answer": "Pressure washer",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Describe Issue / Describir problema",
+          "answer": "Has no pressure",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Please include a photo if applicable / Por favor incluya una foto si corresponde",
+          "answer": "File Attached: 93DF7D5E-CA96-4D77- A73F-252A821EE980.jpg (Image 1)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Name of requestor / Nombre",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Francisco García",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download11.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download11.pdf",
+      "sha256": "6f6a74f6dde714a8f1313c7a6deaaa21e9395ce722a9226597dfb429127b13ff",
+      "report_type": "R008 Daily Warehouse Checklist",
+      "report_id": "12139",
+      "date_time": "08/27/2025 06:50 AM",
+      "creator": "Lead Lider",
+      "location": "BBP Warehouse / BBP-WH / Warehouse - Bodega",
+      "coordinates": "",
+      "pages": 3,
+      "bytes": 272508,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "risk-assessment",
+        "water",
+        "pest-animal",
+        "warehouse"
+      ],
+      "field_count_estimate": 33,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12139",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "08/27/2025 06:50 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Lead Lider",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Warehouse - Bodega",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the area free and clear of litter and debris? / ¿El área está libre de basura y escombros?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are there any signs of pest activity and/or animal intrusion? / ¿Hay signos de actividad de plagas y / o intrusión de animales?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any standing water or evidence of flooding? / ¿Hay agua estancada o evidencia de inundaciones?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any evidence of trespassing or human intrusion? / ¿Existe alguna evidencia de allanamiento o intrusión humana?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all trash cans lined properly and covered? / ¿Están todos los botes de basura debidamente forrados y cubiertos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all dumpsters and recycling bins properly closed and secured? / ¿Están todos los contenedores de basura y contenedores de reciclaje debidamente cerrados y asegurados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the area free and clear of litter and debris? / ¿El área está libre de basura y escombros?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are there any signs of pest activity and/or animal intrusion? / ¿Hay signos de actividad de plagas y / o intrusión de animales?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any standing water or evidence of flooding? / ¿Hay agua estancada o evidencia de inundaciones?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all trash cans lined properly lined and covered? / ¿Están todos los botes de basura forrados y cubiertos adecuadamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Has all equipment been cleaned and sanitized for use? / ¿Se ha limpiado y desinfectado todo el equipo para su uso?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are the wash tanks clean and prepared for use? / ¿Están los tanques de lavado limpios y preparados para su uso?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is the area free and clear of litter and debris? / ¿El área está libre de basura y escombros?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are there any signs of pest activity and/or animal intrusion? / ¿Hay signos de actividad de plagas y / o intrusión de animales?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there any standing water or evidence of flooding? / ¿Hay agua estancada o evidencia de inundaciones?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all trash cans lined properly and covered? / ¿Están todos los botes de basura debidamente forrados y cubiertos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Has all equipment been cleaned and sanitized for use? / ¿Se ha limpiado y desinfectado todo el equipo para su uso?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Have the packing lines been properly cleaned and sanitized? / ¿Se han limpiado y desinfectado adecuadamente las líneas de empaque?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Have the packing lines been properly set up for operation? / ¿Se han configurado correctamente las líneas de empaque para su funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is the area free and clear of litter and debris? / ¿El área está libre de basura y escombros?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are there any signs of pest activity and/or animal intrusion? / ¿Hay signos de actividad de plagas y / o intrusión de animales?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there any standing water or evidence of flooding? / ¿Hay agua estancada o evidencia de inundaciones?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all trash cans lined properly and covered? / ¿Están todos los botes de basura debidamente forrados y cubiertos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Has all equipment been cleaned and sanitized for use? / ¿Se ha limpiado y desinfectado todo el equipo para su uso?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all employees following proper hygiene protocols? / ¿Están todos los empleados siguiendo los protocolos de higiene adecuados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Have all employees participated in mandatory health screening? / ¿Han participado todos los empleados en exámenes de salud obligatorios?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are First Aid & PPE supplies adequately stocked? / ¿Se almacenan adecuadamente los suministros de primeros auxilios y PPE?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are employees using tobacco, chewing gum, eating, spitting or wearing jewelry in the packinghouse? / ¿Los empleados usan tabaco, mascan chicle, comen, escupen o usan joyas en la empacadora?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download12.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download12.pdf",
+      "sha256": "75966a1c6c7a0de154290961d094b147cbaf60587f3c0c6078f33e70e1c3ef42",
+      "report_type": "R007 Line Lead - End of Day",
+      "report_id": "12897",
+      "date_time": "11/14/2025 11:21 AM",
+      "creator": "Lead Lider",
+      "location": "BBP Warehouse / BBP-WH / Line 3 - Linea 3",
+      "coordinates": "(48.35085932630681, -122.33759617299928)",
+      "pages": 3,
+      "bytes": 277881,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "pest-animal",
+        "worker-health-safety",
+        "warehouse",
+        "corrective-action"
+      ],
+      "field_count_estimate": 28,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12897",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "11/14/2025 11:21 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Lead Lider",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Line 3 - Linea 3",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35085932630681, -122.33759617299928)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Tag all Completed Pallets / ¿Están todas las órdenes de trabajo y hojas de producción completadas y entregadas correctamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Continuously put away unused UPC's, dirty rags, and products not needed / Guardar continuamente los UPC no utilizados, trapos sucios y productos innecesarios",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Report all accidents, injuries and near misses that occurred on your line / Informar de todos los accidentes, lesiones y casi accidentes que ocurrieron en su línea",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Report all maintenance issues on your line immediately. / Informe de todos los problemas de mantenimiento en su línea de inmediato.",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Continuously wipe mispainted pumpkins when machines are down or product is being switched / Limpiar continuamente las calabazas mal pintadas cuando las máquinas estén detenidas o se esté cambiando el producto.",
+          "answer": "N/A",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Continuously stock hats and hair for Line 1 / Abastecer continuamente sombreros y cabello para la Línea 1",
+          "answer": "N/A",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Tag all Completed Pallets / ¿Están todas las órdenes de trabajo y hojas de producción completadas y entregadas correctamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Continuously put away unused UPC's, dirty rags, and products not needed / Guardar continuamente los UPC no utilizados, trapos sucios y productos innecesarios",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Report all accidents, injuries and near misses that occurred on your line / Informar de todos los accidentes, lesiones y casi accidentes que ocurrieron en su línea",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Report all maintenance issues on your line immediately. / Informe de todos los problemas de mantenimiento en su línea de inmediato.",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Continuously wipe mispainted pumpkins when machines are down or product is being switched / Limpiar continuamente las calabazas mal pintadas cuando las máquinas estén detenidas o se esté cambiando el producto.",
+          "answer": "N/A",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Continuously stock hats and hair for Line 1 / Abastecer continuamente sombreros y cabello para la Línea 1",
+          "answer": "N/A",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Begin stocking and organizing all supplies-(boxes, UPCs, slip sheets, pallets) / Comience a abastecer y organizar todos los suministros (cajas, UPCs, hojas deslizantes, pallets)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Empty all Trash cans, and replace all towel baskets / Vaciar todos los botes de basura y reemplazar todas las cestas de toallas.",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Put away unused items-sticker guns, UPCs, dirty rags, etc. / Guardar los artículos no utilizados: pistolas de etiquetas, UPCs, trapos sucios, etc.",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Begin to grab any cleaning supplies you will need to shut down after close-clean rags / Comience a recoger los suministros de limpieza que necesitará para el cierre: trapos de limpieza.",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Organize unusable boxes on a pallet, and ask a forklift driver to move them the proper area / Organice las cajas inservibles en un pallet y pida a un conductor de montacargas que las traslade al área adecuada",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Clean all rollers, remove UPC's that have stuck on / Limpiar todos los rodillos, quitar los UPC que se hayan quedado pegados",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Clean and Sanitize all contact surface areas / Limpiar y desinfectar todas las áreas de superficies de contacto",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Put away all brooms, dust pans and mops- make sure they are hung up off the ground / Guardar todas las escobas, recogedores y trapeadores, asegurándose de que estén colgados y fuera del suelo",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "After cleaning, gather any rags or cleaning supplies, put them in their designated areas / Después de limpiar, recoge los trapos o suministros de limpieza y colócalos en su área designada.",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Employee name of who reported these checks? / ¿Nombre del empleado que reportó estos cheques?",
+          "answer": "Adilene",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download13.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download13.pdf",
+      "sha256": "99239ad0d1a00f282317564b51317889aee2acaedb0f58d2446d4a02f262f1ef",
+      "report_type": "R006 Daily Sanitation Log",
+      "report_id": "10574",
+      "date_time": "04/11/2025 02:41 PM",
+      "creator": "Manager Gerente",
+      "location": "BBP Warehouse / BBP-WH / Restrooms - Banos",
+      "coordinates": "(48.35084129293862, -122.33763412132934)",
+      "pages": 2,
+      "bytes": 268208,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "pest-animal",
+        "warehouse",
+        "corrective-action"
+      ],
+      "field_count_estimate": 18,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "10574",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "04/11/2025 02:41 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Restrooms - Banos",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35084129293862, -122.33763412132934)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have all surfaces been cleaned and sanitized? / ¿Se han limpiado y desinfectado todas las superficies?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the walls, shelves and storage areas been cleaned and sanitized? / ¿Se han limpiado y desinfectado las paredes, los estantes y las áreas de almacenamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the sinks been cleaned and sanitized? / ¿Se han limpiado y desinfectado los fregaderos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the floors been swept and if needed properly mopped? / ¿Se han barrido los pisos y, si es necesario, se han trapeado adecuadamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Has all trash and litter been removed? / ¿Se ha eliminado toda la basura y la basura?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all trash cans properly lined and covered? / ¿Están todos los botes de basura debidamente forrados y cubiertos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Hand Soap / Jabon de Manos",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Hand Sanitizer / Desinfectante de Manos",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Hand Towels / Toallas de Papel",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do all doors and latches work properly? / ¿Todas las puertas y pestillos funcionan correctamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is maintenance service required? / ¿Se requiere servicio de mantenimiento?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Ofelia Flores",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Checked By / Comprobado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download14.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download14.pdf",
+      "sha256": "624ffb8e1d35ba90a05f9df194674807a111c513f4075dcd3a774d7cc535f3ee",
+      "report_type": "R005 Farm Equipment Service Request",
+      "report_id": "11252",
+      "date_time": "06/05/2025 06:28 AM",
+      "creator": "Operator Operador",
+      "location": "Farm Fields / BBP-FARM / Kamb's Northeast",
+      "coordinates": "(48.34115905260243, -122.38096011624732)",
+      "pages": 2,
+      "bytes": 335695,
+      "evidence_tags": [
+        "equipment",
+        "corrective-action"
+      ],
+      "field_count_estimate": 11,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11252",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "06/05/2025 06:28 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Operator Operador",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Kamb's Northeast",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.34115905260243, -122.38096011624732)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Equipment Name / Number / Nombre / Número del equipo",
+          "answer": "2012 Chevy truck",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Describe Issue / Describir problema",
+          "answer": "Requiere el servicio",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Please include a photo if applicable / Por favor incluya una foto si corresponde",
+          "answer": "File Attached: 670478A5-85E9-4709- A2DB-002108FD4D30.jpg (Image 1)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Name of requestor / Nombre",
+          "answer": "Gonzalo Interiano Galicia (ID: A2J9)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Gonzalo",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download15.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download15.pdf",
+      "sha256": "c11e2d88116ae98ad6f3db7d490a6f3cb575b0ae37c2144ce65f0df9aae0f47a",
+      "report_type": "R004 Tractor Inspection",
+      "report_id": "12846",
+      "date_time": "10/22/2025 07:54 AM",
+      "creator": "Operator Operador",
+      "location": "Farm Fields / BBP-FARM / Bolings",
+      "coordinates": "(48.336466449355605, -122.34207636627058)",
+      "pages": 2,
+      "bytes": 271114,
+      "evidence_tags": [
+        "equipment",
+        "worker-health-safety",
+        "corrective-action"
+      ],
+      "field_count_estimate": 23,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12846",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "10/22/2025 07:54 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Operator Operador",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Bolings",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.336466449355605, -122.34207636627058)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "What is the Equipment ID number? / ¿Cuál es el número de identificación del equipo?",
+          "answer": "380 case",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do you notice any coolant or oil leaks? / ¿Observa alguna fuga de refrigerante o aceite?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do you notice any hydraulic line issues and/or leaks? / ¿Observa algún problema en la línea hidráulica y / o fugas?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the battery in good working condition? / ¿Está la batería en buenas condiciones de funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are the wheels in good operating condition? / ¿Están las ruedas en buen estado de funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all safety guards intact? / ¿Están intactos todos los guardias de seguridad?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all attachments or attachment points secure and in good working condition? / ¿Están todos los accesorios o puntos de sujeción seguros y en buenas condiciones de funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the seatbelt functional? / ¿Funciona el cinturón de seguridad?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the equipment have a fire extinguisher? / ¿Tiene el equipo un extintor de incendios?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the equipment in clean condition? (dirt, debris, etc.) / ¿Está el equipo limpio? (suciedad, escombros, etc.)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the equipment have adequate fuel? / ¿El equipo tiene combustible adecuado?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all lights operational?(headlights, reverse, hazards, turn signals, brake) / ¿Están todas las luces en funcionamiento? (Faros, marcha atrás, peligros, señales de giro, freno)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the horn work? / ¿Funciona la bocina?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do the brakes work properly? (foot and park) / ¿Funcionan correctamente los frenos? (freno y freno de mano)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Do you have all necessary equipment for road travel, if necessary? / ¿Tiene todo el equipo necesario para viajar por carretera, si es necesario?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Record the equipment hours: / Registre las horas del equipo:",
+          "answer": "1954",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Gonzalo",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download16.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download16.pdf",
+      "sha256": "86d4ed32c17b80a8cf405d02341ba4eea3d6cb970d8f02420c275b035238bf84",
+      "report_type": "R003 Daily Harvest Checklist",
+      "report_id": "12830",
+      "date_time": "10/17/2025 07:54 AM",
+      "creator": "Lead Lider",
+      "location": "Farm Fields / BBP-FARM / Organic Mesman",
+      "coordinates": "(48.39013248879065, -122.45160609945046)",
+      "pages": 3,
+      "bytes": 274951,
+      "evidence_tags": [
+        "field-activity",
+        "sanitation",
+        "risk-assessment",
+        "pest-animal",
+        "corrective-action",
+        "pre-harvest"
+      ],
+      "field_count_estimate": 25,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12830",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "10/17/2025 07:54 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Lead Lider",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Organic Mesman",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.39013248879065, -122.45160609945046)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any evidence of animal intrusion in the field? / Hay evidencia de intrusión de animal en la area de cosecha?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any litter or debris in the field? / ¿Hay basura o escombros en el campo?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any evidence of human intrusion in the field? / ¿Existe alguna evidencia de intrusión humana en el campo?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are any materials stored on site clean and orderly? / ¿Hay algún material almacenado en el sitio limpio y ordenado?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all field entry restrictions lifted? (i.e., recent pesticides, fertilizer applications) / ¿Se eliminan todas las restricciones de entrada al campo? (es decir, pesticidas recientes, aplicaciones de fertilizantes)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any sign of recent flooding? / ¿Hay alguna señal de inundaciones recientes?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Were all harvest tools properly cleaned and sanitized prior to starting work? / ¿Se limpiaron y desinfectaron correctamente todas las herramientas de cosecha antes de comenzar a trabajar?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all employees following proper hygiene protocols? / ¿Están todos los empleados siguiendo los protocolos de higiene adecuados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Have all employees participated in mandatory health screening? / ¿Están todos los empleados siguiendo los protocolos de higiene adecuados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are First Aid & PPE supplies adequately stocked? / ¿Se almacenan adecuadamente los suministros de primeros auxilios y PPE?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there adequate drinking water and cups for all employees? / ¿Hay agua potable y vasos adecuados para todos los empleados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are employees using tobacco, chewing gum, eating, spitting or wearing jewelry in the growing area? / ¿Los empleados consumen tabaco, mascan chicle, comen, escupen o usan joyas en el área de cultivo?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there a restroom on-site adequate for all employees? / ¿Hay un baño en el lugar adecuado para todos los empleados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there adequate water in the tank for handwashing? / ¿Hay suficiente agua en el tanque para lavarse las manos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are the restrooms adequately stocked? / ¿Están los baños adecuadamente abastecidos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all trashes lined and properly covered? / ¿Están todos los basureros forrados y cubiertos adecuadamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Has the restroom been adequately cleaned and sanitized today? / ¿Se ha limpiado y desinfectado adecuadamente el baño hoy?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Does the restroom need to be serviced and/or repaired? / ¿El baño necesita servicio y / o reparación?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Yoselin Ochoa",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download17.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download17.pdf",
+      "sha256": "6be59a24245bbe417c3d15b68879363ae1ca290a8360c847ea702c9aac642364",
+      "report_type": "R002 Daily Field Checklist",
+      "report_id": "11407",
+      "date_time": "06/17/2025 09:35 AM",
+      "creator": "Manager Gerente",
+      "location": "Farm Fields / BBP-FARM / Organic Jenson",
+      "coordinates": "(48.38346363515442, -122.49777107510948)",
+      "pages": 2,
+      "bytes": 270318,
+      "evidence_tags": [
+        "field-activity",
+        "sanitation",
+        "risk-assessment",
+        "pest-animal",
+        "corrective-action"
+      ],
+      "field_count_estimate": 25,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11407",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "06/17/2025 09:35 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Organic Jenson",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.38346363515442, -122.49777107510948)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Field Name",
+          "answer": "2025 Organic Jenson",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any evidence of animal intrusion in the field? / Hay evidencia de intrusión de animal en la area de cosecha?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any litter or debris in the field? / ¿Hay basura o escombros en el campo?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any evidence of human intrusion in the field? / ¿Existe alguna evidencia de intrusión humana en el campo?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are any materials stored on site clean and orderly? / ¿Hay algún material almacenado en el sitio limpio y ordenado?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all field entry restrictions lifted? (i.e., recent pesticides, fertilizer applications) / ¿Se eliminan todas las restricciones de entrada al campo? (es decir, pesticidas recientes, aplicaciones de fertilizantes)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any sign of recent flooding? / ¿Hay alguna señal de inundaciones recientes?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "What is the condition of the irrigation source? / ¿Cuál es el estado de la fuente de riego?",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all employees following proper hygiene protocols? / ¿Están todos los empleados siguiendo los protocolos de higiene adecuados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are First Aid & PPE supplies adequately stocked? / ¿Se almacenan adecuadamente los suministros de primeros auxilios y PPE?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there adequate drinking water and cups for all employees? / ¿Hay agua potable y vasos adecuados para todos los empleados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are employees using tobacco, chewing gum, eating, spitting or wearing jewelry in the growing area? / ¿Los empleados consumen tabaco, mascan chicle, comen, escupen o usan joyas en el área de cultivo?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there a restroom on-site adequate for all employees? / ¿Hay un baño en el lugar adecuado para todos los empleados?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is there adequate water in the tank for handwashing? / ¿Hay suficiente agua en el tanque para lavarse las manos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are the restrooms adequately stocked? / ¿Están los baños adecuadamente abastecidos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Are all trashes lined and properly covered? / ¿Están todos los basureros forrados y cubiertos adecuadamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Has the restroom been adequately cleaned and sanitized today? / ¿Se ha limpiado y desinfectado adecuadamente el baño hoy?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Does the restroom need to be serviced and/or repaired? / ¿El baño necesita servicio y / o reparación?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Francisco García",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download18.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download18.pdf",
+      "sha256": "5b0af5581abe54ecb2acd26690acf88ae6b12c50554ca08cef0b96677b508a04",
+      "report_type": "R001 Field Activity Log",
+      "report_id": "11644",
+      "date_time": "07/28/2025 05:48 PM",
+      "creator": "Manager Gerente",
+      "location": "Farm Fields / BBP-FARM / Bolings",
+      "coordinates": "",
+      "pages": 1,
+      "bytes": 261987,
+      "evidence_tags": [
+        "field-activity",
+        "equipment",
+        "sanitation",
+        "corrective-action"
+      ],
+      "field_count_estimate": 14,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11644",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "07/28/2025 05:48 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Bolings",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date of Activity / Fecha de actividad: 07/25/2025",
+          "answer": "Start Time / Hora de inicio: 10:00 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Activity Type / Tipo de actividad",
+          "answer": "Riego",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Did you sanitize your equipment before moving fields? / ¿Desinfectó su equipo antes de mover los campos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Irrigation Type / Tipo de riego",
+          "answer": "Goteo",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Source Inspection / Inspección de fuente",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Hours of Use / Horas de uso",
+          "answer": "10",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "For Drip Irrigation input 1470. For Overhead Irrigation input 13582 / Para la entrada de riego por goteo 1470. Para la entrada de riego aéreo 13582",
+          "answer": "1470",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Volume of Water Applied / Volumen de agua aplicado",
+          "answer": "14700",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Salomon camacho",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download19.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download19.pdf",
+      "sha256": "a6a7b1914e788350ca13f34e0c9028e29622b80e0c3795988eb0eaa958f2ec77",
+      "report_type": "Pre-Work HEAT Checklist",
+      "report_id": "12833",
+      "date_time": "10/17/2025 01:33 PM",
+      "creator": "Lead Lider",
+      "location": "",
+      "coordinates": "(48.392088796466986, -122.46140724882754)",
+      "pages": 2,
+      "bytes": 269937,
+      "evidence_tags": [
+        "worker-health-safety"
+      ],
+      "field_count_estimate": 14,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12833",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "10/17/2025 01:33 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Lead Lider",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.392088796466986, -122.46140724882754)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Temperature? / ¿Temperatura?",
+          "answer": "58",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Air Quality",
+          "answer": "24",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "1. Can you quickly provide shade to employees if they ask for it? / 1. ¿Puede proporcionar rápidamente sombra a los empleados si lo solicitan?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "2. Is shade easy to use? / 2. ¿La sombra es fácil de usar?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "3. Are shaded areas placed as close as possible to work areas? / 3. ¿Las áreas sombreadas se colocan lo más cerca posible de las áreas de trabajo?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "5. Are you refilling water when it is (50% )half way gone? / 5. ¿Está rellenando el agua cuando está (50%) a medio camino?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "6. Are any employees experiencing symptoms of heat illness? / 6. ¿Algún empleado tiene síntomas de enfermedad por calor?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "1. I am observing employees for alertness and signs or symptoms of heat illness. / 1. Estoy observando a los empleados en busca de alerta y signos o síntomas de enfermedad por calor.",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Name of Employee who Completed this form:",
+          "answer": "Yoselin Ochoa",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download20.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download20.pdf",
+      "sha256": "35f5a96888727733c250b6de27a47f210f2f1e6a046666efdc3ec5af0af44abf",
+      "report_type": "Pre-Harvest Inspection",
+      "report_id": "12383",
+      "date_time": "09/09/2025 09:35 AM",
+      "creator": "Manager Gerente",
+      "location": "Farm Fields / BBP-FARM / Organic Mesman",
+      "coordinates": "",
+      "pages": 2,
+      "bytes": 261018,
+      "evidence_tags": [
+        "field-activity",
+        "risk-assessment",
+        "pest-animal",
+        "corrective-action",
+        "pre-harvest"
+      ],
+      "field_count_estimate": 13,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12383",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "09/09/2025 09:35 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Organic Mesman",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are there any signs of past flooding issues? / ¿Ha habido señales de problemas de inundaciones?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are there any signs of natural flooding currently? / ¿Hay señales de inundación natural actualmente?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are there any signs of irrigation flooding currently? / ¿Hay señales de inundaciones de riego actualmente?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is there any evidence of visible pesticide contamination (crop or ground)? / ¿Hay alguna evidencia de contaminación visible de pesticidas (cultivo o suelo)?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Any observed issues on adjacent lands that have or might contaminate the block? / ¿Algún problema observado en las tierras adyacentes que tienen o podrían contaminar el bloque?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Any signs of a security issue? / ¿Alguna señal de problemas de seguridad?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Any other issues in the block that could be a crop contamination concern? / ¿Algún otro problema en el bloque que pueda ser un problema de contaminación de cultivos?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Salomon camacho",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download21.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download21.pdf",
+      "sha256": "713ecca0ac852161dc79823e85a6e1cd33527a15987e83899c77cf6962e6c76e",
+      "report_type": "Leadership Training: Communication and Team Management",
+      "report_id": "11721",
+      "date_time": "08/04/2025 03:41 PM",
+      "creator": "Manager Gerente",
+      "location": "Farm Fields / BBP-FARM / Bodega",
+      "coordinates": "",
+      "pages": 2,
+      "bytes": 268902,
+      "evidence_tags": [
+        "equipment",
+        "training"
+      ],
+      "field_count_estimate": 12,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11721",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "08/04/2025 03:41 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Bodega",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Crews:",
+          "answer": "Farm Crew",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Salomon camacho",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Adela Cervantes A2bi",
+          "answer": "Adrian Sloniker A1b7 Laborer",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Anayeli Canchola A2bh",
+          "answer": "Angelica Galicia A2hi Laborer",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Avelino Flores Cruz A2h8 Equipment Operator",
+          "answer": "Francisco Becerra 5001 Equipment Operator",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Gonzalo Alfredo Interiano Galicia A2j9 Equipment Operator",
+          "answer": "Marcelino Chavez Gallegos A13p",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Michele Youngquist A1bp Manager",
+          "answer": "Yoselin Ochoa Millan 6880",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Zacaria Lopez Martinez 202 Laborer",
+          "answer": "Manager W Admin Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download22.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download22.pdf",
+      "sha256": "cf712061d16e7ad5a624800b46dc1e74c100e8dccf9ee26b5548d683cc5bf4df",
+      "report_type": "Housing Safety and Health Checklist",
+      "report_id": "11667",
+      "date_time": "07/29/2025 11:17 AM",
+      "creator": "Manager w Admin",
+      "location": "",
+      "coordinates": "(48.35025725706496, -122.33679464027196)",
+      "pages": 6,
+      "bytes": 284396,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "pest-animal",
+        "worker-health-safety",
+        "corrective-action"
+      ],
+      "field_count_estimate": 110,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11667",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "07/29/2025 11:17 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35025725706496, -122.33679464027196)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Adequate drainage",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Located away from conditions that create or could create offensive odors, noise, traffic, or similar hazards",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Grounds free from debris, poisonous plants, uncontrolled weeds or brush",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Site provides space for recreation reasonably related to the size of the facility and the type of occupancy",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Adequate and convenient water supply that meets standards of the State Health authority",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Cold water taps available within 100 feet of each living unit (unless water is provided in the unit)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Adequate drainage facilities for overflow or spillage",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Individual drinking cups used",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Facilities provided for effective disposal of sewage",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Raw or treated liquid waste not allowed to accumulate on the ground surface",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Connected to public sewer systems where available; privies or portable toilets provided where public sewers are not available",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Provided facilities in compliance with requirements of the State health authority",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Housing is structurally sound, in good repair, maintained in sanitary condition, and provides protection against the elements",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Floors made of smooth, rigid, cleanable surface and prevent entrance of water",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "50 sq. ft. or more per person for sleeping purposes in housing with single beds or in family units",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "40 sq. ft. or more per person for sleeping purposes in housing with double bunk beds",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "60 sq. ft. or more per person for combined cooking, eating, and sleeping purposes",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Housing used by families have separate or partitioned sleeping areas for parents made of rigid materials and installed to provide reasonable privacy, where there are children over 6 years old",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Separate sleeping facilities provided for each sex in non- family groups",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Separate sleeping facilities provided for each family",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Adequate and separate facilities to hang clothes and store personal effects for each person or family",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Ceiling height is 7 ft. for more than half of the floor area in each living unit",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Each habitable room (not including partitioned areas) has at least one window or skylight opening directly to the outdoors",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Window space is 10% or more of usable floor space",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Total openable space is at least 45% of the minimum window area required unless other comparable mechanical ventilation is available",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Openings in shelter screened with not less than 16-mesh materials",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Any screen doors present are in good repair, tight fitting, and equipped with self-closing devices",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Operable, properly installed heating equipment in living quarters and service rooms",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "When the temperature falls below 68°F, heating equipment is capable of maintaining a temperature of 68°F in living quarters or service rooms",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Any stoves or other sources of heat utilizing combustible fuel must be installed and vented to prevent fire hazards and a dangerous concentration of gases",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Nenhum aquecedor portátil usado além daqueles operados por eletricidade Fogão a combustível sólido ou líquido:",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Only used in a room with proper insulation or fireproofing on walls, and ceiling within at least 18” of stove",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Heating pipes of fireproof material; stovepipes have vented metal collars installed through openings",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Any automatic controls cut off the fuel supply upon the failure or interruption of the flame or ignition, or whenever a predetermined safe temperature or pressure is exceeded",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Electricity provided with all wiring and lighting fixtures in safe condition",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Adequate ceiling or wall-type light fixtures in all rooms",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "At least one electrical outlet provided in each living room",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Adequate lighting for yard and pathways to common-use facilities",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Toilets constructed, located, and maintained in a manner to prevent nuisance or public health hazard",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Water closets or privy or outhouse seats for each sex provided in a ratio of at least 1 unit for each 15 occupants",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Common use facilities have a minimum of 1 water closet or privy seat for each sex",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Urinals constructed of non-absorbent materials",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Urinals substituted for men’s toilets in the proper ratio of 1 urinal or 24 inches of trough-type urinal for 1 toilet seat up to a maximum of 1/3 of the required toilet seats, when applicable",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Separate toilet facilities provided for each sex (except in family units)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Toilets facilities for each sex in the same building separated by a solid wall from wall to ceiling/roof",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Toilets marked “men” and “women” and in native language of occupants",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Adequate and accessible supply of toilet tissue (with holders) provided in common-use toilet facilities",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Common use toilets and privies or outhouses well-lighted, ventilated, clean, and sanitary",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Toilet facilities located not more than 200 ft. from living units",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Privies or outhouses located at least 50 ft. from living, cooking, or dining areas",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Privy or outhouse structures and pits are fly-tight and have adequate capacity for the required seats",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Hot and cold water under pressure provided for bathing and hand-washing",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Bathing and hand-washing facilities in sanitary condition",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Bathing and hand-washing facilities located within 200 ft. of each living unit",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Showerheads provided at a ratio of 1 per every 15 persons and not less than 3’ apart",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Shower area includes at least 9 sq. ft. of floor space per unit",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Adequate, dry dressing space in common-use facilities",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Shower floors constructed of nonabsorbent, nonskid materials with proper drains",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Separate shower facilities provided for each sex (except in family units)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Shower facilities for each sex in the same building separated by a solid wall from wall to ceiling/roof",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Shower facilities for each sex in the same building marked “men” and “women” and in native language of occupants",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Lavatories/wash basins provided in a ratio of at least 1 per every 15 persons",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Laundry facilities with hot and cold water under pressure",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Laundry trays or tubs provided in the ratio of at least 1 per 25 persons (or washing machines in the ratio of 1 per 50 persons plus 1 laundry tray per 100 persons)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Space or equipment provided for cooking and eating",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Cookstove or hot plate with at least two burners provided",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Adequate food storage shelves and counter for food preparation",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Provisions for mechanical refrigeration at 45°F or less",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Table and chairs or equivalent seating and eating arrangements proportional to capacity of the unit",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Adequate lighting and ventilation",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Common facility, room, or building separate from sleeping facilities for cooking and eating",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Stoves or hot plates with at least 2 burners provided in ratio of 1 to 10 persons, or 1 to 2 families",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Adequate food storage shelves and counter for food preparation",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Provisions for mechanical refrigeration at 45°F or less",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Adequate tables and chairs or equivalent seating",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Adequate sinks with hot and cold water under pressure",
+          "answer": "Yes",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download23.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download23.pdf",
+      "sha256": "48aa835e4ec9245274738eb04a32113bc472bd70a4c0e9765d5436add8e61987",
+      "report_type": "Hearing Conservation Program",
+      "report_id": "12740",
+      "date_time": "10/03/2025 01:56 PM",
+      "creator": "Manager w Admin",
+      "location": "Noise readings in high noise areas taken with Decibel Meter",
+      "coordinates": "",
+      "pages": 1,
+      "bytes": 266881,
+      "evidence_tags": [
+        "sanitation",
+        "worker-health-safety",
+        "warehouse"
+      ],
+      "field_count_estimate": 9,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12740",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "10/03/2025 01:56 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Noise readings in high noise areas taken with Decibel Meter",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Box Forming Machine Work Area tested with Decibel Meter",
+          "answer": "87.7",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Washline 1 Air Knife Area tested with Decibel Meter",
+          "answer": "94.3",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Washline 2 Air Knife Area tested with Decibel Meter",
+          "answer": "94.1",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Compressor Room tested with Decibel Meter",
+          "answer": "92.2",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download24.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download24.pdf",
+      "sha256": "a3c433f7bd903c1d6db56d3490d977086bfbf49c329c687a190a32ced9f966aa",
+      "report_type": "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting",
+      "report_id": "12695",
+      "date_time": "09/30/2025 02:00 PM",
+      "creator": "Manager w Admin",
+      "location": "",
+      "coordinates": "",
+      "pages": 5,
+      "bytes": 314772,
+      "evidence_tags": [
+        "equipment",
+        "food-safety-meeting",
+        "warehouse",
+        "corrective-action"
+      ],
+      "field_count_estimate": 42,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12695",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "09/30/2025 02:00 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Crews:",
+          "answer": "Permanent Crew, WH Crew",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employees Attending Meeting: Francisco GB, Alexandra",
+          "answer": "Other Employees Attending: Hector A Hernandez Silva Carina Santos Morales Kayla Strachila",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "PRIMUS Audit Update",
+          "answer": "Yes",
+          "comments": "100% packing house 98% Field 96% Harvest jewelry on the field water testing"
+        },
+        {
+          "page": 1,
+          "question": "EFI / SMETA Audit Update",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "People Safety Incidents since last meeting",
+          "answer": "Reviewed Incidents",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Food Safety Incidents since last meeting",
+          "answer": "Incidents Reviewed",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Operations Process Changes since last meeting",
+          "answer": "Reviewed for Risk",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Site Inspections since last meeting",
+          "answer": "No hazards identified",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Emergencies since last meeting",
+          "answer": "No Emergencies since last meeting",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Other Items Discussed:",
+          "answer": "please see attached",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Michele Youngquist A1bp Manager",
+          "answer": "Efren Ramirez A19j Supervisor",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Margarito Gonzalez Villa A2ig Lead",
+          "answer": "Gonzalo Alfredo Interiano Galicia A2j9 Equipment Operator",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Francisco Becerra 5001 Equipment Operator",
+          "answer": "Ofelia Santos A140 Laborer",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Alex Villa Garcia A1bl",
+          "answer": "Jonathan Gonzalez Lopez A2ib Laborer",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Katina Renee Fernando A14e Supervisor",
+          "answer": "Adrian Sloniker A1b7 Laborer",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin 7103 Manager",
+          "answer": "Maria Carrasco A2g8",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Meghan Mc Knight 7513",
+          "answer": "Fred Camarillo A13h",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Marcelino Chavez Gallegos A13p",
+          "answer": "Kevin Harbine A161",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Francisco Barrón 142",
+          "answer": "Francisco Barrón 142",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Francisco Barrón 142",
+          "answer": "Francisco Barrón 142",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Francisco Barrón 142",
+          "answer": "Fransico Barron",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Francisco Barron A2fw Laborer",
+          "answer": "Salomon Coronel A2gj",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Kevin Rodriguez",
+          "answer": "Manuel Sosa 5522",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Edwin Reyes",
+          "answer": "Noe Hernandez",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Rigo Antonio",
+          "answer": "Fidel Perfecto 7430",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Pedro Rodriguez",
+          "answer": "Bulmaro Arellano A2lx",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Carlos Vega 7355",
+          "answer": "Arturo Matamoros 6986",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Javier Gutierrez",
+          "answer": "Angel Toribio",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Leonardo Martinez 6626",
+          "answer": "Cornelio Ramirez 2547 Laborer",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Jose Sanchez 7471",
+          "answer": "Ricardo Ventura 6285 Laborer",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Jose Hechaverria",
+          "answer": "Leonardo Diaz",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Jose Isidro Santos",
+          "answer": "Francisco Barron A2fw Laborer",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Paulino Perea 6697",
+          "answer": "Diego Martinez 1605",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Diego Martinez 1605",
+          "answer": "Diego Martinez 1605",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Diego Martinez 1605",
+          "answer": "Diego Martinez 1605",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "José Rodríguez Luna",
+          "answer": "Samuel Pacheco Ruiz",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Raúl Ruiz Perea",
+          "answer": "Raúl Ruiz Perea",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Oscar Hernández Muñoz",
+          "answer": "Jorge Pacheco",
+          "comments": ""
+        },
+        {
+          "page": 5,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download25.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download25.pdf",
+      "sha256": "6fce239eae69732eb57795a23059410f40cc509be0b2eceaa9e3499648c8de60",
+      "report_type": "Forklift Propane Filling handling instructions.",
+      "report_id": "12298",
+      "date_time": "09/04/2025 10:12 AM",
+      "creator": "Manager Gerente",
+      "location": "BBP Warehouse / BBP-WH / Warehouse - Bodega",
+      "coordinates": "(48.35123996616646, -122.33787795153702)",
+      "pages": 4,
+      "bytes": 280265,
+      "evidence_tags": [
+        "equipment",
+        "warehouse",
+        "training"
+      ],
+      "field_count_estimate": 31,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12298",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "09/04/2025 10:12 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Warehouse - Bodega",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35123996616646, -122.33787795153702)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Crews:",
+          "answer": "WH Crew",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Jorge Pacheco",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Adrian Sloniker A1b7 Laborer",
+          "answer": "Angel Toribio",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Arturo Matamoros 6986",
+          "answer": "Bulmaro Arellano A2lx",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Carlos Vega 7355",
+          "answer": "Cornelio Ramirez 2547 Laborer",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Diego Martinez 1605",
+          "answer": "Diego Martinez 1605",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Diego Martinez 1605",
+          "answer": "Diego Martinez 1605",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Diego Martinez 1605",
+          "answer": "Edwin Reyes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Efren Ramirez A19j Supervisor",
+          "answer": "Fidel Perfecto 7430",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Francisco Barrón 142",
+          "answer": "Francisco Barrón 142",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Francisco Barrón 142",
+          "answer": "Francisco Barrón 142",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Francisco Barrón 142",
+          "answer": "Francisco Barron A2fw Laborer",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Francisco Barron A2fw Laborer",
+          "answer": "Fransico Barron",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Javier Gutierrez",
+          "answer": "Jonathan Gonzalez Lopez A2ib Laborer",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Jorge Pacheco",
+          "answer": "Jose Hechaverria",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Jose Isidro Santos",
+          "answer": "José Rodríguez Luna",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Jose Sanchez 7471",
+          "answer": "Kevin Rodriguez",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Leonardo Diaz",
+          "answer": "Leonardo Martinez 6626",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Manuel Sosa 5522",
+          "answer": "Margarito Gonzalez Villa A2ig Lead",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Michele Youngquist A1bp Manager",
+          "answer": "Noe Hernandez",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Ofelia Santos A140 Laborer",
+          "answer": "Oscar Hernández Muñoz",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Paulino Perea 6697",
+          "answer": "Pedro Rodriguez",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Raúl Ruiz Perea",
+          "answer": "Raúl Ruiz Perea",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Ricardo Ventura 6285 Laborer",
+          "answer": "Rigo Antonio",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Salomon Coronel A2gj",
+          "answer": "Samuel Pacheco Ruiz",
+          "comments": ""
+        },
+        {
+          "page": 4,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download26.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download26.pdf",
+      "sha256": "618785fcafb30d85819dc8e65374ba7839d35303ffb4de8f905be11415bbc926",
+      "report_type": "Forklift Operator Safety Test",
+      "report_id": "12297",
+      "date_time": "09/04/2025 10:10 AM",
+      "creator": "Manager Gerente",
+      "location": "",
+      "coordinates": "(48.351238430737965, -122.33787683399126)",
+      "pages": 3,
+      "bytes": 273983,
+      "evidence_tags": [
+        "equipment",
+        "worker-health-safety",
+        "training"
+      ],
+      "field_count_estimate": 30,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12297",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "09/04/2025 10:10 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.351238430737965, -122.33787683399126)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Use this checklist to evaluate operator safety prior to equipment use. / Utilice esta lista de verificación para evaluar la seguridad del operador antes de usar el equipo.",
+          "answer": "Operator Being Evaluated: / Operador en evaluación: Jorge Pacheco",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Did the operator follow the daily checklist and inspect the equipment prior to use? / ¿El operador siguió la lista de verificación diaria e inspeccionó el equipo antes de usarlo?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Did the operator fasten their seatbelt properly prior to usage? / ¿El operador se abrochó el cinturón de seguridad correctamente antes de usarlo?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Traveling with forks in a safe position (do not raise/lower while in motion) / Viajar con las horquillas en una posición segura (no subir ni bajar en movimiento)",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Operating at a safe speed / Operando a una velocidad segura",
+          "answer": "Regular",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Observing all traffic rules, warning signs and overhead clearances / Observar todas las reglas de tráfico, señales de advertencia y espacios libres elevados",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Using the horn to alert others when cornering, reversing, etc. / Usar la bocina para alertar a los demás al tomar curvas, dar marcha atrás, etc.",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Maintaining personal safety (keep arms/legs within the equipment) / Mantener la seguridad personal (mantener brazos / piernas dentro del equipo)",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Slowing down, stopping in a smooth and controlled manner / Disminuir la velocidad, detenerse de manera suave y controlada",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Parking in a safe manner (lowered forks, parking brake, ignition off, authorized area) / Estacionarse de manera segura (horquillas bajadas, freno de estacionamiento, encendido apagado, área autorizada)",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Ensure all employees are clear from the area / Asegúrese de que todos los empleados estén alejados del área",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Square up with the load prior to lifting / Encuadre con la carga antes de levantar",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Safely make contact with the load and smoothly lift / Haga contacto de forma segura con la carga y levante suavemente",
+          "answer": "Regular",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Tilting the mast to stabilize the load prior to transport / Inclinación del mástil para estabilizar la carga antes del transporte",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Traveling with the load at an appropriate height / Viajar con la carga a una altura adecuada",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Ensuring proper clearance and space for load placement / Garantizar la holgura y el espacio adecuados para la colocación de la carga",
+          "answer": "Regular",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Square up to the location prior to placement / Cuadre con la ubicación antes de la colocación",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Smoothly placing the load and safely make contact with surface / Colocar suavemente la carga y hacer contacto seguro con la superficie",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Safely backing away from the placed load / Retroceder con seguridad de la carga colocada",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Ensuring employee safety while picking/transporting loads / Garantizar la seguridad de los empleados al recoger / transportar cargas",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Wearing proper PPE while fueling / Usar el PPE adecuado mientras reposta",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Equipment safely parked and engine off / Equipo estacionado de forma segura y motor apagado",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Follows all trained procedures and operates safely while fueling / Sigue todos los procedimientos capacitados y opera de manera segura mientras reposta",
+          "answer": "Regular",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Cleans up any spills/messes immediately / Limpia cualquier derrame / desorden inmediatamente",
+          "answer": "Bueno",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Francisco García",
+          "comments": ""
+        },
+        {
+          "page": 3,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download27.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download27.pdf",
+      "sha256": "993367f0f1e1c97a071948900bc757a676106bd138cbf8048b7767c29a948422",
+      "report_type": "Forklift Inspection",
+      "report_id": "12865",
+      "date_time": "10/24/2025 07:32 AM",
+      "creator": "Manager Gerente",
+      "location": "BBP Warehouse / BBP-WH / Half Pallet Display - medias paletas",
+      "coordinates": "(48.350871733973406, -122.33766242283293)",
+      "pages": 2,
+      "bytes": 265990,
+      "evidence_tags": [
+        "equipment",
+        "warehouse",
+        "corrective-action"
+      ],
+      "field_count_estimate": 21,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12865",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "10/24/2025 07:32 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Half Pallet Display - medias paletas",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.350871733973406, -122.33766242283293)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Name of Forklift Operator / Nombre del operador de montacargas",
+          "answer": "Ricardo Ventura",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "What is the Equipment ID number? / ¿Cuál es el número de identificación del equipo?",
+          "answer": "30250",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do you notice any coolant or oil leaks? / ¿Observa alguna fuga de refrigerante o aceite?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do you notice any hydraulic line issues and/or leaks? / ¿Observa algún problema en la línea hidráulica y / o fugas?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are the forks, mast and load backrest in good operating condition? / ¿Están las horquillas, el mástil y el respaldo de carga en buenas condiciones de funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are the wheels in good operating condition? / ¿Están las ruedas en buen estado de funcionamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all safety guards intact? / ¿Están intactos todos los guardias de seguridad?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the seatbelt functional? / ¿Funciona el cinturón de seguridad?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is the equipment in clean condition? (dirt, debris, etc.) / ¿Está el equipo limpio? (suciedad, escombros, etc.)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the forklift have adequate fuel? / ¿El montacargas tiene combustible adecuado?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all lights operational?(headlights, reverse, hazards, brake) / ¿Están todas las luces en funcionamiento? (Faros, marcha atrás, peligros, freno)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the horn work? / ¿Funciona la bocina?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do the brakes work properly? (foot and park) / ¿Funcionan correctamente los frenos? (freno y freno de mano)",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Record the equipment hours: / Registre las horas del equipo:",
+          "answer": "2459",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Francisco García",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download28.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download28.pdf",
+      "sha256": "757763acbdaeab91d6f29e2188b70fd9bd6c36564b76a6de4539d457391c7842",
+      "report_type": "Fire Extinguisher / Eye Wash Station Inspection",
+      "report_id": "11471",
+      "date_time": "06/24/2025 10:07 AM",
+      "creator": "Manager w Admin",
+      "location": "",
+      "coordinates": "",
+      "pages": 2,
+      "bytes": 265010,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "worker-health-safety",
+        "warehouse",
+        "corrective-action"
+      ],
+      "field_count_estimate": 28,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11471",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "06/24/2025 10:07 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #1 / Ubicación # 1",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #2 / Ubicación #2",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #3 / Ubicación #3",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #4 / Ubicación #4",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #5 / Ubicación #5",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #6 / Ubicación #6",
+          "answer": "Poor",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #7 / Ubicación #7",
+          "answer": "Poor",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #8 / Ubicación #8",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #9 / Ubicación #9",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #10 / Ubicación # 10",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #11 / Ubicación #11",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #12 / Ubicación #12",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #13 / Ubicación # 13",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #14- compressor room",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #15 -First aid station Washline",
+          "answer": "Poor",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #16 / Location #16",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #17 / Location #17",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #18 / Location #18",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #19 / Location #19",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #20 - Propane Tank",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #1 Supply room in WH / Ubicacion #1 Cuarto de almacen",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location #2 Sink / Ubicacion #2 lavabo",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Location #3 Outside breakroom / Ubicacion #3 Afuera de la area de descanso",
+          "answer": "Good",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Kevin H and Meghan",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download29.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download29.pdf",
+      "sha256": "71607cc300340862553412167bccaaaba14f41afd725f79bffc3d644e30d8766",
+      "report_type": "Employee Warning Notice Form",
+      "report_id": "12825",
+      "date_time": "10/16/2025 01:52 PM",
+      "creator": "Manager Gerente",
+      "location": "BBP Warehouse / BBP-WH / Warehouse - Bodega",
+      "coordinates": "(48.351265675002914, -122.33795046955944)",
+      "pages": 1,
+      "bytes": 255999,
+      "evidence_tags": [
+        "warehouse",
+        "corrective-action"
+      ],
+      "field_count_estimate": 13,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12825",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "10/16/2025 01:52 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Warehouse - Bodega",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.351265675002914, -122.33795046955944)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date/Fecha",
+          "answer": "10/16/2025",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee's Name/Nombre del empleado",
+          "answer": "Samuel Pacheco Ruiz",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Manager Name/Nombre de Gerente",
+          "answer": "Francisco García Bautista",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Type of Disciplinary Action/Tipo de accion disciplinaria / Tipo de accion disciplinaria",
+          "answer": "Verbal Warning/ Advertencia Verbal",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Reasons for Warning / Razones para la advertencia",
+          "answer": "Failure to follow procedure/ Incumplimiento del procedimiento",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Details of actions that warranted this Coaching and/or Verbal Warning / Detalles de las acciones que justificaron este Entrenamiento y/o Advertencia Verbal",
+          "answer": "Por andar manejando rápido adentro de la bodega",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Francisco García Bau",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download30.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download30.pdf",
+      "sha256": "a7d14244aefb49a381a8e0362bcb5630fe98ff46eaa9f0e5f3692aad21df8f6f",
+      "report_type": "Daily Sanitation Log",
+      "report_id": "12845",
+      "date_time": "10/21/2025 05:20 PM",
+      "creator": "Lead Lider",
+      "location": "Farm Fields / BBP-FARM / Bolings",
+      "coordinates": "(48.35094877677409, -122.33752514066956)",
+      "pages": 2,
+      "bytes": 267264,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "pest-animal"
+      ],
+      "field_count_estimate": 21,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12845",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "10/21/2025 05:20 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Lead Lider",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Bolings",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35094877677409, -122.33752514066956)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have all surfaces been cleaned and sanitized? / ¿Se han limpiado y desinfectado todas las superficies?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the walls, shelves and storage areas been cleaned and sanitized? / ¿Se han limpiado y desinfectado las paredes, los estantes y las áreas de almacenamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the sinks been cleaned and sanitized? / ¿Se han limpiado y desinfectado los fregaderos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the floors been swept and if needed properly mopped? / ¿Se han barrido los pisos y, si es necesario, se han trapeado adecuadamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Has all trash and litter been removed? / ¿Se ha eliminado toda la basura y la basura?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all trash cans properly lined and covered? / ¿Están todos los botes de basura debidamente forrados y cubiertos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all collected tools free from visible signs of damage, rust and chips? / ¿Todas las herramientas recolectadas están libres de signos visibles de daño, óxido y astillas?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Were all hand tools cleaned and sanitized following the proper procedure? / ¿Se limpiaron y desinfectaron todas las herramientas manuales siguiendo el procedimiento adecuado?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Hand Soap / Jabon de Manos",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Hand Sanitizer / Desinfectante de Manos",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Hand Towels / Toallas de Papel",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Toilet Paper / Papel higiénico",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Do all doors and latches work properly? / ¿Todas las puertas y pestillos funcionan correctamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Is maintenance service required? / ¿Se requiere servicio de mantenimiento?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Yoselin Ochoa",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download31.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download31.pdf",
+      "sha256": "a1bdce95e4edd94bfbde825e525e02ee35673e613b422ba471773fe4398331bc",
+      "report_type": "Daily Sanitation Log",
+      "report_id": "12899",
+      "date_time": "11/14/2025 11:41 AM",
+      "creator": "Manager Gerente",
+      "location": "BBP Warehouse / BBP-WH / Restrooms - Banos",
+      "coordinates": "(48.35092551272751, -122.33751266779647)",
+      "pages": 2,
+      "bytes": 264261,
+      "evidence_tags": [
+        "equipment",
+        "sanitation",
+        "water",
+        "pest-animal",
+        "warehouse"
+      ],
+      "field_count_estimate": 21,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "12899",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "11/14/2025 11:41 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager Gerente",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "BBP Warehouse / BBP-WH / Restrooms - Banos",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.35092551272751, -122.33751266779647)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have all surfaces been cleaned and sanitized? / ¿Se han limpiado y desinfectado todas las superficies?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the walls, shelves and storage areas been cleaned and sanitized? / ¿Se han limpiado y desinfectado las paredes, los estantes y las áreas de almacenamiento?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the sinks been cleaned and sanitized? / ¿Se han limpiado y desinfectado los fregaderos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the floors been swept and if needed properly mopped? / ¿Se han barrido los pisos y, si es necesario, se han trapeado adecuadamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Has all trash and litter been removed? / ¿Se ha eliminado toda la basura y la basura?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Are all trash cans properly lined and covered? / ¿Están todos los botes de basura debidamente forrados y cubiertos?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have all drains been cleaned? / ¿Se han limpiado todos los desagües?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Hand Soap / Jabon de Manos",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Hand Sanitizer / Desinfectante de Manos",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Hand Towels / Toallas de Papel",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Do all doors and latches work properly? / ¿Todas las puertas y pestillos funcionan correctamente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Is maintenance service required? / ¿Se requiere servicio de mantenimiento?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Have the Piano Key (sizer/sorter) 1 & 2 been cleaned and sanitized? / ¿Se han limpiado y desinfectado el machino del piano key (calibrador/clasificador) 1 y 2?",
+          "answer": "N/A",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Have the Wash Tank 1 & 2 been cleaned and sanitized? / ¿Se han limpiado y desinfectado los tanques de lavado 1 y 2?",
+          "answer": "N/A",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Manuela Mancillas",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Checked By / Comprobado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download32.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download32.pdf",
+      "sha256": "433ca6c1054914bb1016cb4d09dc7050dcda90ea9d8ba1a2b2af067cb66c9584",
+      "report_type": "Chemical Pump Calibration Report",
+      "report_id": "11723",
+      "date_time": "08/05/2025 08:09 AM",
+      "creator": "Manager w Admin",
+      "location": "",
+      "coordinates": "",
+      "pages": 1,
+      "bytes": 265074,
+      "evidence_tags": [
+        "sanitation",
+        "water"
+      ],
+      "field_count_estimate": 7,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11723",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "08/05/2025 08:09 AM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Manager w Admin",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Smart Digital DDA Pump being Calibrated",
+          "answer": "Wash Tank 2",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Was pump calibration satisfactory?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Kevin Faber",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    },
+    {
+      "source_file": "download33.pdf",
+      "source_path": "C:\\Users\\kenneth\\Desktop\\heavyconnectreports\\download33.pdf",
+      "sha256": "d78f48b7830d1c5d8a912b8253fb48f63c8a3b878dfeb0068097bb135ee5804d",
+      "report_type": "Accident Report",
+      "report_id": "11829",
+      "date_time": "08/09/2025 01:56 PM",
+      "creator": "Lead Lider",
+      "location": "Farm Fields / BBP-FARM / Kamb's Northwest",
+      "coordinates": "(48.334840994949694, -122.38246137163047)",
+      "pages": 3,
+      "bytes": 351545,
+      "evidence_tags": [
+        "pest-animal",
+        "worker-health-safety",
+        "corrective-action"
+      ],
+      "field_count_estimate": 19,
+      "sample_fields": [
+        {
+          "page": 1,
+          "question": "Report ID:",
+          "answer": "11829",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Date & Time:",
+          "answer": "08/09/2025 01:56 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Creator:",
+          "answer": "Lead Lider",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Location:",
+          "answer": "Farm Fields / BBP-FARM / Kamb's Northwest",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Coordinates:",
+          "answer": "(48.334840994949694, -122.38246137163047)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "I am reporting a work related: / Estoy reportando un:",
+          "answer": "Lesión",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Who was involved in the incident? / ¿Quién fue el empleado involucrado en el incidente?",
+          "answer": "Carla ventura albert",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Were any other employees involved in the incident? / ¿Hubo otros empleados involucrados en el incidente?",
+          "answer": "Yes",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Where did the incident occur? / ¿Dónde ocurrió el incidente?",
+          "answer": "In tha field",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "What time did the incident occur? / ¿A qué hora ocurrió el accidente?",
+          "answer": "01:10 PM",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "What was the employee doing at the time of injury or near miss? / ¿Qué estaba haciendo el empleado en el momento de la lesión o casi accidente?",
+          "answer": "Tomando agua",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "How was the employee injured? / ¿Cómo resultó herido el empleado?",
+          "answer": "Un golpe el pierna isquerda",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "What part of the employees body was injured or could have been? / ¿Qué parte del cuerpo de los empleados resultó lesionado o podría haberlo sido?",
+          "answer": "Pierna isquerda",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Attach a photo of the injury, illness or near miss. / Adjunte una foto de la lesión, enfermedad o casi accidente.",
+          "answer": "File Attached: 9B373BF8- B7EB-4BFD-8054-4C4CF7CA3EF7.jpg (Image 1)",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Has the employee injured this part of their body previously? / ¿El empleado se ha lesionado esta parte de su cuerpo anteriormente?",
+          "answer": "No",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Does the employee wish to seek medical treatment? / ¿El empleado desea buscar tratamiento médico?",
+          "answer": "N/A",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "List any employees who may have witnessed the incident: / Enumere cualquier otro empleado involucrado en el incidente:",
+          "answer": "Angelica galicia",
+          "comments": ""
+        },
+        {
+          "page": 1,
+          "question": "Employee name of who reported these checks?",
+          "answer": "Zacaria lopez",
+          "comments": ""
+        },
+        {
+          "page": 2,
+          "question": "Manager W Admin Reported By / Reportado Por",
+          "answer": "Reported By / Reportado Por",
+          "comments": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2312 @@
+{
+  "key": "module-5-facility",
+  "number": "Module 5",
+  "title": "Facility",
+  "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf",
+  "local_cache": "tmp/primusgfs-v4/module-5-facility.pdf",
+  "question_count": 165,
+  "scored_points": 1374,
+  "sections": [
+    {
+      "code": "5.01",
+      "questions": 4,
+      "points": 45
+    },
+    {
+      "code": "5.02",
+      "questions": 10,
+      "points": 100
+    },
+    {
+      "code": "5.03",
+      "questions": 9,
+      "points": 85
+    },
+    {
+      "code": "5.04",
+      "questions": 17,
+      "points": 171
+    },
+    {
+      "code": "5.05",
+      "questions": 13,
+      "points": 83
+    },
+    {
+      "code": "5.06",
+      "questions": 5,
+      "points": 55
+    },
+    {
+      "code": "5.07",
+      "questions": 10,
+      "points": 88
+    },
+    {
+      "code": "5.08",
+      "questions": 14,
+      "points": 98
+    },
+    {
+      "code": "5.09",
+      "questions": 19,
+      "points": 121
+    },
+    {
+      "code": "5.10",
+      "questions": 5,
+      "points": 33
+    },
+    {
+      "code": "5.11",
+      "questions": 3,
+      "points": 18
+    },
+    {
+      "code": "5.12",
+      "questions": 3,
+      "points": 35
+    },
+    {
+      "code": "5.13",
+      "questions": 8,
+      "points": 56
+    },
+    {
+      "code": "5.14",
+      "questions": 13,
+      "points": 120
+    },
+    {
+      "code": "5.15",
+      "questions": 6,
+      "points": 41
+    },
+    {
+      "code": "5.16",
+      "questions": 12,
+      "points": 150
+    },
+    {
+      "code": "5.17",
+      "questions": 6,
+      "points": 40
+    },
+    {
+      "code": "5.18",
+      "questions": 8,
+      "points": 35
+    }
+  ],
+  "questions": [
+    {
+      "id": "5.01.01",
+      "section": "5.01",
+      "question": "Are all chemicals (pesticides, sanitizers, detergents, lubricants, etc.) stored securely, safely and are they labeled correctly?",
+      "points": 15,
+      "expectation_summary": "All chemicals are stored in a clean, designated (with a sign), secure (locked) area, and away from food and packaging materials and separated from the production areas. Access is restricted to trained personnel. Spill controls should be in place for opened in use containers. All chemical containers should be off the floor, have legible labels of contents; this includes chemicals that have been decanted from master containers into smaller containers. Empty containers should be stored and disposed of safely. Chemical storage must meet local and national requirements.",
+      "evidence_tags": [
+        "training",
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.01.02",
+      "section": "5.01",
+      "question": "Are \"food grade\" and \"non-food grade\" chemicals used appropriately, according to the label and not commingled?",
+      "points": 10,
+      "expectation_summary": "All chemicals applied should be approved by the prevailing authority for their designated use and used according to label instructions. Only food grade lubricants should be used anywhere near product and packaging materials. \"Food grade\" and \"non-food grade\" materials should be stored in separate designated areas and adequately labeled. Grease guns and containers should be labeled adequately. Access to non-food grade materials should be limited to those with knowledge of the correct use of chemicals.",
+      "evidence_tags": [],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.01.03",
+      "section": "5.01",
+      "question": "Are signs supporting GMPs posted appropriately?",
+      "points": 10,
+      "expectation_summary": "Highly visible and understood signs supporting appropriate Good Manufacturing Practices (GMP's) (e.g., no eating, chewing, drinking or smoking, hand washing requirements, any specific clothing requirements, etc.) should be posted visibly and in the language of the workers (pictograms allowed) to remind them of proper practices. Signs should especially be located at the entrance(s) to the production/storage areas, restrooms and break areas.",
+      "evidence_tags": [],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.01.04",
+      "section": "5.01",
+      "question": "Are the necessary food defense controls implemented in the operation?",
+      "points": 10,
+      "expectation_summary": "The operation should have implemented the necessary controls for preventing intentional contamination of the product and high-risk areas. These measures should be based on the risk associated with the operation, as detailed in the food defense plan (1.08.02). Some high-risk areas of the facility include: personnel, visitors, contractors, computers, raw material receipt (raw materials, product and packaging), trucks (incoming and outbound), water sources, storage areas for product, materials, chemicals, production areas, shipping areas, etc.",
+      "evidence_tags": [
+        "risk-assessment",
+        "water",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 3,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.01",
+      "section": "5.02",
+      "question": "Are products or ingredients free of pests (e.g., insects, rodents, birds, reptiles, mammals) or any evidence of them? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "Any evidence of pests (e.g., insects, rodents, birds, reptiles or mammals, etc.) in products or ingredients are indicators of contamination, posing physical and microbiological hazards. Evidence of contamination constitutes an automatic failure of the audit. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.02",
+      "section": "5.02",
+      "question": "Are packaging supplies free of pests (e.g., insects, rodents, birds, reptiles, mammals) or any evidence of them? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "Packaging supplies are considered food-contact surfaces and therefore need to be free of pests (e.g., insects, rodents, birds, reptiles, mammals, etc.) Evidence of contamination constitutes an automatic failure of the audit. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "corrective-action",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.03",
+      "section": "5.02",
+      "question": "Are plant and storage areas free of pests (e.g., insects, rodents, birds, reptiles, mammals) or any evidence of them?",
+      "points": 15,
+      "expectation_summary": "Plant and storage areas should be free of pests (e.g., insects, rodents, birds, reptiles or mammals, etc.) to prevent possible physical or microbiological contamination.",
+      "evidence_tags": [
+        "records",
+        "pest-animal"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.04",
+      "section": "5.02",
+      "question": "Is the area outside the facility free of evidence of pest activity?",
+      "points": 10,
+      "expectation_summary": "All areas should be free of recurring/existing external pest activity. Evidence (e.g., activity/tracks, feces) of rodents, animals (e.g., dogs and/or birds) in active areas outside the facility is an indication of a pest pressure on the whole building. All possible measures should be taken to avoid attracting pests to the facility perimeter.",
+      "evidence_tags": [
+        "pest-animal",
+        "facility"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.05",
+      "section": "5.02",
+      "question": "Is there an effective pest control program in place? A ZERO (NON-CONFORMACE) SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "There should be an effective, proactive pest control program (in-house or contracted) to control rodents (also insects, reptiles and birds where necessary) and prevent infestation. A ZERO (NON-CONFORMANCE) SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "policy",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.06",
+      "section": "5.02",
+      "question": "Are pest control devices located away from exposed raw materials, work-in- progress, ingredients (including water and ice), finished goods and packaging, and poisonous bait stations are not used within the facility?",
+      "points": 10,
+      "expectation_summary": "Pest control devices should be located away from exposed food products, packaging materials, or equipment to prevent any physical or microbial contamination. Poisonous bait stations should not be located within the facility. No bait should be found outside of bait stations.",
+      "evidence_tags": [
+        "water",
+        "equipment",
+        "pest-animal",
+        "facility"
+      ],
+      "source_page": 4,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.07",
+      "section": "5.02",
+      "question": "Are pest control devices maintained in a clean and intact condition and marked as monitored (or bar code scanned) on a regular basis?",
+      "points": 5,
+      "expectation_summary": "All pest control devices should be maintained clean, in working order and replaced when damaged so that they will accomplish their intended use. Date of inspections should be posted on the devices (unless barcode scanned), as well as kept on file.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.08",
+      "section": "5.02",
+      "question": "Are interior and exterior building perimeter pest control devices adequate in number and location?",
+      "points": 5,
+      "expectation_summary": "The distance between devices should be determined based on the activity and the needs of the operation. As a reference, the following guidelines can be used to locate traps. Inside pest control: mechanical traps every 20-40 ft (6-12 m). Outside building perimeter: mechanical traps and/or bait stations every 50-100 ft (15-30 m). Interior and exterior devices should be placed on both sides of doorways. Land Perimeter (if used): within 50 ft (30 m) of buildings and at 50-100 ft (15-30 m).",
+      "evidence_tags": [
+        "pest-animal",
+        "facility"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.09",
+      "section": "5.02",
+      "question": "Are all pest control devices identified by a number or other code (e.g. barcode)?",
+      "points": 5,
+      "expectation_summary": "All devices should be clearly identified (e.g., numbered) to facilitate monitoring and maintenance. All internal rodent devices should be located with wall signs (that state the trap number and also that they are pest control device identifier signs).",
+      "evidence_tags": [
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.02.10",
+      "section": "5.02",
+      "question": "Are all pest control devices effective and bait stations secured?",
+      "points": 5,
+      "expectation_summary": "All devices should be correctly orientated with openings parallel with and closest to walls. Bait stations should be locked and tamper resistant in some way (e.g., locks, screws, etc.). Bait stations should be secured to prevent removal.",
+      "evidence_tags": [
+        "pest-animal",
+        "harvest"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.01",
+      "section": "5.03",
+      "question": "Does the facility layout ensure separation of ingredients (including ice), products, and packaging stored to prevent cross contamination (this includes iced product pallets stored above pallets of product without adequate protection as well as any allergen cross contamination issues)?",
+      "points": 15,
+      "expectation_summary": "All raw materials, products and packaging should be stored off the floor (i.e., on racks, pallets, shelves, etc.). Materials should be properly protected during storage to prevent contamination (e.g., away from chemicals, battery chargers, etc.). Raw materials finished product and packaging materials should be stored in separate areas to prevent cross contamination. When separate room storage is not possible, the auditor should assess the risks, especially with respect to cross contamination. Special attention should be given to ice storage and where relevant allergen storage.",
+      "evidence_tags": [
+        "risk-assessment",
+        "inspection",
+        "facility"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.02",
+      "section": "5.03",
+      "question": "Is the facility's use restricted to the storage of food products?",
+      "points": 5,
+      "expectation_summary": "To avoid any adulteration or possible cross contamination from other items, only essential products, packaging, chemicals and equipment should be stored in the facility.",
+      "evidence_tags": [
+        "equipment",
+        "facility"
+      ],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.03",
+      "section": "5.03",
+      "question": "Are rejected or on hold materials clearly identified and separated from other materials?",
+      "points": 10,
+      "expectation_summary": "Rejected or on hold materials should be kept separate and identified from other materials in a designated hold area to avoid accidental use or shipping. Make sure that the pallet or rejected product is properly marked i.e., date item was placed on hold, reason and name of the person placing the item on hold.",
+      "evidence_tags": [],
+      "source_page": 5,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.04",
+      "section": "5.03",
+      "question": "Are raw products, work in progress, ingredients (including water and ice), finished goods and food contact packaging within accepted tolerances for spoilage and without evidence of adulteration? ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "points": 15,
+      "expectation_summary": "Raw products, work in progress, ingredients, finished goods, and food contact packaging and food contact surfaces should be without evidence of spoilage, adulteration and/or gross contamination (21 CFR 110.3g, 21 CFR 117.3). If legislation exists, then the contamination should be viewed against this legislation (e.g., USDA Grading Standards often include decay tolerances). Spoilage and adulteration would include any physical, chemical or biological contamination including blood and bodily fluids. Measures should be taken to prevent any known or reasonably foreseeable hazard (e.g., Clostridium botulinum in mushrooms). Product contact water and water used for ice for product cooling should be potable. This question is designed to allow an auditor to halt an audit when finding gross contamination issues. ANY DOWN SCORE IN THIS QUESTION RESULTS IN AN AUTOMATIC FAILURE OF THE AUDIT.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "water"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.05",
+      "section": "5.03",
+      "question": "Are all storage areas clean, especially the racking structures, lights, ceilings, floor areas by the walls and other hard-to-reach areas?",
+      "points": 10,
+      "expectation_summary": "All storage areas should be kept clean and free from dust, debris and other extraneous materials. This helps avoid pest attraction and contamination of products, ingredients or packaging. Pest activity is easier to detect in a clean area.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.06",
+      "section": "5.03",
+      "question": "Are materials (commodities, packaging, ingredients, processing aids, work in progress, etc.) properly marked with rotation codes (receipt dates, manufacture dates, etc.)?",
+      "points": 5,
+      "expectation_summary": "All materials should be properly marked with receipt dates and/or tracking information (lot numbers, code dating) for traceability/recall and stock rotation purposes. This coding should be understood by all workers, in order to ensure FIFO and effective traceback/recall procedures.",
+      "evidence_tags": [
+        "policy",
+        "traceability"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.07",
+      "section": "5.03",
+      "question": "Are materials (commodities, packaging, ingredients, processing aids, work in progress, etc.) rotated using FIFO policy?",
+      "points": 5,
+      "expectation_summary": "All materials should be rotated using First in First Out (FIFO) policy/procedure to ensure items are used in the correct order they are received and within their allocated shelf-life. Materials should be clearly marked or labeled with some kind of rotation coding that is understood by all workers, in order to ensure FIFO and effective traceback/recall procedures. Proper rotation of materials can prevent stock losses due to pest infestation, decomposition, mold and other problems associated with prolonged storage.",
+      "evidence_tags": [
+        "policy",
+        "pest-animal",
+        "traceability"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.08",
+      "section": "5.03",
+      "question": "Are storage areas at the appropriate temperatures for the specific products being stored?",
+      "points": 10,
+      "expectation_summary": "Products should be stored at the appropriate temperatures. This might mean that the operation has several cold store chambers set at different temperatures.",
+      "evidence_tags": [],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.03.09",
+      "section": "5.03",
+      "question": "Where packaging is stored outside, is it being stored protected?",
+      "points": 10,
+      "expectation_summary": "For total conformance scoring, neither food contact packaging (including RPCs if used as primary packaging) nor non-food contact packaging e.g., cardboard outers should be stored outside. All materials should be adequately protected (e.g., stored off the ground (on pallets, racks, etc.) and protected from dust, leaks and other contaminants, covered with a waterproof and dust proof shroud (often made of plastic material) and included under a pest control program). N/A if no packaging is being stored outside.",
+      "evidence_tags": [
+        "policy",
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 6,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.01",
+      "section": "5.04",
+      "question": "Does the process flow, facility layout, worker control, utensil control, internal vehicle use, etc. ensure that finished products are not contaminated by raw products/ingredients?",
+      "points": 15,
+      "expectation_summary": "Incoming raw materials should not be a source of contamination to work-in- progress and/or finished goods. Raw product should not be allowed to touch processed product; production (product handling) areas should be physically separated from storage areas. Raw product handlers should not contaminate finished/processed product - clear controls required. Separate coded utensils required for finished/processed products relative to raw products. Utensils, cleaning implements, internal vehicles etc. should not be vectors for cross contamination",
+      "evidence_tags": [
+        "sanitation",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.02",
+      "section": "5.04",
+      "question": "Are all exposed materials (product, packaging, etc.) protected from overhead contamination (e.g., ladders, drive assemblies, condensation, lubricants, walkways, loose panels, degrading insulation, etc.)?",
+      "points": 15,
+      "expectation_summary": "Ceilings and/or any overhead fixtures above storage are free from condensation or dust. Ladders or walkways (catwalks) above exposed product or packaging material have kick plates at least 3.5 inches (8 cm) high and are covered in some way that protects the product or food contact surfaces underneath. Drips or condensate (e.g., from roof, fixtures, ducts, pipes, etc.) should not contaminate food, food contact surfaces or packaging material. Adequate measures should be in place to protect from condensate.",
+      "evidence_tags": [],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.03",
+      "section": "5.04",
+      "question": "Are production areas clean and well maintained; especially lights, ducts, fans, floor areas by the walls and equipment, and other hard to reach areas?",
+      "points": 15,
+      "expectation_summary": "Production areas should be maintained in a clean and sanitary condition.",
+      "evidence_tags": [
+        "equipment"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.04",
+      "section": "5.04",
+      "question": "Where facilities are not completely enclosed, are there measures in place to mitigate potential hazards?",
+      "points": 15,
+      "expectation_summary": "Production areas are enclosed (walls and roof) with openings protected or closed, or with other mitigating measures (e.g., equipment cleaned prior to use, covering equipment, no product storage, etc.); auditor discretion applies. Walls can be solid, fine mesh or any other pest proof material, with openings that should be no greater than 1/8 inch (3 mm) or smaller. N/A if facilities are fully enclosed.",
+      "evidence_tags": [
+        "inspection",
+        "sanitation",
+        "equipment",
+        "pest-animal"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.05",
+      "section": "5.04",
+      "question": "Is all re-work / re- packaging handled correctly?",
+      "points": 10,
+      "expectation_summary": "Re-work product should be labeled or tracked properly to avoid mistaking it for other products and maintaining traceability. Re-work should be handled to prevent contamination from the environment or from other products.",
+      "evidence_tags": [
+        "traceability"
+      ],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.06",
+      "section": "5.04",
+      "question": "Are raw ingredients examined before use?",
+      "points": 5,
+      "expectation_summary": "Raw materials should be inspected before use, including looking for foreign material contaminants, rotting materials and any unusual issues (e.g., unsealed packaging, visible residues, etc.).",
+      "evidence_tags": [],
+      "source_page": 7,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.07",
+      "section": "5.04",
+      "question": "Are products produced on-site coded (carton and unit packaging) for the day of production?",
+      "points": 5,
+      "expectation_summary": "Products produced on-site should be lot coded in order to ensure an effective trace back and recall program and also for inventory control. If required by buyer or legal requirements, packaging labeling should include information about recommended storage conditions and usage. Traceability lot codes must meet local and national requirements e.g., FDA Traceability Rule requirements (if applicable). N/A for cross-docked products.",
+      "evidence_tags": [
+        "policy",
+        "traceability"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.08",
+      "section": "5.04",
+      "question": "Are foreign material control methods (e.g., metal detectors, metal traps, magnets, x-ray machines, visual inspection, etc.) in place and regularly tested (where relevant) to ensure proper operation?",
+      "points": 10,
+      "expectation_summary": "Foreign material control systems should be in place where needed. These systems should be frequently checked (recorded) to ensure that they are working correctly with a functioning rejection device (e.g., belt, air jet, etc.). Foreign material issues should be noted as deviations.",
+      "evidence_tags": [
+        "records",
+        "inspection"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.09",
+      "section": "5.04",
+      "question": "Does the facility use the appropriate method and equipment for verifying the concentrations of the anti-microbial chemical (product contact water, terminal sanitizers, dip stations, etc.) being used?",
+      "points": 15,
+      "expectation_summary": "The strength (concentration, pH, etc.) of anti-microbial chemicals should be checked on a regular basis and recorded. All test solutions/strips should be within date code, appropriate for the concentrations used and stored correctly. If an ORP meter controls the pumps that are injecting the anti- microbial and/or buffer, free chlorine levels should be verified by an independent method (e.g., titration. appropriate test strips) in order to verify injector readings.",
+      "evidence_tags": [
+        "records",
+        "water",
+        "sanitation",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.10",
+      "section": "5.04",
+      "question": "Are hand washing stations adequate in number and appropriately located for worker access and monitoring usage?",
+      "points": 15,
+      "expectation_summary": "Enough stations, in working order, should be provided to ensure efficient worker flow and be available to all workers and visitors. Hands free is an optimum system for food establishments. Hand washing stations should be located within close proximity of toilet facilities area and lunchroom area. For operations packing or processing items, stations should be located for convenient use in and/or at access to production areas.",
+      "evidence_tags": [
+        "inspection"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.11",
+      "section": "5.04",
+      "question": "Are hand washing stations in working order, have water of suitable temperature and pressure, adequately stocked (e.g. disposable towels, unscented soap, etc.) and restricted to hand washing purposes only?",
+      "points": 15,
+      "expectation_summary": "Hand washing stations should be designated and used only for hand washing, have water of suitable temperature and pressure and be maintained in good working order with proper drainage. They should be properly stocked with liquid unscented/non-perfumed, neutral or antiseptic soap. Single use paper towels should be used and units properly located; hot air driers are acceptable if properly located. There should be an adequate stock of soap and paper towels.",
+      "evidence_tags": [
+        "water"
+      ],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.12",
+      "section": "5.04",
+      "question": "Are toilet facilities adequate in number and location and are they appropriately stocked (e.g., toilet paper.)?",
+      "points": 15,
+      "expectation_summary": "At least one stall per 15 workers. Toilet facilities are available to all workers and visitors and should not open directly into production or storage areas. Restrooms should be stocked with toilet paper, and hand washing stations should meet 5.04.11 requirements.",
+      "evidence_tags": [],
+      "source_page": 8,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.13",
+      "section": "5.04",
+      "question": "Are secondary hand sanitation stations adequate in number and location, and are the stations maintained properly?",
+      "points": 5,
+      "expectation_summary": "Secondary hand sanitation is required for items that may be potentially “ready-to-eat” (e.g., herbs, tomatoes, edible flowers, etc.). Secondary hand sanitation (hand dips, gels or sprays) does not replace hand washing requirements (lack surfactant qualities). Secondary hand sanitation stations should be unscented/non-perfumed, have 60% to 95% ethanol or isopropanol and conveniently located in traffic zones but should not be obstructive. Units are ideally touch-free. Strength checks do not need to be performed for commercially purchased sanitizers that have been purchased already mixed.",
+      "evidence_tags": [
+        "sanitation"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.14",
+      "section": "5.04",
+      "question": "Are foot baths, foamers or dry powdered sanitizing stations adequate in number and location, and are the stations maintained properly?",
+      "points": 3,
+      "expectation_summary": "Foot (boot) stations (foamers, foot dip mats, baths, sprays) should be located in areas when crossing into a \"clean\" zone from an area of potential contamination (e.g., from outside into the packing zone). Stations should be regularly monitored for volume and concentration (recorded anti-microbial strength checks) and the dip solution regularly changed to ensure their effectiveness throughout the production period with corrective actions recorded (e.g., dip solution replenishment and anti-microbial).",
+      "evidence_tags": [
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.15",
+      "section": "5.04",
+      "question": "Are single service containers used for their intended purpose only so that potential cross contamination is prevented?",
+      "points": 5,
+      "expectation_summary": "Single service containers are used for their intended purpose only (food contact use, not to hold nuts, bolts, trash or other miscellaneous items) and should not be re-used. Returnable plastic containers (RPCs) (e.g., CHEP, IFCO) should be treated like single service containers and only used for product. If a single service container is used for any other reason than the storage and distribution of food, it should be clearly differentiated as such (e.g., painted another color and labeled).",
+      "evidence_tags": [],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.16",
+      "section": "5.04",
+      "question": "Are re-usable containers cleanable and clearly designated for the specific purpose (trash, raw product, finished product, re-work, ice, etc.) such that cross contamination is prevented?",
+      "points": 5,
+      "expectation_summary": "All re-usable containers should be able to be cleaned (smooth, non-porous, non-toxic) or used with a clean liner to protect against contamination. Cleaning type and frequency should be determined based on the products and processes involved. Bins, boxes, hoppers, barrels, baskets, etc. used for the storage of raw materials, work in progress, ingredients, finished goods or packaging should be kept in a clean state. In-house re-usable containers should be identifiable (color-coded, unique design or labeled in the language understood by the workers) so that their designated purpose can be easily known.",
+      "evidence_tags": [
+        "sanitation"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.04.17",
+      "section": "5.04",
+      "question": "Are devices used to measure, regulate or control temperature, pH, acidity, water activity, and other conditions that affect food safety, working properly and",
+      "points": 3,
+      "expectation_summary": "Thermometers, pH meters, ATP systems, etc., should be working correctly. Where necessary, equipment should be calibrated.",
+      "evidence_tags": [
+        "water",
+        "equipment"
+      ],
+      "source_page": 9,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.01",
+      "section": "5.05",
+      "question": "Are workers washing and sanitizing their hands before starting work each day, after using the restroom, after breaks, before putting on gloves and whenever hands may be contaminated?",
+      "points": 15,
+      "expectation_summary": "Worker conformance to hand washing and sanitizing procedures should be assessed as washing hands is the first step in avoiding food contamination. Workers should be observed washing their hands prior to beginning work, after breaks, after using the toilet, before putting on gloves, and whenever hands may have become a source of contamination (e.g., after eating, after using a handkerchief or tissue, smoking, drinking, etc.).",
+      "evidence_tags": [
+        "policy"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.02",
+      "section": "5.05",
+      "question": "Are workers’ fingernails clean, short and free of nail polish?",
+      "points": 5,
+      "expectation_summary": "Fingernails can harbor dirt and debris and can be a source of cross contamination. Therefore, nails should be clean and short to reduce the risk of cross contamination. Fingernail polish and false nails should not be worn, even when gloves are worn.",
+      "evidence_tags": [
+        "risk-assessment"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.03",
+      "section": "5.05",
+      "question": "Are workers who are working directly or indirectly with food, without evidence of boils, sores, open wounds and are not exhibiting signs of foodborne illness?",
+      "points": 10,
+      "expectation_summary": "Workers who have exposed boils, sores, exposed infected wounds, foodborne illness or any other source of abnormal microbial contamination should not be allowed to work in contact with the product, packaging or food contact surfaces.",
+      "evidence_tags": [],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.04",
+      "section": "5.05",
+      "question": "Are workers wearing effective hair restraints that contain all hair?",
+      "points": 5,
+      "expectation_summary": "Wearing effective hair restraints (i.e., hair nets, beard nets), is required in all operations where product is exposed, including with products that require cooking prior to consumption. Hair restraints prevent hair from falling into the product and prevent workers from unintentionally touching hair, then touching product. Baseball caps and head coverings are allowed in packinghouses, only if they are clean and worn with a hair net covering them that is clearly visible and restrains all hair.",
+      "evidence_tags": [],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.05",
+      "section": "5.05",
+      "question": "Are workers not observed wearing watches, jewelry (plain band permitted), studs, false eyelashes, false fingernails, etc.?",
+      "points": 5,
+      "expectation_summary": "Workers are not observed wearing jewelry (including earrings, ear gauges, necklaces, bracelets, rings with stones, rings or studs in nose, lip and eyebrow, watches) in the facility. Plain wedding bands are the only exception. Other examples of foreign items may be a source of foreign material contamination include studs, false eye lashes, eye lash extensions, etc.",
+      "evidence_tags": [
+        "facility"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.06",
+      "section": "5.05",
+      "question": "Are all workers wearing protective outer garments suitable for the operation (e.g., appropriate clean clothes, smocks, aprons, sleeves, non- latex gloves)?",
+      "points": 5,
+      "expectation_summary": "Outer garment policy should consider potential for cross contamination, customer requirements, production risk, product type, etc. Outer garments include where applicable: smocks, aprons, sleeves, gloves, boots, etc. Workers should not wear personal clothes with sequins, pom-poms, fur, etc. No sleeveless tops without an over garment. Where dedicated protective clothing is not required/worn, it must be clear that outer street clothes are clean and not a potential source of contamination.",
+      "evidence_tags": [
+        "policy",
+        "risk-assessment"
+      ],
+      "source_page": 10,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.07",
+      "section": "5.05",
+      "question": "Do workers remove protective outer garments (e.g., smocks, aprons, sleeves, and gloves) when on break, before using the toilets and when going home at the end of their shift?",
+      "points": 5,
+      "expectation_summary": "When worn, protective clothing (e.g., aprons, smocks, sleeves and gloves) should be removed when workers leave the work area (e.g., when they go to the toilet facility, lunchroom, outside, etc.). Workers cannot smoke, eat, go outside the building or use the restroom while wearing these garments.",
+      "evidence_tags": [
+        "facility"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.08",
+      "section": "5.05",
+      "question": "Is there a designated area for workers to leave protective outer garments (e.g., smocks, aprons, sleeves, and gloves) when on break and before using the toilets?",
+      "points": 5,
+      "expectation_summary": "There should be a designated area for workers to leave protective clothing when they are worn (e.g., aprons, smocks, sleeves, and gloves). Workers are observed using the designated area when they leave the work area (e.g., when they go to the toilet facility, lunchroom, outside, etc.).",
+      "evidence_tags": [
+        "facility"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.09",
+      "section": "5.05",
+      "question": "Are worker personal items being stored in such a way that they are not a potential food safety risk to product, equipment or materials?",
+      "points": 5,
+      "expectation_summary": "Workers should have a designated area for storing personal items such as coats, shoes, purses, medication, phones, etc. Lockers or cubbies are ideal. Areas set aside for workers' personal items should be far enough away from production and material storage area(s) to prevent contamination and avoid food security risks.",
+      "evidence_tags": [
+        "risk-assessment",
+        "equipment"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.10",
+      "section": "5.05",
+      "question": "Is smoking, eating, chewing and drinking confined to designated areas, and spitting is prohibited in all areas?",
+      "points": 5,
+      "expectation_summary": "Smoking, chewing tobacco, chewing gum, drinking and eating is permitted in designated areas that are away from production and storage areas. Spitting should be prohibited in all areas. Smoking should not be permitted in eating and drinking areas. Drinking is not permitted near the production line.",
+      "evidence_tags": [],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.11",
+      "section": "5.05",
+      "question": "Is fresh potable drinking water in clean containers readily accessible to workers?",
+      "points": 10,
+      "expectation_summary": "Potable water should be provided for drinking, following local and national laws. Fresh potable water meeting the quality standards for drinking water should be available for workers on-site to prevent dehydration. The term “potable” meaning that the water is of drinking water quality (e.g., the EPA Drinking Water Standard or equivalent). Portable drinking water dispensers should be designed, constructed and maintained in a sanitary condition, capable of being closed, and equipped with a tap. The water should be dispensed in single-use drinking cups or by fountains in production areas. Where individual drinking cups are used, control measures are in place to mitigate potential product contamination. Communal drinking cups and other shared utensils are prohibited.",
+      "evidence_tags": [
+        "water",
+        "equipment"
+      ],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.12",
+      "section": "5.05",
+      "question": "Are all items removed from garment (shirt, blouse, etc.) top pockets, and unsecured items are not worn (e.g., pens, glasses on top of the head, Bluetooth devices, etc.)?",
+      "points": 3,
+      "expectation_summary": "There should be no items stored in pockets above the waist. Items in pockets and otherwise unsecured have the potential to fall into the product.",
+      "evidence_tags": [],
+      "source_page": 11,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.05.13",
+      "section": "5.05",
+      "question": "Are first aid kits adequately stocked and readily available to workers in the facility, and are blue band aids used?",
+      "points": 5,
+      "expectation_summary": "First aid kit(s) supplies should be appropriate for the workplace and the injuries most likely to occur there (including any chemicals stored on-site) and should be stored in an area where they are readily available for emergency access. Date-coded materials should be within dates of expiration. Bandages used in food facilities should be blue in color for easy visual detection with a metal strip in operations where metal detectors are expected, and ideally waterproof. Gloves should be worn over all band aids on hands.",
+      "evidence_tags": [
+        "water",
+        "facility"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.06.01",
+      "section": "5.06",
+      "question": "Are food contact equipment surfaces free of flaking paint, corrosion, rust and other unhygienic materials (e.g., tape, string, cardboard, etc.)?",
+      "points": 15,
+      "expectation_summary": "Food contact surfaces on equipment should not have flaking paint, corrosion, rust and/or unhygienic materials, as they can pose foreign material and/or microbiological hazards. Surfaces should be maintained in good condition. Any temporary repairs should not pose a food safety risk and should not have become a permanent solution.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "equipment"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.06.02",
+      "section": "5.06",
+      "question": "Are non-food contact equipment surfaces free of flaking paint, corrosion, rust and other unhygienic materials (e.g., tape, string, cardboard, etc.)?",
+      "points": 10,
+      "expectation_summary": "Flaking paint, corrosion, rust and/or unhygienic materials should not be present on any non-food contact surfaces. Where possible, equipment framework is not penetrated by bolts or studs. Any temporary repairs should not pose a food safety risk and should not have become a permanent solution.",
+      "evidence_tags": [
+        "risk-assessment",
+        "equipment"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.06.03",
+      "section": "5.06",
+      "question": "Does food contact equipment design, placement, and condition (e.g., smooth surfaces, smooth weld seams, non-toxic materials, corrosion- resistant, non-porous, non-absorbent) facilitate effective cleaning and maintenance?",
+      "points": 15,
+      "expectation_summary": "Equipment should be of sanitary design, allow access to all areas and there should be no debris trapping areas that cannot be easily cleaned, including hollow structures on supports, rollers, racks, etc. Equipment should be made of appropriate materials for current use that can be easily cleaned (smooth, non-porous, non-absorbent, non-toxic, no dead spots) and maintained in an acceptable condition.",
+      "evidence_tags": [
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.06.04",
+      "section": "5.06",
+      "question": "Are thermometers (independent of thermostat probes) present in all coolers and freezers?",
+      "points": 5,
+      "expectation_summary": "All cold rooms should have thermometers appropriately placed to monitor the temperature accurately within the area. The monitoring thermometers should be independent from the thermostat probe.",
+      "evidence_tags": [
+        "inspection"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.06.05",
+      "section": "5.06",
+      "question": "Are all thermometers non-glass and non- mercury?",
+      "points": 10,
+      "expectation_summary": "Thermometers should not pose a foreign material risk. Both glass and mercury could be contaminants if the thermometer was to break.",
+      "evidence_tags": [
+        "risk-assessment"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.01",
+      "section": "5.07",
+      "question": "Are food contact equipment surfaces clean?",
+      "points": 15,
+      "expectation_summary": "Unsanitary food contact surfaces (zone 1) can directly lead to contamination of the product. Food debris, bio films, excessive dust, etc., should be cleaned off equipment and facility surface in order to reduce the overall facility bio- burden.",
+      "evidence_tags": [
+        "sanitation",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 12,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.02",
+      "section": "5.07",
+      "question": "Are non-food contact equipment surfaces clean?",
+      "points": 10,
+      "expectation_summary": "Unsanitary non-food contact surfaces (zone 2, zone 3) can indirectly lead to contamination of the product. Food debris, bio films, excessive dust, etc., should be cleaned off equipment and facility surface in order to reduce the overall facility bio-burden.",
+      "evidence_tags": [
+        "sanitation",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.03",
+      "section": "5.07",
+      "question": "Are items (totes, bins, etc.) that are used to hold or store product clean?",
+      "points": 10,
+      "expectation_summary": "All storage containers should be cleaned and sanitized as frequently as necessary in order to prevent contamination. Cleaning type and frequency should be determined based on the products and processes involved. Containers should be kept covered and protected during storage.",
+      "evidence_tags": [
+        "sanitation"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.04",
+      "section": "5.07",
+      "question": "During cleaning, are food products and packaging materials protected from contamination?",
+      "points": 15,
+      "expectation_summary": "To avoid contamination, food products and packaging material should be covered, screened, protected in some way or removed from the area while cleaning is taking place.",
+      "evidence_tags": [
+        "sanitation"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.05",
+      "section": "5.07",
+      "question": "Are cooling units, including coils in coolers and freezers, clean and free of aged, dirty ice?",
+      "points": 5,
+      "expectation_summary": "Cooling coils can build-up dust and other contaminants. They should be included in the master sanitation schedule.",
+      "evidence_tags": [
+        "sanitation"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.06",
+      "section": "5.07",
+      "question": "Where fans or other air circulation equipment are used, are they maintained and operated in a manner that minimizes the potential for contaminating product, equipment, and packaging materials?",
+      "points": 5,
+      "expectation_summary": "All fan guards (cooling units and general ventilation) are clean. There is no build-up of dust or other materials. The ceiling in front of the fans (especially cooler units) should be free from excessive black deposits. Other air circulation equipment (e.g., swamp coolers, air showers, air curtains) are kept clean and properly maintained.",
+      "evidence_tags": [
+        "equipment"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.07",
+      "section": "5.07",
+      "question": "Is stored equipment that is not used on a daily basis stored in a clean condition with food-contact surfaces protected and/or are they retained on cleaning schedules in some manner, even though they are not in use?",
+      "points": 10,
+      "expectation_summary": "Equipment should be stored appropriately (e.g., covered, protected and off the floor) to prevent inappropriate use and cross contamination. Alternatively, unused equipment can be left on sanitation and maintenance programs.",
+      "evidence_tags": [
+        "policy",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.08",
+      "section": "5.07",
+      "question": "Are all utensils, hoses, and other items not being used, stored clean and in a manner to prevent contamination?",
+      "points": 10,
+      "expectation_summary": "All utensils, hoses and other items not being used are stored clean and, in a manner to prevent contamination (off ground, dedicated areas, etc.). Hoses should be stored coiled, off the floor and ideally used in such a manner that ground contact is avoided.",
+      "evidence_tags": [
+        "equipment"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.09",
+      "section": "5.07",
+      "question": "Are maintenance tools that are used in the production and storage areas of the facility clean, sanitary and corrosion free?",
+      "points": 3,
+      "expectation_summary": "Tools that are used for repairing equipment in the production and storage areas should be appropriately stored to ensure they do not pose a risk of direct or indirect contamination when in production and/or storage areas, clean, free of corrosion and in good working order i.e., fit for their intended use.",
+      "evidence_tags": [
+        "risk-assessment",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 13,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.07.10",
+      "section": "5.07",
+      "question": "Are excess lubricants and grease removed from the equipment and are lubricant catch pans fitted where needed?",
+      "points": 5,
+      "expectation_summary": "Dripping caused by over lubricating is a potential chemical contaminant to the product. Frequent lubrication using minimal material and use of drip pans are control examples. Note, food grade materials are designed for incidental food contact. All efforts should be made to avoid these materials getting onto the product and packaging.",
+      "evidence_tags": [
+        "equipment"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.01",
+      "section": "5.08",
+      "question": "Are spills cleaned up immediately?",
+      "points": 10,
+      "expectation_summary": "To prevent the attraction of pests, reduce cross contamination and maintain a sanitary environment, all spills must be cleaned up immediately.",
+      "evidence_tags": [
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.02",
+      "section": "5.08",
+      "question": "Are waste and garbage frequently removed from production and storage areas?",
+      "points": 5,
+      "expectation_summary": "Waste and garbage must be removed on a frequent basis to prevent attraction of pests, reduce cross contamination, reduce bad odors and maintain a sanitary environment.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.03",
+      "section": "5.08",
+      "question": "Are floor drains and waste trap systems constructed and located so they can be easily cleaned, do they appear clean, free from odors, in good repair, and flow in a manner that prevents contamination (e.g., from high to low risk areas, from high risk directly to drain system)?",
+      "points": 10,
+      "expectation_summary": "Floor drains should be designed and located to minimize risk to product, process and worker safety, flow in a manner that prevents contamination (e.g., from high to low-risk areas, from high risk directly to drain system), be cleaned on a frequent basis (daily in wet facilities) to remove residues, prevent growth of harmful bacteria and allow for proper drainage. Drain grates/covers should be removable for cleaning, and sides and bases should be made of a smooth material that does not trap debris.",
+      "evidence_tags": [
+        "risk-assessment",
+        "sanitation"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.04",
+      "section": "5.08",
+      "question": "Do high level areas, including overhead pipes, ducts, conduit, etc., appear clean?",
+      "points": 10,
+      "expectation_summary": "Overhead areas should be cleaned as required to prevent potential contamination of product, ingredients or packaging materials.",
+      "evidence_tags": [
+        "sanitation"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.05",
+      "section": "5.08",
+      "question": "Are plastic strip curtains maintained in good condition, kept clean and mounted so that the tips are not touching the floor?",
+      "points": 5,
+      "expectation_summary": "Plastic strip curtains may be a source of contamination if they are not maintained clean, intact and fitted properly (so tips are not touching the floor).",
+      "evidence_tags": [],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.06",
+      "section": "5.08",
+      "question": "Is personal protection equipment (PPE) for the sanitation crew in good condition and stored to prevent cross contamination to raw products, work in progress, ingredients, finished goods or packaging?",
+      "points": 3,
+      "expectation_summary": "The sanitation crew should have access to appropriate safety equipment to avoid any health problems from the chemicals that they use during the cleaning process. All safety equipment should be stored to prevent contamination to raw products, work in progress, ingredients, finished goods or packaging.",
+      "evidence_tags": [
+        "sanitation",
+        "equipment",
+        "harvest"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.07",
+      "section": "5.08",
+      "question": "Is cleaning equipment maintained clean and stored properly?",
+      "points": 5,
+      "expectation_summary": "Adequate cleaning equipment should be available, free of debris, cleaned and stored correctly between use.",
+      "evidence_tags": [
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 14,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.08",
+      "section": "5.08",
+      "question": "Is cleaning equipment identified in order to prevent potential cross-contamination issues (e.g., production, maintenance, outside, restroom equipment)?",
+      "points": 10,
+      "expectation_summary": "Cleaning equipment used for production areas need to be separated (physically and visually) from cleaning equipment used in non-production areas in order to prevent cross contamination from occurring. Sometimes even within production areas, there is a need to differentiate equipment even further (e.g., segregating flooring cleaning materials from equipment cleaning materials).",
+      "evidence_tags": [
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.09",
+      "section": "5.08",
+      "question": "Are all items used for sanitation appropriate for their designated purpose (e.g., no steel wool, metal bristles, etc.)?",
+      "points": 5,
+      "expectation_summary": "Sanitation equipment should be constructed of appropriate materials that will not contaminate the product. Avoid anything that flakes, is made of pervious materials, is of a similar color as the products, corrodes or might damage the equipment or facility.",
+      "evidence_tags": [
+        "sanitation",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.10",
+      "section": "5.08",
+      "question": "Are toilet facilities and hand washing stations clean?",
+      "points": 15,
+      "expectation_summary": "Toilet facilities should be cleaned and sanitized at least daily. Soiled tissue should be flushed down the toilet (not placed in trash cans and/or on the floor).",
+      "evidence_tags": [
+        "sanitation"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.11",
+      "section": "5.08",
+      "question": "Are worker break facilities clean, including microwaves and refrigerators, and no rotting or out of date foodstuffs?",
+      "points": 5,
+      "expectation_summary": "All worker break facilities should be clean in order to prevent the attraction of pests. Temperature sensitive foods should be stored in cold boxes or provided refrigerators. Periodic cleaning includes inside microwaves, inside and behind refrigerators, behind and on top of all vending machines, tables, chairs, and lockers to prevent potential pest harborage that may affect the product.",
+      "evidence_tags": [
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.12",
+      "section": "5.08",
+      "question": "Is the maintenance shop organized, with equipment and spares stored in a neat and tidy fashion?",
+      "points": 5,
+      "expectation_summary": "The maintenance shop should be clean and well organized. An unclean shop can result in cross contamination and pest attraction. Any food consumption in the maintenance shop should be in a designated area that does not pose a risk to tools and equipment.",
+      "evidence_tags": [
+        "risk-assessment",
+        "equipment",
+        "pest-animal"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.13",
+      "section": "5.08",
+      "question": "Are internal transport vehicles (e.g., forklifts, bobcats, pallet jacks, carts, floor cleaners, etc.), clean, do not emit toxic fumes and are being used in a sanitary manner?",
+      "points": 5,
+      "expectation_summary": "Internal transport vehicles (e.g., forklifts, bobcats, pallet jacks, carts, floor cleaners, etc.) should be part of the sanitation program, maintained clean and not allowed to be a vector of cross contamination. Vehicles used in food areas should not be gasoline or diesel powered. Propane (LPG) powered vehicles are acceptable, while electric powered are ideal.",
+      "evidence_tags": [
+        "policy",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.08.14",
+      "section": "5.08",
+      "question": "Are shipping trucks clean and in good condition?",
+      "points": 5,
+      "expectation_summary": "Unsanitary (e.g., unclean, damaged insulation, etc.) shipping trucks could be a growth niche for bacteria and a foreign material hazard.",
+      "evidence_tags": [],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.01",
+      "section": "5.09",
+      "question": "Are all lights in the facility that could potentially contaminate raw materials, work in progress, ingredients (including ice), finished goods, equipment or packaging shielded, coated or otherwise shatter resistant to protect product from contamination in the event of breakage?",
+      "points": 15,
+      "expectation_summary": "All lights in the facility that can potentially contaminate finished products, raw materials, ingredients, equipment, or packaging should be shielded, coated or manufactured of shatter-resistant materials to protect product from contamination in the event of a breakage. This includes, but is not limited to items such as light bulbs, emergency lights, truck loading lights (dock lamps), insect trap lights, forklift lights, lights in bathrooms or maintenance shops that open into the production area, etc. End piece fittings on tube lights should be secure. Precautions should be taken to prevent glass contamination in the event of glass breakage.",
+      "evidence_tags": [
+        "equipment",
+        "facility"
+      ],
+      "source_page": 15,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.02",
+      "section": "5.09",
+      "question": "Has the operation eliminated or adequately controlled any potential metal, glass or brittle plastic contamination issues?",
+      "points": 10,
+      "expectation_summary": "All foreign material risks must be either removed and/or accounted for and controlled. Examples include metal filings (maintenance), office windows, PC screens, brittle plastic from any source, staples, etc.",
+      "evidence_tags": [
+        "risk-assessment"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.03",
+      "section": "5.09",
+      "question": "Has the facility eliminated or adequately controlled the use of wooden items or surfaces?",
+      "points": 5,
+      "expectation_summary": "Wood is a porous material and can harbor bacteria. It cannot be cleaned or sanitized effectively. Wooden materials can also splinter and pose a risk of physical contamination. Wet and high humidity areas should not be constructed of wood.",
+      "evidence_tags": [
+        "risk-assessment",
+        "sanitation",
+        "facility"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.04",
+      "section": "5.09",
+      "question": "Is there adequate lighting in the production and storage areas?",
+      "points": 5,
+      "expectation_summary": "Proper lighting is necessary for inspection and sanitation procedures to take place. This includes all areas where food is examined, manufactured, processed, packed, or held and where equipment or utensils are cleaned, maintenance areas, restrooms, etc.",
+      "evidence_tags": [
+        "policy",
+        "inspection",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.05",
+      "section": "5.09",
+      "question": "Is ventilation adequate to control dust, condensation, odors and vapors?",
+      "points": 10,
+      "expectation_summary": "Ventilation systems (cooling, heating and air handling) should be sufficient to control condensation, mold, dust, odors and vapors so that conditions do not exist where raw materials, work in progress, ingredients or packaging materials may be contaminated. Ventilation equipment should be balanced to provide an adequate air exchange rate to prevent condensation on walls, ceilings or other surfaces in production areas. Ideally, positive air pressure is employed in processing operations.",
+      "evidence_tags": [
+        "equipment"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.06",
+      "section": "5.09",
+      "question": "Are floor surfaces in good condition, with no standing water, no debris trapping cracks and are they easy to clean?",
+      "points": 10,
+      "expectation_summary": "Floor surfaces should be impervious to water, non-absorbent, clean easily and resist to wear and corrosion. Exposed aggregate is hard to clean and will get progressively worse. Floors should be free of wide and/or deep cracks.",
+      "evidence_tags": [
+        "water"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.07",
+      "section": "5.09",
+      "question": "Are there floor drains and waste trap systems located where they are needed for drainage?",
+      "points": 5,
+      "expectation_summary": "Drains and waste trap systems should be constructed and located in such a manner that they provide adequate drainage in all areas where floors are subject to flood-type cleaning or where normal operations release or discharge water or other liquid waste on the floor. Drains should flow from processed to raw to avoid contamination in processing plants. Facilities that are washing product should have adequate drainage. Discharge water from sinks should not run directly onto the floor. Where floor drains are not possible there should be control measures in place to control discharge water or overflow. Not applicable in dry facilities with no drains.",
+      "evidence_tags": [
+        "water",
+        "sanitation"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.08",
+      "section": "5.09",
+      "question": "Are exterior doors kept closed and are closed doors and windows to the outside pest-proof?",
+      "points": 10,
+      "expectation_summary": "Doors should not be maintained open for extended periods of time when accessed for receiving, shipping, waste removal activities, etc. Doors, windows, louvers and screens should be maintained, doors should fit tightly with a maximum allowable gap of 1/8 inch (3 mm). Special attention should be given to the maintenance of weather strips. Air curtains are acceptable, provided they are operating properly. Personnel doors to the outside should be loaded so that they close properly.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 16,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.09",
+      "section": "5.09",
+      "question": "Are dock load levelers and buffers/shelters maintained in good condition, pest proof and debris free?",
+      "points": 3,
+      "expectation_summary": "Product debris can attract pests to the area. Gaskets (weather strips) around load levelers should fit tightly to prevent pest entry. This question is applicable only when dock doors have been installed.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.10",
+      "section": "5.09",
+      "question": "Are exterior walls free of holes to exclude pests, and are pipes, vents, and air ducts designed and protected in order to prevent pest entry (e.g., by using fine mesh)?",
+      "points": 5,
+      "expectation_summary": "Walls should be free of holes, crevices and cracks to prevent pest infestations. If pipe holes are needed, they should be protected to avoid pest entry. Vents and air ducts should also be protected. Mesh size should be no greater than 1/8 inch (3 mm) to limit insect entry.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.11",
+      "section": "5.09",
+      "question": "Are interior walls and ceilings free of cracks and crevices to prevent pest harborage and allow proper sanitation?",
+      "points": 5,
+      "expectation_summary": "It is important to keep the building in good repair to prevent the intrusion of pests. Damaged walls are difficult to clean and the exposed foam or polystyrene insulation can be a foreign material risk. Ceiling should be free from evidence of roof leaks (stains), holes or other damage, false ceilings are clean and accessible.",
+      "evidence_tags": [
+        "risk-assessment",
+        "sanitation",
+        "pest-animal",
+        "facility"
+      ],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.12",
+      "section": "5.09",
+      "question": "Is an 18\" (46 cm) internal wall perimeter being maintained within the facility, with adequate access to these wall perimeters, thereby allowing inspection and cleaning?",
+      "points": 5,
+      "expectation_summary": "Aisles and working spaces that are provided should be of adequate width to safely permit the monitoring of pest activity and for workers to perform cleaning and maintenance.",
+      "evidence_tags": [
+        "inspection",
+        "sanitation",
+        "pest-animal",
+        "facility"
+      ],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.13",
+      "section": "5.09",
+      "question": "Is the exterior area immediately outside the facility, including roads, yards and parking areas, free of litter, weeds and standing water?",
+      "points": 5,
+      "expectation_summary": "Litter, waste, refuse, uncut weeds or grass and standing water within the immediate vicinity of the building may constitute an attractant or breeding place for rodents, insects or other pests, as well as microorganisms that may cause contamination.",
+      "evidence_tags": [
+        "water",
+        "pest-animal",
+        "facility"
+      ],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.14",
+      "section": "5.09",
+      "question": "Are control measures being implemented for the outside storage of equipment, pallets, tires, etc. (i.e., out of the mud, pipe ends capped, stacked to prevent pest harborage, away from the building perimeter)?",
+      "points": 5,
+      "expectation_summary": "Incorrectly stored pallets and equipment can provide areas for pest harborage and/or cross contamination. Equipment should be stored at least 4\" (10 cm) off the ground and at least 24\" (61 cm) away from the building perimeter. Workers should check the stored equipment periodically to ensure that it has not become a pest harborage area or dirty due to rains. Inventory checks should occur in order to ensure that these storage areas do not become full of unnecessary items. Outside storage areas should be within the scope of the pest control program.",
+      "evidence_tags": [
+        "policy",
+        "equipment",
+        "pest-animal",
+        "facility"
+      ],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.15",
+      "section": "5.09",
+      "question": "Are pallets inspected to separate and replace dirty or broken pallets, and broken or dirty pallets are not in use?",
+      "points": 5,
+      "expectation_summary": "Broken or split pallets can cause a physical hazard. Dirt, mud, food debris, chemical residues and other contaminants on the pallets can cause a microbial contamination.",
+      "evidence_tags": [],
+      "source_page": 17,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.16",
+      "section": "5.09",
+      "question": "Is the area around the dumpster/cull truck/trash area clean?",
+      "points": 3,
+      "expectation_summary": "The dumpster/cull truck/trash area should be located away from facility entrances, where traffic flow may be a source of cross contamination. The area around the dumpster/cull truck/trash area should be maintained in a clean condition. There should not be any spillage on the ground. There should not be any standing water or liquid seepage around the dumpster/cull truck/trash area and there should not be any foul odor present. The dumpster/cull truck/trash area should be cleaned on a regular basis.",
+      "evidence_tags": [
+        "water",
+        "sanitation",
+        "facility"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.17",
+      "section": "5.09",
+      "question": "Are outside garbage receptacles and dumpsters kept covered or closed?",
+      "points": 5,
+      "expectation_summary": "All dumpsters and garbage receptacles should have a cover and be kept covered to prevent the attraction of insects, rodents and other pests. Fine mesh lids are acceptable. Just having the lids is not acceptable i.e., when not in use, the dumpsters and garbage receptacles should be closed. Dumpsters that are only used for dry non-food waste (e.g., paper, cardboard, etc.) are exempt from this requirement.",
+      "evidence_tags": [
+        "pest-animal"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.18",
+      "section": "5.09",
+      "question": "Are all water lines protected against back siphonage?",
+      "points": 5,
+      "expectation_summary": "Back siphonage protection prevents potable water from coming into contact with unsafe water and potential contamination of the distribution system.",
+      "evidence_tags": [
+        "water"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.09.19",
+      "section": "5.09",
+      "question": "Where there is an on- site laboratory, is it completely enclosed and separated from production and storage areas?",
+      "points": 5,
+      "expectation_summary": "On-site laboratories should not be a source of possible contamination. Pathogen analysis should ideally be contracted to an external testing laboratory. Any facility doing on-site testing which includes an “enrichment step” is covered under this question. N/A if there is no on-site laboratory.",
+      "evidence_tags": [
+        "facility"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.10.01",
+      "section": "5.10",
+      "question": "Is there a site plan showing the facility location, adjacent sites, roads, water sources, storm water, wastewater and other relevant features?",
+      "points": 5,
+      "expectation_summary": "There should be a site map(s) or similar document(s) (photograph, drawing) that accurately shows the facility building(s), description of adjacent sites, location of permanent water fixtures (well, mains) and water systems, including any holding tanks and water captured for re-use. Storm water, waste water, septic systems, effluent lagoons or ponds, surface water bodies are also identified. Auditor should verify site plan features during physical audit.",
+      "evidence_tags": [
+        "inspection",
+        "water",
+        "facility"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.10.02",
+      "section": "5.10",
+      "question": "Is there a facility floor plan showing the layout of the building, production areas, storage areas, water sources and fixtures, layout of equipment and traffic flow patterns?",
+      "points": 5,
+      "expectation_summary": "There should be a facility floor plan(s) (map, drawing) indicating production areas, storage areas, water fixtures and drainage, layout of equipment and traffic flow patterns of product, process, equipment and workers. The flow pattern for food products, waste material, workers and equipment should prevent raw materials and waste from coming in contact with the finished product. Flow is ideally in one direction and follows a logical sequence from raw material handling to finished product storage. Auditor should verify facility floor plan features during physical audit (score any issues seen under 5.04.01).",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "water",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 18,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.10.03",
+      "section": "5.10",
+      "question": "Has a documented risk assessment been performed to ensure that any food safety hazards relevant to facility location and adjacent land use are identified and controlled?",
+      "points": 10,
+      "expectation_summary": "A documented risk assessment should be performed for the facility to identify and control any food safety hazards relevant to the facility location and adjacent land use (e.g., animal activity, industrial activity, waste, sewage and septic systems, water treatment sites (settling ponds, land applications, etc.) or any other potential sources of contamination). All national and local laws pertaining to land use and on-site water treatment systems should be followed. Where necessary, for wastewater treatment areas, there should be applicable permits on file and evidence of regulatory and/or third-party inspections. The risk assessment should be reviewed at least annually and when a significant facility location/adjacent land change occurs including flooding and earthquake events that may impact sewage or septic systems.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "inspection",
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 19,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.10.04",
+      "section": "5.10",
+      "question": "Is there a current certificate of inspection (or similar record) for backflow prevention assemblies on water lines into the facility?",
+      "points": 3,
+      "expectation_summary": "There should be a backflow prevention device on main water lines entering the facility and backflow prevention devices or air gaps on individual water lines within production areas. Examples of backflow prevention include backflow preventer valves, air gaps, check valves, and vacuum breakers. There should be a record provided by a trained inspector verifying the proper operation of the principal backflow prevention system on an annual basis (unless there is a stated expiration on the certificate). This question is not applicable if the facility does not have a water supply (e.g., dry pack pole barn).",
+      "evidence_tags": [
+        "training",
+        "records",
+        "inspection",
+        "water",
+        "facility"
+      ],
+      "source_page": 19,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.10.05",
+      "section": "5.10",
+      "question": "Is there a trained on- site person responsible for the operation's food safety program?",
+      "points": 10,
+      "expectation_summary": "There should be a trained on-site person(s) responsible for the operation's food safety program (cross reference with 1.01.02). They should have documented formal training or be trained by someone that has documented formal credentials in food safety topics relevant to their responsibilities (cross reference with 1.01.04). This training should meet all local and national requirements.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records"
+      ],
+      "source_page": 19,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.11.01",
+      "section": "5.11",
+      "question": "Are there current Safety Data Sheets (SDS), and copies of specimen labels for chemicals used, where the full label is not immediately accessible (e.g., rodent chemicals, product sanitizers)?",
+      "points": 5,
+      "expectation_summary": "Current SDS should be available for hazardous chemicals and when immediate access to a full label is not possible, specimen label copies should be available. SDS and specimen labels should be kept on file, stored on memory stick, CD or computer, and auditee can demonstrate they are readily accessible to workers.. Chemicals used should meet local and national requirements.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "sanitation",
+        "pest-animal"
+      ],
+      "source_page": 19,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.11.02",
+      "section": "5.11",
+      "question": "Are there chemical inventory logs for chemicals, including pesticides, fertilizers and cleaning and sanitizing chemicals?",
+      "points": 3,
+      "expectation_summary": "Chemicals within the scope of this question include pesticides, fertilizers, cleaners and sanitizers i.e., sanitation chemicals and food contact chemicals, such as chlorine, etc., and any post-harvest chemicals (e.g., fungicides, wax, ethylene). This also applies to fertilizers that are used in sprout operations. Primary information in the product inventory includes: the product or chemical names, container volumes, number on hand, and location of containers. Inventory by storage area/type of chemical is optimal. The inventory should take into account the arrival of new stocks and any discrepancies should be explained. Minimum frequency for inventory checks should be monthly and a copy should be maintained separate from the chemical storage location(s).",
+      "evidence_tags": [
+        "records",
+        "sanitation",
+        "pest-animal",
+        "harvest"
+      ],
+      "source_page": 19,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.11.03",
+      "section": "5.11",
+      "question": "Are there specific Standard Operating Procedures (SOPs) for the monitoring of anti- microbial parameters in single pass and/or recirculated/batch water systems, changing of recirculated/batch water systems (e.g., dump tanks, flumes, hydro vacuums, hydro coolers, etc.) and for monitoring pH and water temperature (if applicable)?",
+      "points": 10,
+      "expectation_summary": "The addition of an anti-microbial is expected for product contact water and/or ice. This includes single-pass, recirculated and batch water systems. Monitoring organic and soil build-up (turbidity) is expected in recirculated and batch water systems. There should be specific SOPs that that describe how they are managed, including the water change frequency (recirculated/batch water systems), anti-microbial(s) used, pH monitoring (if required), their concentration(s), monitoring method(s) and frequency and corrective action procedures. The anti-microbial monitoring frequency should be sufficient to demonstrate the required concentration is maintained throughout the time the system is operated. Methods and monitoring procedures for measuring build-up of organic material (soil and plant debris) in recirculated and batch water systems should be described. Water should be changed when it is dirty and ideally when switching product types. If product(s) immersed in water are known to be susceptible to infiltration, the SOP should include water and product temperature parameters and monitoring frequency. There should be sufficient validation to support the anti-microbial concentration used, the water changing frequency (if less than daily) and water testing frequency. Measuring total chlorine is not acceptable for recycled/batch water systems. Concentrations should be properly justified with supporting documents, rationale and evidence. Other anti-microbials include peracetic acid, chlorine dioxide, etc. Refer to “Common Anti-microbial Treatments for Product Contact Water &/or Ice” table in Interpretation Guidelines for further information. See 5.13.03, 5.13.04 and 5.13.05 for record keeping expectations.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection",
+        "water"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.12.01",
+      "section": "5.12",
+      "question": "Is the pest control program properly documented, detailing the scope of the program, target pests and frequency of checks, including a copy of the contract with the extermination company (if used), Pest Control Operator license(s)/training (if baits are used), and insurance documents?",
+      "points": 15,
+      "expectation_summary": "There should be a documented pest control program in place detailing the scope of the program, target pests and frequency of checks. If performed in- house, the pest-control operators or equivalent should be registered, licensed or have documented formal training (if regulation does not require certification or registration). Note that the person’s training and/or license should specify structural pest control or equivalent. Any substitute operator’s license credentials should also be on file. If the service is contracted, the pest control contract service/company should be licensed in structural pest control, insured and the contract should be documented (quoting the scope of the program, types of pests it covers and frequency of visits). The program should include requirements for at least annual pest control survey (QA audit) by someone with relevant training and/or experience based on preventive IPM practices of interior and exterior areas.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.12.02",
+      "section": "5.12",
+      "question": "Is there a schematic drawing/plan of the facility showing numbered locations of all pest monitoring devices (e.g., rodent traps, bait stations, insect light traps, etc.) both inside and outside the facility?",
+      "points": 10,
+      "expectation_summary": "A schematic drawing or trap map is on file, current and details internal and external traps. All devices (e.g., tin cats, Ketch-Alls, bait stations, glue boards, insect light traps, electronic fly killer units, etc.) should be numbered and clearly identified on the map. The numbers should match what is in the facility. The document should be accurate, dated and should show the type of device.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "pest-animal",
+        "facility"
+      ],
+      "source_page": 20,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.12.03",
+      "section": "5.12",
+      "question": "Are service reports created for pest control checks detailing inspection records, application records, and corrective actions of issues noted (in-house and/or contract)?",
+      "points": 10,
+      "expectation_summary": "Service reports from the contract pest control company should be available for review if pest control is contracted out. In-house inspection records should be available for review if pest control is conducted in-house. Records should include services performed, date of service, chemicals used, signs of activity, and corrective actions, and trend reports. Trained pest control operator(s) should be doing annual assessments (QA audit) and giving documented feedback to company about findings beyond just a checking of stations/traps.",
+      "evidence_tags": [
+        "training",
+        "records",
+        "corrective-action",
+        "inspection",
+        "pest-animal"
+      ],
+      "source_page": 21,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.13.01",
+      "section": "5.13",
+      "question": "Are there inspection records for incoming goods (e.g., raw materials, ingredients and packing materials)?",
+      "points": 5,
+      "expectation_summary": "There should be records showing incoming materials are being received as per documented procedures and from approved suppliers. Materials should be inspected for pests, foreign materials, damage, tampering, labeling issues, and to ensure that the materials are appropriate for use.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "inspection",
+        "pest-animal",
+        "supplier"
+      ],
+      "source_page": 21,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.13.02",
+      "section": "5.13",
+      "question": "Are there inspection logs on incoming trailers (and other forms of transport) for rodents and insects, cleanliness, holes and temperature control of the trailer (for food requiring temperature control for safety and/or as required per buyer specifications)?",
+      "points": 10,
+      "expectation_summary": "Incoming trailer (and other forms of transport, e.g., rail cargo carriages) checks for product and packaging should ensure that the trailer was clean, odor free, pest free and in good repair (e.g., no damaged insulation). Inspection records when receiving food materials that are temperature controlled for safety reasons should show that the transport temperature control equipment was working properly, temperature settings were set correctly, product was received at the required temperature and that were no signs of temperature abuse in transit. The receivers should be aware and follow any special documented instructions and specifications communicated by the shipper/supplier of the materials.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "equipment",
+        "pest-animal",
+        "supplier"
+      ],
+      "source_page": 21,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.13.03",
+      "section": "5.13",
+      "question": "Are there records for the necessary process monitoring activities (e.g., pH, water temperature vs. product temperature, metal detection, X-ray, labeling, heating processes, reduction/kill step processes, postharvest pesticides (e.g., fungicides), control of water activity, drying, etc.), showing, for example, monitoring frequencies, results and where necessary the corrective actions?",
+      "points": 10,
+      "expectation_summary": "Records should show process control parameters are being met and detail corrective actions (where necessary). Processes include sterilizing, irradiating, pasteurizing, cooking, blanching, freezing, refrigerating, controlling pH, or controlling aw, postharvest treatments. Any process &/or chemicals used should meet existing legal requirements (including residue levels), used as per label requirements and meet export requirements (as applicable). Corrective actions should also include root cause analysis and preventive actions (where relevant). See 5.13.04 regarding anti-microbial use. There may be some overlap with preventive controls and/or HACCP topics.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 21,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.13.04",
+      "section": "5.13",
+      "question": "Are there records (with corrective actions) that show anti-microbial (e.g., free chlorine, peroxyacetic acid) concentration testing of product contact water and ice solutions prior to start up and throughout the production runs?",
+      "points": 10,
+      "expectation_summary": "Product contact water and ice production systems using anti-microbial agents should have records showing that the concentration of the solution is within stated parameters. Recirculated/batch water systems should be checked by measuring the \"free anti-microbial\" as opposed to bound microbial (i.e., testing for free chlorine as opposed total chlorine); pH should be measured when using hypochlorite (5.13.03) in reused water systems. Where out of specification results are recorded, there should be corrective action records, including root cause analysis and preventive actions (where relevant).",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "water"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.13.05",
+      "section": "5.13",
+      "question": "Are there records of monitoring for build-up of organic material (turbidity) and changing of recirculated and batch water systems (e.g., dump tanks, flumes, hydro vacuums, hydro coolers, etc.)?",
+      "points": 5,
+      "expectation_summary": "There should be records of visual monitoring and/or testing and changing of recirculated and batch water systems. Frequency is at least daily, when it is dirty and ideally when changing products. Water may be used for longer if a validated regeneration system (e.g., a water pasteurization/filtration system) is being used.",
+      "evidence_tags": [
+        "records",
+        "inspection",
+        "water"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.13.06",
+      "section": "5.13",
+      "question": "Are there records (with corrective actions) that show anti-microbial concentration testing of hand/foot/tool dip stations, and are there stock check and replenishment records for gel and spray stations?",
+      "points": 3,
+      "expectation_summary": "The log should include target anti-microbial concentration (ppm) and frequency of verification should be sufficient to ensure adequate anti- microbial strength throughout production. Where hand gel or spray stations are used, there should be monitoring logs indicating that stations are regularly checked to confirm units are stocked and operational.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.13.07",
+      "section": "5.13",
+      "question": "Is there a tool accountability program for knives and similar cutting hand tools used in the production area?",
+      "points": 3,
+      "expectation_summary": "There should be an accountability program in place for knives and similar cutting hand tools to identify potential product contamination. Tool accountability to include inspection of the cutting surfaces for wear and tear as well as a tool inventory at the start and end of each shift. Tools should remain on site when not in use.",
+      "evidence_tags": [
+        "policy",
+        "inspection",
+        "equipment"
+      ],
+      "source_page": 22,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.13.08",
+      "section": "5.13",
+      "question": "Is there a pre-operation inspection log?",
+      "points": 10,
+      "expectation_summary": "Pre-operation inspections should identify potential problems with the facility, workers or equipment that should be corrected prior to starting production. These inspections and corrective actions should be recorded, and where an operation has multiple shifts, there should be pre-operational inspections for each shift.",
+      "evidence_tags": [
+        "records",
+        "corrective-action",
+        "inspection",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 23,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.01",
+      "section": "5.14",
+      "question": "Does the facility have a preventative maintenance program that includes a schedule and completion records?",
+      "points": 10,
+      "expectation_summary": "A preventative maintenance program can help prevent production and ancillary equipment, facility structure and fittings failure that can result in biological, physical or chemical contamination of products. Equipment includes, for example, production line equipment, cooling equipment, compressed air equipment, water treatment equipment, etc. Use of predictive maintenance systems are also acceptable for this question.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "water",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 23,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.02",
+      "section": "5.14",
+      "question": "Are there logs of maintenance work and repairs and are they signed off when work is completed?",
+      "points": 10,
+      "expectation_summary": "A log of maintenance for unscheduled repair work and request orders is necessary to track improperly working equipment, building repairs and similar issues not covered under the preventative maintenance program. Repair activities also have the potential to create unintended hazards if not properly conducted. Tracking these activities help with product contamination investigation as well as to improve preventative maintenance.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 23,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.03",
+      "section": "5.14",
+      "question": "Are there logs showing that equipment is properly cleaned and sanitized after maintenance and repair work has been completed?",
+      "points": 5,
+      "expectation_summary": "Maintenance and repairs on machinery can leave foreign materials behind or leave equipment, including food-contact surfaces, dirty if the entire work area and equipment is not properly cleaned and sanitized after work is completed. Logs of this post maintenance and repair work sanitation should be recorded.",
+      "evidence_tags": [
+        "records",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 23,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.04",
+      "section": "5.14",
+      "question": "Is there a written cleaning schedule (Master Sanitation Schedule) that shows what and where is to be cleaned and how often?",
+      "points": 10,
+      "expectation_summary": "A master sanitation program should be in place that covers all areas of the facility, including production areas, storage areas, break areas, restrooms, maintenance and waste areas. Within these areas, areas such as walls, floors, light covers, overhead pipes, etc. should be included. List should include equipment (e.g., production equipment (food contact and non-food contact), pallet jacks, fork lifts, carts, floor scrubbers, trash cans, cooling equipment (evaporators, cooling coils, drip pans, etc.), lift trucks and company-owned trailers, etc.). The master sanitation schedule should include a detailed list of areas and equipment to be cleaned as well as the frequency.",
+      "evidence_tags": [
+        "policy",
+        "sanitation",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 23,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.05",
+      "section": "5.14",
+      "question": "Are there written cleaning and sanitation procedures (Sanitation Standard Operating Procedures) for the facility and all equipment?",
+      "points": 10,
+      "expectation_summary": "The facility areas (floors, walls, overheads, etc.), all equipment (food contact, non-food contact, cooling equipment, etc.), internal transport vehicles and in- house owned trailers should be cleaned and sanitized on a regularly scheduled basis, based on written Sanitation Standard Operating Procedures (SSOPs). There should be SSOPs covering the cleaning and sanitizing operations noted in the master sanitation schedule. SSOPs should also be created for dry cleaning operations (where applicable) including details of how moisture is controlled. Procedures should detail what, who, how and when, including chemical details, solution temperature, water pressure, dwell times, any disassembly/reassembly instructions and cleaning verification procedures.",
+      "evidence_tags": [
+        "policy",
+        "water",
+        "sanitation",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 24,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.06",
+      "section": "5.14",
+      "question": "Are cleaning and sanitation logs on file that show what was done, when and by who?",
+      "points": 10,
+      "expectation_summary": "Sanitation logs should be on file that cover all areas of the facility (e.g., production areas, storage areas, break areas, restrooms, maintenance, etc.), detailing walls, floors, overhead and all equipment (e.g., production equipment (food contact and non-food contact), pallet jacks, forklifts, carts, floor scrubbers, trash cans, cooling equipment, lift trucks, company owned trailers, etc.). Logs should include: date, list of areas/equipment that were cleaned and sanitized, and the individual accountable who signed-off for each completed task. Logs should be consistent with the master sanitation schedule.",
+      "evidence_tags": [
+        "records",
+        "sanitation",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 24,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.07",
+      "section": "5.14",
+      "question": "Are there records showing verification of cleaning and sanitizing chemical concentrations?",
+      "points": 5,
+      "expectation_summary": "There should be records of verification of the mix concentrations of cleaning and sanitizing chemicals mixed on-site and ideally (based on risk assessment) of pre-mixed chemicals. The strength of sanitizing chemicals should be verified using an appropriate method for the anti-microbial in use or for concentration of cleaning chemicals (e.g., titration method). Frequency of checks should correspond with the SSOP, but at least at mixing (each new lot for pre-mixed chemicals) and then at a frequency that ensures the availability of the anti-microbial or mix concentration is adequate while the cleaning operation is being done. Corrective actions should be recorded.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "corrective-action",
+        "sanitation"
+      ],
+      "source_page": 24,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.08",
+      "section": "5.14",
+      "question": "Are there documented procedures and completion records for clean-in-place (CIP) activities (e.g., cleaning re-circulating water systems such as washing flumes, ice injectors, hydrocoolers, chilled water systems, ice makers, etc.), where applicable?",
+      "points": 10,
+      "expectation_summary": "Operations utilizing clean-in-place (CIP) should have detailed procedures in place. CIP activities should be monitored to ensure the CIP process is effective and not a source of contamination to the product. Detailed CIP cleaning procedures (including chemicals used, dilutions, water pressure, solution temperature, dwell times, etc.) and records of cleaning should be maintained.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "water",
+        "sanitation"
+      ],
+      "source_page": 24,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.09",
+      "section": "5.14",
+      "question": "Are there sanitation logs on file indicating that floor drains are cleaned on a regular basis (minimum daily in wet and fresh-cut production areas)?",
+      "points": 10,
+      "expectation_summary": "It is important to include drains in the cleaning schedule to prevent cross contamination. Drains in wet storage and production areas should be cleaned daily and sanitized regularly to prevent harmful bacteria from growing.",
+      "evidence_tags": [
+        "records",
+        "sanitation"
+      ],
+      "source_page": 24,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.10",
+      "section": "5.14",
+      "question": "Are there records showing filters in air conditioning, evaporative coolers, ventilation and air filtration units are regularly cleaned and replaced?",
+      "points": 5,
+      "expectation_summary": "Records should be made available to verify that filters in air conditioning, ventilation and air filtration units serving production (product handling) areas are regularly cleaned and replaced. Records might include in-house sanitation records, maintenance records and/or contractor records/invoices.",
+      "evidence_tags": [
+        "records",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 25,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.11",
+      "section": "5.14",
+      "question": "Are there records showing cooling units are maintenance serviced and cleaned at least every 12 months or more frequently as required?",
+      "points": 10,
+      "expectation_summary": "Records should be available to verify that the cooling units are serviced and cleaned on a scheduled basis. Cooling units should be cleaned and sanitized at least every 12 months or more frequently to prevent harmful pathogens from growing. Maintenance servicing ensures that coolers are working properly and efficiently. Records might include in-house sanitation records, maintenance records and/or contractor records/invoices.",
+      "evidence_tags": [
+        "records",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 25,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.12",
+      "section": "5.14",
+      "question": "Is there a routine program and written procedure to verify cleaning effectiveness using rapid surface monitoring checks (e.g., ATP, allergen specific proteins, general proteins)?",
+      "points": 15,
+      "expectation_summary": "Procedures for use and disposal should be documented, in line with any manufacturer recommendations and should justify the rapid method chosen, detail sampling strategy, standardized sampling technique, including location of sample and time of sampling, and there should be clear threshold parameters. The procedure should address justification for the number of sites and sampling frequency. Records of routine testing (at least daily in processing operations and weekly in others as applicable) and corrective actions should be maintained. Rapid checks (e.g., ATP (adenosine tri phosphate)) testing, allergen specific proteins, general proteins, etc., provides an instant indication of the hygiene status of food contact equipment and facility surfaces after cleaning and/or prior to start up. Measuring ATP, for example, detects food residues, bacteria, yeast, mold - either living or dead (i.e., all organic matter) to give a measure of cleaning effectiveness.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "inspection",
+        "sanitation"
+      ],
+      "source_page": 25,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.14.13",
+      "section": "5.14",
+      "question": "Is there a documented glass and brittle plastic management procedure (including company glass and brittle plastic policy, glass breakage procedure and where necessary a glass register)?",
+      "points": 10,
+      "expectation_summary": "There should be a documented site glass management procedure including company glass and brittle plastic policy, glass and brittle plastic breakage procedure and glass register if necessary (a no glass policy in production, storage or maintenance areas should be the target). If certain glass and brittle plastic items are allowed, a glass register should describe each item, location and quantity; items should be checked on a routine basis. Clean-up procedure after glass or brittle plastic breakage should indicate what equipment to use and include boot and tool checks/decontamination procedures to ensure broken glass or brittle plastic is not unintentionally transported out of the area.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "equipment"
+      ],
+      "source_page": 25,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.15.01",
+      "section": "5.15",
+      "question": "Are there records of new worker food safety (GMP) orientation training (with topics covered and attendees) and are all workers required to sign the company’s food safety hygiene and health policy?",
+      "points": 10,
+      "expectation_summary": "All new workers (including workers in departments such as production, storage, maintenance, etc.) should be GMP trained on employment in the language understood by the workers, with records of this training being maintained. Training should include the importance of recognizing food safety and/or hygiene issues with co-workers and visitors, correcting problems and reporting problems to a supervisor. Cross reference with 1.01.04. All workers should be issued a list of GMP rules in the relevant languages and confirm by signing they understand and agree to abide by the company’s food safety policy rules regarding personal hygiene/GMPs and health requirements. Training provided and associated records should meet local and national regulations.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records"
+      ],
+      "source_page": 25,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.15.02",
+      "section": "5.15",
+      "question": "Are there logs of ongoing worker food safety education training, including topics covered, attendees, etc.?",
+      "points": 10,
+      "expectation_summary": "Ongoing worker training should cover at least GMP food safety hazards and relevant regulatory requirements and guidance. Training records should detail who has been trained, topics covered, trainer details, materials used and when the training occurred. Cross reference with 1.01.04. Training provided and associated records should meet local and national regulations.",
+      "evidence_tags": [
+        "training",
+        "records"
+      ],
+      "source_page": 26,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.15.03",
+      "section": "5.15",
+      "question": "Are there training logs for the sanitation workers, including best practices and chemical use details?",
+      "points": 5,
+      "expectation_summary": "Sanitation training should ensure that the workers understand the importance of proper sanitation, cleaning efficacy, how to use the cleaning chemicals and how to understand Sanitation Standard Operating Procedures. Unless sanitation workers attend regular food safety trainings, sanitation training should also include elements of food safety training pertinent to sanitation operations (e.g., hand washing, restroom use, foreign material, etc.). Training logs should have a clearly defined topic(s) covered, trainer(s) and material(s) used/given.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "sanitation"
+      ],
+      "source_page": 26,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.15.04",
+      "section": "5.15",
+      "question": "Are there written and communicated procedures in place that require food handlers to report any cuts or grazes and/or if they are suffering any illnesses that might be a contamination risk to the products being produced, and include return to work requirements? (In countries with health privacy/confidentiality laws, e.g., USA, auditors should check procedure/policy but not the actual records).",
+      "points": 10,
+      "expectation_summary": "There should be documented procedures that are communicated (e.g., worker signature on a training log) to food handlers, requiring them to report any cuts, grazes and/or any illnesses that might be a food safety cross contamination risk. Procedures to indicate return to work requirements for affected workers, to whom the food handlers should report, how the issue is recorded and appropriate actions to be taken for a particular issue. Procedures should cover recording requirements, but auditors should not request to review records where countries have laws covering privacy/confidentiality of health records.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "risk-assessment",
+        "inspection"
+      ],
+      "source_page": 26,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.15.05",
+      "section": "5.15",
+      "question": "Are there worker food safety non- conformance records and associated corrective actions (including retraining records)?",
+      "points": 3,
+      "expectation_summary": "There should be records covering instances when workers are found not following food safety requirements. These records should also show corrective actions and evidence that retraining has occurred (where relevant).",
+      "evidence_tags": [
+        "training",
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 26,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.15.06",
+      "section": "5.15",
+      "question": "Are visitors and contractors required to sign a log stating that they will comply with the operations’ personal hygiene and health requirements?",
+      "points": 3,
+      "expectation_summary": "All visitors and contractors should sign to say that they will abide by the company rules regarding personal hygiene/GMPs and health requirements (which they have reviewed before entering the food handling areas of the facility).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "equipment",
+        "facility"
+      ],
+      "source_page": 27,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.01",
+      "section": "5.16",
+      "question": "Is there a written risk- based, scientifically valid environmental monitoring program?",
+      "points": 15,
+      "expectation_summary": "A written risk-based, scientifically valid environmental monitoring program has been developed and is used to verify the effectiveness of cleaning and sanitization programs, monitor the facility environment for microorganisms of human health concern and/or meet customer or other specific requirements. Program should include:  design (zonal (1-4 approach, food or non-food contact equipment),  rationale and justification for organisms tested for,  procedures for sampling including timing of sampling  frequency of testing  the testing methodology,  the lab that performs the tests,  acceptable results/threshold levels for each organism/group of organisms.  Any hold and release (hold and test) activities. There may be some overlap with preventive controls and/or HACCP and/or Preventive Control topics.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "risk-assessment",
+        "inspection",
+        "sanitation"
+      ],
+      "source_page": 27,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.02",
+      "section": "5.16",
+      "question": "Are there written risk- based corrective action procedures for when unacceptable environmental monitoring test results are received, that describe the steps to be taken, and assign responsibility for taking those steps?",
+      "points": 10,
+      "expectation_summary": "There should be written corrective action procedures detailing actions to take when unacceptable results are received (including trends), based on the risk that contamination could result in contaminated food and consumer illness. Procedure should describe the steps to be taken (e.g., vector sampling, swabbing/cleaning/post-cleaning swabbing, etc.), assign responsibility for taking those steps, steps to ensure the cause is identified (e.g., root cause analysis), how impacted product is handled and corrections to minimize the potential for product contamination. Focus should be on investigation, root cause analysis, intensified sampling and testing in order to identify the source, as well as a review of SOPs, sanitation and maintenance programs, etc.",
+      "evidence_tags": [
+        "policy",
+        "risk-assessment",
+        "corrective-action",
+        "inspection",
+        "sanitation"
+      ],
+      "source_page": 27,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.03",
+      "section": "5.16",
+      "question": "Are there records of environmental microbiological test results and does testing meet the program requirements?",
+      "points": 15,
+      "expectation_summary": "Environmental microbiological testing should be recorded, including organism tested for, the testing methodology, lab that performed the test, details of the sampling sites (zone (1-4), food contact/non-food contact equipment, location), when the test occurred and the results (including units of measure). If any issues are detected, corrective actions should be recorded. Testing should meet written program requirements (5.16.01).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "equipment"
+      ],
+      "source_page": 28,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.04",
+      "section": "5.16",
+      "question": "Is there a written program describing the operation’s requirements for other microbiological or chemical testing not identified in 5.16.01?",
+      "points": 15,
+      "expectation_summary": "The written program should include an identification of the testing to be conducted (e.g., water testing, ice testing, product testing, compressed air testing, spent sprout irrigation water testing), the sampling program (including sites), acceptable levels/limits and corrective action procedures. Testing may include microbiological, heavy metals, allergens, pesticides, dioxins, mycotoxins, and other natural toxins, etc. Testing may be conducted as determined by the operation or if required by customer(s) or by regulatory agencies.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 28,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.05",
+      "section": "5.16",
+      "question": "Are there written risk- based corrective action procedures for when unacceptable other microbiological or chemical test results are received, that describe the steps to be taken, and assign responsibility for taking those steps?",
+      "points": 10,
+      "expectation_summary": "There should be written corrective action procedures detailing actions to take when unacceptable results are received (including trends), based on the risk that contamination could result in contaminated food and consumer illness. Procedure should describe the steps to be taken, assign responsibility for taking those steps, steps to ensure the cause is identified (e.g., root cause analysis), how impacted product is handled and corrections to minimize the potential for product contamination. Focus should be on investigation, root cause analysis, intensified sampling and testing in order to identify the source, as well as a review of SOPs, sanitation and maintenance programs, etc.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "risk-assessment",
+        "corrective-action",
+        "sanitation"
+      ],
+      "source_page": 28,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.06",
+      "section": "5.16",
+      "question": "Are there records of microbiological tests on water used in the facility (sampled from within the facility) and does the testing meet the program requirements?",
+      "points": 15,
+      "expectation_summary": "Testing of facility water should be performed on a routine basis to assure it meets the microbial requirements of potable water. Water samples should be taken from within the facility in order to assess pipes and tanks (a city water result does not take into account the operations pipes and fittings). Well water should (in addition) be tested at source. Testing frequency should be related to the risk assessment of the production. Testing should meet written program requirements (5.16.04).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "risk-assessment",
+        "water",
+        "facility"
+      ],
+      "source_page": 28,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.07",
+      "section": "5.16",
+      "question": "Are there records of microbiological tests on ice used in the facility (either produced in-house or purchased) and does testing meet the program requirements?",
+      "points": 15,
+      "expectation_summary": "Testing ice helps check both the water microbial potability and ice equipment hygiene. Testing frequency should be related to the risk assessment of the production. Testing should meet written program requirements (5.16.04).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "risk-assessment",
+        "water",
+        "equipment"
+      ],
+      "source_page": 28,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.08",
+      "section": "5.16",
+      "question": "Are there records of tests performed on compressed air or other mechanically introduced gases that are used directly on food and food contact surfaces and does testing meet the program requirements?",
+      "points": 5,
+      "expectation_summary": "Compressed air or other mechanically introduced gases used in direct contact with product, product food contact areas and the inside surfaces of packaging should be filtered and tested for contaminants (e.g., microorganisms, particulates, water, oil, etc.). Compressed air should ideally be tested to ISO 8573-7 to ensure it is not a source of contamination. Testing should be based on a documented risk assessment and controls in place (e.g., use of the air/gas, risk to the product/food contact surfaces and type of process/product). Testing should be at least annually and meet written program requirements (5.16.04).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "risk-assessment",
+        "water"
+      ],
+      "source_page": 29,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.09",
+      "section": "5.16",
+      "question": "Are there records of other tests (e.g., spent sprout irrigation water, product, raw ingredients, etc.) that are performed for any reason (e.g., customer requirements, best practice, regulatory requirements) and does testing meet program requirements?",
+      "points": 15,
+      "expectation_summary": "Testing should be recorded, including organism tested for, the testing methodology, lab that performed the test, details of the sampling sites, when the test occurred, the results (including units of measure) and appropriate corrective actions (where relevant). Product testing may include microbiological, heavy metals, pesticides, dioxins, mycotoxins and other natural toxins, etc. Testing should meet written program requirements (5.16.04).",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "corrective-action",
+        "water",
+        "pest-animal"
+      ],
+      "source_page": 29,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.10",
+      "section": "5.16",
+      "question": "Are there records of corrective actions taken after any unsuitable testing results that describe the steps taken, responsibility for taking those steps, and actions taken to ensure that the cause of contamination has been identified and corrected?",
+      "points": 15,
+      "expectation_summary": "There should be documented evidence that corrective actions have been taken when required and were adequate for the specific situation, including the disposition of any impacted product (if applicable). Where appropriate, a trend analysis of results should be documented to assist with the development of corrective actions.",
+      "evidence_tags": [
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 29,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.11",
+      "section": "5.16",
+      "question": "Is there a documented training program with training records for the sampling personnel, including aseptic sampling collection techniques, sampling protocols and sample handling?",
+      "points": 10,
+      "expectation_summary": "Personnel should be trained on applicable sampling techniques (cross reference with 5.14.02, 5.16.01, 5.16.04 for relevance) including microbiological sampling, rapid surface monitoring sampling, (e.g., ATP, allergens, proteins), product sampling, etc.). Training should ensure that the sampling personnel are educated in the concepts of aseptic sampling using aseptic techniques, sampling protocols and sample handling including preparation and care of sample(s) for transport to the lab. Training may include a formal training course, directly from laboratory personnel or via an on-line resource. N/A if all sampling is handled by the laboratory service provider.",
+      "evidence_tags": [
+        "policy",
+        "training",
+        "records",
+        "inspection"
+      ],
+      "source_page": 29,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.16.12",
+      "section": "5.16",
+      "question": "Where food safety related testing is being done in-house, is there a laboratory quality assurance manual with protocols and validated testing methods, evidence of training on testing protocols and methods, and relevant supporting documentation?",
+      "points": 10,
+      "expectation_summary": "There should be documented evidence that the in-house laboratory is using the correct methods for testing (e.g., validation for specific applications) and have established protocols to detect errors (e.g., split samples to an external laboratory to verify consistent results and proficiency, result review and sign off) and to initiate corrective actions. There are records showing that workers handling samples have been trained on proper testing protocols and methods.",
+      "evidence_tags": [
+        "training",
+        "records",
+        "corrective-action"
+      ],
+      "source_page": 30,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.17.01",
+      "section": "5.17",
+      "question": "Are there records of final product temperature checks for temperature sensitive product?",
+      "points": 10,
+      "expectation_summary": "Records for final product temperature should be maintained for temperature sensitive products. Temperature requirements of customers and organizations that are coordinating the shipping of the finished products should be considered. Records should show that product is not shipped above temperature requirements (in-house, customer, legal or best practice). Corrective and preventive actions and should be recorded (where relevant).",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 30,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.17.02",
+      "section": "5.17",
+      "question": "Are there temperature logs for the production area (if refrigerated)?",
+      "points": 5,
+      "expectation_summary": "Temperature control is important in limiting microbial growth for temperature sensitive products. Corrective and preventive actions should be recorded (where relevant).",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 30,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.17.03",
+      "section": "5.17",
+      "question": "Are there temperature logs for storage rooms?",
+      "points": 5,
+      "expectation_summary": "Temperature control is important in limiting microbial growth for temperature sensitive products. Corrective and preventive actions should be recorded (where relevant).",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 30,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.17.04",
+      "section": "5.17",
+      "question": "Is there a documented procedure for checking truck trailer temperature and reviewing sanitary condition of truck trailers prior to loading?",
+      "points": 10,
+      "expectation_summary": "There should be a documented procedure to check truck trailer (or other transportation system, e.g., railway carriages) temperature and sanitary condition prior to loading. Checks should include cleanliness, trailer fitness for intended use (design and construction materials), issues from previous loads, pest free, odor free, load segregation, etc. Where relevant, requirements from the organization that has contracted the carrier should be followed, including the use of time temperature recording devices and other requirements.",
+      "evidence_tags": [
+        "policy",
+        "records",
+        "pest-animal"
+      ],
+      "source_page": 30,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.17.05",
+      "section": "5.17",
+      "question": "Are there records of shipping truck trailer (or other transportation systems) temperature checks, indicating the truck trailer temperature settings and that the truck trailer was pre-cooled prior to loading?",
+      "points": 5,
+      "expectation_summary": "Truck trailers (or other transportations system, e.g., railway carriages) should be checked to ensure they are pre-cooled when transporting temperature sensitive products, and the truck trailer refrigeration unit set point should be recorded.",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 30,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.17.06",
+      "section": "5.17",
+      "question": "Are there sanitary condition logs for shipping truck trailers (or other transportation systems)?",
+      "points": 5,
+      "expectation_summary": "Truck trailers (or other transportations systems, e.g., railway carriages) should be checked for their sanitary condition and records maintained. Records should reflect the documented procedure.",
+      "evidence_tags": [
+        "policy",
+        "records"
+      ],
+      "source_page": 31,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.18.01",
+      "section": "5.18",
+      "question": "Does the operation handle or store any food allergens?",
+      "points": 0,
+      "expectation_summary": "Information gathering question. If allergens are handled and/or stored within the facility then the allergen questions in this sub-section should be completed (applicability of some questions will vary depending on variables, such as process steps and how allergen containing materials are handled). Also, the allergen hazards should form part of the HACCP and/or Preventive Controls programs. The key concerning allergens (a.k.a. major 9) are Wheat, Eggs, Milk, Soybeans, Crustaceans (Shellfish), Peanuts, Tree Nuts, Sesame and Fish. Legislation should be reviewed to see if the country of production or countries being exported to have different allergen listings (e.g., mustard, celery). If there is no allergen handling on site then mark this question “No”, state an explanation and mark the rest of the allergen questions as N/A.",
+      "evidence_tags": [
+        "policy",
+        "haccp",
+        "facility"
+      ],
+      "source_page": 31,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.18.02",
+      "section": "5.18",
+      "question": "Are there adequate storage controls (e.g., separation, identification, etc.) that ensure that allergens are not contaminating other raw materials?",
+      "points": 5,
+      "expectation_summary": "Allergen materials and allergen containing materials should be stored in a manner that avoids cross contaminating all other materials. Separated areas are ideal and allergen containing products should never be stored above food products, other than those containing the exact same allergens. Allergens should be tagged as usual (rotation and lot coding), and should also be identified as allergens.",
+      "evidence_tags": [],
+      "source_page": 31,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.18.03",
+      "section": "5.18",
+      "question": "Is there a dedicated allergen production line or adequate clean down and production procedures that prevent allergen cross contamination?",
+      "points": 5,
+      "expectation_summary": "Ideally, facilities have separate production line(s) for allergen containing ingredients. If no separate production line is being used, then procedures should be written so as to prevent allergen cross contamination. These procedures might include the specific order of producing allergen containing products and special sanitation SOPs between allergen and non-allergen production runs. Some allergen testing kits (where available for the particular allergen) are also used in order to check the sanitation after an allergen has been used in a product. Where allergen dust is considered a risk, then practices, such as keeping ingredient bins covered, separate sets of tools for different allergens, consideration of ventilation flows, etc., should be considered.",
+      "evidence_tags": [
+        "policy",
+        "risk-assessment",
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 31,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.18.04",
+      "section": "5.18",
+      "question": "Are utensils and work in progress storage containers identified in order to prevent allergen cross contamination?",
+      "points": 5,
+      "expectation_summary": "Utensils, such as shovels, paddles, knives, maintenance tools, etc. should be coded in order to differentiate between items associated with producing different allergen containing products and products that do not contain allergens. Sanitation equipment (e.g., cleaning pads, mops, brushes, etc.) should also be coded and separated between equipment destined to be used on different allergen containing products/processes and nonallergen containing products/processes. Product holding bins, including re-work bins, should be coded in a similar fashion i.e., a separate set of bins for the allergen containing products.",
+      "evidence_tags": [
+        "sanitation",
+        "equipment"
+      ],
+      "source_page": 32,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.18.05",
+      "section": "5.18",
+      "question": "Does re-work handling take into account the issues associated with allergen containing products?",
+      "points": 5,
+      "expectation_summary": "Rework of allergen containing products needs to be strictly controlled. Allergen re-work product should be clearly labeled. Allergen re-work should be stored separately from non-allergen re-work, raw materials and product. Allergen re-work should only be used when a similar allergen containing product is being packed/processed. Even the outside of allergen containing condiment packs might be a risk to the foodstuff (e.g., romaine lettuce) that a condiment pack was touching and therefore this foodstuff (e.g., romaine lettuce) should only be re-used for the allergen containing product. Like all re- work, traceability should be maintained, meaning that the use of re-work materials is being properly recorded.",
+      "evidence_tags": [
+        "records",
+        "risk-assessment",
+        "traceability"
+      ],
+      "source_page": 32,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.18.06",
+      "section": "5.18",
+      "question": "Are workers trained with respect to allergen risks and the facility allergen cross contamination controls (including hand washing between production runs) and are there records of this allergen training?",
+      "points": 5,
+      "expectation_summary": "Workers should be aware of what allergens are, the effects of allergens on allergy sufferers, the actual allergens handled on site and the facility controls to prevent allergen cross contamination. Training should include personnel practices (e.g., hand washing, changing protective garments and gloves, etc.), when moving around the production area between allergen and non- allergen handling. Key operators, including warehouse workers, production workers, label designers, etc., should receive specific training for the risk involved. Training should be recorded.",
+      "evidence_tags": [
+        "training",
+        "records",
+        "risk-assessment",
+        "facility"
+      ],
+      "source_page": 32,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.18.07",
+      "section": "5.18",
+      "question": "Are worker practices adequate and being followed to protect against allergen cross- contact and against contamination of food?",
+      "points": 5,
+      "expectation_summary": "Worker practices should be adequate to ensure that necessary precautions are being followed to protect against allergen cross-contact and against contamination of food, food-contact surfaces, or food-packaging materials with allergenic substances. Practices may include unique color-code designation for PPE, utensils and supplies, designated process and personnel flow.",
+      "evidence_tags": [
+        "equipment"
+      ],
+      "source_page": 32,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    },
+    {
+      "id": "5.18.08",
+      "section": "5.18",
+      "question": "Are all products manufactured on site labeled correctly with respect to allergens?",
+      "points": 5,
+      "expectation_summary": "Allergen containing products should clearly show on the label the allergens that are associated with the product and meet any laws in the country of production and consumption. The correct label should be on the product. If the allergens form part of condiment inclusion packs, these allergens should still be indicated on the main product label. If an operation is producing allergen containing products that will be used as an ingredient by a subsequent manufacturer, the documentation that goes with the product should underline the allergen contents and also, ideally, the bag and cartons should indicate the allergen contained within the product. If non-allergen containing products are produced on a site where allergens are used, the management should consider the chance of allergen cross contamination and if satisfactory controls to prevent such contamination are in place. If there are any doubts about the adequacy of these controls (e.g., GMPs, etc.), then management should consider using a “may contain” (or a similar clause) on the non-allergy containing products (this is a last resort and should not replace proper GMPs).",
+      "evidence_tags": [
+        "records"
+      ],
+      "source_page": 33,
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf"
+    }
+  ]
+}

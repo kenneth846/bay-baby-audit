@@ -8,9 +8,12 @@ A simpler inspection and Primus audit-preparation application for Bay Baby Produ
 - Three-step report form with draft and submission states
 - Manager review and corrective-action workflow
 - Four-step Audit Generator with readiness validation and server-generated PDF download
+- PrimusGFS v4.0 standard view with module readiness and evidence mapping
 - Scalable Supabase schema for dynamic report templates, questions, attachments, reviews, and audit packets
 - Seed locations and initial R001, R004, and R006 report types
 - HeavyConnect transcription ledger under `data/heavyconnect-templates`
+- HeavyConnect completed-report evidence import under `data/heavyconnect-reports`
+- PrimusGFS v4.0 extracted module index under `data/primusgfs/v4`
 
 ## Local setup
 
@@ -20,6 +23,30 @@ A simpler inspection and Primus audit-preparation application for Bay Baby Produ
 4. Open `http://127.0.0.1:3000`.
 
 The current interface uses realistic local demonstration data, so it runs without Supabase credentials. Apply `supabase/migrations/001_initial_schema.sql` and `supabase/seed.sql` when connecting a project.
+
+## Audit standard
+
+Bay Baby Audit now treats PrimusGFS v4.0 as the audit-standard backbone. The extracted v4.0 index includes Modules 1-6, source URLs, question counts, point values, sections, and evidence tags.
+
+Likely Bay Baby scope is Modules 1, 2, 4, 5, and 6. Module 3, Indoor Agriculture, is kept available but marked optional/confirm until the actual audit scope requires it.
+
+HeavyConnect reports should be mapped as evidence against PrimusGFS v4.0 question IDs. HeavyConnect's v3.2 self-audit templates should be crosswalked to v4.0 rather than treated as the source of truth.
+
+## HeavyConnect evidence import
+
+Completed HeavyConnect report PDFs were downloaded locally for January 1, 2025 through January 1, 2026 and indexed into `data/heavyconnect-reports/inventory.json`.
+
+The original PDFs remain local at `C:/Users/kenneth/Desktop/heavyconnectreports/` and are not committed. The committed import includes metadata, report type grouping, bounded field samples, evidence tags, and a first-pass map to PrimusGFS v4.0 modules.
+
+The seven core Bay Baby report types are all represented in the import:
+
+- Daily Sanitation Log
+- FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting
+- R001 Field Activity Log
+- R004 Tractor Inspection
+- R006 Daily Sanitation Log
+- R022 Risk Assessment
+- R024 Field Buffer Log
 
 ## HeavyConnect template migration
 

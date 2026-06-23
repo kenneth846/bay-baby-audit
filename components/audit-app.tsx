@@ -2,6 +2,7 @@
 
 import {
   Archive,
+  BookOpenText,
   Buildings,
   CalendarBlank,
   CaretDown,
@@ -25,8 +26,11 @@ import {
   X,
 } from "@phosphor-icons/react";
 import { useMemo, useState } from "react";
+import heavyConnectInventory from "@/data/heavyconnect-reports/inventory.json";
+import primusV4Index from "@/data/primusgfs/v4/index.json";
 
 type Status = "approved" | "review" | "action" | "draft";
+type View = "inspector" | "standard";
 type Report = {
   id: number; type: string; code: string; location: string; date: string;
   creator: string; status: Status; severity: "Good" | "Attention" | "Issue";
@@ -57,6 +61,7 @@ function ReportIcon({ code }: { code: string }) {
 }
 
 export function AuditApp() {
+  const [view, setView] = useState<View>("inspector");
   const [activeTab, setActiveTab] = useState("all");
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<number[]>([5, 6, 7]);
@@ -102,7 +107,8 @@ export function AuditApp() {
       <aside className="sidebar">
         <div className="brand"><strong>Bay Baby Audit</strong><span>Bay Baby Produce</span></div>
         <nav>
-          <button className="active"><ClipboardText /><span>Inspector</span></button>
+          <button className={view === "inspector" ? "active" : ""} onClick={() => setView("inspector")}><ClipboardText /><span>Inspector</span></button>
+          <button className={view === "standard" ? "active" : ""} onClick={() => setView("standard")}><BookOpenText /><span>Primus v4.0</span></button>
           <button onClick={() => { setModal("audit"); setWizardStep(1); }}><Archive /><span>Audit Packets</span></button>
           <button><Files /><span>Templates</span></button>
           <button><Buildings /><span>Locations</span></button>
@@ -114,11 +120,16 @@ export function AuditApp() {
 
       <main>
         <header className="topbar">
-          <div><h1>Inspector</h1><p>All inspection reports and review status</p></div>
-          <button className="primary" onClick={() => setModal("report")}><Plus /> Start Report</button>
+          <div>
+            <h1>{view === "standard" ? "PrimusGFS v4.0" : "Inspector"}</h1>
+            <p>{view === "standard" ? "Audit standard, module readiness, and Bay Baby evidence mapping" : "All inspection reports and review status"}</p>
+          </div>
+          <button className="primary" onClick={() => view === "standard" ? setModal("audit") : setModal("report")}>
+            {view === "standard" ? <FilePdf /> : <Plus />} {view === "standard" ? "Build Audit Packet" : "Start Report"}
+          </button>
         </header>
 
-        <div className="workspace">
+        {view === "standard" ? <PrimusStandardView /> : <div className="workspace">
           <section className="report-area">
             <div className="tabs">
               {[
@@ -185,7 +196,7 @@ export function AuditApp() {
             <button className="generate" onClick={() => { setModal("audit"); setWizardStep(1); }}><FilePdf /> Generate Audit</button>
             <small>Creates a PDF audit packet ready for Primus submission.</small>
           </aside>
-        </div>
+        </div>}
       </main>
 
       {modal && <div className="modal-backdrop" onMouseDown={() => setModal(null)}>
@@ -199,6 +210,67 @@ export function AuditApp() {
       {toast && <div className="toast"><CheckCircle weight="fill" />{toast}<button onClick={() => setToast("")}><X /></button></div>}
     </div>
   );
+}
+
+function PrimusStandardView() {
+  const modules = primusV4Index.modules;
+  const totalQuestions = modules.reduce((sum, module) => sum + module.question_count, 0);
+  const totalPoints = modules.reduce((sum, module) => sum + module.scored_points, 0);
+  const importedReports = heavyConnectInventory.report_count;
+  const importedReportTypes = heavyConnectInventory.report_type_count;
+  const moduleEvidence = new Map(heavyConnectInventory.primus_v4_module_evidence.map((item) => [item.module_key, item]));
+  const recommendedModules = new Set(["module-1-fsms", "module-2-farm", "module-4-harvest-crew", "module-5-facility", "module-6-haccp"]);
+  const bayBabyEvidence = heavyConnectInventory.expected_bay_baby_report_status;
+
+  return <div className="standard-workspace">
+    <section className="standard-hero">
+      <div>
+        <span>Audit backbone</span>
+        <h2>Use PrimusGFS v4.0 as the source of truth</h2>
+        <p>HeavyConnect reports become evidence against v4.0 questions instead of driving the audit structure. That gives Bay Baby a cleaner packet and keeps us ready for the newer standard.</p>
+      </div>
+      <div className="standard-score">
+        <strong>v4.0</strong>
+        <span>{totalQuestions} questions</span>
+        <span>{totalPoints.toLocaleString()} scored points</span>
+        <span>{importedReports} HeavyConnect PDFs imported</span>
+      </div>
+    </section>
+
+    <section className="module-grid">
+      {modules.map((module) => {
+        const inScope = recommendedModules.has(module.key);
+        const evidence = moduleEvidence.get(module.key);
+        return <article key={module.key} className={inScope ? "in-scope" : ""}>
+          <div>
+            <span>{module.number}</span>
+            {inScope ? <b>Bay Baby scope</b> : <b>Optional / confirm</b>}
+          </div>
+          <h3>{module.title}</h3>
+          <p>{module.question_count} questions • {module.scored_points.toLocaleString()} points • {module.sections.length} sections</p>
+          <div className="mini-progress"><i style={{ width: `${inScope ? Math.min(88, 34 + (evidence?.evidence_count ?? 0) * 6) : 28}%` }} /></div>
+          <small>{evidence?.evidence_count ? `${evidence.evidence_count} downloaded report examples mapped` : "Keep available, use only if audit scope requires it"}</small>
+        </article>;
+      })}
+    </section>
+
+    <div className="standard-columns">
+      <section className="evidence-map">
+        <div className="section-heading"><h2>Bay Baby evidence sources</h2><span>{importedReportTypes} HeavyConnect report types</span></div>
+        {bayBabyEvidence.map((item) => <div className="evidence-row" key={item.report_type}>
+          <CheckCircle weight="duotone" />
+          <div><strong>{item.report_type}</strong><span>{item.count} imported PDF{item.count === 1 ? "" : "s"} • {item.source_files.join(", ")}</span></div>
+        </div>)}
+      </section>
+
+      <section className="gap-panel">
+        <div className="section-heading"><h2>Next gaps to close</h2><span>Before packet generation</span></div>
+        <div className="gap-row"><CheckCircle weight="duotone" /><div><strong>HeavyConnect evidence import complete</strong><span>{importedReports} PDFs from Jan 1, 2025 to Jan 1, 2026 are indexed and ready for mapping.</span></div></div>
+        <div className="gap-row warning"><WarningCircle weight="fill" /><div><strong>Crosswalk v3.2 self-audit to v4.0</strong><span>HeavyConnect self audit may still be v3.2, so the next build step is a translation layer to v4.0 question IDs.</span></div></div>
+        <div className="gap-row"><FilePdf weight="duotone" /><div><strong>Generate question-level packet index</strong><span>Use the imported report examples to attach evidence to specific PrimusGFS v4.0 questions.</span></div></div>
+      </section>
+    </div>
+  </div>;
 }
 
 function ReportForm({ onDone }: { onDone: () => void }) {

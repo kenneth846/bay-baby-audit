@@ -1,0 +1,402 @@
+{
+  "standard": "PrimusGFS",
+  "version": "4.0",
+  "source_page": "https://primusauditingops.com/primusgfs/",
+  "source_docs": [
+    {
+      "key": "general-regulations",
+      "title": "PrimusGFS v4.0 General Regulations",
+      "url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-030-R0-PrimusGFS-v4.0-General-Regulations-1.pdf",
+      "local_cache": "tmp/primusgfs-v4/general-regulations.pdf"
+    },
+    {
+      "key": "summary-of-changes",
+      "title": "PrimusGFS v4.0 Summary of Changes",
+      "url": "https://primusauditingops.com/wp-content/uploads/2025/08/PrimusGFS-v4.0-Summary-of-Changes-1.pdf",
+      "local_cache": "tmp/primusgfs-v4/summary-of-changes.pdf"
+    }
+  ],
+  "modules": [
+    {
+      "key": "module-1-fsms",
+      "number": "Module 1",
+      "title": "Food Safety Management System",
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-1-R0-PrimusGFS-v4.0-Questions-Expectations-MOD1-1.pdf",
+      "local_cache": "tmp/primusgfs-v4/module-1-fsms.pdf",
+      "question_count": 42,
+      "scored_points": 288,
+      "sections": [
+        {
+          "code": "1.01",
+          "questions": 8,
+          "points": 58
+        },
+        {
+          "code": "1.02",
+          "questions": 5,
+          "points": 21
+        },
+        {
+          "code": "1.03",
+          "questions": 4,
+          "points": 20
+        },
+        {
+          "code": "1.04",
+          "questions": 6,
+          "points": 48
+        },
+        {
+          "code": "1.05",
+          "questions": 5,
+          "points": 30
+        },
+        {
+          "code": "1.06",
+          "questions": 5,
+          "points": 50
+        },
+        {
+          "code": "1.07",
+          "questions": 3,
+          "points": 35
+        },
+        {
+          "code": "1.08",
+          "questions": 6,
+          "points": 26
+        }
+      ]
+    },
+    {
+      "key": "module-2-farm",
+      "number": "Module 2",
+      "title": "Farm",
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-2-R0-PrimusGFS-v4.0-Questions-Expectations-MOD2-1.pdf",
+      "local_cache": "tmp/primusgfs-v4/module-2-farm.pdf",
+      "question_count": 62,
+      "scored_points": 549,
+      "sections": [
+        {
+          "code": "2.01",
+          "questions": 3,
+          "points": 25
+        },
+        {
+          "code": "2.02",
+          "questions": 13,
+          "points": 140
+        },
+        {
+          "code": "2.03",
+          "questions": 4,
+          "points": 0
+        },
+        {
+          "code": "2.04",
+          "questions": 6,
+          "points": 0
+        },
+        {
+          "code": "2.05",
+          "questions": 4,
+          "points": 36
+        },
+        {
+          "code": "2.06",
+          "questions": 3,
+          "points": 28
+        },
+        {
+          "code": "2.07",
+          "questions": 12,
+          "points": 100
+        },
+        {
+          "code": "2.08",
+          "questions": 4,
+          "points": 45
+        },
+        {
+          "code": "2.09",
+          "questions": 4,
+          "points": 40
+        },
+        {
+          "code": "2.10",
+          "questions": 6,
+          "points": 90
+        },
+        {
+          "code": "2.11",
+          "questions": 3,
+          "points": 45
+        }
+      ]
+    },
+    {
+      "key": "module-3-indoor-agriculture",
+      "number": "Module 3",
+      "title": "Indoor Agriculture",
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-3-R0-PrimusGFS-v4.0-Questions-Expectations-MOD3-1.pdf",
+      "local_cache": "tmp/primusgfs-v4/module-3-indoor-agriculture.pdf",
+      "question_count": 130,
+      "scored_points": 1226,
+      "sections": [
+        {
+          "code": "3.01",
+          "questions": 4,
+          "points": 25
+        },
+        {
+          "code": "3.02",
+          "questions": 15,
+          "points": 153
+        },
+        {
+          "code": "3.03",
+          "questions": 12,
+          "points": 110
+        },
+        {
+          "code": "3.04",
+          "questions": 5,
+          "points": 46
+        },
+        {
+          "code": "3.05",
+          "questions": 10,
+          "points": 95
+        },
+        {
+          "code": "3.06",
+          "questions": 22,
+          "points": 205
+        },
+        {
+          "code": "3.07",
+          "questions": 7,
+          "points": 48
+        },
+        {
+          "code": "3.08",
+          "questions": 4,
+          "points": 33
+        },
+        {
+          "code": "3.09",
+          "questions": 18,
+          "points": 126
+        },
+        {
+          "code": "3.10",
+          "questions": 8,
+          "points": 90
+        },
+        {
+          "code": "3.11",
+          "questions": 8,
+          "points": 85
+        },
+        {
+          "code": "3.12",
+          "questions": 6,
+          "points": 90
+        },
+        {
+          "code": "3.13",
+          "questions": 3,
+          "points": 45
+        },
+        {
+          "code": "3.14",
+          "questions": 8,
+          "points": 75
+        }
+      ]
+    },
+    {
+      "key": "module-4-harvest-crew",
+      "number": "Module 4",
+      "title": "Harvest Crew",
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-4-R0-PrimusGFS-v4.0-Questions-Expectations-MOD4-1.pdf",
+      "local_cache": "tmp/primusgfs-v4/module-4-harvest-crew.pdf",
+      "question_count": 56,
+      "scored_points": 424,
+      "sections": [
+        {
+          "code": "4.01",
+          "questions": 2,
+          "points": 25
+        },
+        {
+          "code": "4.02",
+          "questions": 2,
+          "points": 15
+        },
+        {
+          "code": "4.03",
+          "questions": 4,
+          "points": 33
+        },
+        {
+          "code": "4.04",
+          "questions": 19,
+          "points": 153
+        },
+        {
+          "code": "4.05",
+          "questions": 20,
+          "points": 143
+        },
+        {
+          "code": "4.06",
+          "questions": 1,
+          "points": 0
+        },
+        {
+          "code": "4.07",
+          "questions": 4,
+          "points": 30
+        },
+        {
+          "code": "4.08",
+          "questions": 4,
+          "points": 25
+        }
+      ]
+    },
+    {
+      "key": "module-5-facility",
+      "number": "Module 5",
+      "title": "Facility",
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-5-R0-PrimusGFS-v4.0-Questions-Expectations-MOD5-2.pdf",
+      "local_cache": "tmp/primusgfs-v4/module-5-facility.pdf",
+      "question_count": 165,
+      "scored_points": 1374,
+      "sections": [
+        {
+          "code": "5.01",
+          "questions": 4,
+          "points": 45
+        },
+        {
+          "code": "5.02",
+          "questions": 10,
+          "points": 100
+        },
+        {
+          "code": "5.03",
+          "questions": 9,
+          "points": 85
+        },
+        {
+          "code": "5.04",
+          "questions": 17,
+          "points": 171
+        },
+        {
+          "code": "5.05",
+          "questions": 13,
+          "points": 83
+        },
+        {
+          "code": "5.06",
+          "questions": 5,
+          "points": 55
+        },
+        {
+          "code": "5.07",
+          "questions": 10,
+          "points": 88
+        },
+        {
+          "code": "5.08",
+          "questions": 14,
+          "points": 98
+        },
+        {
+          "code": "5.09",
+          "questions": 19,
+          "points": 121
+        },
+        {
+          "code": "5.10",
+          "questions": 5,
+          "points": 33
+        },
+        {
+          "code": "5.11",
+          "questions": 3,
+          "points": 18
+        },
+        {
+          "code": "5.12",
+          "questions": 3,
+          "points": 35
+        },
+        {
+          "code": "5.13",
+          "questions": 8,
+          "points": 56
+        },
+        {
+          "code": "5.14",
+          "questions": 13,
+          "points": 120
+        },
+        {
+          "code": "5.15",
+          "questions": 6,
+          "points": 41
+        },
+        {
+          "code": "5.16",
+          "questions": 12,
+          "points": 150
+        },
+        {
+          "code": "5.17",
+          "questions": 6,
+          "points": 40
+        },
+        {
+          "code": "5.18",
+          "questions": 8,
+          "points": 35
+        }
+      ]
+    },
+    {
+      "key": "module-6-haccp",
+      "number": "Module 6",
+      "title": "HACCP",
+      "source_url": "https://primusauditingops.com/wp-content/uploads/2025/08/PGFS-ND-028-6-R0-PrimusGFS-v4.0-Questions-Expectations-MOD6-2.pdf",
+      "local_cache": "tmp/primusgfs-v4/module-6-haccp.pdf",
+      "question_count": 22,
+      "scored_points": 260,
+      "sections": [
+        {
+          "code": "6.01",
+          "questions": 5,
+          "points": 50
+        },
+        {
+          "code": "6.02",
+          "questions": 11,
+          "points": 135
+        },
+        {
+          "code": "6.03",
+          "questions": 6,
+          "points": 75
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Generated from public PrimusGFS v4.0 Questions & Expectations PDFs downloaded from Primus Auditing Ops.",
+    "Original PDFs are cached locally under tmp/ and intentionally ignored by git.",
+    "Use this index as the audit standard backbone; map Bay Baby and HeavyConnect records as evidence against these question IDs."
+  ]
+}
