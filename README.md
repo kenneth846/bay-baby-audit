@@ -48,6 +48,12 @@ The seven core Bay Baby report types are all represented in the import:
 - R022 Risk Assessment
 - R024 Field Buffer Log
 
+## Current production-readiness pass
+
+The app now avoids the earlier demo-only report flow. `Start Report` opens a template picker first, then renders a data-driven report form based on captured HeavyConnect template fields or completed-report examples. The Inspector list is also populated from the imported HeavyConnect evidence inventory instead of hardcoded tractor/sanitation examples.
+
+Captured templates render from `data/heavyconnect-templates`. Templates not yet captured live in HeavyConnect are marked as inferred and built from downloaded report PDFs until the exact template can be transcribed.
+
 ## HeavyConnect template migration
 
 The active-template verification found six report types with activity in HeavyConnect's visible summary period:
