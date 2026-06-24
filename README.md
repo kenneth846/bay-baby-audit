@@ -19,9 +19,10 @@ A simpler inspection and Primus audit-preparation application for Bay Baby Produ
 ## Local setup
 
 1. Copy `.env.example` to `.env.local` and add Supabase values. Keep `SUPABASE_SECRET_KEY` local only; do not commit it.
-2. Install dependencies with `pnpm install`.
-3. Run `pnpm dev`.
-4. Open `http://127.0.0.1:3000`.
+2. If you deploy on Netlify, also set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Browser code cannot read the non-public `SUPABASE_*` variables.
+3. Install dependencies with `pnpm install`.
+4. Run `pnpm dev`.
+5. Open `http://127.0.0.1:3000`.
 
 The current interface uses realistic local demonstration data, so it runs without Supabase credentials. Apply `supabase/migrations/001_initial_schema.sql` and `supabase/seed.sql` when connecting a project.
 
