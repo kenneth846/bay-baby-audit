@@ -101,7 +101,7 @@ main { min-width: 0; }
 .text-link { padding: 0; background: transparent; border: 0; color: var(--green); font-weight: 600; text-align: left; cursor: pointer; font-size: 12px; }
 .readiness p b { color: var(--green); }
 .readiness > span { color: var(--green); font-weight: 600; font-size: 12px; }
-.progress { height: 7px; background: #dedfdd; border-radius: 8px; margin-top: 5px; overflow: hidden; }.progress i { display: block; height: 100%; width: 78%; background: var(--green); border-radius: 8px; }
+.progress { height: 7px; background: #dedfdd; border-radius: 8px; margin-top: 5px; overflow: hidden; }.progress i { display: block; height: 100%; width: 0; background: var(--green); border-radius: 8px; }
 .legend { padding: 20px 0 8px; display: flex; flex-direction: column; gap: 9px; font-size: 12px; }
 .legend span { display: grid; grid-template-columns: 8px 1fr auto; align-items: center; gap: 8px; color: #545c59; }
 .legend i { width: 7px; height: 7px; border-radius: 50%; }.green { background: var(--green); }.yellow { background: var(--amber); }.orange { background: var(--orange); }.red { background: var(--red); }.gray { background: #929895; }
