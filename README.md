@@ -4,10 +4,10 @@ A simpler inspection and Primus audit-preparation application for Bay Baby Produ
 
 ## Included
 
-- Responsive Inspector report inbox with status tabs, filters, search, selection, and audit scope
-- Three-step report form with draft and submission states
-- Manager review and corrective-action workflow
-- Four-step Audit Generator with readiness validation and server-generated PDF download
+- Responsive Inspector report inbox loaded from Supabase
+- Supabase-backed location, team, template, and report counts
+- Manager review and corrective-action surfaces for real reports
+- Four-step Audit Generator with selected-report validation and server-generated PDF download
 - PrimusGFS v4.0 standard view with module readiness and evidence mapping
 - Legacy self-audit capture plus a draft question crosswalk to PrimusGFS v4.0
 - Scalable Supabase schema for dynamic report templates, questions, attachments, reviews, and audit packets
@@ -22,9 +22,13 @@ A simpler inspection and Primus audit-preparation application for Bay Baby Produ
 2. If you deploy on Netlify, also set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Browser code cannot read the non-public `SUPABASE_*` variables.
 3. Install dependencies with `pnpm install`.
 4. Run `pnpm dev`.
-5. Open `http://127.0.0.1:3000`.
+5. Apply `supabase/migrations/001_initial_schema.sql` to the target Supabase project.
+6. Add real reference rows. `supabase/seed.sql` only inserts starter locations and report types; it does not create users or fake reports.
+7. Open `http://127.0.0.1:3000`.
 
-The current interface uses realistic local demonstration data, so it runs without Supabase credentials. Apply `supabase/migrations/001_initial_schema.sql` and `supabase/seed.sql` when connecting a project.
+The app no longer falls back to local demonstration reports, people, locations, or readiness scores. If Supabase tables are missing, empty, or blocked by RLS, the UI shows that state instead of fabricating data.
+
+With the currently configured project URL, a direct REST check returned `Could not find the table 'public.locations' in the schema cache`, which means the migration has not been applied to that Supabase project yet or the table was created in a different schema/project.
 
 ## Roles and approvals
 
@@ -64,9 +68,9 @@ The seven core Bay Baby report types are all represented in the import:
 
 ## Current production-readiness pass
 
-The app now avoids the earlier demo-only report flow. `Start Report` opens a template picker first, then renders a data-driven report form based on Bay Baby template fields or completed-report examples. The Inspector list is also populated from the imported historical evidence inventory instead of hardcoded tractor/sanitation examples.
+The app now avoids the earlier demo-only report flow. The Inspector, Locations, Team, Templates, and Settings views read Supabase data and show empty/setup states when no real rows are available.
 
-Captured templates render from `data/heavyconnect-templates`. Remaining live dropdown/multi-select option gaps are tracked in `data/heavyconnect-templates/live-capture-gaps.json` and should not be guessed.
+Captured templates remain under `data/heavyconnect-templates` as migration/reference material. Runtime templates should come from `public.report_templates` and `public.report_template_questions`. Remaining live dropdown/multi-select option gaps are tracked in `data/heavyconnect-templates/live-capture-gaps.json` and should not be guessed.
 
 ## Template migration
 

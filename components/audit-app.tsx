@@ -23,15 +23,8 @@ import {
   X,
 } from "@phosphor-icons/react";
 import { useMemo, useState } from "react";
+import type { AppLocation, AppReport, AppTeamMember, AppTemplate } from "@/app/page";
 import heavyConnectInventory from "@/data/heavyconnect-reports/inventory.json";
-import dailySanitationTemplate from "@/data/heavyconnect-templates/daily-sanitation-log.json";
-import freshTemplate from "@/data/heavyconnect-templates/fresh-committee-meeting.json";
-import r001Template from "@/data/heavyconnect-templates/r001-field-activity-log.json";
-import r022Template from "@/data/heavyconnect-templates/r022-risk-assessment.json";
-import r024Template from "@/data/heavyconnect-templates/r024-field-buffer-log.json";
-import r004Template from "@/data/heavyconnect-templates/r004-tractor-inspection.json";
-import r006Template from "@/data/heavyconnect-templates/r006-daily-sanitation-log.json";
-import liveCaptureGaps from "@/data/heavyconnect-templates/live-capture-gaps.json";
 import heavyConnectSelfAudit32 from "@/data/heavyconnect-self-audits/primus-gfs-3-2.json";
 import primusCrosswalk from "@/data/primusgfs/crosswalks/v3-2-to-v4-0.json";
 import primusV4Index from "@/data/primusgfs/v4/index.json";
@@ -62,6 +55,7 @@ type TemplateSection = {
 };
 
 type TemplateDefinition = {
+  id: string;
   key: string;
   code: string;
   name: string;
@@ -69,20 +63,11 @@ type TemplateDefinition = {
   status: "ready" | "needs_options_review";
   source: string;
   moduleTargets: string[];
-  lastExample?: string;
-  sections: TemplateSection[];
-};
-
-type TemplateJson = {
-  name: string;
-  category: string;
-  status?: string;
-  source?: string;
   sections: TemplateSection[];
 };
 
 type Report = {
-  id: number;
+  id: string;
   reportId: string;
   type: string;
   code: string;
@@ -95,26 +80,6 @@ type Report = {
   evidenceTags: string[];
 };
 
-const activeTemplateNames = [
-  "R001 Field Activity Log",
-  "R004 Tractor Inspection",
-  "R006 Daily Sanitation Log",
-  "R022 Risk Assessment",
-  "R024 Field Buffer Log",
-  "Daily Sanitation Log",
-  "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting",
-];
-
-const farmLocations = [
-  "BBP-FARM / 2026 South Fork",
-  "BBP-FARM / 2026 SW Hoffman",
-  "BBP-FARM / 2026 Maplewood",
-  "BBP-FARM / 2026 Org. Cram-Jenson",
-  "BBP-FARM / 2026 Youngquist",
-  "BBP-FARM / 2026 S. Reedy",
-  "BBP Warehouse / BBP-WH",
-];
-
 const statusCopy = {
   approved: { label: "Approved", action: "View packet" },
   review: { label: "Needs review", action: "Review" },
@@ -122,37 +87,14 @@ const statusCopy = {
   submitted: { label: "Submitted", action: "Review" },
 };
 
-const bayBabyLocations = [
-  { code: "SF", name: "2026 South Fork", area: "Farm", manager: "Juan Diaz", active: true, readiness: 92 },
-  { code: "SWH", name: "2026 SW Hoffman", area: "Farm", manager: "Maria Lopez", active: true, readiness: 88 },
-  { code: "MW", name: "2026 Maplewood", area: "Farm", manager: "Alex Torres", active: true, readiness: 84 },
-  { code: "OCJ", name: "2026 Org. Cram-Jenson", area: "Organic Farm", manager: "Juan Diaz", active: true, readiness: 79 },
-  { code: "YQ", name: "2026 Youngquist", area: "Farm", manager: "Chris Nguyen", active: true, readiness: 83 },
-  { code: "WH", name: "BBP Warehouse", area: "Facility", manager: "Maria Lopez", active: true, readiness: 90 },
-];
-
-const teamMembers = [
-  { initials: "JD", name: "Juan Diaz", role: "Manager", access: "Can approve reports and generate packets", status: "Active" },
-  { initials: "ML", name: "Maria Lopez", role: "Reviewer", access: "Can review reports and assign corrective actions", status: "Active" },
-  { initials: "AT", name: "Alex Torres", role: "Operator", access: "Can create and submit reports", status: "Active" },
-  { initials: "CN", name: "Chris Nguyen", role: "Auditor", access: "Can view approved evidence and packets", status: "Invited" },
-];
-
-const appSettings = [
-  { label: "Audit standard", value: "PrimusGFS v4.0", note: "Official source of truth for audit packets" },
-  { label: "Packet format", value: "Clean Bay Baby binder", note: "Internal format, with Primus question references" },
-  { label: "Report approval", value: "Manager or reviewer required", note: "Operators can submit, not approve" },
-  { label: "Evidence retention", value: "24 months minimum", note: "Matches audit-record expectations" },
-  { label: "Supabase project", value: "Connected configuration ready", note: "Keys stay in environment variables" },
-];
-
-function normalizeCode(name: string) {
-  const match = name.match(/^(R\d{3})/);
-  if (match) return match[1];
-  if (name.startsWith("FRESH")) return "FRESH";
-  if (name === "Daily Sanitation Log") return "SAN";
-  return "LOG";
-}
+type AuditAppData = {
+  connected: boolean;
+  error: string | null;
+  reports: AppReport[];
+  locations: AppLocation[];
+  teamMembers: AppTeamMember[];
+  templates: AppTemplate[];
+};
 
 function cleanQuestionLabel(label: string) {
   return label
@@ -162,109 +104,24 @@ function cleanQuestionLabel(label: string) {
     .trim();
 }
 
-function reportStatus(index: number): Status {
-  if (index % 11 === 0) return "action";
-  if (index % 5 === 0) return "review";
-  return "approved";
-}
-
-function reportSeverity(status: Status): Report["severity"] {
-  if (status === "action") return "Issue";
-  if (status === "review") return "Attention";
-  return "Good";
-}
-
-function buildImportedReports(): Report[] {
-  return heavyConnectInventory.reports.map((report, index) => {
-    const status = reportStatus(index);
-    return {
-      id: index + 1,
-      reportId: report.report_id || `${index + 1}`,
-      type: report.report_type,
-      code: normalizeCode(report.report_type),
-      location: report.location || "No location recorded",
-      date: report.date_time || "No date recorded",
-      creator: report.creator || "Unknown",
-      status,
-      severity: reportSeverity(status),
-      sourceFile: report.source_file,
-      evidenceTags: report.evidence_tags,
-    };
-  });
-}
-
-function templateFromJson(template: TemplateJson, key: string, status: TemplateDefinition["status"], source: string, moduleTargets: string[]): TemplateDefinition {
-  return {
-    key,
-    code: normalizeCode(template.name),
-    name: template.name,
-    category: template.category,
-    status,
-    source,
-    moduleTargets,
-    sections: template.sections,
-  };
-}
-
-function buildTemplates(): TemplateDefinition[] {
-  return [
-    {
-      key: "r001-field-activity-log",
-      code: "R001",
-      name: r001Template.name,
-      category: "Field",
-      status: "needs_options_review",
-      source: "Ready to use. Admin should confirm a few dropdown option lists before locking this template.",
-      moduleTargets: ["Module 2 Farm"],
-      sections: r001Template.sections,
-    },
-    {
-      key: "r004-tractor-inspection",
-      code: "R004",
-      name: r004Template.name,
-      category: "Field",
-      status: "ready",
-      source: "Ready to use.",
-      moduleTargets: ["Module 2 Farm", "Module 5 Facility"],
-      sections: r004Template.sections,
-    },
-    {
-      key: "r006-daily-sanitation-log",
-      code: "R006",
-      name: r006Template.name,
-      category: "Field / Warehouse",
-      status: "ready",
-      source: "Ready to use.",
-      moduleTargets: ["Module 5 Facility"],
-      sections: r006Template.sections,
-    },
-    templateFromJson(r022Template, "r022-risk-assessment", "needs_options_review", "Ready to use. Admin should confirm conditional dropdowns before locking.", ["Module 2 Farm"]),
-    templateFromJson(r024Template, "r024-field-buffer-log", "needs_options_review", "Ready to use. Admin should confirm optional buffer dropdowns before locking.", ["Module 2 Farm"]),
-    templateFromJson(dailySanitationTemplate, "daily-sanitation-log", "needs_options_review", "Ready to use. Admin should confirm warehouse/harvest variant controls before locking.", ["Module 4 Harvest Crew", "Module 5 Facility"]),
-    templateFromJson(freshTemplate, "fresh-committee-meeting", "needs_options_review", "Ready to use. Admin should confirm attendance selector behavior before locking.", ["Module 1 FSMS", "Module 6 HACCP"]),
-  ];
-}
-
 function ReportIcon({ code }: { code: string }) {
   if (code === "R004") return <Tractor weight="duotone" />;
   if (code === "R006" || code === "SAN") return <ShieldCheck weight="duotone" />;
   return <ClipboardText weight="duotone" />;
 }
 
-export function AuditApp() {
+export function AuditApp({ initialData }: { initialData: AuditAppData }) {
   const [view, setView] = useState<View>("inspector");
   const [activeTab, setActiveTab] = useState("all");
   const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState<number[]>([1, 2, 3, 4, 5, 6, 7]);
+  const [selected, setSelected] = useState<string[]>([]);
   const [modal, setModal] = useState<Modal>(null);
   const [currentReport, setCurrentReport] = useState<Report | null>(null);
   const [wizardStep, setWizardStep] = useState(1);
   const [toast, setToast] = useState("");
 
-  const templates = useMemo(() => buildTemplates(), []);
-  const [newReports, setNewReports] = useState<Report[]>([]);
-  const importedReports = useMemo(() => buildImportedReports(), []);
-  const allReports = useMemo(() => [...newReports, ...importedReports], [importedReports, newReports]);
+  const templates = initialData.templates;
+  const allReports = initialData.reports;
   const reports = useMemo(() => allReports.filter((report) => {
     const matchesTab = activeTab === "all" || report.status === activeTab ||
       (activeTab === "ready" && report.status === "approved");
@@ -272,7 +129,7 @@ export function AuditApp() {
     return matchesTab && text.includes(query.toLowerCase());
   }), [activeTab, allReports, query]);
 
-  const toggle = (id: number) => setSelected((items) =>
+  const toggle = (id: string) => setSelected((items) =>
     items.includes(id) ? items.filter((item) => item !== id) : [...items, id]);
 
   const openReport = (report: Report) => {
@@ -281,16 +138,28 @@ export function AuditApp() {
   };
 
   async function downloadPacket() {
+    const selectedReports = allReports.filter((report) => selected.includes(report.id));
+    const approvedCount = selectedReports.filter((report) => report.status === "approved").length;
+    const reviewCount = selectedReports.filter((report) => report.status === "review" || report.status === "submitted").length;
+    const actionCount = selectedReports.filter((report) => report.status === "action").length;
+    const readiness = selectedReports.length ? Math.round((approvedCount / selectedReports.length) * 100) : 0;
     const response = await fetch("/api/audit-packet", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ count: selected.length || heavyConnectInventory.report_count, generatedBy: "Juan Diaz" }),
+      body: JSON.stringify({
+        count: selectedReports.length,
+        approvedCount,
+        reviewCount,
+        actionCount,
+        readiness,
+        generatedBy: "Bay Baby Audit",
+      }),
     });
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "Bay-Baby-PrimusGFS-v4-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
+    a.download = "Bay-Baby-PrimusGFS-v4-Audit-Packet.pdf";
     a.click();
     URL.revokeObjectURL(url);
     setToast("Audit packet generated");
@@ -298,12 +167,12 @@ export function AuditApp() {
   }
 
   const pageCopy = {
-    inspector: ["Inspector", "Create, review, approve, and prepare Bay Baby reports for audit"],
+    inspector: ["Inspector", "Create, review, approve, and prepare Supabase reports for audit"],
     standard: ["PrimusGFS v4.0", "Audit standard, module readiness, and Bay Baby evidence mapping"],
     templates: ["Templates", "Bay Baby report templates, questions, and admin review status"],
-    locations: ["Locations", "Ranches, facilities, and audit readiness by site"],
-    team: ["Team", "Users, roles, invitations, and approval permissions"],
-    settings: ["Settings", "Company defaults, audit rules, and system configuration"],
+    locations: ["Locations", "Sites loaded from Supabase"],
+    team: ["Team", "Users and roles loaded from Supabase"],
+    settings: ["Settings", "Supabase connection and schema status"],
   } satisfies Record<View, [string, string]>;
   const [topbarTitle, topbarCopy] = pageCopy[view];
 
@@ -320,7 +189,7 @@ export function AuditApp() {
           <button className={view === "team" ? "active" : ""} onClick={() => setView("team")}><UsersThree /><span>Team</span></button>
           <button className={view === "settings" ? "active" : ""} onClick={() => setView("settings")}><Gear /><span>Settings</span></button>
         </nav>
-        <div className="profile"><div className="avatar">JD</div><div><strong>Juan Diaz</strong><span>Manager</span></div><CaretDown /></div>
+        <div className="profile"><div className="avatar">BB</div><div><strong>Bay Baby</strong><span>Supabase data</span></div><CaretDown /></div>
       </aside>
 
       <main>
@@ -333,12 +202,14 @@ export function AuditApp() {
 
         {view === "standard" && <PrimusStandardView />}
         {view === "templates" && <TemplatesView templates={templates} onStart={() => setModal("start")} />}
-        {view === "locations" && <LocationsView />}
-        {view === "team" && <TeamView />}
-        {view === "settings" && <SettingsView />}
+        {view === "locations" && <LocationsView locations={initialData.locations} />}
+        {view === "team" && <TeamView teamMembers={initialData.teamMembers} />}
+        {view === "settings" && <SettingsView connected={initialData.connected} error={initialData.error} reportCount={allReports.length} locationCount={initialData.locations.length} templateCount={templates.length} teamCount={initialData.teamMembers.length} />}
         {view === "inspector" && <InspectorView
           reports={reports}
           totalReports={allReports.length}
+          reportTypeCount={new Set(allReports.map((report) => report.code)).size}
+          dataError={initialData.error}
           selected={selected}
           activeTab={activeTab}
           query={query}
@@ -354,15 +225,9 @@ export function AuditApp() {
       {modal && <div className="modal-backdrop" onMouseDown={() => setModal(null)}>
         <div className={`modal ${modal === "audit" || modal === "start" ? "wide" : ""}`} onMouseDown={(event) => event.stopPropagation()}>
           <button className="modal-close" onClick={() => setModal(null)}><X /></button>
-          {modal === "start" && <StartReportFlow templates={templates} onCancel={() => setModal(null)} onSubmit={(report) => {
-            setNewReports((items) => [report, ...items]);
-            setSelected((items) => [report.id, ...items]);
-            setModal(null);
-            setToast("Report submitted for review");
-            setView("inspector");
-          }} />}
+          {modal === "start" && <StartReportFlow templates={templates} locations={initialData.locations} onCancel={() => setModal(null)} />}
           {modal === "review" && currentReport && <ReviewPanel report={currentReport} onDone={() => { setModal(null); setToast("Report marked reviewed"); }} />}
-          {modal === "audit" && <AuditWizard step={wizardStep} setStep={setWizardStep} onGenerate={downloadPacket} selected={selected.length || heavyConnectInventory.report_count} />}
+          {modal === "audit" && <AuditWizard step={wizardStep} setStep={setWizardStep} onGenerate={downloadPacket} selected={selected.length} reportTypeCount={new Set(allReports.map((report) => report.code)).size} templateCount={templates.length} />}
         </div>
       </div>}
       {toast && <div className="toast"><CheckCircle weight="fill" />{toast}<button onClick={() => setToast("")}><X /></button></div>}
@@ -373,13 +238,15 @@ export function AuditApp() {
 function InspectorView(props: {
   reports: Report[];
   totalReports: number;
-  selected: number[];
+  reportTypeCount: number;
+  dataError: string | null;
+  selected: string[];
   activeTab: string;
   query: string;
   setQuery: (value: string) => void;
   setActiveTab: (value: string) => void;
-  setSelected: (items: number[]) => void;
-  toggle: (id: number) => void;
+  setSelected: (items: string[]) => void;
+  toggle: (id: string) => void;
   openReport: (report: Report) => void;
   onGenerate: () => void;
 }) {
@@ -401,11 +268,11 @@ function InspectorView(props: {
           </button>
         ))}
       </div>
-      <p className="helper">Showing Bay Baby reports for Jan 1, 2025 to Jan 1, 2026. Review anything flagged before generating the Primus packet.</p>
+      <p className="helper">{props.dataError ? `Supabase data is unavailable: ${props.dataError}` : "Showing live Bay Baby reports from Supabase. Review anything flagged before generating the Primus packet."}</p>
       <div className="filters">
-        <button><CalendarBlank /> Jan 1, 2025 - Jan 1, 2026 <CaretDown /></button>
+        <button><CalendarBlank /> All report dates <CaretDown /></button>
         <button><MapPin /> All locations <CaretDown /></button>
-        <button><ClipboardText /> {heavyConnectInventory.report_type_count} report types <CaretDown /></button>
+        <button><ClipboardText /> {props.reportTypeCount} report types <CaretDown /></button>
         <label><MagnifyingGlass /><input value={props.query} onChange={(event) => props.setQuery(event.target.value)} placeholder="Search reports..." /></label>
         <button className="filter-button"><Funnel /> Filters</button>
       </div>
@@ -431,17 +298,17 @@ function InspectorView(props: {
             </button>
           </article>
         ))}
-        {props.reports.length === 0 && <div className="empty"><MagnifyingGlass /><strong>No reports found</strong><span>Try another search or status tab.</span></div>}
+        {props.reports.length === 0 && <div className="empty"><MagnifyingGlass /><strong>No Supabase reports found</strong><span>{props.dataError ? "Apply the migration or check the table names in Supabase." : "Create reports in Supabase or adjust the current filters."}</span></div>}
       </div>
       <footer className="pagination"><span>{props.reports.length} of {props.totalReports} reports</span><div><button disabled>‹</button><button className="active">1</button><button>›</button></div></footer>
     </section>
 
     <aside className="audit-scope">
       <h2>Audit scope</h2>
-      <button className="date-control"><CalendarBlank /> Jan 1, 2025 - Jan 1, 2026 <CaretDown /></button>
-      <div className="scope-section"><strong>Evidence ready</strong><p><b>{props.totalReports}</b> records</p><span>{heavyConnectInventory.report_type_count} report types</span></div>
+      <button className="date-control"><CalendarBlank /> All report dates <CaretDown /></button>
+      <div className="scope-section"><strong>Supabase records</strong><p><b>{props.totalReports}</b> reports</p><span>{props.reportTypeCount} report types</span></div>
       <div className="scope-section"><strong>Reports included</strong><p><b>{props.selected.length}</b> selected</p><button className="text-link">View selected</button></div>
-      <div className="scope-section readiness"><strong>Readiness</strong><p><b>{readiness}%</b></p><span>{needsAttention ? `${needsAttention} need attention` : "Good to go"}</span><div className="progress"><i style={{ width: `${readiness}%` }} /></div></div>
+      <div className="scope-section readiness"><strong>Readiness</strong><p><b>{readiness}%</b></p><span>{props.reports.length === 0 ? "No reports loaded" : needsAttention ? `${needsAttention} need attention` : "Good to go"}</span><div className="progress"><i style={{ width: `${readiness}%` }} /></div></div>
       <div className="legend">
         <span><i className="green" />Approved <b>{approved}</b></span>
         <span><i className="yellow" />Needs review <b>{props.reports.filter((report) => report.status === "review").length}</b></span>
@@ -455,26 +322,14 @@ function InspectorView(props: {
 }
 
 function TemplatesView({ templates, onStart }: { templates: TemplateDefinition[]; onStart: () => void }) {
-  const remainingGapCount = liveCaptureGaps.templates.reduce((sum, template) => sum + template.missing_controls.length, 0);
-
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
-        <span>Active templates</span>
-        <h2>Start from the same reports Bay Baby actually uses</h2>
-        <p>Templates are ready for daily use. Admin review items show controls that should be locked before final audit season.</p>
+        <span>Supabase templates</span>
+        <h2>{templates.length} report templates loaded</h2>
+        <p>Templates are read from Supabase. Add real published templates and questions before operators create reports.</p>
       </div>
       <button className="primary" onClick={onStart}><Plus /> Start Report</button>
-    </section>
-    <section className="gap-panel template-gaps">
-      <div className="section-heading"><h2>Admin review remaining</h2><span>{remainingGapCount} controls/options</span></div>
-      {liveCaptureGaps.templates.map((template) => <div className="gap-row warning" key={template.name}>
-        <WarningCircle weight="fill" />
-        <div>
-          <strong>{template.name}</strong>
-          <span>{template.missing_controls.slice(0, 2).join("; ")}{template.missing_controls.length > 2 ? `; +${template.missing_controls.length - 2} more` : ""}</span>
-        </div>
-      </div>)}
     </section>
     <section className="template-table">
       {templates.map((template) => <article key={template.key}>
@@ -487,6 +342,7 @@ function TemplatesView({ templates, onStart }: { templates: TemplateDefinition[]
         </div>
         <b className={`capture ${template.status}`}>{template.status === "ready" ? "Ready" : "Option review"}</b>
       </article>)}
+      {templates.length === 0 && <EmptyTable title="No Supabase templates" copy="Apply the schema and insert real report_templates with report_template_questions." />}
     </section>
   </div>;
 }
@@ -557,109 +413,105 @@ function PrimusStandardView() {
     </div>
   </div>;
 }
-function LocationsView() {
-  const averageReadiness = Math.round(bayBabyLocations.reduce((sum, location) => sum + location.readiness, 0) / bayBabyLocations.length);
+function LocationsView({ locations }: { locations: AppLocation[] }) {
+  const activeLocations = locations.filter((location) => location.active).length;
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
         <span>Sites</span>
-        <h2>{bayBabyLocations.length} active Bay Baby locations</h2>
-        <p>Use this screen to keep ranches, warehouses, and audit readiness visible before report creation and packet generation.</p>
+        <h2>{activeLocations} active Bay Baby locations</h2>
+        <p>Locations are loaded from Supabase. Empty results mean the reference table has not been seeded yet or RLS is blocking the current user.</p>
       </div>
-      <div className="standard-score small-score"><strong>{averageReadiness}%</strong><span>Average readiness</span><span>{bayBabyLocations.filter((location) => location.active).length} active</span></div>
+      <div className="standard-score small-score"><strong>{locations.length}</strong><span>Total locations</span><span>{activeLocations} active</span></div>
     </section>
     <section className="template-table management-table">
-      {bayBabyLocations.map((location) => <article key={location.code}>
+      {locations.map((location) => <article key={location.id}>
         <div className="template-icon"><Buildings weight="duotone" /></div>
         <div>
-          <span>{location.area} ? {location.code}</span>
+          <span>{location.code}</span>
           <h3>{location.name}</h3>
-          <p>Manager: {location.manager} ? Status: {location.active ? "Active" : "Inactive"}</p>
-          <div className="mini-progress"><i style={{ width: `${location.readiness}%` }} /></div>
+          <p>Status: {location.active ? "Active" : "Inactive"}</p>
         </div>
-        <b className="capture ready">{location.readiness}% ready</b>
+        <b className={`capture ${location.active ? "ready" : "inferred"}`}>{location.active ? "Active" : "Inactive"}</b>
       </article>)}
+      {locations.length === 0 && <EmptyTable title="No Supabase locations" copy="Apply the migration and seed real location rows before using this view." />}
     </section>
   </div>;
 }
 
-function TeamView() {
+function TeamView({ teamMembers }: { teamMembers: AppTeamMember[] }) {
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
         <span>Access control</span>
-        <h2>Roles are ready for approval workflows</h2>
-        <p>Operators submit reports. Managers and reviewers approve. Admins manage templates and users. Auditors get read-only packet access.</p>
+        <h2>{teamMembers.length} Supabase user profiles</h2>
+        <p>User profiles are loaded from Supabase. Invite and authentication flows should create these rows instead of relying on demo people.</p>
       </div>
       <button className="primary"><Plus /> Invite user</button>
     </section>
     <section className="template-table management-table">
-      {teamMembers.map((member) => <article key={member.name}>
+      {teamMembers.map((member) => <article key={member.id}>
         <div className="avatar table-avatar">{member.initials}</div>
         <div>
-          <span>{member.role} ? {member.status}</span>
+          <span>{member.role} - {member.status}</span>
           <h3>{member.name}</h3>
-          <p>{member.access}</p>
+          <p>Role stored in public.users_profile</p>
         </div>
         <b className={`capture ${member.status === "Active" ? "ready" : "needs_options_review"}`}>{member.status}</b>
       </article>)}
+      {teamMembers.length === 0 && <EmptyTable title="No Supabase profiles" copy="Sign in or insert real users_profile rows to populate team access." />}
     </section>
   </div>;
 }
 
-function SettingsView() {
+function SettingsView(props: { connected: boolean; error: string | null; reportCount: number; locationCount: number; templateCount: number; teamCount: number }) {
+  const settings = [
+    { label: "Supabase connection", value: props.connected ? "Readable" : "Needs setup", note: props.error ?? "Queries completed without Supabase errors" },
+    { label: "Reports table", value: `${props.reportCount} rows`, note: "Loaded from public.reports" },
+    { label: "Locations table", value: `${props.locationCount} rows`, note: "Loaded from public.locations" },
+    { label: "Templates table", value: `${props.templateCount} rows`, note: "Loaded from public.report_templates" },
+    { label: "User profiles", value: `${props.teamCount} rows`, note: "Loaded from public.users_profile" },
+  ];
+
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
         <span>Configuration</span>
-        <h2>Bay Baby Audit is configured for PrimusGFS v4.0</h2>
-        <p>These settings define how reports move from creation to review, approval, packet generation, and audit export.</p>
+        <h2>{props.connected ? "Supabase schema is readable" : "Supabase schema needs attention"}</h2>
+        <p>{props.error ?? "The app is reading live tables through the configured Supabase project."}</p>
       </div>
-      <button className="primary"><Check /> Save settings</button>
+      <button className="primary"><Check /> Checked</button>
     </section>
     <section className="template-table management-table">
-      {appSettings.map((setting) => <article key={setting.label}>
+      {settings.map((setting) => <article key={setting.label}>
         <div className="template-icon"><Gear weight="duotone" /></div>
         <div>
           <span>{setting.label}</span>
           <h3>{setting.value}</h3>
           <p>{setting.note}</p>
         </div>
-        <b className="capture ready">Set</b>
+        <b className={`capture ${props.connected ? "ready" : "needs_options_review"}`}>{props.connected ? "Loaded" : "Check"}</b>
       </article>)}
     </section>
   </div>;
 }
 
-function StartReportFlow({ templates, onCancel, onSubmit }: { templates: TemplateDefinition[]; onCancel: () => void; onSubmit: (report: Report) => void }) {
+function EmptyTable({ title, copy }: { title: string; copy: string }) {
+  return <div className="empty table-empty"><MagnifyingGlass /><strong>{title}</strong><span>{copy}</span></div>;
+}
+
+function StartReportFlow({ templates, locations, onCancel }: { templates: TemplateDefinition[]; locations: AppLocation[]; onCancel: () => void }) {
   const [selectedTemplateKey, setSelectedTemplateKey] = useState(templates[0]?.key ?? "");
   const [step, setStep] = useState(1);
   const [search, setSearch] = useState("");
-  const [location, setLocation] = useState(farmLocations[0]);
-  const [reportedBy, setReportedBy] = useState("Juan Diaz");
+  const [location, setLocation] = useState(locations[0]?.id ?? "");
   const selectedTemplate = templates.find((template) => template.key === selectedTemplateKey) ?? templates[0];
   const filteredTemplates = templates.filter((template) => `${template.name} ${template.category} ${template.code}`.toLowerCase().includes(search.toLowerCase()));
-  const firstSection = selectedTemplate.sections[0];
-  const statusLabel = selectedTemplate.status === "ready" ? "Ready" : "Needs option review";
-
-  const submitReport = () => {
-    onSubmit({
-      id: Date.now(),
-      reportId: `BBA-${Math.floor(100000 + Math.random() * 900000)}`,
-      type: selectedTemplate.name,
-      code: selectedTemplate.code,
-      location,
-      date: "06/23/2026 07:00 AM",
-      creator: reportedBy || "Juan Diaz",
-      status: "review",
-      severity: "Attention",
-      sourceFile: "Created in Bay Baby Audit",
-      evidenceTags: selectedTemplate.moduleTargets,
-    });
-  };
+  const firstSection = selectedTemplate?.sections[0];
+  const statusLabel = selectedTemplate?.status === "ready" ? "Ready" : "Needs option review";
 
   return <div className="form-panel start-flow">
-    <div className="modal-heading"><span>Start Report</span><h2>{step === 1 ? "Choose a report template" : selectedTemplate.name}</h2><p>{step === 1 ? "Pick a Bay Baby report type, fill it out, and submit it for review." : selectedTemplate.source}</p></div>
+    <div className="modal-heading"><span>Start Report</span><h2>{step === 1 ? "Choose a report template" : selectedTemplate?.name ?? "No templates available"}</h2><p>{step === 1 ? "Pick a Supabase template before creating a report." : selectedTemplate?.source}</p></div>
     <div className="stepper real-stepper">{["Template", "Basics", "Questions", "Submit"].map((label, index) => <span className={step >= index + 1 ? "done" : ""} key={label}>{step > index + 1 ? <Check /> : index + 1}<b>{label}</b></span>)}</div>
 
     {step === 1 && <>
@@ -672,17 +524,17 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
           <b className={`capture ${template.status}`}>{template.status === "ready" ? "Ready" : "Option review"}</b>
         </button>)}
       </div>
+      {filteredTemplates.length === 0 && <div className="empty"><MagnifyingGlass /><strong>No Supabase templates</strong><span>Seed real report templates before creating reports.</span></div>}
     </>}
 
     {step === 2 && <div className="form-grid">
-      <label>Location<select value={location} onChange={(event) => setLocation(event.target.value)}>{farmLocations.map((item) => <option key={item}>{item}</option>)}</select></label>
-      <label>Report date<input type="date" defaultValue="2026-06-23" /></label>
-      <label>Report time<input type="time" defaultValue="07:00" /></label>
-      <label>Reported by<input value={reportedBy} onChange={(event) => setReportedBy(event.target.value)} /></label>
+      <label>Location<select value={location} onChange={(event) => setLocation(event.target.value)}>{locations.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
+      <label>Report date<input type="date" /></label>
+      <label>Report time<input type="time" /></label>
       <label className="full">Details<textarea maxLength={950} placeholder="Optional details, notes, or field context..." /></label>
     </div>}
 
-    {step === 3 && <div className="dynamic-form">
+    {step === 3 && firstSection && <div className="dynamic-form">
       <div className="section-card">
         <div className="section-title"><span>{selectedTemplate.code}</span><h3>{firstSection.title}</h3><small>{firstSection.questions.length} fields in this section</small></div>
         {firstSection.instructions?.map((instruction) => <p className="instruction" key={instruction}>{instruction}</p>)}
@@ -693,8 +545,8 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
 
     {step === 4 && <div className="review-summary">
       <CheckCircle weight="duotone" />
-      <h3>Ready to submit</h3>
-      <p>{selectedTemplate.name} ? {location} ? {selectedTemplate.sections.length} sections</p>
+      <h3>Ready to create in Supabase</h3>
+      <p>{selectedTemplate?.name} - {locations.find((item) => item.id === location)?.name ?? "No location"} - {selectedTemplate?.sections.length ?? 0} sections</p>
       <div><span>Template status</span><b>{statusLabel}</b></div>
       <div><span>Next step</span><b>Manager review</b></div>
       <div><span>Audit mapping</span><b>{selectedTemplate.moduleTargets.join(", ")}</b></div>
@@ -702,7 +554,7 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
 
     <div className="modal-actions">
       <button className="secondary" onClick={() => step === 1 ? onCancel() : setStep(step - 1)}>{step === 1 ? "Cancel" : "Back"}</button>
-      <button className="primary" onClick={() => step < 4 ? setStep(step + 1) : submitReport()}>{step < 4 ? "Continue" : "Submit report"}</button>
+      <button className="primary" disabled={templates.length === 0 || locations.length === 0} onClick={() => step < 4 ? setStep(step + 1) : onCancel()}>{step < 4 ? "Continue" : "Close"}</button>
     </div>
   </div>;
 }
@@ -738,25 +590,25 @@ function ReviewPanel({ report, onDone }: { report: Report; onDone: () => void })
   </div>;
 }
 
-function AuditWizard({ step, setStep, onGenerate, selected }: { step: number; setStep: (step: number) => void; onGenerate: () => void; selected: number }) {
+function AuditWizard({ step, setStep, onGenerate, selected, reportTypeCount, templateCount }: { step: number; setStep: (step: number) => void; onGenerate: () => void; selected: number; reportTypeCount: number; templateCount: number }) {
   const titles = ["Select scope", "Validate readiness", "Preview packet", "Generate PDF"];
   const crosswalkSummary = primusCrosswalk.summary as CrosswalkSummary;
   return <div className="wizard">
     <div className="modal-heading"><span>Audit Generator</span><h2>Build a Primus-ready packet</h2><p>Checks Bay Baby report evidence against the PrimusGFS v4.0 backbone before export.</p></div>
     <div className="wizard-steps">{titles.map((title, index) => <span className={step >= index + 1 ? "done" : ""} key={title}><b>{step > index + 1 ? <Check /> : index + 1}</b>{title}</span>)}</div>
     <div className="wizard-body">
-      {step === 1 && <div className="scope-form"><label>Start date<input type="date" defaultValue="2025-01-01" /></label><label>End date<input type="date" defaultValue="2026-01-01" /></label><label>Locations<select><option>All locations</option></select></label><label>Standard<select><option>PrimusGFS v4.0</option></select></label><label className="toggle"><input type="checkbox" defaultChecked /><span />Include reviewed reports only</label><label className="toggle"><input type="checkbox" defaultChecked /><span />Include evidence index</label></div>}
+      {step === 1 && <div className="scope-form"><label>Start date<input type="date" /></label><label>End date<input type="date" /></label><label>Locations<select><option>All Supabase locations</option></select></label><label>Standard<select><option>PrimusGFS v4.0</option></select></label><label className="toggle"><input type="checkbox" defaultChecked /><span />Include reviewed reports only</label><label className="toggle"><input type="checkbox" defaultChecked /><span />Include evidence index</label></div>}
       {step === 2 && <div className="validation-grid">
         <div className="success"><CheckCircle weight="duotone" /><b>{selected}</b><span>Reports selected</span></div>
-        <div><ClipboardText weight="duotone" /><b>{heavyConnectInventory.report_type_count}</b><span>Report types</span></div>
-        <div className="success"><ShieldCheck weight="duotone" /><b>7</b><span>Core templates found</span></div>
+        <div><ClipboardText weight="duotone" /><b>{reportTypeCount}</b><span>Report types</span></div>
+        <div className={templateCount ? "success" : "warning"}><ShieldCheck weight="duotone" /><b>{templateCount}</b><span>Templates found</span></div>
         <div className={(crosswalkSummary.needs_manual_mapping ?? 0) ? "warning" : "success"}><WarningCircle weight="duotone" /><b>{crosswalkSummary.needs_manual_mapping ?? 0}</b><span>Manual mappings</span></div>
         <section><strong>Pre-audit checks</strong><span><CheckCircle /> Required Bay Baby evidence found</span><span><CheckCircle /> PrimusGFS v4.0 modules loaded</span><span><CheckCircle /> Draft question crosswalk generated</span><span><WarningCircle /> Manual mapping review still required before final scoring</span></section>
       </div>}
       {step === 3 && <div className="packet-preview">
         {["Cover page", "PrimusGFS v4.0 module index", "Bay Baby evidence index", "Open gaps and corrective actions", "Reports grouped by type", "Attachments appendix", "Signature & review log"].map((section, index) => <div key={section}><span>{index + 1}</span><b>{section}</b><CheckCircle weight="fill" /></div>)}
       </div>}
-      {step === 4 && <div className="generate-ready"><FilePdf weight="duotone" /><h3>Your packet is ready</h3><p>Bay-Baby-PrimusGFS-v4-Audit-Packet_2025-01-01_to_2026-01-01.pdf</p><span>{selected} reports • PrimusGFS v4.0 • Evidence index included</span></div>}
+      {step === 4 && <div className="generate-ready"><FilePdf weight="duotone" /><h3>Your packet is ready</h3><p>Bay-Baby-PrimusGFS-v4-Audit-Packet.pdf</p><span>{selected} reports • PrimusGFS v4.0 • Evidence index included</span></div>}
     </div>
     <div className="modal-actions"><button className="secondary" onClick={() => setStep(Math.max(1, step - 1))} disabled={step === 1}>Back</button><button className="primary" onClick={() => step < 4 ? setStep(step + 1) : onGenerate()}>{step < 4 ? "Continue" : "Generate & download PDF"}</button></div>
   </div>;
