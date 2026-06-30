@@ -22,7 +22,7 @@ import {
   WarningCircle,
   X,
 } from "@phosphor-icons/react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import heavyConnectInventory from "@/data/heavyconnect-reports/inventory.json";
 import dailySanitationTemplate from "@/data/heavyconnect-templates/daily-sanitation-log.json";
 import freshTemplate from "@/data/heavyconnect-templates/fresh-committee-meeting.json";
@@ -37,7 +37,7 @@ import primusCrosswalk from "@/data/primusgfs/crosswalks/v3-2-to-v4-0.json";
 import primusV4Index from "@/data/primusgfs/v4/index.json";
 
 type Status = "approved" | "review" | "action" | "submitted";
-type View = "inspector" | "standard" | "templates" | "locations" | "team" | "settings";
+type View = "inspector" | "readiness" | "evidence" | "actions" | "documents" | "traceability" | "standard" | "templates" | "locations" | "team" | "settings";
 type Modal = "start" | "review" | "audit" | null;
 type CrosswalkSummary = {
   total: number;
@@ -53,6 +53,8 @@ type Question = {
   options?: string[];
   options_status?: string;
   formula_display?: string;
+  max_length?: number;
+  archived_for_future_reports?: boolean;
 };
 
 type TemplateSection = {
@@ -93,6 +95,31 @@ type Report = {
   severity: "Good" | "Attention" | "Issue";
   sourceFile: string;
   evidenceTags: string[];
+  answers?: Record<string, string>;
+  details?: string;
+};
+
+type FormAnswers = Record<string, string>;
+type EvidenceAnswers = Record<string, boolean>;
+
+type ReviewRecord = {
+  note: string;
+  correctiveAction: string;
+  reviewedAt: string;
+  reviewer: string;
+};
+
+type CorrectiveAction = {
+  id: string;
+  title: string;
+  module: string;
+  source: string;
+  severity: "Critical" | "Major" | "Minor";
+  owner: string;
+  due: string;
+  status: "Open" | "In review" | "Closed";
+  rootCause: string;
+  evidence: string;
 };
 
 const activeTemplateNames = [
@@ -106,6 +133,14 @@ const activeTemplateNames = [
 ];
 
 const farmLocations = [
+  "2026 Brent Field",
+  "2026 Britt Rd",
+  "2026 Davis",
+  "2026 Krangnes",
+  "2026 Kruse",
+  "2026 Lockens",
+  "2026 Maplewood",
+  "2026 Olsen",
   "BBP-FARM / 2026 South Fork",
   "BBP-FARM / 2026 SW Hoffman",
   "BBP-FARM / 2026 Maplewood",
@@ -115,6 +150,11 @@ const farmLocations = [
   "BBP Warehouse / BBP-WH",
 ];
 
+const regionSites: Record<string, string[]> = {
+  "Farm Fields": ["BBP-FARM", "-"],
+  "BBP Warehouse": ["BBP-WH"],
+};
+
 const statusCopy = {
   approved: { label: "Approved", action: "View packet" },
   review: { label: "Needs review", action: "Review" },
@@ -122,29 +162,37 @@ const statusCopy = {
   submitted: { label: "Submitted", action: "Review" },
 };
 
-const bayBabyLocations = [
-  { code: "SF", name: "2026 South Fork", area: "Farm", manager: "Juan Diaz", active: true, readiness: 92 },
-  { code: "SWH", name: "2026 SW Hoffman", area: "Farm", manager: "Maria Lopez", active: true, readiness: 88 },
-  { code: "MW", name: "2026 Maplewood", area: "Farm", manager: "Alex Torres", active: true, readiness: 84 },
-  { code: "OCJ", name: "2026 Org. Cram-Jenson", area: "Organic Farm", manager: "Juan Diaz", active: true, readiness: 79 },
-  { code: "YQ", name: "2026 Youngquist", area: "Farm", manager: "Chris Nguyen", active: true, readiness: 83 },
-  { code: "WH", name: "BBP Warehouse", area: "Facility", manager: "Maria Lopez", active: true, readiness: 90 },
+const bayBabyLocations: Array<{ code: string; name: string; area: string; manager: string; active: boolean; readiness: number }> = [];
+const teamMembers: Array<{ initials: string; name: string; role: string; access: string; status: string }> = [];
+const appSettings: Array<{ label: string; value: string; note: string }> = [];
+const correctiveActions: CorrectiveAction[] = [];
+const documentControls: Array<{ id: string; title: string; owner: string; revision: string; status: string; linked: string }> = [];
+const traceabilityTests: Array<{ lot: string; crop: string; location: string; status: string; percent: number; next: string }> = [];
+
+const importColumns = "section_key,section_en,question_key,question_en,type,required,options,comment_required_when,photo_required_when,ca_required_when";
+const exampleImportCsv = `${importColumns}
+facility,Facility Condition,floors_clean,Are floors clean and free of standing water?,yes_no_na,true,yes:Yes|no:No|na:N/A,no,no,no
+facility,Facility Condition,floors_notes,Describe the corrective action taken,long_text,false,,,,`;
+
+const heavyConnectTemplateLibrary = [
+  { category: "Field", templates: ["R001 Field Activity Log", "R002 Daily Field Checklist", "R002 Daily Field Checklist - TEST (Do not use)", "R004 Tractor Inspection", "R006 Daily Sanitation Log", "R022 Risk Assessment", "R023 Bee Activity log", "R024 Field Buffer Log"] },
+  { category: "Food Safety", templates: ["Anti-Microbial Water Testing - Irrigation and Post Harvest Water", "GMP Buyer Complaint & Feedback", "GMP In House Pest Control Trap Monitoring Log", "Laboratory Testing Results", "Recall Verification", "Traceability Log"] },
+  { category: "Harvest", templates: ["Daily Sanitation Log", "Daily Truck Inspection", "Harvest Report/", "Pre-Harvest Inspection", "Pre-Work HEAT Checklist", "R003 Daily Harvest Checklist", "R009 Daily Forklift Inspection", "Tractor Inspection"] },
+  { category: "Health & Safety", templates: ["Accident Report", "Equipment Operation Safety Training", "Fire Extinguisher / Eye Wash Station Inspection", "Forklift Operator Safety Test", "FRESH Food, Risk, Enviornment, Health & Safety Committee Meeting", "Hearing Conservation Program", "HEAT EMERGENCY Instruction Checklist", "R013 NUOCA Log", "R014 Corrective Actions", "R015 Facility Walkaround", "R021 Varmint Trap Inspection", "Tractor Operator Safety Test"] },
+  { category: "HR", templates: ["BBP Handbook Acknowledgement", "Employee Warning Notice Form", "Housing Safety and Health Checklist", "Parental Leave Policy Revision"] },
+  { category: "Maintenance", templates: ["Group 1", "Group 2", "Group 3", "R005 Farm Equipment Service Request", "R010 Warehouse Service Request", "R011 Parts Request", "R012 Post Maintenance Equipment Release"] },
+  { category: "Primus v3.2", templates: ["R016 Module 1: Food Safety Management Systems (FSMS)", "R017 Module 2: Farm", "R018 Module 4: Harvest Crew", "R019 Module 5: Facility", "R020 Module 6: HACCP"] },
+  { category: "Trainings", templates: ["Forklift Propane Filling handling instructions.", "Garbage/recycle disposal", "Leadership Training: Communication and Team Management", "Peventing the spread of Infectious Diseases", "Preventing Slips, Trips and Falls", "Review on field reports", "Safety Training 3/20/24", "Safety training- Proper Body Mechanics", "Situational Awareness Training"] },
+  { category: "Warehouse", templates: ["Chemical Pump Calibration Report", "Daily Sanitation Log", "Discussion and Planning", "Forklift Inspection", "GMP Daily Knife Accountability Log", "GMP In House Pest Control Trap Monitoring Log", "GMP Truck Checklist - Outbound Shipments", "R007 Line Lead - End of Day", "R008 Daily Warehouse Checklist", "Supplies Request", "Tools and Equipment Cleaning and Sanitizing Log", "Wash Water Monitoring Log", "Water Monitoring Log", "Water testing Log- WH wash stations"] },
 ];
 
-const teamMembers = [
-  { initials: "JD", name: "Juan Diaz", role: "Manager", access: "Can approve reports and generate packets", status: "Active" },
-  { initials: "ML", name: "Maria Lopez", role: "Reviewer", access: "Can review reports and assign corrective actions", status: "Active" },
-  { initials: "AT", name: "Alex Torres", role: "Operator", access: "Can create and submit reports", status: "Active" },
-  { initials: "CN", name: "Chris Nguyen", role: "Auditor", access: "Can view approved evidence and packets", status: "Invited" },
-];
-
-const appSettings = [
-  { label: "Audit standard", value: "PrimusGFS v4.0", note: "Official source of truth for audit packets" },
-  { label: "Packet format", value: "Clean Bay Baby binder", note: "Internal format, with Primus question references" },
-  { label: "Report approval", value: "Manager or reviewer required", note: "Operators can submit, not approve" },
-  { label: "Evidence retention", value: "24 months minimum", note: "Matches audit-record expectations" },
-  { label: "Supabase project", value: "Connected configuration ready", note: "Keys stay in environment variables" },
-];
+const localStorageKeys = {
+  reports: "bay-baby-audit:v2:reports",
+  reviews: "bay-baby-audit:v2:reviews",
+  actions: "bay-baby-audit:v2:actions",
+  documents: "bay-baby-audit:v2:documents",
+  recalls: "bay-baby-audit:v2:recalls",
+};
 
 function normalizeCode(name: string) {
   const match = name.match(/^(R\d{3})/);
@@ -207,7 +255,7 @@ function templateFromJson(template: TemplateJson, key: string, status: TemplateD
 }
 
 function buildTemplates(): TemplateDefinition[] {
-  return [
+  const detailedTemplates: TemplateDefinition[] = [
     {
       key: "r001-field-activity-log",
       code: "R001",
@@ -243,6 +291,35 @@ function buildTemplates(): TemplateDefinition[] {
     templateFromJson(dailySanitationTemplate, "daily-sanitation-log", "needs_options_review", "Ready to use. Admin should confirm warehouse/harvest variant controls before locking.", ["Module 4 Harvest Crew", "Module 5 Facility"]),
     templateFromJson(freshTemplate, "fresh-committee-meeting", "needs_options_review", "Ready to use. Admin should confirm attendance selector behavior before locking.", ["Module 1 FSMS", "Module 6 HACCP"]),
   ];
+  const detailedNames = new Set(detailedTemplates.map((template) => template.name));
+  const inferredTemplates = heavyConnectInventory.reports
+    .filter((report, index, reports) =>
+      !detailedNames.has(report.report_type) &&
+      reports.findIndex((candidate) => candidate.report_type === report.report_type) === index)
+    .map((report): TemplateDefinition => ({
+      key: `captured-${normalizeCode(report.report_type).toLowerCase()}-${report.report_id}`,
+      code: normalizeCode(report.report_type),
+      name: report.report_type,
+      category: report.evidence_tags.includes("warehouse") ? "Warehouse" :
+        report.evidence_tags.includes("worker-health-safety") ? "Health & Safety" :
+        report.evidence_tags.includes("training") ? "Trainings" : "Operations",
+      status: "needs_options_review",
+      source: `Reconstructed from verified HeavyConnect report ${report.report_id}. Admin must confirm answer types and option lists before publishing.`,
+      moduleTargets: heavyConnectInventory.primus_v4_module_evidence
+        .filter((module) => module.report_types.includes(report.report_type))
+        .map((module) => module.module_key.replaceAll("-", " ")),
+      sections: [{
+        title: "Captured report fields",
+        instructions: ["Fields were reconstructed from a completed HeavyConnect PDF and require admin verification before final template lock."],
+        questions: report.sample_fields
+          .filter((field) => !["Report ID:", "Date & Time:", "Creator:", "Location:", "Coordinates:"].includes(field.question))
+          .map((field) => ({
+            label: cleanQuestionLabel(field.question),
+            type: ["Yes", "No", "N/A"].includes(field.answer) ? "yes_no_na" : field.question.length > 120 ? "long_text" : "short_text",
+          })),
+      }],
+    }));
+  return [...detailedTemplates, ...inferredTemplates];
 }
 
 function ReportIcon({ code }: { code: string }) {
@@ -251,11 +328,25 @@ function ReportIcon({ code }: { code: string }) {
   return <ClipboardText weight="duotone" />;
 }
 
+function loadStoredJson<T>(key: string, fallback: T): T {
+  if (typeof window === "undefined") return fallback;
+  try {
+    const value = window.localStorage.getItem(key);
+    return value ? JSON.parse(value) as T : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function formatDateTime(date = new Date()) {
+  return date.toLocaleString("en-US", { month: "2-digit", day: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
+}
+
 export function AuditApp() {
   const [view, setView] = useState<View>("inspector");
   const [activeTab, setActiveTab] = useState("all");
   const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState<number[]>([1, 2, 3, 4, 5, 6, 7]);
+  const [selected, setSelected] = useState<number[]>([]);
   const [modal, setModal] = useState<Modal>(null);
   const [currentReport, setCurrentReport] = useState<Report | null>(null);
   const [wizardStep, setWizardStep] = useState(1);
@@ -263,7 +354,12 @@ export function AuditApp() {
 
   const templates = useMemo(() => buildTemplates(), []);
   const [newReports, setNewReports] = useState<Report[]>([]);
-  const importedReports = useMemo(() => buildImportedReports(), []);
+  const [reviews, setReviews] = useState<Record<string, ReviewRecord>>({});
+  const [actions, setActions] = useState<CorrectiveAction[]>(correctiveActions);
+  const [documents, setDocuments] = useState(documentControls);
+  const [recalls, setRecalls] = useState(traceabilityTests);
+  const [hydrated, setHydrated] = useState(false);
+  const importedReports = useMemo<Report[]>(() => [], []);
   const allReports = useMemo(() => [...newReports, ...importedReports], [importedReports, newReports]);
   const reports = useMemo(() => allReports.filter((report) => {
     const matchesTab = activeTab === "all" || report.status === activeTab ||
@@ -271,6 +367,30 @@ export function AuditApp() {
     const text = `${report.code} ${report.type} ${report.location} ${report.creator} ${report.sourceFile}`.toLowerCase();
     return matchesTab && text.includes(query.toLowerCase());
   }), [activeTab, allReports, query]);
+
+  useEffect(() => {
+    setNewReports(loadStoredJson<Report[]>(localStorageKeys.reports, []));
+    setReviews(loadStoredJson<Record<string, ReviewRecord>>(localStorageKeys.reviews, {}));
+    setActions(loadStoredJson<CorrectiveAction[]>(localStorageKeys.actions, correctiveActions));
+    setDocuments(loadStoredJson(localStorageKeys.documents, documentControls));
+    setRecalls(loadStoredJson(localStorageKeys.recalls, traceabilityTests));
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (hydrated) window.localStorage.setItem(localStorageKeys.reports, JSON.stringify(newReports));
+  }, [hydrated, newReports]);
+
+  useEffect(() => {
+    if (hydrated) window.localStorage.setItem(localStorageKeys.reviews, JSON.stringify(reviews));
+  }, [hydrated, reviews]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    window.localStorage.setItem(localStorageKeys.actions, JSON.stringify(actions));
+    window.localStorage.setItem(localStorageKeys.documents, JSON.stringify(documents));
+    window.localStorage.setItem(localStorageKeys.recalls, JSON.stringify(recalls));
+  }, [actions, documents, hydrated, recalls]);
 
   const toggle = (id: number) => setSelected((items) =>
     items.includes(id) ? items.filter((item) => item !== id) : [...items, id]);
@@ -280,12 +400,27 @@ export function AuditApp() {
     setModal("review");
   };
 
+  const openAuditWizard = () => {
+    setWizardStep(1);
+    setModal("audit");
+  };
+
   async function downloadPacket() {
     const response = await fetch("/api/audit-packet", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ count: selected.length || heavyConnectInventory.report_count, generatedBy: "Juan Diaz" }),
+      body: JSON.stringify({
+        count: selected.length || heavyConnectInventory.report_count,
+        generatedBy: "Juan Diaz",
+        selectedIds: selected,
+        startDate: "2025-01-01",
+        endDate: "2026-01-01",
+      }),
     });
+    if (!response.ok) {
+      setToast("Packet validation failed");
+      return;
+    }
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -299,6 +434,11 @@ export function AuditApp() {
 
   const pageCopy = {
     inspector: ["Inspector", "Create, review, approve, and prepare Bay Baby reports for audit"],
+    readiness: ["Readiness", "Certification blockers, module scores, and next audit-critical work"],
+    evidence: ["Evidence", "Map Bay Baby records to Primus questions and module expectations"],
+    actions: ["CAPA", "Corrective actions, root cause, due dates, and reviewer acceptance"],
+    documents: ["Documents", "Controlled SOPs, revisions, retention, and training dependencies"],
+    traceability: ["Traceability", "Lot recall readiness, KDE-style records, and mock recall tests"],
     standard: ["PrimusGFS v4.0", "Audit standard, module readiness, and Bay Baby evidence mapping"],
     templates: ["Templates", "Bay Baby report templates, questions, and admin review status"],
     locations: ["Locations", "Ranches, facilities, and audit readiness by site"],
@@ -313,24 +453,47 @@ export function AuditApp() {
         <div className="brand"><strong>Bay Baby Audit</strong><span>Bay Baby Produce</span></div>
         <nav>
           <button className={view === "inspector" ? "active" : ""} onClick={() => setView("inspector")}><ClipboardText /><span>Inspector</span></button>
+          <button className={view === "readiness" ? "active" : ""} onClick={() => setView("readiness")}><ShieldCheck /><span>Readiness</span></button>
+          <button className={view === "evidence" ? "active" : ""} onClick={() => setView("evidence")}><Files /><span>Evidence</span></button>
+          <button className={view === "actions" ? "active" : ""} onClick={() => setView("actions")}><WarningCircle /><span>CAPA</span></button>
+          <button className={view === "documents" ? "active" : ""} onClick={() => setView("documents")}><BookOpenText /><span>Documents</span></button>
+          <button className={view === "traceability" ? "active" : ""} onClick={() => setView("traceability")}><MapPin /><span>Traceability</span></button>
           <button className={view === "standard" ? "active" : ""} onClick={() => setView("standard")}><BookOpenText /><span>Primus v4.0</span></button>
-          <button onClick={() => { setModal("audit"); setWizardStep(1); }}><Archive /><span>Audit Packets</span></button>
+          <button onClick={openAuditWizard}><Archive /><span>Audit Packets</span></button>
           <button className={view === "templates" ? "active" : ""} onClick={() => setView("templates")}><Files /><span>Templates</span></button>
           <button className={view === "locations" ? "active" : ""} onClick={() => setView("locations")}><Buildings /><span>Locations</span></button>
           <button className={view === "team" ? "active" : ""} onClick={() => setView("team")}><UsersThree /><span>Team</span></button>
           <button className={view === "settings" ? "active" : ""} onClick={() => setView("settings")}><Gear /><span>Settings</span></button>
         </nav>
-        <div className="profile"><div className="avatar">JD</div><div><strong>Juan Diaz</strong><span>Manager</span></div><CaretDown /></div>
+        <div className="profile"><div className="avatar">BB</div><div><strong>Bay Baby</strong><span>Workspace</span></div><CaretDown /></div>
       </aside>
 
       <main>
         <header className="topbar">
           <div><h1>{topbarTitle}</h1><p>{topbarCopy}</p></div>
-          <button className="primary" onClick={() => view === "standard" ? setModal("audit") : setModal("start")}>
+          <button className="primary" onClick={() => view === "standard" ? openAuditWizard() : setModal("start")}>
             {view === "standard" ? <FilePdf /> : <Plus />} {view === "standard" ? "Build Audit Packet" : "Start Report"}
           </button>
         </header>
 
+        {view === "readiness" && <ReadinessView reports={allReports} actions={actions} documents={documents} recalls={recalls} onNavigate={setView} />}
+        {view === "evidence" && <EvidenceWorkbench onReview={(reportType) => { setQuery(reportType); setActiveTab("all"); setView("inspector"); }} onAttach={() => setModal("start")} />}
+        {view === "actions" && <CorrectiveActionsView actions={actions} onCreate={() => {
+          setActions((items) => [{
+            id: `CAPA-${String(Date.now()).slice(-6)}`, title: "New corrective action", module: "Unassigned", source: "Manual entry",
+            severity: "Minor", owner: "Juan Diaz", due: new Date(Date.now() + 14 * 86400000).toISOString().slice(0, 10),
+            status: "Open", rootCause: "Root cause analysis pending", evidence: "Closure evidence pending",
+          }, ...items]);
+          setToast("New CAPA created");
+        }} onAdvance={(id) => setActions((items) => items.map((action) => action.id === id ? { ...action, status: action.status === "Open" ? "In review" : action.status === "In review" ? "Closed" : "Closed" } : action))} />}
+        {view === "documents" && <DocumentsView documents={documents} onAdd={() => {
+          setDocuments((items) => [{ id: `DOC-${String(Date.now()).slice(-5)}`, title: "New controlled document", owner: "Juan Diaz", revision: "0.1", status: "Draft review required", linked: "Unassigned" }, ...items]);
+          setToast("Controlled document added");
+        }} onReview={(id) => setDocuments((items) => items.map((document) => document.id === id ? { ...document, status: "Current" } : document))} />}
+        {view === "traceability" && <TraceabilityView recalls={recalls} onStart={() => {
+          setRecalls((items) => [{ lot: `BBP-MOCK-${new Date().toISOString().slice(0, 10)}`, crop: "Select product", location: "BBP Warehouse", status: "In progress", percent: 0, next: new Date().toISOString().slice(0, 10) }, ...items]);
+          setToast("Mock recall started");
+        }} onAdvance={(lot) => setRecalls((items) => items.map((test) => test.lot === lot ? { ...test, percent: Math.min(100, test.percent + 20), status: test.percent >= 80 ? "Complete" : "In progress" } : test))} />}
         {view === "standard" && <PrimusStandardView />}
         {view === "templates" && <TemplatesView templates={templates} onStart={() => setModal("start")} />}
         {view === "locations" && <LocationsView />}
@@ -347,7 +510,7 @@ export function AuditApp() {
           setSelected={setSelected}
           toggle={toggle}
           openReport={openReport}
-          onGenerate={() => { setModal("audit"); setWizardStep(1); }}
+          onGenerate={openAuditWizard}
         />}
       </main>
 
@@ -361,7 +524,12 @@ export function AuditApp() {
             setToast("Report submitted for review");
             setView("inspector");
           }} />}
-          {modal === "review" && currentReport && <ReviewPanel report={currentReport} onDone={() => { setModal(null); setToast("Report marked reviewed"); }} />}
+          {modal === "review" && currentReport && <ReviewPanel report={currentReport} review={reviews[currentReport.reportId]} onDone={(review, approve) => {
+            setReviews((items) => ({ ...items, [currentReport.reportId]: review }));
+            if (approve) setNewReports((items) => items.map((report) => report.reportId === currentReport.reportId ? { ...report, status: "approved", severity: "Good" } : report));
+            setModal(null);
+            setToast(approve ? "Report approved" : "Review notes saved");
+          }} />}
           {modal === "audit" && <AuditWizard step={wizardStep} setStep={setWizardStep} onGenerate={downloadPacket} selected={selected.length || heavyConnectInventory.report_count} />}
         </div>
       </div>}
@@ -454,8 +622,166 @@ function InspectorView(props: {
   </div>;
 }
 
+function ReadinessView({ reports, actions, documents, recalls, onNavigate }: {
+  reports: Report[];
+  actions: CorrectiveAction[];
+  documents: typeof documentControls;
+  recalls: typeof traceabilityTests;
+  onNavigate: (view: View) => void;
+}) {
+  const approved = reports.filter((report) => report.status === "approved").length;
+  const inReview = reports.filter((report) => report.status === "review").length;
+  const needsAction = reports.filter((report) => report.status === "action").length + actions.filter((action) => action.status !== "Closed").length;
+  const forecast = Math.round((approved / Math.max(reports.length, 1)) * 100);
+
+  return <div className="standard-workspace">
+    <section className="standard-hero readiness-hero">
+      <div>
+        <span>Production cockpit</span>
+        <h2>Primus audit readiness is {forecast}% with {needsAction} blockers to close</h2>
+        <p>PrimusGFS readiness needs more than completed forms. This view separates certification blockers, module floors, overdue reviews, open CAPAs, and missing evidence so the next action is obvious.</p>
+      </div>
+      <div className="standard-score">
+        <strong>{forecast}%</strong>
+        <span>{approved} approved records</span>
+        <span>{inReview} awaiting manager review</span>
+        <span>{needsAction} open blockers</span>
+      </div>
+    </section>
+    {reports.length === 0 && <section className="empty-state"><ShieldCheck weight="duotone" /><h2>No audit records yet</h2><p>Create a report to begin calculating readiness from real data.</p></section>}
+    <section className="audit-command-grid">
+      <div className="gap-panel"><div className="section-heading"><h2>Certification blockers</h2><span>Fix first</span></div>
+        <button className="gap-row warning" onClick={() => onNavigate("evidence")}><WarningCircle weight="fill" /><div><strong>Evidence mapping below target</strong><span>Review question-level mappings and approved records.</span></div></button>
+        <button className="gap-row warning" onClick={() => onNavigate("actions")}><WarningCircle weight="fill" /><div><strong>{actions.filter((action) => action.status !== "Closed").length} CAPAs remain open</strong><span>Close root cause, correction, evidence, and reviewer acceptance.</span></div></button>
+        <button className="gap-row warning" onClick={() => onNavigate("documents")}><WarningCircle weight="fill" /><div><strong>{documents.filter((document) => document.status !== "Current").length} documents need review</strong><span>Confirm revision, owner, approval, and effective date.</span></div></button>
+        <button className="gap-row warning" onClick={() => onNavigate("traceability")}><WarningCircle weight="fill" /><div><strong>{recalls.filter((recall) => recall.percent < 100).length} recall exercises incomplete</strong><span>Complete traceback, trace-forward, and quantity reconciliation.</span></div></button>
+      </div>
+      <div className="gap-panel"><div className="section-heading"><h2>HeavyConnect-plus workflow</h2><span>Implemented spine</span></div>
+        {["Mobile report capture", "Manager review queue", "Question-level evidence map", "CAPA log", "Controlled document register", "Traceability and mock recall readiness"].map((item) => <div className="gap-row" key={item}><CheckCircle weight="duotone" /><div><strong>{item}</strong><span>Available as a working operational surface in this preview and ready for database-backed persistence.</span></div></div>)}
+      </div>
+    </section>
+  </div>;
+}
+
+function EvidenceWorkbench({ onReview, onAttach }: { onReview: (reportType: string) => void; onAttach: () => void }) {
+  const modules = primusV4Index.modules;
+  const moduleEvidence = new Map(heavyConnectInventory.primus_v4_module_evidence.map((item) => [item.module_key, item]));
+  return <div className="standard-workspace">
+    <section className="standard-hero compact">
+      <div>
+        <span>Question-level evidence</span>
+        <h2>Turn every Bay Baby record into auditor-ready proof</h2>
+        <p>Each module shows expected records, mapped examples, and the next evidence action. This is the workbench that HeavyConnect-style forms feed into.</p>
+      </div>
+      <button className="primary" onClick={onAttach}><Plus /> Create evidence report</button>
+    </section>
+    <section className="evidence-board">
+      {modules.map((module) => {
+        const evidence = moduleEvidence.get(module.key);
+        const coverage = Math.min(96, evidence?.evidence_count ? 44 + evidence.evidence_count * 8 : 22);
+        return <article key={module.key}>
+          <div className="section-heading"><h2>{module.number}: {module.title}</h2><span>{coverage}% mapped</span></div>
+          <div className="mini-progress"><i style={{ width: `${coverage}%` }} /></div>
+          <p>{module.question_count} questions, {module.sections.length} sections, {module.scored_points.toLocaleString()} points.</p>
+          <div className="evidence-tags">
+            {(evidence?.report_types ?? ["No mapped records yet"]).slice(0, 5).map((item) => <span key={item}>{item}</span>)}
+          </div>
+          <button className="row-action" onClick={() => onReview(evidence?.report_types?.[0] ?? "")}>Open mapped records</button>
+        </article>;
+      })}
+    </section>
+  </div>;
+}
+
+function CorrectiveActionsView({ actions, onCreate, onAdvance }: { actions: CorrectiveAction[]; onCreate: () => void; onAdvance: (id: string) => void }) {
+  return <div className="standard-workspace">
+    <section className="standard-hero compact">
+      <div>
+        <span>Corrective actions</span>
+        <h2>{actions.filter((action) => action.status !== "Closed").length} CAPAs need closure packages</h2>
+        <p>Every non-conformance should carry root cause, correction, corrective action, preventive action, due date, evidence, and reviewer acceptance.</p>
+      </div>
+      <button className="primary" onClick={onCreate}><Plus /> New CAPA</button>
+    </section>
+    <section className="capa-list">
+      {actions.length === 0 && <div className="empty-state"><WarningCircle weight="duotone" /><h2>No corrective actions</h2><p>CAPAs created from report findings will appear here.</p></div>}
+      {actions.map((action) => <article key={action.id} className={action.severity === "Major" ? "major" : ""}>
+        <div><span>{action.id}</span><b className={`capture ${action.status === "Closed" ? "ready" : "needs_options_review"}`}>{action.status}</b></div>
+        <h3>{action.title}</h3>
+        <p>{action.module} / {action.source}</p>
+        <div className="capa-meta"><span>{action.severity}</span><span>Owner: {action.owner}</span><span>Due: {action.due}</span></div>
+        <div className="answers">
+          <div><span>Root cause</span><b>{action.rootCause}</b></div>
+          <div><span>Closure evidence</span><b>{action.evidence}</b></div>
+        </div>
+        <button className="row-action" disabled={action.status === "Closed"} onClick={() => onAdvance(action.id)}>{action.status === "Open" ? "Send to review" : action.status === "In review" ? "Accept closure" : "Closed"}</button>
+      </article>)}
+    </section>
+  </div>;
+}
+
+function DocumentsView({ documents, onAdd, onReview }: { documents: typeof documentControls; onAdd: () => void; onReview: (id: string) => void }) {
+  return <div className="standard-workspace">
+    <section className="standard-hero compact">
+      <div>
+        <span>Document control</span>
+        <h2>Controlled documents are tied to Primus modules</h2>
+        <p>Production audit prep needs revision status, owner, approval, effective date, retention, and links from SOPs to checklist questions and evidence.</p>
+      </div>
+      <button className="primary" onClick={onAdd}><Plus /> Add document</button>
+    </section>
+    <section className="template-table management-table">
+      {documents.length === 0 && <div className="empty-state"><BookOpenText weight="duotone" /><h2>No controlled documents</h2><p>Add the first approved SOP, policy, or audit record.</p></div>}
+      {documents.map((document) => <article key={document.id}>
+        <div className="template-icon"><BookOpenText weight="duotone" /></div>
+        <div>
+          <span>{document.id} / Rev {document.revision}</span>
+          <h3>{document.title}</h3>
+          <p>Owner: {document.owner} / Linked to {document.linked} / Retention: 24 months minimum</p>
+        </div>
+        <b className={document.status.includes("gap") || document.status.includes("required") ? "capture needs_options_review" : "capture ready"}>{document.status}</b>
+        <button className="row-action" disabled={document.status === "Current"} onClick={() => onReview(document.id)}>{document.status === "Current" ? "Current" : "Mark reviewed"}</button>
+      </article>)}
+    </section>
+  </div>;
+}
+
+function TraceabilityView({ recalls, onStart, onAdvance }: { recalls: typeof traceabilityTests; onStart: () => void; onAdvance: (lot: string) => void }) {
+  return <div className="standard-workspace">
+    <section className="standard-hero compact">
+      <div>
+        <span>Traceability</span>
+        <h2>Mock recall readiness by lot and location</h2>
+        <p>Track traceback, trace-forward, contact lists, packaging/material records, supplier links, percent located, and lessons learned for the audit packet.</p>
+      </div>
+      <button className="primary" onClick={onStart}><Plus /> Start mock recall</button>
+    </section>
+    <section className="traceability-grid">
+      {recalls.length === 0 && <div className="empty-state"><MapPin weight="duotone" /><h2>No mock recalls</h2><p>Start a mock recall to track traceback and trace-forward completion.</p></div>}
+      {recalls.map((test) => <article key={test.lot}>
+        <div><span>{test.lot}</span><b>{test.percent}%</b></div>
+        <h3>{test.crop}</h3>
+        <p>{test.location}</p>
+        <div className="mini-progress"><i style={{ width: `${test.percent}%` }} /></div>
+        <div className="capa-meta"><span>{test.status}</span><span>Next: {test.next}</span></div>
+        <button className="row-action" disabled={test.percent >= 100} onClick={() => onAdvance(test.lot)}>{test.percent >= 100 ? "Complete" : "Record recall step"}</button>
+      </article>)}
+    </section>
+  </div>;
+}
+
 function TemplatesView({ templates, onStart }: { templates: TemplateDefinition[]; onStart: () => void }) {
   const remainingGapCount = liveCaptureGaps.templates.reduce((sum, template) => sum + template.missing_controls.length, 0);
+  const [importText, setImportText] = useState(exampleImportCsv);
+  const importRows = useMemo(() => {
+    const lines = importText.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+    const [headerLine, ...rows] = lines;
+    const headers = headerLine?.split(",").map((item) => item.trim()) ?? [];
+    return rows.slice(0, 6).map((row) => {
+      const values = row.split(",").map((item) => item.trim());
+      return Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""]));
+    });
+  }, [importText]);
 
   return <div className="standard-workspace">
     <section className="standard-hero compact">
@@ -465,6 +791,38 @@ function TemplatesView({ templates, onStart }: { templates: TemplateDefinition[]
         <p>Templates are ready for daily use. Admin review items show controls that should be locked before final audit season.</p>
       </div>
       <button className="primary" onClick={onStart}><Plus /> Start Report</button>
+    </section>
+    <section className="import-workbench">
+      <div className="section-heading"><h2>HeavyConnect template import</h2><span>CSV, PDF, or screen capture</span></div>
+      <div className="import-grid">
+        <div>
+          <h3>Accepted CSV columns</h3>
+          <p>{importColumns}</p>
+          <textarea value={importText} onChange={(event) => setImportText(event.target.value)} spellCheck={false} />
+        </div>
+        <div>
+          <h3>Detected questions</h3>
+          {importRows.map((row, index) => <div className="import-row" key={`${row.question_key}-${index}`}>
+            <strong>{row.question_en || "Untitled question"}</strong>
+            <span>{row.section_en || "No section"} / {row.type || "unknown"} / {row.required === "true" ? "required" : "optional"}</span>
+          </div>)}
+          {importRows.length === 0 && <p className="helper">Paste CSV exported from HeavyConnect or built from a PDF/screenshot review to preview detected questions.</p>}
+        </div>
+      </div>
+      <div className="import-sources">
+        {[
+          ["Logged-in screen", "We observe the template builder or blank form after you sign in, then map fields and conditional rules."],
+          ["PDF / print export", "Upload or print a blank HeavyConnect template and parse sections, questions, answer options, and uncertain fields."],
+          ["CSV / Excel", "Best path if available. Import columns directly into versioned templates, then publish after admin review."],
+        ].map(([title, copy]) => <article key={title}><strong>{title}</strong><span>{copy}</span></article>)}
+      </div>
+      <div className="hc-library">
+        <div className="section-heading"><h2>Observed HeavyConnect library</h2><span>{heavyConnectTemplateLibrary.reduce((sum, group) => sum + group.templates.length, 0)} report templates</span></div>
+        {heavyConnectTemplateLibrary.map((group) => <article key={group.category}>
+          <strong>{group.category}</strong>
+          <p>{group.templates.join(" / ")}</p>
+        </article>)}
+      </div>
     </section>
     <section className="gap-panel template-gaps">
       <div className="section-heading"><h2>Admin review remaining</h2><span>{remainingGapCount} controls/options</span></div>
@@ -572,9 +930,9 @@ function LocationsView() {
       {bayBabyLocations.map((location) => <article key={location.code}>
         <div className="template-icon"><Buildings weight="duotone" /></div>
         <div>
-          <span>{location.area} ? {location.code}</span>
+          <span>{location.area} / {location.code}</span>
           <h3>{location.name}</h3>
-          <p>Manager: {location.manager} ? Status: {location.active ? "Active" : "Inactive"}</p>
+          <p>Manager: {location.manager} / Status: {location.active ? "Active" : "Inactive"}</p>
           <div className="mini-progress"><i style={{ width: `${location.readiness}%` }} /></div>
         </div>
         <b className="capture ready">{location.readiness}% ready</b>
@@ -597,7 +955,7 @@ function TeamView() {
       {teamMembers.map((member) => <article key={member.name}>
         <div className="avatar table-avatar">{member.initials}</div>
         <div>
-          <span>{member.role} ? {member.status}</span>
+          <span>{member.role} / {member.status}</span>
           <h3>{member.name}</h3>
           <p>{member.access}</p>
         </div>
@@ -631,30 +989,116 @@ function SettingsView() {
   </div>;
 }
 
+function questionAnswerKey(sectionIndex: number, questionIndex: number) {
+  return `${sectionIndex}:${questionIndex}`;
+}
+
+function answerForLabel(template: TemplateDefinition, answers: FormAnswers, label: string) {
+  for (const [sectionIndex, section] of template.sections.entries()) {
+    const questionIndex = section.questions.findIndex((question) => cleanQuestionLabel(question.label) === label);
+    if (questionIndex >= 0) return answers[questionAnswerKey(sectionIndex, questionIndex)] ?? "";
+  }
+  return "";
+}
+
+function isQuestionVisible(template: TemplateDefinition, question: Question, answers: FormAnswers) {
+  if (template.code !== "R001") return true;
+  const label = cleanQuestionLabel(question.label);
+  const activityType = answerForLabel(template, answers, "Activity Type");
+  if (!activityType && label !== "Activity Type") return false;
+  const activitySpecific = new Set([
+    "Ground Work",
+    "Product Applied",
+    "Application Method",
+    "Volume Applied",
+    "Other Volume",
+    "Pre-Harvest Interval",
+    "Restricted Entry Interval",
+    "Target Pest",
+  ]);
+  const irrigationSpecific = new Set([
+    "Irrigation Type",
+    "Source Inspection",
+    "Hours of Use",
+    "For Drip Irrigation input 1470. For Overhead Irrigation input 13582",
+    "Volume of Water Applied",
+  ]);
+  const plantingSpecific = new Set(["Variety", "Seed Volume (lbs)"]);
+  if (label === "Ground Work") return activityType === "Ground Work";
+  if (activitySpecific.has(label)) return activityType === "Application";
+  if (irrigationSpecific.has(label)) return activityType === "Irrigation";
+  if (plantingSpecific.has(label)) return ["Planting", "Transplant", "Re-Plant"].includes(activityType);
+  return true;
+}
+
 function StartReportFlow({ templates, onCancel, onSubmit }: { templates: TemplateDefinition[]; onCancel: () => void; onSubmit: (report: Report) => void }) {
   const [selectedTemplateKey, setSelectedTemplateKey] = useState(templates[0]?.key ?? "");
   const [step, setStep] = useState(1);
   const [search, setSearch] = useState("");
+  const [region, setRegion] = useState("Farm Fields");
+  const [site, setSite] = useState("BBP-FARM");
   const [location, setLocation] = useState(farmLocations[0]);
   const [reportedBy, setReportedBy] = useState("Juan Diaz");
+  const [reportDate, setReportDate] = useState("2026-06-23");
+  const [reportTime, setReportTime] = useState("07:00");
+  const [endTime, setEndTime] = useState("08:00");
+  const [details, setDetails] = useState("");
+  const [answers, setAnswers] = useState<FormAnswers>({});
+  const [evidence, setEvidence] = useState<EvidenceAnswers>({});
+  const [activeSection, setActiveSection] = useState(0);
+  const [loadedSections, setLoadedSections] = useState(1);
+  const [validationMessage, setValidationMessage] = useState("");
   const selectedTemplate = templates.find((template) => template.key === selectedTemplateKey) ?? templates[0];
   const filteredTemplates = templates.filter((template) => `${template.name} ${template.category} ${template.code}`.toLowerCase().includes(search.toLowerCase()));
-  const firstSection = selectedTemplate.sections[0];
   const statusLabel = selectedTemplate.status === "ready" ? "Ready" : "Needs option review";
+  const requiredQuestions = selectedTemplate.sections.flatMap((section, sectionIndex) =>
+    section.questions.map((question, questionIndex) => ({ question, key: questionAnswerKey(sectionIndex, questionIndex) })))
+    .filter(({ question }) => question.required && question.type !== "instruction" && isQuestionVisible(selectedTemplate, question, answers));
+  const missingRequired = requiredQuestions.filter(({ key }) => !answers[key]);
+  const visibleSections = selectedTemplate.sections.slice(0, loadedSections);
+  const currentSection = visibleSections[Math.min(activeSection, visibleSections.length - 1)] ?? selectedTemplate.sections[0];
+  const currentSectionIndex = Math.max(0, selectedTemplate.sections.indexOf(currentSection));
+
+  const updateAnswer = (key: string, value: string) => {
+    setAnswers((items) => ({ ...items, [key]: value }));
+    setValidationMessage("");
+  };
+
+  const chooseTemplate = (templateKey: string) => {
+    setSelectedTemplateKey(templateKey);
+    setAnswers({});
+    setEvidence({});
+    setActiveSection(0);
+    setLoadedSections(1);
+    setValidationMessage("");
+  };
+
+  const loadNextSection = () => {
+    const nextLoaded = Math.min(selectedTemplate.sections.length, loadedSections + 1);
+    setLoadedSections(nextLoaded);
+    setActiveSection(Math.min(nextLoaded - 1, selectedTemplate.sections.length - 1));
+  };
 
   const submitReport = () => {
+    if (missingRequired.length > 0) {
+      setValidationMessage(`${missingRequired.length} required field${missingRequired.length === 1 ? "" : "s"} still need answers.`);
+      setStep(3);
+      return;
+    }
     onSubmit({
       id: Date.now(),
       reportId: `BBA-${Math.floor(100000 + Math.random() * 900000)}`,
       type: selectedTemplate.name,
       code: selectedTemplate.code,
       location,
-      date: "06/23/2026 07:00 AM",
+      date: `${reportDate} ${reportTime}`,
       creator: reportedBy || "Juan Diaz",
       status: "review",
       severity: "Attention",
       sourceFile: "Created in Bay Baby Audit",
       evidenceTags: selectedTemplate.moduleTargets,
+      answers,
+      details: `${region} / ${site}. ${details}`.trim(),
     });
   };
 
@@ -665,36 +1109,49 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
     {step === 1 && <>
       <label className="template-search"><MagnifyingGlass /><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search templates..." /></label>
       <div className="template-picker">
-        {filteredTemplates.map((template) => <button key={template.key} className={template.key === selectedTemplateKey ? "selected" : ""} onClick={() => setSelectedTemplateKey(template.key)}>
+        {filteredTemplates.map((template) => <button type="button" key={template.key} className={template.key === selectedTemplateKey ? "selected" : ""} onClick={() => chooseTemplate(template.key)}>
           <span className="template-icon"><ReportIcon code={template.code} /></span>
           <strong>{template.name}</strong>
-          <small>{template.category} ? {template.sections.reduce((sum, section) => sum + section.questions.length, 0)} fields</small>
+          <small>{template.category} / {template.sections.reduce((sum, section) => sum + section.questions.length, 0)} fields</small>
           <b className={`capture ${template.status}`}>{template.status === "ready" ? "Ready" : "Option review"}</b>
         </button>)}
       </div>
     </>}
 
     {step === 2 && <div className="form-grid">
+      <label>Region<select value={region} onChange={(event) => { setRegion(event.target.value); setSite(regionSites[event.target.value]?.[0] ?? ""); }}><option>Farm Fields</option><option>BBP Warehouse</option></select></label>
+      <label>Site<select value={site} onChange={(event) => setSite(event.target.value)}>{(regionSites[region] ?? []).map((item) => <option key={item}>{item}</option>)}</select></label>
       <label>Location<select value={location} onChange={(event) => setLocation(event.target.value)}>{farmLocations.map((item) => <option key={item}>{item}</option>)}</select></label>
-      <label>Report date<input type="date" defaultValue="2026-06-23" /></label>
-      <label>Report time<input type="time" defaultValue="07:00" /></label>
+      <label>Date of Activity<input type="date" value={reportDate} onChange={(event) => setReportDate(event.target.value)} /></label>
+      <label>Start Time<input type="time" value={reportTime} onChange={(event) => setReportTime(event.target.value)} /></label>
+      <label>End Time<input type="time" value={endTime} onChange={(event) => setEndTime(event.target.value)} /></label>
       <label>Reported by<input value={reportedBy} onChange={(event) => setReportedBy(event.target.value)} /></label>
-      <label className="full">Details<textarea maxLength={950} placeholder="Optional details, notes, or field context..." /></label>
+      <label className="full">Details<textarea value={details} onChange={(event) => setDetails(event.target.value)} maxLength={950} placeholder="Optional details, notes, or field context..." /></label>
     </div>}
 
     {step === 3 && <div className="dynamic-form">
-      <div className="section-card">
-        <div className="section-title"><span>{selectedTemplate.code}</span><h3>{firstSection.title}</h3><small>{firstSection.questions.length} fields in this section</small></div>
-        {firstSection.instructions?.map((instruction) => <p className="instruction" key={instruction}>{instruction}</p>)}
-        {firstSection.questions.slice(0, 12).map((question, index) => <QuestionInput question={question} index={index} key={`${question.label}-${index}`} />)}
-        {firstSection.questions.length > 12 && <p className="helper">Showing the first 12 fields in this preview. All {firstSection.questions.length} fields are stored with the template and will be available in the full form renderer.</p>}
+      {validationMessage && <p className="form-warning"><WarningCircle weight="fill" /> {validationMessage}</p>}
+      <div className="form-workbench">
+        <aside className="section-rail"><strong>Sections</strong>{selectedTemplate.sections.map((section, index) => <button type="button" disabled={index >= loadedSections} className={activeSection === index ? "active" : ""} onClick={() => setActiveSection(index)} key={section.title}>{index + 1}<span>{section.title}</span></button>)}</aside>
+        <div className="section-card" key={`${selectedTemplate.key}-${currentSection.title}`}>
+          <div className="section-title"><span>{currentSectionIndex + 1}</span><h3>{currentSection.title}</h3><small>{currentSection.questions.filter((question) => isQuestionVisible(selectedTemplate, question, answers)).length} visible fields</small></div>
+          {currentSection.instructions?.map((instruction) => <p className="instruction" key={instruction}>{instruction}</p>)}
+          {currentSection.questions.map((question, index) => {
+            if (!isQuestionVisible(selectedTemplate, question, answers)) return null;
+            const answerKey = questionAnswerKey(currentSectionIndex, index);
+            return <QuestionInput question={question} index={index} value={answers[answerKey] ?? ""} evidenceMarked={!!evidence[answerKey]} onEvidence={() => setEvidence((items) => ({ ...items, [answerKey]: !items[answerKey] }))} onChange={(value) => updateAnswer(answerKey, value)} key={`${currentSection.title}-${question.label}-${index}`} />;
+          })}
+          {loadedSections < selectedTemplate.sections.length && <div className="load-section"><button type="button" className="primary" onClick={loadNextSection}>Load next section</button></div>}
+        </div>
       </div>
     </div>}
 
     {step === 4 && <div className="review-summary">
       <CheckCircle weight="duotone" />
       <h3>Ready to submit</h3>
-      <p>{selectedTemplate.name} ? {location} ? {selectedTemplate.sections.length} sections</p>
+      <p>{selectedTemplate.name} / {site} / {location} / {selectedTemplate.sections.length} sections</p>
+      <div><span>Answered fields</span><b>{Object.values(answers).filter(Boolean).length}</b></div>
+      <div><span>Evidence markers</span><b>{Object.values(evidence).filter(Boolean).length}</b></div>
       <div><span>Template status</span><b>{statusLabel}</b></div>
       <div><span>Next step</span><b>Manager review</b></div>
       <div><span>Audit mapping</span><b>{selectedTemplate.moduleTargets.join(", ")}</b></div>
@@ -707,23 +1164,37 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
   </div>;
 }
 
-function QuestionInput({ question, index }: { question: Question; index: number }) {
+function QuestionInput({ question, index, value, evidenceMarked, onEvidence, onChange }: { question: Question; index: number; value: string; evidenceMarked: boolean; onEvidence: () => void; onChange: (value: string) => void }) {
   if (question.type === "instruction") return <p className="instruction">{question.label}</p>;
   const label = cleanQuestionLabel(question.label);
   return <div className="field-question">
-    <div><b>{index + 1}</b><span>{label}{question.required && <em>Required</em>}</span></div>
-    {question.type === "yes_no" && <div className="segmented"><button>Yes</button><button>No</button></div>}
-    {question.type === "yes_no_na" && <div className="segmented"><button>Yes</button><button>No</button><button>N/A</button></div>}
-    {question.type === "single_select" && <select><option>{question.options_status === "pending" ? "Options pending admin review" : "Select an option"}</option>{question.options?.map((option) => <option key={option}>{option}</option>)}</select>}
-    {question.type === "number" && <input type="number" placeholder="Enter number" />}
-    {question.type === "date" && <input type="date" />}
-    {question.type === "time" && <input type="time" />}
-    {question.type === "calculated_number" && <input disabled placeholder={question.formula_display ?? "Calculated"} />}
-    {!["yes_no", "yes_no_na", "single_select", "number", "date", "time", "calculated_number"].includes(question.type) && <input placeholder="Enter response" />}
+    <div><b>{index + 1}</b><span>{label}{question.required && <em>Required</em>}{question.archived_for_future_reports && <small>Archived in HeavyConnect</small>}</span></div>
+    <div className="question-control">
+      {question.type === "yes_no" && <div className="segmented">{["Yes", "No"].map((option) => <button type="button" className={value === option ? "selected" : ""} onClick={() => onChange(option)} key={option}>{option}</button>)}</div>}
+      {question.type === "yes_no_na" && <div className="segmented">{["Yes", "No", "N/A"].map((option) => <button type="button" className={value === option ? "selected" : ""} onClick={() => onChange(option)} key={option}>{option}</button>)}</div>}
+      {question.type === "single_select" && <select value={value} onChange={(event) => onChange(event.target.value)}><option value="">{question.options_status === "pending" ? "Options pending admin review" : "Select an option"}</option>{question.options?.map((option) => <option key={option}>{option}</option>)}</select>}
+      {question.type === "number" && <input type="number" value={value} onChange={(event) => onChange(event.target.value)} placeholder="Enter number" />}
+      {question.type === "date" && <input type="date" value={value} onChange={(event) => onChange(event.target.value)} />}
+      {question.type === "time" && <input type="time" value={value} onChange={(event) => onChange(event.target.value)} />}
+      {question.type === "long_text" && <textarea value={value} onChange={(event) => onChange(event.target.value)} placeholder="Enter notes" />}
+      {question.type === "calculated_number" && <input disabled placeholder={question.formula_display ?? "Calculated"} />}
+      {question.type === "unsupported_in_web_dashboard" && <p className="helper">HeavyConnect hides this control in the web dashboard. Mark for admin review before locking.</p>}
+      {!["yes_no", "yes_no_na", "single_select", "number", "date", "time", "long_text", "calculated_number", "unsupported_in_web_dashboard"].includes(question.type) && <input value={value} maxLength={question.max_length} onChange={(event) => onChange(event.target.value)} placeholder="Enter response" />}
+    </div>
+    <button type="button" className={`evidence-button ${evidenceMarked ? "selected" : ""}`} onClick={onEvidence} title="Mark evidence or attachment needed"><Files />{evidenceMarked ? "Evidence" : "Attach"}</button>
   </div>;
 }
 
-function ReviewPanel({ report, onDone }: { report: Report; onDone: () => void }) {
+function ReviewPanel({ report, review, onDone }: { report: Report; review?: ReviewRecord; onDone: (review: ReviewRecord, approve: boolean) => void }) {
+  const [note, setNote] = useState(review?.note ?? "");
+  const [correctiveAction, setCorrectiveAction] = useState(review?.correctiveAction ?? "");
+  const saveReview = (approve: boolean) => onDone({
+    note,
+    correctiveAction,
+    reviewedAt: new Date().toISOString(),
+    reviewer: "Juan Diaz",
+  }, approve);
+
   return <div className="form-panel review-panel">
     <div className="modal-heading"><span>Report review</span><h2>{report.code} {report.type}</h2><p>{report.location} • {report.date} • {report.creator}</p></div>
     <div className="review-alert"><WarningCircle weight="fill" /><div><strong>{report.status === "action" ? "Corrective action required" : "Verify report evidence"}</strong><span>Record: {report.reportId}. Tags: {report.evidenceTags.join(", ") || "none"}.</span></div></div>
@@ -731,10 +1202,11 @@ function ReviewPanel({ report, onDone }: { report: Report; onDone: () => void })
       <div><span>Report ID</span><b>{report.reportId}</b></div>
       <div><span>Primus evidence status</span><b className={report.status === "approved" ? "pass" : "fail"}>{statusCopy[report.status].label}</b></div>
       <div><span>Recommended action</span><b>{report.status === "approved" ? "Include in packet" : "Manager review"}</b></div>
+      {review && <div><span>Last review</span><b>{new Date(review.reviewedAt).toLocaleString("en-US")}</b></div>}
     </div>
-    <label>Review notes<textarea placeholder="Add a clear note for the audit packet..." /></label>
-    <label>Corrective action<textarea placeholder="Describe what must be corrected and by when..." /></label>
-    <div className="modal-actions"><button className="secondary" onClick={onDone}>Save notes</button><button className="primary" onClick={onDone}><Check /> Mark reviewed</button></div>
+    <label>Review notes<textarea value={note} onChange={(event) => setNote(event.target.value)} placeholder="Add a clear note for the audit packet..." /></label>
+    <label>Corrective action<textarea value={correctiveAction} onChange={(event) => setCorrectiveAction(event.target.value)} placeholder="Describe root cause, correction, evidence, owner, and due date..." /></label>
+    <div className="modal-actions"><button className="secondary" onClick={() => saveReview(false)}>Save notes</button><button className="primary" onClick={() => saveReview(true)}><Check /> Approve report</button></div>
   </div>;
 }
 
