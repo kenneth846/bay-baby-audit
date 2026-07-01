@@ -22,7 +22,7 @@ import {
   WarningCircle,
   X,
 } from "@phosphor-icons/react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import heavyConnectInventory from "@/data/heavyconnect-reports/inventory.json";
 import dailySanitationTemplate from "@/data/heavyconnect-templates/daily-sanitation-log.json";
 import freshTemplate from "@/data/heavyconnect-templates/fresh-committee-meeting.json";
@@ -98,6 +98,7 @@ type Report = {
   evidenceTags: string[];
   answers?: Record<string, string>;
   answerRows?: ReportAnswer[];
+  attachments?: MediaAttachment[];
   details?: string;
   review?: ReviewRecord;
 };
@@ -111,7 +112,6 @@ type ReportAnswer = {
 };
 
 type FormAnswers = Record<string, string>;
-type EvidenceAnswers = Record<string, MediaAttachment[]>;
 
 type MediaAttachment = {
   id: string;
@@ -1247,7 +1247,7 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
   const [endTime, setEndTime] = useState("08:00");
   const [details, setDetails] = useState("");
   const [answers, setAnswers] = useState<FormAnswers>({});
-  const [evidence, setEvidence] = useState<EvidenceAnswers>({});
+  const [reportAttachments, setReportAttachments] = useState<MediaAttachment[]>([]);
   const [activeSection, setActiveSection] = useState(0);
   const [loadedSections, setLoadedSections] = useState(1);
   const [validationMessage, setValidationMessage] = useState("");
@@ -1270,10 +1270,11 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
   const chooseTemplate = (templateKey: string) => {
     setSelectedTemplateKey(templateKey);
     setAnswers({});
-    setEvidence({});
+    setReportAttachments([]);
     setActiveSection(0);
     setLoadedSections(1);
     setValidationMessage("");
+    setStep(2);
   };
 
   const loadNextSection = () => {
@@ -1296,8 +1297,8 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
           section: section.title,
           question: cleanQuestionLabel(question.label),
           answer: answers[key] || "",
-          evidenceMarked: (evidence[key]?.length ?? 0) > 0,
-          attachments: evidence[key] ?? [],
+          evidenceMarked: false,
+          attachments: [],
         };
       }).filter((row): row is ReportAnswer => row !== null));
     onSubmit({
@@ -1314,6 +1315,7 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
       evidenceTags: selectedTemplate.moduleTargets,
       answers,
       answerRows,
+      attachments: reportAttachments,
       details: `${region} / ${site}. ${details}`.trim(),
     });
   };
@@ -1359,16 +1361,6 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
               question={question}
               index={index}
               value={answers[answerKey] ?? ""}
-              attachments={evidence[answerKey] ?? []}
-              onAttach={async (files) => {
-                const nextAttachments = await Promise.all(files.map(readMediaFile));
-                setEvidence((items) => ({ ...items, [answerKey]: [...(items[answerKey] ?? []), ...nextAttachments].slice(0, 6) }));
-              }}
-              onClearAttachments={() => setEvidence((items) => {
-                const next = { ...items };
-                delete next[answerKey];
-                return next;
-              })}
               onChange={(value) => updateAnswer(answerKey, value)}
               key={`${currentSection.title}-${question.label}-${index}`}
             />;
@@ -1383,10 +1375,18 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
       <h3>Ready to submit</h3>
       <p>{selectedTemplate.name} / {site} / {location} / {selectedTemplate.sections.length} sections</p>
       <div><span>Answered fields</span><b>{Object.values(answers).filter(Boolean).length}</b></div>
-      <div><span>Media attachments</span><b>{Object.values(evidence).reduce((sum, files) => sum + files.length, 0)}</b></div>
+      <div><span>Media attachments</span><b>{reportAttachments.length}</b></div>
       <div><span>Template status</span><b>{statusLabel}</b></div>
       <div><span>Next step</span><b>Manager review</b></div>
       <div><span>Audit mapping</span><b>{selectedTemplate.moduleTargets.join(", ")}</b></div>
+      <ReportMediaDropzone
+        attachments={reportAttachments}
+        onAttach={async (files) => {
+          const nextAttachments = await Promise.all(files.map(readMediaFile));
+          setReportAttachments((items) => [...items, ...nextAttachments].slice(0, 12));
+        }}
+        onRemove={(id) => setReportAttachments((items) => items.filter((item) => item.id !== id))}
+      />
     </div>}
 
     <div className="modal-actions">
@@ -1396,18 +1396,14 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
   </div>;
 }
 
-function QuestionInput({ question, index, value, attachments, onAttach, onClearAttachments, onChange }: {
+function QuestionInput({ question, index, value, onChange }: {
   question: Question;
   index: number;
   value: string;
-  attachments: MediaAttachment[];
-  onAttach: (files: File[]) => void;
-  onClearAttachments: () => void;
   onChange: (value: string) => void;
 }) {
   if (question.type === "instruction") return <p className="instruction">{question.label}</p>;
   const label = cleanQuestionLabel(question.label);
-  const inputId = `media-${index}-${label.replace(/[^a-z0-9]+/gi, "-").slice(0, 24)}`;
   return <div className="field-question">
     <div><b>{index + 1}</b><span>{label}{question.required && <em>Required</em>}{question.archived_for_future_reports && <small>Archived in HeavyConnect</small>}</span></div>
     <div className="question-control">
@@ -1422,24 +1418,40 @@ function QuestionInput({ question, index, value, attachments, onAttach, onClearA
       {question.type === "unsupported_in_web_dashboard" && <p className="helper">HeavyConnect hides this control in the web dashboard. Mark for admin review before locking.</p>}
       {!["yes_no", "yes_no_na", "single_select", "number", "date", "time", "long_text", "calculated_number", "unsupported_in_web_dashboard"].includes(question.type) && <input value={value} maxLength={question.max_length} onChange={(event) => onChange(event.target.value)} placeholder="Enter response" />}
     </div>
-    <div className="media-control">
-      <label className={`evidence-button ${attachments.length ? "selected" : ""}`} htmlFor={inputId} title="Attach photos, PDFs, or evidence files">
-        <Files />{attachments.length ? `${attachments.length} file${attachments.length === 1 ? "" : "s"}` : "Attach"}
-      </label>
-      <input id={inputId} type="file" multiple accept="image/*,.pdf" onChange={(event) => {
+  </div>;
+}
+
+function ReportMediaDropzone({ attachments, onAttach, onRemove }: {
+  attachments: MediaAttachment[];
+  onAttach: (files: File[]) => void;
+  onRemove: (id: string) => void;
+}) {
+  return <section className="report-media-box">
+    <div>
+      <strong>Report media</strong>
+      <span>Attach photos, PDFs, or supporting evidence for this report.</span>
+    </div>
+    <label className="media-drop-button">
+      <Files /> Add media
+      <input type="file" multiple accept="image/*,.pdf" onChange={(event) => {
         onAttach(Array.from(event.target.files ?? []));
         event.currentTarget.value = "";
       }} />
-      {attachments.length > 0 && <button type="button" className="clear-media" onClick={onClearAttachments}>Clear</button>}
-      {attachments.length > 0 && <small>{attachments.map((file) => `${file.name} (${formatFileSize(file.size)})`).join(", ")}</small>}
-    </div>
-  </div>;
+    </label>
+    {attachments.length > 0 && <ul>
+      {attachments.map((file) => <li key={file.id}>
+        <span>{file.name}<small>{formatFileSize(file.size)}</small></span>
+        <button type="button" onClick={() => onRemove(file.id)}>Remove</button>
+      </li>)}
+    </ul>}
+  </section>;
 }
 
 function ReviewPanel({ report, review, answerRows, onDone, onPacket }: { report: Report; review?: ReviewRecord; answerRows: ReportAnswer[]; onDone: (review: ReviewRecord, approve: boolean) => void; onPacket: () => void }) {
   const [note, setNote] = useState(review?.note ?? "");
   const [correctiveAction, setCorrectiveAction] = useState(review?.correctiveAction ?? "");
   const [severityFilter, setSeverityFilter] = useState("All Severities");
+  const reviewFieldRef = useRef<HTMLTextAreaElement>(null);
   const saveReview = (approve: boolean) => onDone({
     note,
     correctiveAction,
@@ -1456,20 +1468,19 @@ function ReviewPanel({ report, review, answerRows, onDone, onPacket }: { report:
     severityFilter === "Evidence marked" ? rows.filter((row) => row.evidenceMarked) : rows,
   ] as const).filter(([, rows]) => rows.length > 0);
   const answeredCount = answerRows.filter((row) => row.answer).length;
-  const evidenceCount = answerRows.reduce((sum, row) => sum + (row.attachments?.length ?? (row.evidenceMarked ? 1 : 0)), 0);
+  const evidenceCount = (report.attachments?.length ?? 0) + answerRows.reduce((sum, row) => sum + (row.attachments?.length ?? (row.evidenceMarked ? 1 : 0)), 0);
   const statusLabel = statusCopy[report.status].label;
 
-  return <div className="report-detail">
-    <div className="report-detail-bar">Report Details</div>
+  return <div className="report-detail bay-review">
     <section className="report-detail-head">
       <div className="report-type-icon"><ReportIcon code={report.code} /></div>
       <div className="report-title-block">
-        <span>{report.evidenceTags[0] ?? "Bay Baby report"}</span>
+        <span>{report.evidenceTags[0] ?? "Bay Baby report"} / {report.reportId}</span>
         <h2>{report.code} {report.type}</h2>
         <b className={`detail-status ${report.status}`}>{statusLabel}</b>
       </div>
       <div className="detail-actions">
-        <button className="secondary" onClick={() => saveReview(false)}><Plus /> Add review</button>
+        <button className="secondary" onClick={() => reviewFieldRef.current?.focus()}><Plus /> Write review</button>
         <button className="row-action" onClick={onPacket}><FilePdf /> View PDF</button>
       </div>
     </section>
@@ -1483,8 +1494,12 @@ function ReviewPanel({ report, review, answerRows, onDone, onPacket }: { report:
     </section>
     <div className="detail-tabs"><button className="active">Report Questions</button><button>Review</button></div>
     <section className="detail-review-fields">
-      <label><span>General Corrective Action</span><textarea value={correctiveAction} onChange={(event) => setCorrectiveAction(event.target.value)} placeholder="Type a corrective action" /></label>
-      <label><span>General Recommendations</span><textarea value={note} onChange={(event) => setNote(event.target.value)} placeholder="Type a recommendation" /></label>
+      {review?.reviewedAt && <div className="saved-review">
+        <CheckCircle weight="fill" />
+        <div><strong>Saved review</strong><span>{review.reviewer} / {new Date(review.reviewedAt).toLocaleString("en-US")}</span></div>
+      </div>}
+      <label><span>Review notes</span><textarea ref={reviewFieldRef} value={note} onChange={(event) => setNote(event.target.value)} placeholder="Add reviewer notes, observations, or recommendations..." /></label>
+      <label><span>Corrective action</span><textarea value={correctiveAction} onChange={(event) => setCorrectiveAction(event.target.value)} placeholder="Root cause, correction, owner, due date, and closure evidence..." /></label>
       <select value={severityFilter} onChange={(event) => setSeverityFilter(event.target.value)}>
         <option>All Severities</option>
         <option>Good</option>
@@ -1496,6 +1511,10 @@ function ReviewPanel({ report, review, answerRows, onDone, onPacket }: { report:
     {report.details && <section className="detail-section">
       <h3>Header</h3>
       <ol>{report.details.split(". ").filter(Boolean).map((item, index) => <li key={`${item}-${index}`}>{item}</li>)}</ol>
+    </section>}
+    {!!report.attachments?.length && <section className="detail-section review-media-list">
+      <h3>Report media</h3>
+      <div>{report.attachments.map((file) => <span key={file.id}><Files />{file.name}<small>{formatFileSize(file.size)}</small></span>)}</div>
     </section>}
     {displayedGroups.map(([section, rows], sectionIndex) => <section className="detail-section" key={section}>
       <h3>{sectionIndex + 1}. {section}</h3>

@@ -39,6 +39,7 @@ type PacketReport = {
   evidenceTags: string[];
   details?: string;
   answerRows: PacketAnswer[];
+  attachments: PacketAttachment[];
   review?: {
     note: string;
     correctiveAction: string;
@@ -128,6 +129,7 @@ function parseReports(value: unknown) {
       evidenceTags: parseStringArray(record.evidenceTags),
       details: cleanText(record.details),
       answerRows: parseAnswers(record.answerRows),
+      attachments: parseAttachments(record.attachments),
       review: reviewRecord ? {
         note: cleanText(reviewRecord.note),
         correctiveAction: cleanText(reviewRecord.correctiveAction),
@@ -270,7 +272,7 @@ async function addSingleReportPage(pdf: PDFDocument, report: PacketReport, font:
     page.drawText(`+ ${report.answerRows.length - rendered} more captured answers retained in the app.`, { x: 30, y, size: 7, font: bold, color: rgb(0.56, 0.32, 0.05) });
   }
 
-  const attachments = report.answerRows.flatMap((row) => row.attachments);
+  const attachments = [...report.attachments, ...report.answerRows.flatMap((row) => row.attachments)];
   page.drawRectangle({ x: 30, y: 44, width: 552, height: 112, color: rgb(0.96, 0.98, 0.96), borderColor: rgb(0.8, 0.86, 0.81), borderWidth: 0.5 });
   page.drawText("Media evidence", { x: 42, y: 136, size: 9, font: bold, color: rgb(0.07, 0.18, 0.14) });
   if (attachments.length) {
@@ -308,6 +310,11 @@ function addReportPages(pdf: PDFDocument, report: PacketReport, font: PDFFont, b
     y = drawWrapped(page, `Reviewer: ${report.review.reviewer || "Not recorded"} / Reviewed: ${report.review.reviewedAt || "Not recorded"}`, margin, y, { font, size: 9, maxWidth: 500, lineGap: 3 }) - 4;
     if (report.review.note) y = drawWrapped(page, `Notes: ${report.review.note}`, margin, y, { font, size: 9, maxWidth: 500, lineGap: 3 }) - 4;
     if (report.review.correctiveAction) y = drawWrapped(page, `Corrective action: ${report.review.correctiveAction}`, margin, y, { font, size: 9, maxWidth: 500, lineGap: 3 }) - 12;
+  }
+
+  if (report.attachments.length) {
+    page.drawText("Report media", { x: margin, y, size: 11, font: bold, color: rgb(0.07, 0.18, 0.14) });
+    y = drawWrapped(page, report.attachments.map(attachmentLabel).join(", "), margin, y - 18, { font, size: 9, maxWidth: 500, lineGap: 3 }) - 14;
   }
 
   page.drawText("Questions and answers", { x: margin, y, size: 12, font: bold, color: rgb(0.07, 0.18, 0.14) });
