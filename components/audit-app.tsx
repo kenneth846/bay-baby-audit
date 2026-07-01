@@ -97,7 +97,16 @@ type Report = {
   sourceFile: string;
   evidenceTags: string[];
   answers?: Record<string, string>;
+  answerRows?: ReportAnswer[];
   details?: string;
+  review?: ReviewRecord;
+};
+
+type ReportAnswer = {
+  section: string;
+  question: string;
+  answer: string;
+  evidenceMarked: boolean;
 };
 
 type FormAnswers = Record<string, string>;
@@ -446,6 +455,10 @@ export function AuditApp() {
     items.includes(id) ? items.filter((item) => item !== id) : [...items, id]);
 
   const openReport = (report: Report) => {
+    if (report.status === "approved") {
+      void downloadPacket([report]);
+      return;
+    }
     setCurrentReport(report);
     setModal("review");
   };
@@ -455,14 +468,21 @@ export function AuditApp() {
     setModal("audit");
   };
 
-  async function downloadPacket() {
+  async function downloadPacket(reportOverride?: Report[]) {
+    const sourceReports = reportOverride ?? (selected.length ? allReports.filter((report) => selected.includes(report.id)) : allReports);
+    const packetReports = sourceReports.map((report) => ({
+      ...report,
+      answerRows: answerRowsForReport(report, templates),
+      review: reviews[report.reportId],
+    }));
     const response = await fetch("/api/audit-packet", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        count: selected.length || heavyConnectInventory.report_count,
+        count: packetReports.length || selected.length || heavyConnectInventory.report_count,
         generatedBy: "Juan Diaz",
-        selectedIds: selected,
+        selectedIds: reportOverride ? reportOverride.map((report) => report.id) : selected,
+        reports: packetReports,
         startDate: "2025-01-01",
         endDate: "2026-01-01",
       }),
@@ -475,10 +495,10 @@ export function AuditApp() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "Bay-Baby-PrimusGFS-v4-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
+    a.download = reportOverride?.length === 1 ? `Bay-Baby-${reportOverride[0].reportId}-Report-Packet.pdf` : "Bay-Baby-PrimusGFS-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
     a.click();
     URL.revokeObjectURL(url);
-    setToast("Audit packet generated");
+    setToast(reportOverride?.length === 1 ? "Report packet generated" : "Audit packet generated");
     setModal(null);
   }
 
@@ -580,7 +600,7 @@ export function AuditApp() {
             setModal(null);
             setToast(approve ? "Report approved" : "Review notes saved");
           }} />}
-          {modal === "audit" && <AuditWizard step={wizardStep} setStep={setWizardStep} onGenerate={downloadPacket} selected={selected.length || heavyConnectInventory.report_count} />}
+          {modal === "audit" && <AuditWizard step={wizardStep} setStep={setWizardStep} onGenerate={downloadPacket} selected={selected.length || allReports.length} />}
         </div>
       </div>}
       {toast && <div className="toast"><CheckCircle weight="fill" />{toast}<button onClick={() => setToast("")}><X /></button></div>}
@@ -1145,6 +1165,31 @@ function isQuestionVisible(template: TemplateDefinition, question: Question, ans
   return true;
 }
 
+function answerRowsForReport(report: Report, templates: TemplateDefinition[]): ReportAnswer[] {
+  if (report.answerRows?.length) return report.answerRows;
+  if (!report.answers) return [];
+  const template = templates.find((item) => item.name === report.type || item.code === report.code);
+  if (!template) return Object.entries(report.answers).map(([key, value]) => ({
+    section: "Captured answers",
+    question: key,
+    answer: value,
+    evidenceMarked: false,
+  }));
+  return template.sections.flatMap((section, sectionIndex) =>
+    section.questions.map((question, questionIndex): ReportAnswer | null => {
+      if (question.type === "instruction") return null;
+      const key = questionAnswerKey(sectionIndex, questionIndex);
+      const answer = report.answers?.[key];
+      if (!answer) return null;
+      return {
+        section: section.title,
+        question: cleanQuestionLabel(question.label),
+        answer,
+        evidenceMarked: false,
+      };
+    }).filter((row): row is ReportAnswer => row !== null));
+}
+
 function StartReportFlow({ templates, onCancel, onSubmit }: { templates: TemplateDefinition[]; onCancel: () => void; onSubmit: (report: Report) => void }) {
   const [selectedTemplateKey, setSelectedTemplateKey] = useState(templates[0]?.key ?? "");
   const [step, setStep] = useState(1);
@@ -1199,6 +1244,17 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
       setStep(3);
       return;
     }
+    const answerRows = selectedTemplate.sections.flatMap((section, sectionIndex) =>
+      section.questions.map((question, questionIndex): ReportAnswer | null => {
+        if (question.type === "instruction" || !isQuestionVisible(selectedTemplate, question, answers)) return null;
+        const key = questionAnswerKey(sectionIndex, questionIndex);
+        return {
+          section: section.title,
+          question: cleanQuestionLabel(question.label),
+          answer: answers[key] || "",
+          evidenceMarked: !!evidence[key],
+        };
+      }).filter((row): row is ReportAnswer => row !== null));
     onSubmit({
       id: Date.now(),
       reportId: `BBA-${Math.floor(100000 + Math.random() * 900000)}`,
@@ -1212,6 +1268,7 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
       sourceFile: "Created in Bay Baby Audit",
       evidenceTags: selectedTemplate.moduleTargets,
       answers,
+      answerRows,
       details: `${region} / ${site}. ${details}`.trim(),
     });
   };
