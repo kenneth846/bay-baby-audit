@@ -107,10 +107,19 @@ type ReportAnswer = {
   question: string;
   answer: string;
   evidenceMarked: boolean;
+  attachments?: MediaAttachment[];
 };
 
 type FormAnswers = Record<string, string>;
-type EvidenceAnswers = Record<string, boolean>;
+type EvidenceAnswers = Record<string, MediaAttachment[]>;
+
+type MediaAttachment = {
+  id: string;
+  name: string;
+  type: string;
+  size: number;
+  dataUrl?: string;
+};
 
 type ReviewRecord = {
   note: string;
@@ -204,7 +213,7 @@ const regionSites: Record<string, string[]> = {
 };
 
 const statusCopy = {
-  approved: { label: "Approved", action: "View packet" },
+  approved: { label: "Approved", action: "View PDF" },
   review: { label: "Needs review", action: "Review" },
   action: { label: "Needs action", action: "Add action" },
   submitted: { label: "Submitted", action: "Review" },
@@ -267,6 +276,31 @@ function cleanQuestionLabel(label: string) {
     .replace(/\s*\/\s*[A-ZÁÉÍÓÚÑ].*$/i, "")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function formatFileSize(size: number) {
+  if (size < 1024) return `${size} B`;
+  if (size < 1024 * 1024) return `${Math.round(size / 1024)} KB`;
+  return `${(size / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+function readMediaFile(file: File): Promise<MediaAttachment> {
+  return new Promise((resolve) => {
+    const attachment = {
+      id: `${Date.now()}-${Math.random().toString(36).slice(2)}`,
+      name: file.name,
+      type: file.type || "application/octet-stream",
+      size: file.size,
+    };
+    if (!file.type.startsWith("image/") || file.size > 1_500_000) {
+      resolve(attachment);
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => resolve({ ...attachment, dataUrl: String(reader.result || "") });
+    reader.onerror = () => resolve(attachment);
+    reader.readAsDataURL(file);
+  });
 }
 
 function reportStatus(index: number): Status {
@@ -456,7 +490,7 @@ export function AuditApp() {
 
   const openReport = (report: Report) => {
     if (report.status === "approved") {
-      void downloadPacket([report]);
+      void downloadPacket([report], "report");
       return;
     }
     setCurrentReport(report);
@@ -468,7 +502,7 @@ export function AuditApp() {
     setModal("audit");
   };
 
-  async function downloadPacket(reportOverride?: Report[]) {
+  async function downloadPacket(reportOverride?: Report[], mode: "audit" | "report" = reportOverride?.length === 1 ? "report" : "audit") {
     const sourceReports = reportOverride ?? (selected.length ? allReports.filter((report) => selected.includes(report.id)) : allReports);
     const packetReports = sourceReports.map((report) => ({
       ...report,
@@ -479,6 +513,7 @@ export function AuditApp() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        mode,
         count: packetReports.length || selected.length || heavyConnectInventory.report_count,
         generatedBy: "Juan Diaz",
         selectedIds: reportOverride ? reportOverride.map((report) => report.id) : selected,
@@ -493,12 +528,19 @@ export function AuditApp() {
     }
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
+    if (mode === "report") {
+      window.open(url, "_blank", "noopener,noreferrer");
+      setTimeout(() => URL.revokeObjectURL(url), 30_000);
+      setToast("Report PDF opened");
+      setModal(null);
+      return;
+    }
     const a = document.createElement("a");
     a.href = url;
-    a.download = reportOverride?.length === 1 ? `Bay-Baby-${reportOverride[0].reportId}-Report-Packet.pdf` : "Bay-Baby-PrimusGFS-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
+    a.download = "Bay-Baby-PrimusGFS-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
     a.click();
     URL.revokeObjectURL(url);
-    setToast(reportOverride?.length === 1 ? "Report packet generated" : "Audit packet generated");
+    setToast("Audit packet generated");
     setModal(null);
   }
 
@@ -585,7 +627,7 @@ export function AuditApp() {
       </main>
 
       {modal && <div className="modal-backdrop" onMouseDown={() => setModal(null)}>
-        <div className={`modal ${modal === "audit" || modal === "start" ? "wide" : ""}`} onMouseDown={(event) => event.stopPropagation()}>
+        <div className={`modal ${modal === "audit" || modal === "start" || modal === "review" ? "wide" : ""} ${modal === "review" ? "report-detail-modal" : ""}`} onMouseDown={(event) => event.stopPropagation()}>
           <button className="modal-close" onClick={() => setModal(null)}><X /></button>
           {modal === "start" && <StartReportFlow templates={templates} onCancel={() => setModal(null)} onSubmit={(report) => {
             setNewReports((items) => [report, ...items]);
@@ -594,7 +636,7 @@ export function AuditApp() {
             setToast("Report submitted for review");
             setView("inspector");
           }} />}
-          {modal === "review" && currentReport && <ReviewPanel report={currentReport} review={reviews[currentReport.reportId]} onDone={(review, approve) => {
+          {modal === "review" && currentReport && <ReviewPanel report={currentReport} review={reviews[currentReport.reportId]} answerRows={answerRowsForReport(currentReport, templates)} onPacket={() => downloadPacket([currentReport])} onDone={(review, approve) => {
             setReviews((items) => ({ ...items, [currentReport.reportId]: review }));
             if (approve) setNewReports((items) => items.map((report) => report.reportId === currentReport.reportId ? { ...report, status: "approved", severity: "Good" } : report));
             setModal(null);
@@ -1174,6 +1216,7 @@ function answerRowsForReport(report: Report, templates: TemplateDefinition[]): R
     question: key,
     answer: value,
     evidenceMarked: false,
+    attachments: [],
   }));
   return template.sections.flatMap((section, sectionIndex) =>
     section.questions.map((question, questionIndex): ReportAnswer | null => {
@@ -1186,6 +1229,7 @@ function answerRowsForReport(report: Report, templates: TemplateDefinition[]): R
         question: cleanQuestionLabel(question.label),
         answer,
         evidenceMarked: false,
+        attachments: [],
       };
     }).filter((row): row is ReportAnswer => row !== null));
 }
@@ -1252,7 +1296,8 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
           section: section.title,
           question: cleanQuestionLabel(question.label),
           answer: answers[key] || "",
-          evidenceMarked: !!evidence[key],
+          evidenceMarked: (evidence[key]?.length ?? 0) > 0,
+          attachments: evidence[key] ?? [],
         };
       }).filter((row): row is ReportAnswer => row !== null));
     onSubmit({
@@ -1310,7 +1355,23 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
           {currentSection.questions.map((question, index) => {
             if (!isQuestionVisible(selectedTemplate, question, answers)) return null;
             const answerKey = questionAnswerKey(currentSectionIndex, index);
-            return <QuestionInput question={question} index={index} value={answers[answerKey] ?? ""} evidenceMarked={!!evidence[answerKey]} onEvidence={() => setEvidence((items) => ({ ...items, [answerKey]: !items[answerKey] }))} onChange={(value) => updateAnswer(answerKey, value)} key={`${currentSection.title}-${question.label}-${index}`} />;
+            return <QuestionInput
+              question={question}
+              index={index}
+              value={answers[answerKey] ?? ""}
+              attachments={evidence[answerKey] ?? []}
+              onAttach={async (files) => {
+                const nextAttachments = await Promise.all(files.map(readMediaFile));
+                setEvidence((items) => ({ ...items, [answerKey]: [...(items[answerKey] ?? []), ...nextAttachments].slice(0, 6) }));
+              }}
+              onClearAttachments={() => setEvidence((items) => {
+                const next = { ...items };
+                delete next[answerKey];
+                return next;
+              })}
+              onChange={(value) => updateAnswer(answerKey, value)}
+              key={`${currentSection.title}-${question.label}-${index}`}
+            />;
           })}
           {loadedSections < selectedTemplate.sections.length && <div className="load-section"><button type="button" className="primary" onClick={loadNextSection}>Load next section</button></div>}
         </div>
@@ -1322,7 +1383,7 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
       <h3>Ready to submit</h3>
       <p>{selectedTemplate.name} / {site} / {location} / {selectedTemplate.sections.length} sections</p>
       <div><span>Answered fields</span><b>{Object.values(answers).filter(Boolean).length}</b></div>
-      <div><span>Evidence markers</span><b>{Object.values(evidence).filter(Boolean).length}</b></div>
+      <div><span>Media attachments</span><b>{Object.values(evidence).reduce((sum, files) => sum + files.length, 0)}</b></div>
       <div><span>Template status</span><b>{statusLabel}</b></div>
       <div><span>Next step</span><b>Manager review</b></div>
       <div><span>Audit mapping</span><b>{selectedTemplate.moduleTargets.join(", ")}</b></div>
@@ -1335,9 +1396,18 @@ function StartReportFlow({ templates, onCancel, onSubmit }: { templates: Templat
   </div>;
 }
 
-function QuestionInput({ question, index, value, evidenceMarked, onEvidence, onChange }: { question: Question; index: number; value: string; evidenceMarked: boolean; onEvidence: () => void; onChange: (value: string) => void }) {
+function QuestionInput({ question, index, value, attachments, onAttach, onClearAttachments, onChange }: {
+  question: Question;
+  index: number;
+  value: string;
+  attachments: MediaAttachment[];
+  onAttach: (files: File[]) => void;
+  onClearAttachments: () => void;
+  onChange: (value: string) => void;
+}) {
   if (question.type === "instruction") return <p className="instruction">{question.label}</p>;
   const label = cleanQuestionLabel(question.label);
+  const inputId = `media-${index}-${label.replace(/[^a-z0-9]+/gi, "-").slice(0, 24)}`;
   return <div className="field-question">
     <div><b>{index + 1}</b><span>{label}{question.required && <em>Required</em>}{question.archived_for_future_reports && <small>Archived in HeavyConnect</small>}</span></div>
     <div className="question-control">
@@ -1352,19 +1422,95 @@ function QuestionInput({ question, index, value, evidenceMarked, onEvidence, onC
       {question.type === "unsupported_in_web_dashboard" && <p className="helper">HeavyConnect hides this control in the web dashboard. Mark for admin review before locking.</p>}
       {!["yes_no", "yes_no_na", "single_select", "number", "date", "time", "long_text", "calculated_number", "unsupported_in_web_dashboard"].includes(question.type) && <input value={value} maxLength={question.max_length} onChange={(event) => onChange(event.target.value)} placeholder="Enter response" />}
     </div>
-    <button type="button" className={`evidence-button ${evidenceMarked ? "selected" : ""}`} onClick={onEvidence} title="Mark evidence or attachment needed"><Files />{evidenceMarked ? "Evidence" : "Attach"}</button>
+    <div className="media-control">
+      <label className={`evidence-button ${attachments.length ? "selected" : ""}`} htmlFor={inputId} title="Attach photos, PDFs, or evidence files">
+        <Files />{attachments.length ? `${attachments.length} file${attachments.length === 1 ? "" : "s"}` : "Attach"}
+      </label>
+      <input id={inputId} type="file" multiple accept="image/*,.pdf" onChange={(event) => {
+        onAttach(Array.from(event.target.files ?? []));
+        event.currentTarget.value = "";
+      }} />
+      {attachments.length > 0 && <button type="button" className="clear-media" onClick={onClearAttachments}>Clear</button>}
+      {attachments.length > 0 && <small>{attachments.map((file) => `${file.name} (${formatFileSize(file.size)})`).join(", ")}</small>}
+    </div>
   </div>;
 }
 
-function ReviewPanel({ report, review, onDone }: { report: Report; review?: ReviewRecord; onDone: (review: ReviewRecord, approve: boolean) => void }) {
+function ReviewPanel({ report, review, answerRows, onDone, onPacket }: { report: Report; review?: ReviewRecord; answerRows: ReportAnswer[]; onDone: (review: ReviewRecord, approve: boolean) => void; onPacket: () => void }) {
   const [note, setNote] = useState(review?.note ?? "");
   const [correctiveAction, setCorrectiveAction] = useState(review?.correctiveAction ?? "");
+  const [severityFilter, setSeverityFilter] = useState("All Severities");
   const saveReview = (approve: boolean) => onDone({
     note,
     correctiveAction,
     reviewedAt: new Date().toISOString(),
     reviewer: "Juan Diaz",
   }, approve);
+  const groupedRows = answerRows.reduce<Record<string, ReportAnswer[]>>((groups, row) => {
+    const key = row.section || "Report questions";
+    groups[key] = [...(groups[key] ?? []), row];
+    return groups;
+  }, {});
+  const displayedGroups = Object.entries(groupedRows).map(([section, rows]) => [
+    section,
+    severityFilter === "Evidence marked" ? rows.filter((row) => row.evidenceMarked) : rows,
+  ] as const).filter(([, rows]) => rows.length > 0);
+  const answeredCount = answerRows.filter((row) => row.answer).length;
+  const evidenceCount = answerRows.reduce((sum, row) => sum + (row.attachments?.length ?? (row.evidenceMarked ? 1 : 0)), 0);
+  const statusLabel = statusCopy[report.status].label;
+
+  return <div className="report-detail">
+    <div className="report-detail-bar">Report Details</div>
+    <section className="report-detail-head">
+      <div className="report-type-icon"><ReportIcon code={report.code} /></div>
+      <div className="report-title-block">
+        <span>{report.evidenceTags[0] ?? "Bay Baby report"}</span>
+        <h2>{report.code} {report.type}</h2>
+        <b className={`detail-status ${report.status}`}>{statusLabel}</b>
+      </div>
+      <div className="detail-actions">
+        <button className="secondary" onClick={() => saveReview(false)}><Plus /> Add review</button>
+        <button className="row-action" onClick={onPacket}><FilePdf /> View PDF</button>
+      </div>
+    </section>
+    <section className="detail-meta">
+      <div><span>ID:</span><b>{report.reportId}</b></div>
+      <div><span>Date & Time:</span><b>{report.date}</b></div>
+      <div><span>Creator:</span><b>{report.creator}</b></div>
+      <div><span>Location:</span><b>{report.location}</b></div>
+      <div><span>Answered:</span><b>{answeredCount}/{answerRows.length}</b></div>
+      <div><span>Evidence:</span><b>{evidenceCount}</b></div>
+    </section>
+    <div className="detail-tabs"><button className="active">Report Questions</button><button>Review</button></div>
+    <section className="detail-review-fields">
+      <label><span>General Corrective Action</span><textarea value={correctiveAction} onChange={(event) => setCorrectiveAction(event.target.value)} placeholder="Type a corrective action" /></label>
+      <label><span>General Recommendations</span><textarea value={note} onChange={(event) => setNote(event.target.value)} placeholder="Type a recommendation" /></label>
+      <select value={severityFilter} onChange={(event) => setSeverityFilter(event.target.value)}>
+        <option>All Severities</option>
+        <option>Good</option>
+        <option>Needs review</option>
+        <option>Needs action</option>
+        <option>Evidence marked</option>
+      </select>
+    </section>
+    {report.details && <section className="detail-section">
+      <h3>Header</h3>
+      <ol>{report.details.split(". ").filter(Boolean).map((item, index) => <li key={`${item}-${index}`}>{item}</li>)}</ol>
+    </section>}
+    {displayedGroups.map(([section, rows], sectionIndex) => <section className="detail-section" key={section}>
+      <h3>{sectionIndex + 1}. {section}</h3>
+      <div className="detail-table">
+        <div className="detail-table-head"><span>Question</span><span>Answer</span><span>Attachment</span></div>
+        {rows.map((row, index) => <div className={`detail-row ${row.evidenceMarked ? "marked" : ""}`} key={`${section}-${row.question}-${index}`}>
+          <div><i>{row.evidenceMarked ? <Check /> : ""}</i><b>{index + 1}. {row.question}</b></div>
+          <span>{row.answer || "No answer recorded"}</span>
+          <small>{row.attachments?.length ? row.attachments.map((file) => file.name).join(", ") : row.evidenceMarked ? "Evidence marked" : "None"}</small>
+        </div>)}
+      </div>
+    </section>)}
+    {answerRows.length === 0 && <section className="detail-section empty-state"><ClipboardText weight="duotone" /><h2>No answers captured</h2><p>This report does not have question-level answers yet.</p></section>}
+    <div className="modal-actions detail-footer"><button className="secondary" onClick={() => saveReview(false)}>Save review</button><button className="row-action" onClick={onPacket}><FilePdf /> View PDF</button><button className="primary" onClick={() => saveReview(true)}><Check /> Approve report</button></div>
+  </div>;
 
   return <div className="form-panel review-panel">
     <div className="modal-heading"><span>Report review</span><h2>{report.code} {report.type}</h2><p>{report.location} • {report.date} • {report.creator}</p></div>
@@ -1373,7 +1519,7 @@ function ReviewPanel({ report, review, onDone }: { report: Report; review?: Revi
       <div><span>Report ID</span><b>{report.reportId}</b></div>
       <div><span>Primus evidence status</span><b className={report.status === "approved" ? "pass" : "fail"}>{statusCopy[report.status].label}</b></div>
       <div><span>Recommended action</span><b>{report.status === "approved" ? "Include in packet" : "Manager review"}</b></div>
-      {review && <div><span>Last review</span><b>{new Date(review.reviewedAt).toLocaleString("en-US")}</b></div>}
+      {review?.reviewedAt && <div><span>Last review</span><b>{new Date(review!.reviewedAt).toLocaleString("en-US")}</b></div>}
     </div>
     <label>Review notes<textarea value={note} onChange={(event) => setNote(event.target.value)} placeholder="Add a clear note for the audit packet..." /></label>
     <label>Corrective action<textarea value={correctiveAction} onChange={(event) => setCorrectiveAction(event.target.value)} placeholder="Describe root cause, correction, evidence, owner, and due date..." /></label>

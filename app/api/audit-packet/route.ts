@@ -15,6 +15,15 @@ type PacketAnswer = {
   question: string;
   answer: string;
   evidenceMarked: boolean;
+  attachments: PacketAttachment[];
+};
+
+type PacketAttachment = {
+  id: string;
+  name: string;
+  type: string;
+  size: number;
+  dataUrl?: string;
 };
 
 type PacketReport = {
@@ -39,6 +48,7 @@ type PacketReport = {
 };
 
 type PacketRequest = {
+  mode: "audit" | "report";
   count: number;
   generatedBy: string;
   startDate: string;
@@ -63,6 +73,21 @@ function parseStringArray(value: unknown) {
   return Array.isArray(value) ? value.map((item) => cleanShort(item)).filter(Boolean).slice(0, 20) : [];
 }
 
+function parseAttachments(value: unknown) {
+  if (!Array.isArray(value)) return [];
+  return value.slice(0, 24).map((item): PacketAttachment | null => {
+    if (!item || typeof item !== "object") return null;
+    const record = item as Record<string, unknown>;
+    const name = cleanShort(record.name, "Attachment");
+    const type = cleanShort(record.type, "application/octet-stream");
+    const size = Math.max(0, Math.min(Number(record.size) || 0, 10_000_000));
+    const dataUrl = typeof record.dataUrl === "string" && /^data:image\/(png|jpe?g);base64,/i.test(record.dataUrl) && record.dataUrl.length < 2_200_000
+      ? record.dataUrl
+      : undefined;
+    return { id: cleanShort(record.id, name), name, type, size, dataUrl };
+  }).filter((item): item is PacketAttachment => item !== null);
+}
+
 function parseAnswers(value: unknown) {
   if (!Array.isArray(value)) return [];
   return value.slice(0, 500).map((row): PacketAnswer | null => {
@@ -70,11 +95,13 @@ function parseAnswers(value: unknown) {
     const record = row as Record<string, unknown>;
     const question = cleanText(record.question);
     if (!question) return null;
+    const attachments = parseAttachments(record.attachments);
     return {
       section: cleanShort(record.section, "Report"),
       question,
       answer: cleanText(record.answer, "No answer recorded"),
-      evidenceMarked: Boolean(record.evidenceMarked),
+      evidenceMarked: Boolean(record.evidenceMarked) || attachments.length > 0,
+      attachments,
     };
   }).filter((row): row is PacketAnswer => row !== null);
 }
@@ -115,6 +142,7 @@ function parsePacketRequest(input: unknown): PacketRequest | null {
   if (!input || typeof input !== "object") return null;
   const body = input as Record<string, unknown>;
   const reports = parseReports(body.reports);
+  const mode = body.mode === "report" ? "report" : "audit";
   const count = Number(body.count ?? reports.length ?? heavyConnectInventory.report_count);
   const generatedBy = cleanShort(body.generatedBy, "Juan Diaz");
   const startDate = typeof body.startDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(body.startDate) ? body.startDate : "2025-01-01";
@@ -122,7 +150,7 @@ function parsePacketRequest(input: unknown): PacketRequest | null {
   const selectedIds = Array.isArray(body.selectedIds) ? body.selectedIds.map(Number).filter(Number.isFinite).slice(0, 500) : [];
   if (!Number.isFinite(count) || count < 0 || count > 500) return null;
   if (new Date(startDate) > new Date(endDate)) return null;
-  return { count, generatedBy, startDate, endDate, selectedIds, reports };
+  return { mode, count, generatedBy, startDate, endDate, selectedIds, reports };
 }
 
 function wrapText(text: string, font: PDFFont, size: number, maxWidth: number) {
@@ -164,6 +192,96 @@ function drawKeyValue(page: PDFPage, label: string, value: string, x: number, y:
   drawWrapped(page, value, x, y - 14, { font: bold, size: 10, maxWidth: 220, color: rgb(0.07, 0.18, 0.14), lineGap: 2 });
 }
 
+function attachmentLabel(attachment: PacketAttachment) {
+  const size = attachment.size < 1024 * 1024 ? `${Math.round(attachment.size / 1024)} KB` : `${(attachment.size / (1024 * 1024)).toFixed(1)} MB`;
+  return `${attachment.name} (${size})`;
+}
+
+async function drawAttachmentThumbnails(pdf: PDFDocument, page: PDFPage, attachments: PacketAttachment[], x: number, y: number) {
+  let offsetX = 0;
+  for (const attachment of attachments.filter((item) => item.dataUrl).slice(0, 4)) {
+    try {
+      const [, meta = "", base64 = ""] = attachment.dataUrl?.match(/^data:(image\/(?:png|jpe?g));base64,(.*)$/i) ?? [];
+      if (!base64) continue;
+      const imageBytes = Buffer.from(base64, "base64");
+      const image = meta.includes("png") ? await pdf.embedPng(imageBytes) : await pdf.embedJpg(imageBytes);
+      const scale = Math.min(72 / image.width, 52 / image.height);
+      const width = image.width * scale;
+      const height = image.height * scale;
+      page.drawRectangle({ x: x + offsetX, y: y - 56, width: 78, height: 58, borderColor: rgb(0.77, 0.82, 0.78), borderWidth: 0.5, color: rgb(0.98, 0.99, 0.97) });
+      page.drawImage(image, { x: x + offsetX + (78 - width) / 2, y: y - 54 + (52 - height) / 2, width, height });
+      offsetX += 86;
+    } catch {
+      continue;
+    }
+  }
+}
+
+async function addSingleReportPage(pdf: PDFDocument, report: PacketReport, font: PDFFont, bold: PDFFont) {
+  const page = pdf.addPage(pageSize);
+  page.drawRectangle({ x: 0, y: 730, width: pageSize[0], height: 62, color: rgb(0.06, 0.22, 0.18) });
+  page.drawText("BAY BABY PRODUCE", { x: 30, y: 766, size: 9, font: bold, color: rgb(0.72, 0.9, 0.69) });
+  page.drawText(`${report.code} ${report.type}`.slice(0, 72), { x: 30, y: 744, size: 15, font: bold, color: rgb(1, 1, 1) });
+  page.drawText(`Report ID ${report.reportId} / ${report.status.toUpperCase()}`, { x: 390, y: 746, size: 8, font: bold, color: rgb(0.86, 0.95, 0.89) });
+
+  let y = 704;
+  const meta = [
+    ["Location", report.location],
+    ["Date / time", report.date],
+    ["Creator", report.creator],
+    ["Audit mapping", report.evidenceTags.join(", ") || "Not mapped"],
+  ];
+  meta.forEach(([label, value], index) => {
+    const x = index % 2 === 0 ? 30 : 315;
+    const rowY = y - Math.floor(index / 2) * 34;
+    page.drawText(label, { x, y: rowY, size: 7, font, color: rgb(0.42, 0.46, 0.43) });
+    drawWrapped(page, value, x, rowY - 11, { font: bold, size: 8, maxWidth: 235, lineGap: 1 });
+  });
+  y -= 82;
+
+  if (report.review?.note || report.review?.correctiveAction) {
+    page.drawRectangle({ x: 30, y: y - 30, width: 552, height: 42, color: rgb(0.97, 0.98, 0.94), borderColor: rgb(0.84, 0.86, 0.72), borderWidth: 0.5 });
+    page.drawText("Review", { x: 40, y: y - 2, size: 8, font: bold, color: rgb(0.23, 0.28, 0.18) });
+    drawWrapped(page, [report.review.note, report.review.correctiveAction].filter(Boolean).join(" / "), 95, y - 2, { font, size: 7, maxWidth: 470, lineGap: 1 });
+    y -= 54;
+  }
+
+  page.drawText("Questions", { x: 30, y, size: 10, font: bold, color: rgb(0.07, 0.18, 0.14) });
+  page.drawText("Answer", { x: 375, y, size: 8, font: bold, color: rgb(0.07, 0.18, 0.14) });
+  page.drawText("Media", { x: 500, y, size: 8, font: bold, color: rgb(0.07, 0.18, 0.14) });
+  y -= 10;
+  page.drawLine({ start: { x: 30, y }, end: { x: 582, y }, thickness: 0.7, color: rgb(0.35, 0.39, 0.36) });
+  y -= 14;
+
+  let rendered = 0;
+  for (const [index, row] of report.answerRows.entries()) {
+    const questionLines = wrapText(`${index + 1}. ${row.question}`, bold, 7, 330).slice(0, 2);
+    const answerLines = wrapText(row.answer || "No answer recorded", font, 7, 110).slice(0, 2);
+    const mediaText = row.attachments.length ? `${row.attachments.length} file${row.attachments.length === 1 ? "" : "s"}` : row.evidenceMarked ? "Marked" : "-";
+    const rowHeight = Math.max(questionLines.length, answerLines.length, 1) * 9 + 8;
+    if (y - rowHeight < 188) break;
+    questionLines.forEach((line, lineIndex) => page.drawText(line, { x: 30, y: y - lineIndex * 9, size: 7, font: lineIndex === 0 ? bold : font, color: rgb(0.08, 0.12, 0.11) }));
+    answerLines.forEach((line, lineIndex) => page.drawText(line, { x: 375, y: y - lineIndex * 9, size: 7, font, color: rgb(0.16, 0.18, 0.17) }));
+    page.drawText(mediaText, { x: 500, y, size: 7, font, color: row.attachments.length ? rgb(0.07, 0.38, 0.2) : rgb(0.45, 0.49, 0.46) });
+    y -= rowHeight;
+    rendered += 1;
+  }
+  if (rendered < report.answerRows.length) {
+    page.drawText(`+ ${report.answerRows.length - rendered} more captured answers retained in the app.`, { x: 30, y, size: 7, font: bold, color: rgb(0.56, 0.32, 0.05) });
+  }
+
+  const attachments = report.answerRows.flatMap((row) => row.attachments);
+  page.drawRectangle({ x: 30, y: 44, width: 552, height: 112, color: rgb(0.96, 0.98, 0.96), borderColor: rgb(0.8, 0.86, 0.81), borderWidth: 0.5 });
+  page.drawText("Media evidence", { x: 42, y: 136, size: 9, font: bold, color: rgb(0.07, 0.18, 0.14) });
+  if (attachments.length) {
+    await drawAttachmentThumbnails(pdf, page, attachments, 42, 116);
+    const names = attachments.map(attachmentLabel).join(" / ");
+    drawWrapped(page, names, 42, 68, { font, size: 7, maxWidth: 525, lineGap: 1 });
+  } else {
+    page.drawText("No media attached to this report.", { x: 42, y: 104, size: 8, font, color: rgb(0.42, 0.46, 0.43) });
+  }
+}
+
 function addReportPages(pdf: PDFDocument, report: PacketReport, font: PDFFont, bold: PDFFont) {
   let page = pdf.addPage(pageSize);
   drawHeader(page, `${report.code} ${report.type}`, `${report.reportId} / ${report.status.toUpperCase()}`, bold, font);
@@ -203,7 +321,8 @@ function addReportPages(pdf: PDFDocument, report: PacketReport, font: PDFFont, b
   let activeSection = "";
   for (const [index, row] of report.answerRows.entries()) {
     const questionLines = wrapText(`${index + 1}. ${row.question}`, bold, 9, 500);
-    const answerText = row.evidenceMarked ? `${row.answer || "No answer recorded"} [Evidence marked]` : row.answer || "No answer recorded";
+    const attachmentText = row.attachments.length ? ` [${row.attachments.map((item) => item.name).join(", ")}]` : row.evidenceMarked ? " [Evidence marked]" : "";
+    const answerText = `${row.answer || "No answer recorded"}${attachmentText}`;
     const answerLines = wrapText(answerText, font, 9, 488);
     const rowHeight = (questionLines.length + answerLines.length) * 13 + (row.section !== activeSection ? 18 : 8);
     if (y - rowHeight < bottomMargin) {
@@ -244,6 +363,18 @@ export async function POST(request: Request) {
   const pdf = await PDFDocument.create();
   const font = await pdf.embedFont(StandardFonts.Helvetica);
   const bold = await pdf.embedFont(StandardFonts.HelveticaBold);
+
+  if (body.mode === "report" && body.reports.length === 1) {
+    await addSingleReportPage(pdf, body.reports[0], font, bold);
+    const bytes = await pdf.save();
+    return new NextResponse(Buffer.from(bytes), {
+      headers: {
+        "Content-Type": "application/pdf",
+        "Content-Disposition": `inline; filename="Bay-Baby-${body.reports[0].reportId}-Report.pdf"`,
+      },
+    });
+  }
+
   const page = pdf.addPage(pageSize);
   const crosswalkSummary = primusCrosswalk.summary as CrosswalkSummary;
   const localSourceCount = localPrimusSources.module_sources.reduce((sum, module) => sum + module.source_count, 0);
@@ -251,7 +382,7 @@ export async function POST(request: Request) {
 
   page.drawRectangle({ x: 0, y: 700, width: 612, height: 92, color: rgb(0.04, 0.18, 0.14) });
   page.drawText("BAY BABY PRODUCE", { x: margin, y: 747, size: 12, font: bold, color: rgb(0.72, 0.9, 0.69) });
-  page.drawText(body.reports.length === 1 ? "Report Packet" : "PrimusGFS Audit Packet", { x: margin, y: 718, size: 25, font: bold, color: rgb(1, 1, 1) });
+  page.drawText("PrimusGFS Audit Packet", { x: margin, y: 718, size: 25, font: bold, color: rgb(1, 1, 1) });
   page.drawText(`${body.startDate} to ${body.endDate}`, { x: margin, y: 660, size: 16, font: bold });
   page.drawText(`Generated by ${body.generatedBy} - ${new Date().toLocaleDateString("en-US")}`, { x: margin, y: 636, size: 10, font, color: rgb(0.35, 0.38, 0.37) });
 
@@ -288,7 +419,7 @@ export async function POST(request: Request) {
   }
 
   const bytes = await pdf.save();
-  const filename = body.reports.length === 1 ? `Bay-Baby-${body.reports[0].reportId}-Report-Packet.pdf` : "Bay-Baby-PrimusGFS-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
+  const filename = "Bay-Baby-PrimusGFS-Audit-Packet_2025-01-01_to_2026-01-01.pdf";
   return new NextResponse(Buffer.from(bytes), {
     headers: {
       "Content-Type": "application/pdf",
