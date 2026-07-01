@@ -1,0 +1,307 @@
+{
+  "summary": {
+    "source_label": "Bay Baby shared PRIMUS folders",
+    "source_root": "M:/Food Safety and Quality/PRIMUS",
+    "historical_standard": "PrimusGFS v3.2-era evidence",
+    "future_standard": "PrimusGFS v4.0 readiness mapping",
+    "generated_from": [
+      "PRIMUS AUDIT",
+      "PRIMUS- based PLANS",
+      "Emergency Contact List"
+    ],
+    "usable_file_count": 158,
+    "primus_audit_file_count": 154,
+    "file_types": {
+      "pdf": 102,
+      "msg": 23,
+      "docx": 22,
+      "xlsx": 7,
+      "doc": 4
+    },
+    "notes": [
+      "The shared-drive materials are treated as real Bay Baby source evidence, not demo data.",
+      "Most source files were prepared for PrimusGFS v3.2-era audits and need review before relying on them for v4.0 scoring.",
+      "HeavyConnect contains more template features than Bay Baby uses; this app should prioritize Bay Baby's active modules and forms."
+    ],
+    "ignore_patterns": [
+      "~$*.docx",
+      "Thumbs.db",
+      "*.download",
+      "*_files/",
+      "Obsolete/"
+    ]
+  },
+  "bay_baby_scope": {
+    "active_module_keys": [
+      "module-1-fsms",
+      "module-2-farm",
+      "module-4-harvest-crew",
+      "module-5-facility",
+      "module-6-haccp",
+      "module-9-ipm"
+    ],
+    "optional_or_unused": [
+      {
+        "key": "module-3-indoor-agriculture",
+        "reason": "No current Bay Baby indoor agriculture scope found in the supplied PRIMUS folders."
+      },
+      {
+        "key": "heavyconnect-unused-library",
+        "reason": "HeavyConnect has many templates outside the Bay Baby Primus workflow; keep them in the library but out of readiness scoring until Bay Baby confirms use."
+      }
+    ]
+  },
+  "module_sources": [
+    {
+      "module_key": "module-1-fsms",
+      "module": "Module 1",
+      "title": "Food Safety Management System",
+      "status": "source evidence found",
+      "standard_basis": "PrimusGFS v3.2-era source; crosswalk to v4.0 required",
+      "source_count": 12,
+      "evidence_categories": [
+        "Food safety plan",
+        "Emergency contacts",
+        "Approved suppliers",
+        "Corrective action procedure/log",
+        "Mock recall",
+        "Binder cover and table of contents"
+      ],
+      "key_files": [
+        "PRIMUS- based PLANS/Food Safety Plan- Absolute Final Version 6.docx",
+        "PRIMUS- based PLANS/Food Safety Plan- Final Version 6.docx",
+        "Emergency Contact List/Emergency Contacts_2026.xlsx",
+        "PRIMUS AUDIT/Primus Binder and Materials/1.06.01 Approved Suppliers & Service Providers 2025.xlsx",
+        "PRIMUS AUDIT/TK-F-027-R0-Corrective-Action-Log-Example.docx",
+        "PRIMUS AUDIT/2025 Primus Audit/BBP Mock Recall 06 20 25 KH.doc"
+      ],
+      "next_actions": [
+        "Confirm the final approved food safety plan version and archive the under-construction copy separately.",
+        "Map approved supplier, emergency contact, recall, and corrective action records to exact Primus questions."
+      ]
+    },
+    {
+      "module_key": "module-2-farm",
+      "module": "Module 2",
+      "title": "Farm",
+      "status": "source evidence found",
+      "standard_basis": "PrimusGFS v3.2-era source; crosswalk to v4.0 required",
+      "source_count": 15,
+      "evidence_categories": [
+        "Farm certificate/report",
+        "Growing area risk assessment",
+        "Pesticide and herbicide records",
+        "Field activity records",
+        "Module 2 binder materials"
+      ],
+      "key_files": [
+        "PRIMUS AUDIT/Certificates/Final Certificate/2025 Cert and Report/PrimusGFS Audit Report- Field- Bay Baby Produce Sep 22 25.pdf",
+        "PRIMUS AUDIT/Certificates/Final Certificate/2025 Cert and Report/PrimusGFS Certificate Bay Baby- Field- Sep 22 25 to Sep 21 26.pdf",
+        "PRIMUS AUDIT/Risk Assessment for the Growing Area- Auditor Request 08 13 24 KH.pdf",
+        "PRIMUS AUDIT/Pesticide Herbicide Info/Pesticide Applications/04 09 26 Pesticided Application - Hoffman KH.pdf",
+        "PRIMUS AUDIT/Primus Binder and Materials/Module 2 and 4 binder cover- 2026.docx"
+      ],
+      "next_actions": [
+        "Separate current-season farm evidence from historical auditor-request material.",
+        "Link pesticide application records to ranch, crop, product, target pest, PHI/REI, and applicator fields."
+      ]
+    },
+    {
+      "module_key": "module-4-harvest-crew",
+      "module": "Module 4",
+      "title": "Harvest Crew",
+      "status": "source evidence found",
+      "standard_basis": "PrimusGFS v3.2-era source; crosswalk to v4.0 required",
+      "source_count": 10,
+      "evidence_categories": [
+        "Harvest certificate/report",
+        "Harvest crew corrective actions",
+        "Handwash testing",
+        "Worker hygiene retraining",
+        "Module 2/4 binder materials"
+      ],
+      "key_files": [
+        "PRIMUS AUDIT/Certificates/Final Certificate/2025 Cert and Report/PrimusGFS Audit Report- Harvest- Bay Baby Produce Sep 22 25.pdf",
+        "PRIMUS AUDIT/Certificates/Final Certificate/2025 Cert and Report/PrimusGFS Certificate Bay Baby- Harvest- Sep 22 25 to Sep 21 26.pdf",
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/Aug 15 2025 Audit NCR#1 & 3 Corrective Action- Hand Wash Testing - KH 08 22 25.docx",
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/Aug 15 2025 Audit NCR#2 Corrective Action- A Harvest Worker Wearing Earrings - KH 08 22 25.docx",
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/NCR #2 Q 2.07.04- SOP Retraining regarding Jewelry to field staff done 08 19 25 KH.pdf"
+      ],
+      "next_actions": [
+        "Normalize harvest findings into CAPA records with root cause, correction, preventive action, evidence, owner, and due date.",
+        "Confirm which harvest sanitation/inspection forms Bay Baby actually uses next season."
+      ]
+    },
+    {
+      "module_key": "module-5-facility",
+      "module": "Module 5",
+      "title": "Facility",
+      "status": "source evidence found",
+      "standard_basis": "PrimusGFS v3.2-era source; crosswalk to v4.0 required",
+      "source_count": 14,
+      "evidence_categories": [
+        "Packinghouse certificate/report",
+        "Facility risk assessment",
+        "Rinse water risk assessment",
+        "Packinghouse corrective action report",
+        "Module 5 binder materials"
+      ],
+      "key_files": [
+        "PRIMUS AUDIT/Certificates/Final Certificate/2025 Cert and Report/PrimusGFS AuditReport Bay Baby Produce Sep 17 25.pdf",
+        "PRIMUS AUDIT/Certificates/Final Certificate/2025 Cert and Report/PrimusGFS Certificate Bay Baby- Packinghouse- Sep 17 25 to Sep 16 26.pdf",
+        "PRIMUS AUDIT/Risk Assessment for the Packinghouse- Auditor Request  08 13 24 KH.pdf",
+        "PRIMUS AUDIT/Risk Assessment- Wash Step Rinse Water- 08 20 24 KH for Primus Audit on 08 16 24.doc",
+        "PRIMUS AUDIT/Certificates/Final Corrective Action Report/Packinghouse Corrective Action Report- PGFS_CAReport331036_7746_1_EN.pdf"
+      ],
+      "next_actions": [
+        "Treat rinse water risk assessment as facility evidence and HACCP support evidence.",
+        "Confirm which warehouse sanitation, pest control, and wash-water forms are active for Bay Baby."
+      ]
+    },
+    {
+      "module_key": "module-6-haccp",
+      "module": "Module 6",
+      "title": "HACCP",
+      "status": "source evidence found",
+      "standard_basis": "PrimusGFS v3.2-era source; crosswalk to v4.0 required",
+      "source_count": 4,
+      "evidence_categories": [
+        "Hazard analysis",
+        "HACCP plan",
+        "Wash-step/rinse-water risk assessment",
+        "Food safety plan support"
+      ],
+      "key_files": [
+        "PRIMUS AUDIT/R027 Hazard Analysis- BBP Pumpkins and Squash- Auditor Request  08 13 24 KH.pdf",
+        "PRIMUS AUDIT/R028 HACCP PLAN- BBP Pumpkins and Squash -Signed 8 9 24- Auditor Request  08 13 24 KH.pdf",
+        "PRIMUS AUDIT/Risk Assessment- Wash Step Rinse Water- 08 20 24 KH for Primus Audit on 08 16 24.doc",
+        "PRIMUS- based PLANS/Food Safety Plan- Absolute Final Version 6.docx"
+      ],
+      "next_actions": [
+        "Confirm whether pumpkins and squash remain the exact HACCP scope for next season.",
+        "Add revision/effective-date fields before using these as controlled documents."
+      ]
+    },
+    {
+      "module_key": "module-9-ipm",
+      "module": "Module 9",
+      "title": "Integrated Pest Management",
+      "status": "source evidence found",
+      "standard_basis": "PrimusGFS v3.2-era / add-on module source; confirm 2026 audit scope",
+      "source_count": 76,
+      "evidence_categories": [
+        "IPM plan documentation",
+        "IPM implementation evidence",
+        "Pesticide application risk and justification",
+        "Annual IPM checklist",
+        "Pest/disease reference library",
+        "Herbicide information"
+      ],
+      "key_files": [
+        "PRIMUS AUDIT/2025 Primus based Plans/Module 9/Integrated Pest Management Plan- BBP/9.01.01 IPM Plan Documentation.docx",
+        "PRIMUS AUDIT/2025 Primus based Plans/Module 9/Integrated Pest Management Plan- BBP/9.01.02 IPM Evidence of IPM Practices Implementation.docx",
+        "PRIMUS AUDIT/2025 Primus based Plans/Module 9/Integrated Pest Management Plan- BBP/9.01.03 Pesticide applications risk and justification.docx",
+        "PRIMUS AUDIT/2025 Primus based Plans/Module 9/R048- 2026 Year-Round IPM Annual Checklist- Conv.xlsx",
+        "PRIMUS AUDIT/2025 Primus based Plans/Module 9/R048- 2026 Year-Round IPM Annual Checklist- Organic.xlsx"
+      ],
+      "next_actions": [
+        "Confirm whether Module 9 remains in Bay Baby's audit scope for the next audit cycle.",
+        "Convert R048 annual checklist fields into a launchable Bay Baby template."
+      ]
+    }
+  ],
+  "capa_sources": [
+    {
+      "id": "NCR-2025-001-003",
+      "title": "Hand wash testing corrective action",
+      "module_keys": [
+        "module-2-farm",
+        "module-4-harvest-crew"
+      ],
+      "source_files": [
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/Aug 15 2025 Audit NCR#1 & 3 Corrective Action- Hand Wash Testing - KH 08 22 25.docx",
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/BBP 8 15 25 Primus Audit Corrective Action- NCR# 1 & 3, Q 2.07.04 & 4.04.04, KH 082225.pdf",
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/CAR- Portable Handwash Station Water Test 8 19 24- Stender Field, Previously in Landing Field KH.pdf"
+      ],
+      "status": "historical closure package found"
+    },
+    {
+      "id": "NCR-2025-002",
+      "title": "Harvest worker jewelry corrective action",
+      "module_keys": [
+        "module-4-harvest-crew"
+      ],
+      "source_files": [
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/Aug 15 2025 Audit NCR#2 Corrective Action- A Harvest Worker Wearing Earrings - KH 08 22 25.docx",
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/BBP 8 15 25 Primus Audit Corrective Action- NCR# 2, Q 4.04.09, KH 082225.pdf",
+        "PRIMUS AUDIT/2025 Primus Audit/Audit Corrective Action/NCR #2 Q 2.07.04- SOP Retraining regarding Jewelry to field staff done 08 19 25 KH.pdf"
+      ],
+      "status": "historical closure package found"
+    },
+    {
+      "id": "NCR-2024-PACKINGHOUSE",
+      "title": "Packinghouse corrective action report",
+      "module_keys": [
+        "module-5-facility"
+      ],
+      "source_files": [
+        "PRIMUS AUDIT/Certificates/Final Corrective Action Report/Packinghouse Corrective Action Report- PGFS_CAReport331036_7746_1_EN.pdf",
+        "PRIMUS AUDIT/Certificates/PGFS_CAReport- BBP Packinghouse 2024.pdf"
+      ],
+      "status": "historical closure package found"
+    }
+  ],
+  "traceability_sources": [
+    {
+      "id": "MOCK-RECALL-2025-06-20",
+      "title": "Mock recall",
+      "module_keys": [
+        "module-1-fsms"
+      ],
+      "source_files": [
+        "PRIMUS AUDIT/2025 Primus Audit/BBP Mock Recall 06 20 25 KH.doc"
+      ],
+      "status": "historical exercise found"
+    }
+  ],
+  "document_control_sources": [
+    {
+      "id": "FSP-V6",
+      "title": "Food Safety Plan - Version 6",
+      "module_keys": [
+        "module-1-fsms",
+        "module-6-haccp"
+      ],
+      "source_files": [
+        "PRIMUS- based PLANS/Food Safety Plan- Absolute Final Version 6.docx",
+        "PRIMUS- based PLANS/Food Safety Plan- Final Version 6.docx",
+        "PRIMUS- based PLANS/Food Safety Plan- Final Version 6 Under Construction.docx"
+      ],
+      "status": "confirm controlled final"
+    },
+    {
+      "id": "SUPPLIER-2025",
+      "title": "Approved Suppliers & Service Providers 2025",
+      "module_keys": [
+        "module-1-fsms"
+      ],
+      "source_files": [
+        "PRIMUS AUDIT/Primus Binder and Materials/1.06.01 Approved Suppliers & Service Providers 2025.xlsx"
+      ],
+      "status": "source register found"
+    },
+    {
+      "id": "IPM-2026",
+      "title": "Module 9 IPM plan and annual checklists",
+      "module_keys": [
+        "module-9-ipm"
+      ],
+      "source_files": [
+        "PRIMUS AUDIT/2025 Primus based Plans/Module 9/Integrated Pest Management Plan- BBP/9.01.01 IPM Plan Documentation.docx",
+        "PRIMUS AUDIT/2025 Primus based Plans/Module 9/R048- 2026 Year-Round IPM Annual Checklist- Conv.xlsx",
+        "PRIMUS AUDIT/2025 Primus based Plans/Module 9/R048- 2026 Year-Round IPM Annual Checklist- Organic.xlsx"
+      ],
+      "status": "confirm 2026 scope"
+    }
+  ]
+}

@@ -33,6 +33,7 @@ import r004Template from "@/data/heavyconnect-templates/r004-tractor-inspection.
 import r006Template from "@/data/heavyconnect-templates/r006-daily-sanitation-log.json";
 import liveCaptureGaps from "@/data/heavyconnect-templates/live-capture-gaps.json";
 import heavyConnectSelfAudit32 from "@/data/heavyconnect-self-audits/primus-gfs-3-2.json";
+import localPrimusSources from "@/data/primus-local/source-map.json";
 import primusCrosswalk from "@/data/primusgfs/crosswalks/v3-2-to-v4-0.json";
 import primusV4Index from "@/data/primusgfs/v4/index.json";
 
@@ -122,6 +123,44 @@ type CorrectiveAction = {
   evidence: string;
 };
 
+type DocumentControl = {
+  id: string;
+  title: string;
+  owner: string;
+  revision: string;
+  status: string;
+  linked: string;
+};
+
+type TraceabilityTest = {
+  lot: string;
+  crop: string;
+  location: string;
+  status: string;
+  percent: number;
+  next: string;
+};
+
+type LocalPrimusModuleSource = {
+  module_key: string;
+  module: string;
+  title: string;
+  status: string;
+  standard_basis: string;
+  source_count: number;
+  evidence_categories: string[];
+  key_files: string[];
+  next_actions: string[];
+};
+
+type LocalSourceRecord = {
+  id: string;
+  title: string;
+  module_keys: string[];
+  source_files: string[];
+  status: string;
+};
+
 const activeTemplateNames = [
   "R001 Field Activity Log",
   "R004 Tractor Inspection",
@@ -166,8 +205,8 @@ const bayBabyLocations: Array<{ code: string; name: string; area: string; manage
 const teamMembers: Array<{ initials: string; name: string; role: string; access: string; status: string }> = [];
 const appSettings: Array<{ label: string; value: string; note: string }> = [];
 const correctiveActions: CorrectiveAction[] = [];
-const documentControls: Array<{ id: string; title: string; owner: string; revision: string; status: string; linked: string }> = [];
-const traceabilityTests: Array<{ lot: string; crop: string; location: string; status: string; percent: number; next: string }> = [];
+const documentControls: DocumentControl[] = [];
+const traceabilityTests: TraceabilityTest[] = [];
 
 const importColumns = "section_key,section_en,question_key,question_en,type,required,options,comment_required_when,photo_required_when,ca_required_when";
 const exampleImportCsv = `${importColumns}
@@ -193,6 +232,17 @@ const localStorageKeys = {
   documents: "bay-baby-audit:v2:documents",
   recalls: "bay-baby-audit:v2:recalls",
 };
+
+const localSourceModules = localPrimusSources.module_sources as LocalPrimusModuleSource[];
+const localSourceByModule = new Map(localSourceModules.map((source) => [source.module_key, source]));
+const bayBabyActiveModuleKeys = new Set(localPrimusSources.bay_baby_scope.active_module_keys);
+const localCapaSources = localPrimusSources.capa_sources as LocalSourceRecord[];
+const localDocumentSources = localPrimusSources.document_control_sources as LocalSourceRecord[];
+const localTraceabilitySources = localPrimusSources.traceability_sources as LocalSourceRecord[];
+
+function labelForModuleKeys(moduleKeys: string[]) {
+  return moduleKeys.map((key) => localSourceByModule.get(key)?.module ?? key.replaceAll("-", " ")).join(", ");
+}
 
 function normalizeCode(name: string) {
   const match = name.match(/^(R\d{3})/);
@@ -631,33 +681,38 @@ function ReadinessView({ reports, actions, documents, recalls, onNavigate }: {
 }) {
   const approved = reports.filter((report) => report.status === "approved").length;
   const inReview = reports.filter((report) => report.status === "review").length;
-  const needsAction = reports.filter((report) => report.status === "action").length + actions.filter((action) => action.status !== "Closed").length;
-  const forecast = Math.round((approved / Math.max(reports.length, 1)) * 100);
+  const openActionCount = actions.filter((action) => action.status !== "Closed").length;
+  const needsAction = reports.filter((report) => report.status === "action").length + openActionCount;
+  const scopedSources = localSourceModules.filter((source) => bayBabyActiveModuleKeys.has(source.module_key));
+  const sourceCoverage = Math.round((scopedSources.filter((source) => source.source_count > 0).length / Math.max(scopedSources.length, 1)) * 100);
+  const forecast = reports.length ? Math.round((approved / Math.max(reports.length, 1)) * 100) : sourceCoverage;
+  const localSourceCount = scopedSources.reduce((sum, source) => sum + source.source_count, 0);
 
   return <div className="standard-workspace">
     <section className="standard-hero readiness-hero">
       <div>
         <span>Production cockpit</span>
-        <h2>Primus audit readiness is {forecast}% with {needsAction} blockers to close</h2>
-        <p>PrimusGFS readiness needs more than completed forms. This view separates certification blockers, module floors, overdue reviews, open CAPAs, and missing evidence so the next action is obvious.</p>
+        <h2>Primus readiness is {forecast}% with v3.2 evidence ready to migrate</h2>
+        <p>Bay Baby's supplied PRIMUS files are real v3.2-era audit evidence. The next production step is to preserve what Bay Baby actually uses, then map it carefully into the v4.0 backbone before relying on question-level scoring.</p>
       </div>
       <div className="standard-score">
         <strong>{forecast}%</strong>
-        <span>{approved} approved records</span>
+        <span>{localSourceCount} source items mapped</span>
         <span>{inReview} awaiting manager review</span>
-        <span>{needsAction} open blockers</span>
+        <span>{needsAction} app blockers</span>
+        <span>{scopedSources.length} Bay Baby modules in scope</span>
       </div>
     </section>
-    {reports.length === 0 && <section className="empty-state"><ShieldCheck weight="duotone" /><h2>No audit records yet</h2><p>Create a report to begin calculating readiness from real data.</p></section>}
+    {reports.length === 0 && <section className="empty-state"><ShieldCheck weight="duotone" /><h2>No app-created reports yet</h2><p>Readiness is currently based on the shared-drive PRIMUS source map. Create reports when the team starts using Bay Baby Audit for live records.</p></section>}
     <section className="audit-command-grid">
       <div className="gap-panel"><div className="section-heading"><h2>Certification blockers</h2><span>Fix first</span></div>
-        <button className="gap-row warning" onClick={() => onNavigate("evidence")}><WarningCircle weight="fill" /><div><strong>Evidence mapping below target</strong><span>Review question-level mappings and approved records.</span></div></button>
-        <button className="gap-row warning" onClick={() => onNavigate("actions")}><WarningCircle weight="fill" /><div><strong>{actions.filter((action) => action.status !== "Closed").length} CAPAs remain open</strong><span>Close root cause, correction, evidence, and reviewer acceptance.</span></div></button>
-        <button className="gap-row warning" onClick={() => onNavigate("documents")}><WarningCircle weight="fill" /><div><strong>{documents.filter((document) => document.status !== "Current").length} documents need review</strong><span>Confirm revision, owner, approval, and effective date.</span></div></button>
-        <button className="gap-row warning" onClick={() => onNavigate("traceability")}><WarningCircle weight="fill" /><div><strong>{recalls.filter((recall) => recall.percent < 100).length} recall exercises incomplete</strong><span>Complete traceback, trace-forward, and quantity reconciliation.</span></div></button>
+        <button className="gap-row warning" onClick={() => onNavigate("evidence")}><WarningCircle weight="fill" /><div><strong>v3.2 evidence needs v4.0 crosswalk review</strong><span>Review shared-drive evidence against the exact PrimusGFS v4.0 questions before final scoring.</span></div></button>
+        <button className="gap-row warning" onClick={() => onNavigate("documents")}><WarningCircle weight="fill" /><div><strong>Controlled final versions must be confirmed</strong><span>Food safety plan, binder materials, supplier register, IPM plan, and HACCP documents need owner/revision/effective-date control.</span></div></button>
+        <button className="gap-row warning" onClick={() => onNavigate("actions")}><WarningCircle weight="fill" /><div><strong>{localPrimusSources.capa_sources.length} historical CAPA packages found</strong><span>Normalize NCRs into root cause, correction, prevention, evidence, and reviewer acceptance fields.</span></div></button>
+        <button className="gap-row warning" onClick={() => onNavigate("traceability")}><WarningCircle weight="fill" /><div><strong>{localPrimusSources.traceability_sources.length} mock recall source found</strong><span>Convert the historical exercise into a repeatable 2026 mock recall workflow.</span></div></button>
       </div>
-      <div className="gap-panel"><div className="section-heading"><h2>HeavyConnect-plus workflow</h2><span>Implemented spine</span></div>
-        {["Mobile report capture", "Manager review queue", "Question-level evidence map", "CAPA log", "Controlled document register", "Traceability and mock recall readiness"].map((item) => <div className="gap-row" key={item}><CheckCircle weight="duotone" /><div><strong>{item}</strong><span>Available as a working operational surface in this preview and ready for database-backed persistence.</span></div></div>)}
+      <div className="gap-panel"><div className="section-heading"><h2>Bay Baby scope</h2><span>Source backed</span></div>
+        {scopedSources.map((source) => <div className="gap-row" key={source.module_key}><CheckCircle weight="duotone" /><div><strong>{source.module}: {source.title}</strong><span>{source.source_count} source items found / {source.standard_basis}</span></div></div>)}
       </div>
     </section>
   </div>;
@@ -666,25 +721,37 @@ function ReadinessView({ reports, actions, documents, recalls, onNavigate }: {
 function EvidenceWorkbench({ onReview, onAttach }: { onReview: (reportType: string) => void; onAttach: () => void }) {
   const modules = primusV4Index.modules;
   const moduleEvidence = new Map(heavyConnectInventory.primus_v4_module_evidence.map((item) => [item.module_key, item]));
+  const displayModules = [
+    ...modules,
+    ...localSourceModules.filter((source) => !modules.some((module) => module.key === source.module_key)).map((source) => ({
+      key: source.module_key,
+      number: source.module,
+      title: source.title,
+      question_count: 0,
+      sections: [],
+      scored_points: 0,
+    })),
+  ];
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
         <span>Question-level evidence</span>
-        <h2>Turn every Bay Baby record into auditor-ready proof</h2>
-        <p>Each module shows expected records, mapped examples, and the next evidence action. This is the workbench that HeavyConnect-style forms feed into.</p>
+        <h2>Map Bay Baby's v3.2-era evidence into the audit backbone</h2>
+        <p>The shared-drive PRIMUS files show what Bay Baby actually uses. Keep these source links intact, then review each mapping before treating it as v4.0-ready proof.</p>
       </div>
       <button className="primary" onClick={onAttach}><Plus /> Create evidence report</button>
     </section>
     <section className="evidence-board">
-      {modules.map((module) => {
+      {displayModules.map((module) => {
         const evidence = moduleEvidence.get(module.key);
-        const coverage = Math.min(96, evidence?.evidence_count ? 44 + evidence.evidence_count * 8 : 22);
+        const localSource = localSourceByModule.get(module.key);
+        const coverage = localSource?.source_count ? Math.min(92, 48 + localSource.source_count * 3) : Math.min(96, evidence?.evidence_count ? 44 + evidence.evidence_count * 8 : 18);
         return <article key={module.key}>
           <div className="section-heading"><h2>{module.number}: {module.title}</h2><span>{coverage}% mapped</span></div>
           <div className="mini-progress"><i style={{ width: `${coverage}%` }} /></div>
-          <p>{module.question_count} questions, {module.sections.length} sections, {module.scored_points.toLocaleString()} points.</p>
+          <p>{localSource ? `${localSource.source_count} Bay Baby source items found. ${localSource.standard_basis}.` : `${module.question_count} questions, ${module.sections.length} sections, ${module.scored_points.toLocaleString()} points.`}</p>
           <div className="evidence-tags">
-            {(evidence?.report_types ?? ["No mapped records yet"]).slice(0, 5).map((item) => <span key={item}>{item}</span>)}
+            {(localSource?.evidence_categories ?? evidence?.report_types ?? ["No mapped records yet"]).slice(0, 5).map((item) => <span key={item}>{item}</span>)}
           </div>
           <button className="row-action" onClick={() => onReview(evidence?.report_types?.[0] ?? "")}>Open mapped records</button>
         </article>;
@@ -694,17 +761,28 @@ function EvidenceWorkbench({ onReview, onAttach }: { onReview: (reportType: stri
 }
 
 function CorrectiveActionsView({ actions, onCreate, onAdvance }: { actions: CorrectiveAction[]; onCreate: () => void; onAdvance: (id: string) => void }) {
+  const sourcePackages = localCapaSources;
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
         <span>Corrective actions</span>
-        <h2>{actions.filter((action) => action.status !== "Closed").length} CAPAs need closure packages</h2>
-        <p>Every non-conformance should carry root cause, correction, corrective action, preventive action, due date, evidence, and reviewer acceptance.</p>
+        <h2>{sourcePackages.length} historical CAPA packages need normalization</h2>
+        <p>Bay Baby's folders include real NCR closure evidence. Convert each package into root cause, correction, preventive action, due date, closure evidence, and reviewer acceptance before the next audit cycle.</p>
       </div>
       <button className="primary" onClick={onCreate}><Plus /> New CAPA</button>
     </section>
     <section className="capa-list">
-      {actions.length === 0 && <div className="empty-state"><WarningCircle weight="duotone" /><h2>No corrective actions</h2><p>CAPAs created from report findings will appear here.</p></div>}
+      {sourcePackages.map((source) => <article key={source.id} className="major">
+        <div><span>{source.id}</span><b className="capture needs_options_review">Normalize</b></div>
+        <h3>{source.title}</h3>
+        <p>{labelForModuleKeys(source.module_keys)} / {source.status}</p>
+        <div className="capa-meta"><span>Historical NCR</span><span>{source.source_files.length} source files</span><span>v3.2-era evidence</span></div>
+        <div className="answers">
+          <div><span>Source package</span><b>{source.source_files[0]}</b></div>
+          <div><span>Next step</span><b>Create live CAPA fields and attach closure evidence</b></div>
+        </div>
+      </article>)}
+      {actions.length === 0 && sourcePackages.length === 0 && <div className="empty-state"><WarningCircle weight="duotone" /><h2>No corrective actions</h2><p>CAPAs created from report findings will appear here.</p></div>}
       {actions.map((action) => <article key={action.id} className={action.severity === "Major" ? "major" : ""}>
         <div><span>{action.id}</span><b className={`capture ${action.status === "Closed" ? "ready" : "needs_options_review"}`}>{action.status}</b></div>
         <h3>{action.title}</h3>
@@ -720,18 +798,29 @@ function CorrectiveActionsView({ actions, onCreate, onAdvance }: { actions: Corr
   </div>;
 }
 
-function DocumentsView({ documents, onAdd, onReview }: { documents: typeof documentControls; onAdd: () => void; onReview: (id: string) => void }) {
+function DocumentsView({ documents, onAdd, onReview }: { documents: DocumentControl[]; onAdd: () => void; onReview: (id: string) => void }) {
+  const sourceDocuments = localDocumentSources;
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
         <span>Document control</span>
-        <h2>Controlled documents are tied to Primus modules</h2>
-        <p>Production audit prep needs revision status, owner, approval, effective date, retention, and links from SOPs to checklist questions and evidence.</p>
+        <h2>{sourceDocuments.length} controlled source groups found</h2>
+        <p>These are the real Bay Baby PRIMUS documents to convert into controlled records with owner, approval, revision, effective date, retention, and module/question links.</p>
       </div>
       <button className="primary" onClick={onAdd}><Plus /> Add document</button>
     </section>
     <section className="template-table management-table">
-      {documents.length === 0 && <div className="empty-state"><BookOpenText weight="duotone" /><h2>No controlled documents</h2><p>Add the first approved SOP, policy, or audit record.</p></div>}
+      {sourceDocuments.map((document) => <article key={document.id}>
+        <div className="template-icon"><BookOpenText weight="duotone" /></div>
+        <div>
+          <span>{document.id} / {labelForModuleKeys(document.module_keys)}</span>
+          <h3>{document.title}</h3>
+          <p>{document.source_files.length} source file{document.source_files.length === 1 ? "" : "s"} / {document.source_files[0]}</p>
+        </div>
+        <b className="capture needs_options_review">{document.status}</b>
+        <button className="row-action" disabled>Source mapped</button>
+      </article>)}
+      {documents.length === 0 && sourceDocuments.length === 0 && <div className="empty-state"><BookOpenText weight="duotone" /><h2>No controlled documents</h2><p>Add the first approved SOP, policy, or audit record.</p></div>}
       {documents.map((document) => <article key={document.id}>
         <div className="template-icon"><BookOpenText weight="duotone" /></div>
         <div>
@@ -746,18 +835,26 @@ function DocumentsView({ documents, onAdd, onReview }: { documents: typeof docum
   </div>;
 }
 
-function TraceabilityView({ recalls, onStart, onAdvance }: { recalls: typeof traceabilityTests; onStart: () => void; onAdvance: (lot: string) => void }) {
+function TraceabilityView({ recalls, onStart, onAdvance }: { recalls: TraceabilityTest[]; onStart: () => void; onAdvance: (lot: string) => void }) {
+  const sourceExercises = localTraceabilitySources;
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
         <span>Traceability</span>
-        <h2>Mock recall readiness by lot and location</h2>
-        <p>Track traceback, trace-forward, contact lists, packaging/material records, supplier links, percent located, and lessons learned for the audit packet.</p>
+        <h2>{sourceExercises.length} historical mock recall source found</h2>
+        <p>Use the existing mock recall as the evidence baseline, then run the next exercise with traceback, trace-forward, contact checks, quantity reconciliation, and lessons learned inside the app.</p>
       </div>
       <button className="primary" onClick={onStart}><Plus /> Start mock recall</button>
     </section>
     <section className="traceability-grid">
-      {recalls.length === 0 && <div className="empty-state"><MapPin weight="duotone" /><h2>No mock recalls</h2><p>Start a mock recall to track traceback and trace-forward completion.</p></div>}
+      {sourceExercises.map((exercise) => <article key={exercise.id}>
+        <div><span>{exercise.id}</span><b>Found</b></div>
+        <h3>{exercise.title}</h3>
+        <p>{exercise.source_files[0]}</p>
+        <div className="mini-progress"><i style={{ width: "68%" }} /></div>
+        <div className="capa-meta"><span>{exercise.status}</span><span>Next: convert to live 2026 workflow</span></div>
+      </article>)}
+      {recalls.length === 0 && sourceExercises.length === 0 && <div className="empty-state"><MapPin weight="duotone" /><h2>No mock recalls</h2><p>Start a mock recall to track traceback and trace-forward completion.</p></div>}
       {recalls.map((test) => <article key={test.lot}>
         <div><span>{test.lot}</span><b>{test.percent}%</b></div>
         <h3>{test.crop}</h3>
@@ -851,37 +948,53 @@ function TemplatesView({ templates, onStart }: { templates: TemplateDefinition[]
 
 function PrimusStandardView() {
   const modules = primusV4Index.modules;
+  const displayModules = [
+    ...modules,
+    ...localSourceModules.filter((source) => !modules.some((module) => module.key === source.module_key)).map((source) => ({
+      key: source.module_key,
+      number: source.module,
+      title: source.title,
+      question_count: 0,
+      sections: [],
+      scored_points: 0,
+    })),
+  ];
   const totalQuestions = modules.reduce((sum, module) => sum + module.question_count, 0);
   const totalPoints = modules.reduce((sum, module) => sum + module.scored_points, 0);
   const importedReports = heavyConnectInventory.report_count;
-  const importedReportTypes = heavyConnectInventory.report_type_count;
+  const localSourceCount = localSourceModules.reduce((sum, module) => sum + module.source_count, 0);
   const selfAuditQuestionCount = heavyConnectSelfAudit32.modules.reduce((sum, module) => sum + module.question_count, 0);
   const crosswalkSummary = primusCrosswalk.summary as CrosswalkSummary;
   const moduleEvidence = new Map(heavyConnectInventory.primus_v4_module_evidence.map((item) => [item.module_key, item]));
-  const recommendedModules = new Set(["module-1-fsms", "module-2-farm", "module-4-harvest-crew", "module-5-facility", "module-6-haccp"]);
-  const bayBabyEvidence = heavyConnectInventory.expected_bay_baby_report_status;
+  const bayBabyEvidence = localSourceModules.map((source) => ({
+    report_type: `${source.module}: ${source.title}`,
+    count: source.source_count,
+    source_files: source.key_files,
+  }));
 
   return <div className="standard-workspace">
     <section className="standard-hero">
       <div>
         <span>Audit backbone</span>
-        <h2>Use PrimusGFS v4.0 as the source of truth</h2>
-        <p>Bay Baby reports become evidence against v4.0 questions. The packet stays clean, readable, and auditor-friendly.</p>
+        <h2>Preserve Bay Baby's v3.2 evidence while preparing for v4.0</h2>
+        <p>The supplied PRIMUS folders are the practical source of truth for what Bay Baby does today. PrimusGFS v4.0 remains the target standard, but each old document/report needs a reviewed crosswalk before official scoring.</p>
       </div>
       <div className="standard-score">
         <strong>v4.0</strong>
         <span>{totalQuestions} questions</span>
         <span>{totalPoints.toLocaleString()} scored points</span>
-        <span>{importedReports} Bay Baby records ready</span>
+        <span>{localSourceCount} local source items mapped</span>
+        <span>{importedReports} HeavyConnect examples retained</span>
         <span>{selfAuditQuestionCount} Self-audit questions mapped</span>
         <span>{crosswalkSummary.strong_candidate ?? 0} legacy question matches</span>
       </div>
     </section>
 
     <section className="module-grid">
-      {modules.map((module) => {
-        const inScope = recommendedModules.has(module.key);
+      {displayModules.map((module) => {
+        const inScope = bayBabyActiveModuleKeys.has(module.key);
         const evidence = moduleEvidence.get(module.key);
+        const localSource = localSourceByModule.get(module.key);
         return <article key={module.key} className={inScope ? "in-scope" : ""}>
           <div>
             <span>{module.number.replace("Module ", "")}</span>
@@ -897,7 +1010,7 @@ function PrimusStandardView() {
 
     <div className="standard-columns">
       <section className="evidence-map">
-        <div className="section-heading"><h2>Bay Baby evidence sources</h2><span>{importedReportTypes} Bay Baby report types</span></div>
+        <div className="section-heading"><h2>Bay Baby PRIMUS source folders</h2><span>{localSourceCount} source items</span></div>
         {bayBabyEvidence.map((item) => <div className="evidence-row" key={item.report_type}>
           <CheckCircle weight="duotone" />
           <div><strong>{item.report_type}</strong><span>{item.count} record{item.count === 1 ? "" : "s"} • {item.source_files.join(", ")}</span></div>
@@ -916,7 +1029,7 @@ function PrimusStandardView() {
   </div>;
 }
 function LocationsView() {
-  const averageReadiness = Math.round(bayBabyLocations.reduce((sum, location) => sum + location.readiness, 0) / bayBabyLocations.length);
+  const averageReadiness = bayBabyLocations.length ? Math.round(bayBabyLocations.reduce((sum, location) => sum + location.readiness, 0) / bayBabyLocations.length) : 0;
   return <div className="standard-workspace">
     <section className="standard-hero compact">
       <div>
@@ -927,6 +1040,7 @@ function LocationsView() {
       <div className="standard-score small-score"><strong>{averageReadiness}%</strong><span>Average readiness</span><span>{bayBabyLocations.filter((location) => location.active).length} active</span></div>
     </section>
     <section className="template-table management-table">
+      {bayBabyLocations.length === 0 && <div className="empty-state"><Buildings weight="duotone" /><h2>No locations configured</h2><p>Add Bay Baby ranches and facilities when the production database is connected.</p></div>}
       {bayBabyLocations.map((location) => <article key={location.code}>
         <div className="template-icon"><Buildings weight="duotone" /></div>
         <div>
